@@ -11,6 +11,6 @@
   <nav class="flex justify-between w-full">
     <HamburgerButton bind:open={spellOptionsMenu} />
     <h1 class="text-blue-700 text-3xl">Conjure5e</h1>
-    <HamburgerButton bind:open={sourceOptionsMenu} />
+    <HamburgerButton bind:open={sourceOptionsMenu} left={false} />
   </nav>
 </header>
