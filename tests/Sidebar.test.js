@@ -26,3 +26,13 @@ test("if it is rendered with its open prop set to true, it has a css class named
   await component.$set({ open: false });
   expect(aside).not.toHaveClass("open");
 });
+
+test("renders with a left class on its complementary by default, and without it when the left prop is set to false", async () => {
+  const { getByRole, component } = render(Sidebar, { props: { open: true } });
+  const aside = getByRole("complementary");
+
+  expect(aside).toHaveClass("left");
+
+  await component.$set({ left: false });
+  expect(aside).not.toHaveClass("left");
+});

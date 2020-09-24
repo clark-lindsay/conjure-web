@@ -16,4 +16,4 @@
   bind:spellOptionsMenu={leftSidebarIsOpen}
   bind:sourceOptionsMenu={rightSidebarIsOpen} />
 <Sidebar bind:open={leftSidebarIsOpen} />
-<Sidebar bind:open={rightSidebarIsOpen} />
+<Sidebar bind:open={rightSidebarIsOpen} left={false} />
