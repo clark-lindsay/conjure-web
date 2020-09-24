@@ -1,0 +1,10 @@
+import { render } from "@testing-library/svelte";
+
+import App from "../src/App.svelte";
+
+test("shows proper heading when rendered", () => {
+  const { getByText } = render(App);
+
+  expect(getByText("Conjure5e")).toBeInTheDocument();
+});
+
