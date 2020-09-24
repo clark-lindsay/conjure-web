@@ -38,7 +38,7 @@
 </style>
 
 <button
-  class="{fontColor} hover:{hoverFontColor} cursor-pointer mr-4 border-none focus:outline-none"
+  class="{fontColor} hover:{hoverFontColor} cursor-pointer my-4 border-none focus:outline-none"
   class:open
   on:click={() => (open = !open)}>
   <svg width="32" height="24">
