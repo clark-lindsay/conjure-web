@@ -1,5 +1,9 @@
 <script lang="ts">
   import Navbar from "./components/Navbar.svelte";
+  import Sidebar from "./components/Sidebar.svelte";
+
+  export let leftSidebarIsOpen: boolean = false;
+  export let rightSidebarIsOpen: boolean = false;
 </script>
 
 <svelte:head>
@@ -8,4 +12,8 @@
     rel="stylesheet" />
 </svelte:head>
 
-<Navbar />
+<Navbar
+  bind:spellOptionsMenu={leftSidebarIsOpen}
+  bind:sourceOptionsMenu={rightSidebarIsOpen} />
+<Sidebar bind:open={leftSidebarIsOpen} />
+<Sidebar bind:open={rightSidebarIsOpen} />

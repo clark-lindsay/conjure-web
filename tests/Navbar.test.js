@@ -1,4 +1,4 @@
-import { render, fireEvent, getAllByRole } from "@testing-library/svelte";
+import { render } from "@testing-library/svelte";
 
 import Navbar from "../src/components/Navbar.svelte";
 
