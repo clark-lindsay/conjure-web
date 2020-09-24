@@ -1,4 +1,5 @@
 import { render } from "@testing-library/svelte";
+import html from "svelte-htm";
 
 import Sidebar from "../src/components/Sidebar.svelte";
 
@@ -35,4 +36,15 @@ test("renders with a left class on its complementary by default, and without it 
 
   await component.$set({ left: false });
   expect(aside).not.toHaveClass("left");
+});
+
+test("supports slotted content", () => {
+  const { getByRole } = render(html`
+    <${Sidebar}>
+      <h1>Test Data</h1>
+    <//>
+  `);
+  const heading = getByRole("heading");
+
+  expect(heading).toBeInTheDocument();
 });
