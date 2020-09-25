@@ -26,7 +26,7 @@
 </style>
 
 <aside
-  class="absolute w-full h-full bg-gray-200 border-r-2 shadow-lg"
+  class="fixed w-full h-full bg-gray-200 border-r-2 shadow-lg"
   class:open
   class:right
   class:left>

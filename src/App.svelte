@@ -17,3 +17,5 @@
   bind:sourceOptionsMenu={rightSidebarIsOpen} />
 <Sidebar bind:open={leftSidebarIsOpen} />
 <Sidebar bind:open={rightSidebarIsOpen} left={false} />
+
+<button name="cast-spell" id="cast-spell-button">Cast Spell</button>

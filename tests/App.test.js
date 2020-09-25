@@ -8,3 +8,9 @@ test("shows proper heading when rendered", () => {
   expect(getByText("Conjure5e")).toBeInTheDocument();
 });
 
+test("contains a button labelled Cast Spell", () => {
+  const { getByText } = render(App);
+  const button = getByText("Cast Spell");
+
+  expect(button).toBeInTheDocument();
+});
