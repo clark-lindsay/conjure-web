@@ -1865,6 +1865,11 @@ concat-map@0.0.1:
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
   integrity sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=
 
+conjure5e@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/conjure5e/-/conjure5e-1.4.0.tgz#f7dd3c89359c6114b9a8a194cbc794ad6e3ab9c0"
+  integrity sha512-ZxZk/3uOcuoEWSXmng6qPJOi1UDYgEtSwdpn/Ixm+WMzBM1qgEFzfH0E4Ei0qd0f6+D9wF8WEHDKSmiafZ+QvA==
+
 console-clear@^1.1.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/console-clear/-/console-clear-1.1.1.tgz#995e20cbfbf14dd792b672cde387bd128d674bf7"
