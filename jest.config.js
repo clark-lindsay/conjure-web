@@ -8,7 +8,7 @@ module.exports = {
     ],
     "^.+\\.js$": "babel-jest",
   },
-  moduleFileExtensions: ["js", "svelte"],
+  moduleFileExtensions: ["ts", "js", "svelte"],
   setupFilesAfterEnv: [
     "@testing-library/jest-dom/extend-expect",
     "./jest.setup.js",
