@@ -3,6 +3,10 @@ import html from "svelte-htm";
 
 import Sidebar from "../src/components/Sidebar.svelte";
 
+// If your intellisense complains about using "await" to call "component.$set",
+// it is probably wrong. Feel free to remove the "await" as a test, but this
+// will result in previously passing tests to fail.
+
 test("renders with no header if there is no title prop provided", () => {
   const { getByRole } = render(Sidebar);
 
