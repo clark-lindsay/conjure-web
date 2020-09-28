@@ -1,5 +1,6 @@
 <script lang="ts">
   import { readSourcebooks } from "./stores/readSourcebooks";
+  import { readSpellParameters } from "./stores/readSpellParameters";
 
   import Navbar from "./components/Navbar.svelte";
   import Sidebar from "./components/Sidebar.svelte";
