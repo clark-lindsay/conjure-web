@@ -4,7 +4,7 @@ import SelectSpellParameters from "../src/components/SelectSpellParameters.svelt
 
 test("renders with the heading provided, or by default with Spell Parameters", async () => {
   const { getByRole, component } = render(SelectSpellParameters);
-  const heading = getByRole("heading");
+  const heading = getByRole("heading", { name: "Spell Parameters" });
 
   expect(heading).toHaveTextContent("Spell Parameters");
 

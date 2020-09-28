@@ -7,11 +7,11 @@
   let sourceBookTitles = Object.values(sources).sort();
 </script>
 
-<h2>{heading}</h2>
+<h2 class="text-blue-700 text-2xl">{heading}</h2>
 
 <form name="sourcebooks" id="select-sourcebooks">
   {#each sourceBookTitles as sourcebook}
-    <label>
+    <label class="text-lg">
       <input
         type="checkbox"
         value={sourcebook}

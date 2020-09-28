@@ -12,9 +12,9 @@
   const terrainOptions: string[] = ["Land", "Water", "Air"];
 </script>
 
-<h2>{heading}</h2>
+<h2 class="text-blue-700 text-2xl">{heading}</h2>
 <form name="spell-parameters">
-  <label for="spell-select">Spell</label>
+  <label for="spell-select" class="text-gray-700 text-xl m-1">Spell</label>
   <select
     bind:value={$writeSpellParameters.spellName}
     id="spell-select"
@@ -24,7 +24,9 @@
     {/each}
   </select>
 
-  <label for="challenge-rating-select">Challenge Rating of Creatures</label>
+  <label
+    for="challenge-rating-select"
+    class="text-gray-700 text-xl m-1">Challenge Rating of Creatures</label>
   <select
     bind:value={$writeSpellParameters.challengeRating}
     id="challenge-rating-select"
@@ -34,8 +36,9 @@
     {/each}
   </select>
 
+  <h2 class="text-gray-700 text-xl m-1">Terrains</h2>
   {#each terrainOptions as terrain}
-    <label>
+    <label class="text-lg">
       <input
         bind:group={$writeSpellParameters.terrains}
         type="checkbox"
