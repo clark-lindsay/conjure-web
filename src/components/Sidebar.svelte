@@ -26,12 +26,13 @@
 </style>
 
 <aside
-  class="fixed w-full h-full bg-gray-200 border-r-2 shadow-lg"
+  class="fixed w-full h-full bg-gray-200 border-r-2 shadow-lg overflow-auto
+    box-border"
   class:open
   class:right
   class:left>
   {#if title}
-    <h2>{title}</h2>
+    <h2 class="absolute">{title}</h2>
   {/if}
   <slot />
 </aside>

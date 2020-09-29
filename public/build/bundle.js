@@ -2102,7 +2102,7 @@ var app = (function () {
       ($writeSpellParameters) => $writeSpellParameters
     );
 
-    var name="svelte-app";var version="0.1.1";var scripts={build:"rollup -c",dev:"rollup -c -w",start:"sirv public",validate:"svelte-check"};var devDependencies={"@babel/core":"^7.11.6","@babel/preset-env":"^7.11.5","@rollup/plugin-commonjs":"^14.0.0","@rollup/plugin-json":"^4.1.0","@rollup/plugin-node-resolve":"^8.0.0","@rollup/plugin-typescript":"^6.0.0","@testing-library/jest-dom":"^5.11.4","@testing-library/svelte":"^3.0.0","@tsconfig/svelte":"^1.0.0","@types/jest":"^26.0.14","babel-jest":"^26.3.0",eslint:"^7.9.0","eslint-plugin-jest-dom":"^3.2.3",jest:"^26.4.2","jest-vim-reporter":"^0.0.1",prettier:"^2.1.2",rollup:"^2.3.4","rollup-plugin-livereload":"^2.0.0","rollup-plugin-svelte":"^6.0.0","rollup-plugin-terser":"^7.0.0",svelte:"^3.0.0","svelte-check":"^1.0.0","svelte-htm":"^1.1.1","svelte-jester":"^1.1.5","svelte-preprocess":"^4.3.0","ts-jest":"^26.4.0",tslib:"^2.0.0",typescript:"^3.9.3"};var dependencies={conjure5e:"^1.4.0","sirv-cli":"^1.0.0"};var packageJson = {name:name,version:version,scripts:scripts,devDependencies:devDependencies,dependencies:dependencies};
+    var name="svelte-app";var version="0.1.2";var scripts={build:"rollup -c",dev:"rollup -c -w",start:"sirv public",validate:"svelte-check"};var devDependencies={"@babel/core":"^7.11.6","@babel/preset-env":"^7.11.5","@rollup/plugin-commonjs":"^14.0.0","@rollup/plugin-json":"^4.1.0","@rollup/plugin-node-resolve":"^8.0.0","@rollup/plugin-typescript":"^6.0.0","@testing-library/jest-dom":"^5.11.4","@testing-library/svelte":"^3.0.0","@tsconfig/svelte":"^1.0.0","@types/jest":"^26.0.14","babel-jest":"^26.3.0",eslint:"^7.9.0","eslint-plugin-jest-dom":"^3.2.3",jest:"^26.4.2","jest-vim-reporter":"^0.0.1",prettier:"^2.1.2",rollup:"^2.3.4","rollup-plugin-livereload":"^2.0.0","rollup-plugin-svelte":"^6.0.0","rollup-plugin-terser":"^7.0.0",svelte:"^3.0.0","svelte-check":"^1.0.0","svelte-htm":"^1.1.1","svelte-jester":"^1.1.5","svelte-preprocess":"^4.3.0","ts-jest":"^26.4.0",tslib:"^2.0.0",typescript:"^3.9.3"};var dependencies={conjure5e:"^1.4.0","sirv-cli":"^1.0.0"};var packageJson = {name:name,version:version,scripts:scripts,devDependencies:devDependencies,dependencies:dependencies};
 
     function packageVersion() {
       if (packageJson) {
@@ -2553,7 +2553,7 @@ var app = (function () {
 
     const file$2 = "src/components/Sidebar.svelte";
 
-    // (32:2) {#if title}
+    // (33:2) {#if title}
     function create_if_block(ctx) {
     	let h2;
     	let t;
@@ -2562,7 +2562,8 @@ var app = (function () {
     		c: function create() {
     			h2 = element("h2");
     			t = text(/*title*/ ctx[1]);
-    			add_location(h2, file$2, 32, 4, 478);
+    			attr_dev(h2, "class", "absolute");
+    			add_location(h2, file$2, 33, 4, 507);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h2, anchor);
@@ -2580,7 +2581,7 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(32:2) {#if title}",
+    		source: "(33:2) {#if title}",
     		ctx
     	});
 
@@ -2601,7 +2602,7 @@ var app = (function () {
     			if (if_block) if_block.c();
     			t = space();
     			if (default_slot) default_slot.c();
-    			attr_dev(aside, "class", "fixed w-full h-full bg-gray-200 border-r-2 shadow-lg svelte-zcncv0");
+    			attr_dev(aside, "class", "fixed w-full h-full bg-gray-200 border-r-2 shadow-lg overflow-auto\n    box-border svelte-zcncv0");
     			toggle_class(aside, "open", /*open*/ ctx[0]);
     			toggle_class(aside, "right", /*right*/ ctx[3]);
     			toggle_class(aside, "left", /*left*/ ctx[2]);
@@ -2782,7 +2783,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (19:4) {#each spellOptions as spell}
+    // (22:4) {#each spellOptions as spell}
     function create_each_block_2(ctx) {
     	let option;
     	let t_value = /*spell*/ ctx[15] + "";
@@ -2795,7 +2796,7 @@ var app = (function () {
     			t = text(t_value);
     			option.__value = option_value_value = /*spell*/ ctx[15];
     			option.value = option.__value;
-    			add_location(option, file$3, 19, 6, 645);
+    			add_location(option, file$3, 22, 6, 686);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -2811,14 +2812,14 @@ var app = (function () {
     		block,
     		id: create_each_block_2.name,
     		type: "each",
-    		source: "(19:4) {#each spellOptions as spell}",
+    		source: "(22:4) {#each spellOptions as spell}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (31:4) {#each crOptions as cr}
+    // (35:4) {#each crOptions as cr}
     function create_each_block_1(ctx) {
     	let option;
     	let t_value = /*cr*/ ctx[12] + "";
@@ -2831,7 +2832,7 @@ var app = (function () {
     			t = text(t_value);
     			option.__value = option_value_value = /*cr*/ ctx[12];
     			option.value = option.__value;
-    			add_location(option, file$3, 31, 6, 989);
+    			add_location(option, file$3, 35, 6, 1058);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -2847,14 +2848,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(31:4) {#each crOptions as cr}",
+    		source: "(35:4) {#each crOptions as cr}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (37:2) {#each terrainOptions as terrain}
+    // (41:2) {#each terrainOptions as terrain}
     function create_each_block(ctx) {
     	let label;
     	let input;
@@ -2877,9 +2878,9 @@ var app = (function () {
     			input.__value = input_value_value = /*terrain*/ ctx[9];
     			input.value = input.__value;
     			/*$$binding_groups*/ ctx[8][0].push(input);
-    			add_location(input, file$3, 38, 6, 1171);
-    			attr_dev(label, "class", "text-lg");
-    			add_location(label, file$3, 37, 4, 1141);
+    			add_location(input, file$3, 42, 6, 1256);
+    			attr_dev(label, "class", "text-lg my-1 mx-2");
+    			add_location(label, file$3, 41, 4, 1216);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, label, anchor);
@@ -2911,7 +2912,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(37:2) {#each terrainOptions as terrain}",
+    		source: "(41:2) {#each terrainOptions as terrain}",
     		ctx
     	});
 
@@ -2993,26 +2994,28 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(h20, "class", "text-blue-700 text-2xl");
+    			attr_dev(h20, "class", "text-blue-700 text-2xl mx-2");
     			add_location(h20, file$3, 11, 0, 349);
     			attr_dev(label0, "for", "spell-select");
-    			attr_dev(label0, "class", "text-gray-700 text-xl m-1");
-    			add_location(label0, file$3, 13, 2, 432);
+    			attr_dev(label0, "class", "text-gray-700 text-xl my-1 mx-2");
+    			add_location(label0, file$3, 13, 2, 437);
     			attr_dev(select0, "id", "spell-select");
     			attr_dev(select0, "name", "spell");
+    			attr_dev(select0, "class", "my-1 mx-2");
     			if (/*$writeSpellParameters*/ ctx[1].spellName === void 0) add_render_callback(() => /*select0_change_handler*/ ctx[5].call(select0));
-    			add_location(select0, file$3, 14, 2, 508);
+    			add_location(select0, file$3, 16, 2, 527);
     			attr_dev(label1, "for", "challenge-rating-select");
-    			attr_dev(label1, "class", "text-gray-700 text-xl m-1");
-    			add_location(label1, file$3, 23, 2, 711);
+    			attr_dev(label1, "class", "text-gray-700 text-xl my-1 mx-2");
+    			add_location(label1, file$3, 26, 2, 752);
     			attr_dev(select1, "id", "challenge-rating-select");
+    			attr_dev(select1, "class", "my-1 mx-2");
     			attr_dev(select1, "name", "challenge-rating");
     			if (/*$writeSpellParameters*/ ctx[1].challengeRating === void 0) add_render_callback(() => /*select1_change_handler*/ ctx[6].call(select1));
-    			add_location(select1, file$3, 26, 2, 830);
-    			attr_dev(h21, "class", "text-gray-700 text-xl m-1");
-    			add_location(h21, file$3, 35, 2, 1049);
+    			add_location(select1, file$3, 29, 2, 877);
+    			attr_dev(h21, "class", "text-gray-700 text-xl my-1 mx-2");
+    			add_location(h21, file$3, 39, 2, 1118);
     			attr_dev(form, "name", "spell-parameters");
-    			add_location(form, file$3, 12, 0, 399);
+    			add_location(form, file$3, 12, 0, 404);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -3269,7 +3272,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (10:2) {#each sourceBookTitles as sourcebook}
+    // (14:4) {#each sourceBookTitles as sourcebook}
     function create_each_block$1(ctx) {
     	let label;
     	let input;
@@ -3292,9 +3295,9 @@ var app = (function () {
     			input.__value = input_value_value = /*sourcebook*/ ctx[5];
     			input.value = input.__value;
     			/*$$binding_groups*/ ctx[4][0].push(input);
-    			add_location(input, file$4, 11, 6, 395);
-    			attr_dev(label, "class", "text-lg");
-    			add_location(label, file$4, 10, 4, 365);
+    			add_location(input, file$4, 15, 8, 551);
+    			attr_dev(label, "class", "text-lg mx-2 my-1");
+    			add_location(label, file$4, 14, 6, 509);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, label, anchor);
@@ -3326,7 +3329,7 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(10:2) {#each sourceBookTitles as sourcebook}",
+    		source: "(14:4) {#each sourceBookTitles as sourcebook}",
     		ctx
     	});
 
@@ -3337,6 +3340,7 @@ var app = (function () {
     	let h2;
     	let t0;
     	let t1;
+    	let div;
     	let form;
     	let each_value = /*sourceBookTitles*/ ctx[2];
     	validate_each_argument(each_value);
@@ -3351,17 +3355,21 @@ var app = (function () {
     			h2 = element("h2");
     			t0 = text(/*heading*/ ctx[0]);
     			t1 = space();
+    			div = element("div");
     			form = element("form");
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(h2, "class", "text-blue-700 text-2xl");
+    			attr_dev(h2, "class", "text-blue-700 text-2xl mx-2");
     			add_location(h2, file$4, 6, 0, 219);
     			attr_dev(form, "name", "sourcebooks");
     			attr_dev(form, "id", "select-sourcebooks");
-    			add_location(form, file$4, 8, 0, 270);
+    			attr_dev(form, "class", "overflow-visible overflow-auto box-border pb-8");
+    			add_location(form, file$4, 9, 2, 343);
+    			attr_dev(div, "class", "overflow-visible overflow-auto box-border pb-8 mb-4");
+    			add_location(div, file$4, 8, 0, 275);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -3370,7 +3378,8 @@ var app = (function () {
     			insert_dev(target, h2, anchor);
     			append_dev(h2, t0);
     			insert_dev(target, t1, anchor);
-    			insert_dev(target, form, anchor);
+    			insert_dev(target, div, anchor);
+    			append_dev(div, form);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].m(form, null);
@@ -3408,7 +3417,7 @@ var app = (function () {
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(h2);
     			if (detaching) detach_dev(t1);
-    			if (detaching) detach_dev(form);
+    			if (detaching) detach_dev(div);
     			destroy_each(each_blocks, detaching);
     		}
     	};
