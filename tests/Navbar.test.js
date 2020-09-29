@@ -2,18 +2,18 @@ import { render, fireEvent } from "@testing-library/svelte";
 
 import Navbar from "../src/components/Navbar.svelte";
 
-test("renders with the app title, and two buttons", () => {
-  const { getByText, getAllByRole } = render(Navbar);
+test("renders with the supplied heading, and two buttons", () => {
+  const { getByRole, getAllByRole } = render(Navbar, { heading: "Conjure5e" });
 
-  const navbar = getByText("Conjure5e");
+  const heading = getByRole("heading", { name: "Conjure5e" });
   const buttons = getAllByRole("button");
 
-  expect(navbar).toBeInTheDocument();
+  expect(heading).toBeInTheDocument();
   expect(buttons).toHaveLength(2);
 });
 
 test("when one button is clicked, the other button becomes invisible", async () => {
-  const { getAllByRole, getByTestId } = render(Navbar);
+  const { getAllByRole, getByTestId } = render(Navbar, { heading: "test" });
   const spellOptionsButton = getAllByRole("button")[0];
   const sourceOptionsButton = getAllByRole("button")[1];
 

@@ -1,2 +1,4274 @@
-var app=function(){"use strict";function e(){}function n(e){return e()}function t(){return Object.create(null)}function a(e){e.forEach(n)}function r(e){return"function"==typeof e}function l(e,n){return e!=e?n==n:e!==n||e&&"object"==typeof e||"function"==typeof e}function s(n,...t){if(null==n)return e;const a=n.subscribe(...t);return a.unsubscribe?()=>a.unsubscribe():a}function i(e,n,t){e.$$.on_destroy.push(s(n,t))}function o(e,n,t,a){if(e){const r=c(e,n,t,a);return e[0](r)}}function c(e,n,t,a){return e[1]&&a?function(e,n){for(const t in n)e[t]=n[t];return e}(t.ctx.slice(),e[1](a(n))):t.ctx}function u(e,n,t,a,r,l,s){const i=function(e,n,t,a){if(e[2]&&a){const r=e[2](a(t));if(void 0===n.dirty)return r;if("object"==typeof r){const e=[],t=Math.max(n.dirty.length,r.length);for(let a=0;a<t;a+=1)e[a]=n.dirty[a]|r[a];return e}return n.dirty|r}return n.dirty}(n,a,r,l);if(i){const r=c(n,t,a,s);e.p(r,i)}}function g(e,n){e.appendChild(n)}function d(e,n,t){e.insertBefore(n,t||null)}function p(e){e.parentNode.removeChild(e)}function h(e,n){for(let t=0;t<e.length;t+=1)e[t]&&e[t].d(n)}function m(e){return document.createElement(e)}function f(e){return document.createElementNS("http://www.w3.org/2000/svg",e)}function y(e){return document.createTextNode(e)}function R(){return y(" ")}function L(e,n,t,a){return e.addEventListener(n,t,a),()=>e.removeEventListener(n,t,a)}function $(e,n,t){null==t?e.removeAttribute(n):e.getAttribute(n)!==t&&e.setAttribute(n,t)}function B(e,n,t){const a=new Set;for(let n=0;n<e.length;n+=1)e[n].checked&&a.add(e[n].__value);return t||a.delete(n),Array.from(a)}function b(e,n){n=""+n,e.wholeText!==n&&(e.data=n)}function v(e,n){for(let t=0;t<e.options.length;t+=1){const a=e.options[t];if(a.__value===n)return void(a.selected=!0)}}function x(e){const n=e.querySelector(":checked")||e.options[0];return n&&n.__value}function E(e,n,t){e.classList[t?"add":"remove"](n)}let A;function M(e){A=e}const S=[],w=[],W=[],_=[],k=Promise.resolve();let G=!1;function j(e){W.push(e)}function O(e){_.push(e)}let C=!1;const F=new Set;function T(){if(!C){C=!0;do{for(let e=0;e<S.length;e+=1){const n=S[e];M(n),P(n.$$)}for(M(null),S.length=0;w.length;)w.pop()();for(let e=0;e<W.length;e+=1){const n=W[e];F.has(n)||(F.add(n),n())}W.length=0}while(S.length);for(;_.length;)_.pop()();G=!1,C=!1,F.clear()}}function P(e){if(null!==e.fragment){e.update(),a(e.before_update);const n=e.dirty;e.dirty=[-1],e.fragment&&e.fragment.p(e.ctx,n),e.after_update.forEach(j)}}const H=new Set;let D;function I(e,n){e&&e.i&&(H.delete(e),e.i(n))}function N(e,n,t,a){if(e&&e.o){if(H.has(e))return;H.add(e),D.c.push(()=>{H.delete(e),a&&(t&&e.d(1),a())}),e.o(n)}}function V(e,n,t){const a=e.$$.props[n];void 0!==a&&(e.$$.bound[a]=t,t(e.$$.ctx[a]))}function K(e){e&&e.c()}function q(e,t,l){const{fragment:s,on_mount:i,on_destroy:o,after_update:c}=e.$$;s&&s.m(t,l),j(()=>{const t=i.map(n).filter(r);o?o.push(...t):a(t),e.$$.on_mount=[]}),c.forEach(j)}function z(e,n){const t=e.$$;null!==t.fragment&&(a(t.on_destroy),t.fragment&&t.fragment.d(n),t.on_destroy=t.fragment=null,t.ctx=[])}function Q(e,n){-1===e.$$.dirty[0]&&(S.push(e),G||(G=!0,k.then(T)),e.$$.dirty.fill(0)),e.$$.dirty[n/31|0]|=1<<n%31}function X(n,r,l,s,i,o,c=[-1]){const u=A;M(n);const g=r.props||{},d=n.$$={fragment:null,ctx:null,props:o,update:e,not_equal:i,bound:t(),on_mount:[],on_destroy:[],before_update:[],after_update:[],context:new Map(u?u.$$.context:[]),callbacks:t(),dirty:c,skip_bound:!1};let h=!1;if(d.ctx=l?l(n,g,(e,t,...a)=>{const r=a.length?a[0]:t;return d.ctx&&i(d.ctx[e],d.ctx[e]=r)&&(!d.skip_bound&&d.bound[e]&&d.bound[e](r),h&&Q(n,e)),t}):[],d.update(),h=!0,a(d.before_update),d.fragment=!!s&&s(d.ctx),r.target){if(r.hydrate){const e=function(e){return Array.from(e.childNodes)}(r.target);d.fragment&&d.fragment.l(e),e.forEach(p)}else d.fragment&&d.fragment.c();r.intro&&I(n.$$.fragment),q(n,r.target,r.anchor),T()}M(u)}class J{$destroy(){z(this,1),this.$destroy=e}$on(e,n){const t=this.$$.callbacks[e]||(this.$$.callbacks[e]=[]);return t.push(n),()=>{const e=t.indexOf(n);-1!==e&&t.splice(e,1)}}$set(e){var n;this.$$set&&(n=e,0!==Object.keys(n).length)&&(this.$$.skip_bound=!0,this.$$set(e),this.$$.skip_bound=!1)}}const Y=[];function Z(n,t=e){let a;const r=[];function s(e){if(l(n,e)&&(n=e,a)){const e=!Y.length;for(let e=0;e<r.length;e+=1){const t=r[e];t[1](),Y.push(t,n)}if(e){for(let e=0;e<Y.length;e+=2)Y[e][0](Y[e+1]);Y.length=0}}}return{set:s,update:function(e){s(e(n))},subscribe:function(l,i=e){const o=[l,i];return r.push(o),1===r.length&&(a=t(s)||e),l(n),()=>{const e=r.indexOf(o);-1!==e&&r.splice(e,1),0===r.length&&(a(),a=null)}}}}function U(n,t,l){const i=!Array.isArray(n),o=i?[n]:n,c=t.length<2;return{subscribe:Z(l,n=>{let l=!1;const u=[];let g=0,d=e;const p=()=>{if(g)return;d();const a=t(i?u[0]:u,n);c?n(a):d=r(a)?a:e},h=o.map((e,n)=>s(e,e=>{u[n]=e,g&=~(1<<n),l&&p()},()=>{g|=1<<n}));return l=!0,p(),function(){a(h),d()}}).subscribe}}var ee="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof window?window:"undefined"!=typeof global?global:"undefined"!=typeof self?self:{};function ne(e,n,t){return e(t={path:n,exports:{},require:function(e,n){return function(){throw new Error("Dynamic requires are not currently supported by @rollup/plugin-commonjs")}(null==n&&t.path)}},t.exports),t.exports}var te=ne((function(e,n){Object.defineProperty(n,"__esModule",{value:!0}),n.sources=void 0,n.sources={BR:"Basic Rules",PHB:"Player's Handbook",MM:"Monster Manual",DMG:"Dungeon Master's Guide",DiT:"Dead in Thay",ERLW:"Eberron: Rising from the Last War",EEPC:"Elemental Evil Player's Companion",GGtR:"Guildmaster's Guide to Ravnica",LR:"Locathah Rising",MtoF:"Mordenkainen's Tome of Foes",SKT:"Storm King's Thunder",SCAG:"Sword Coast Adventurer's Guide",TP:"Tortle Package",ToA:"Tomb of Annhilation",ToH:"Tomb of Horrors",VGtM:"Volo's Guide to Monsters",WGtE:"Wayfinder's Guide to Eberron",XGtE:"Xanathar's Guide to Everything"}})),ae=ne((function(e,n){Object.defineProperty(n,"__esModule",{value:!0}),n.creatures=void 0;var t=te.sources.BR,a=te.sources.MM,r=te.sources.DiT,l=te.sources.ERLW,s=te.sources.MtoF,i=te.sources.SKT,o=te.sources.TP,c=te.sources.ToA,u=te.sources.ToH,g=te.sources.VGtM,d=te.sources.WGtE;n.creatures={beasts:[{name:"Frog",challengeRating:0,terrains:["Land","Water"],type:"Beast",source:t},{name:"Sea Horse",challengeRating:0,terrains:["Water"],type:"Beast",source:t},{name:"Baboon",challengeRating:0,terrains:["Land"],type:"Beast",source:t},{name:"Badger",challengeRating:0,terrains:["Land"],type:"Beast",source:t},{name:"Bat",challengeRating:0,terrains:["Land","Air"],type:"Beast",source:t},{name:"Cat",challengeRating:0,terrains:["Land"],type:"Beast",source:t},{name:"Crab",challengeRating:0,terrains:["Land","Water"],type:"Beast",source:t},{name:"Deer",challengeRating:0,terrains:["Land"],type:"Beast",source:t},{name:"Eagle",challengeRating:0,terrains:["Land","Air"],type:"Beast",source:t},{name:"Giant Fire Beetle",challengeRating:0,terrains:["Land"],type:"Beast",source:t},{name:"Goat",challengeRating:0,terrains:["Land"],type:"Beast",source:t},{name:"Hawk",challengeRating:0,terrains:["Land","Air"],type:"Beast",source:t},{name:"Hyena",challengeRating:0,terrains:["Land"],type:"Beast",source:t},{name:"Jackal",challengeRating:0,terrains:["Land"],type:"Beast",source:t},{name:"Lizard",challengeRating:0,terrains:["Land"],type:"Beast",source:t},{name:"Octopus",challengeRating:0,terrains:["Land","Water"],type:"Beast",source:t},{name:"Owl",challengeRating:0,terrains:["Land","Air"],type:"Beast",source:t},{name:"Quipper",challengeRating:0,terrains:["Water"],type:"Beast",source:t},{name:"Rat",challengeRating:0,terrains:["Land"],type:"Beast",source:t},{name:"Raven",challengeRating:0,terrains:["Land","Air"],type:"Beast",source:t},{name:"Scorpion",challengeRating:0,terrains:["Land"],type:"Beast",source:t},{name:"Sheep",challengeRating:0,terrains:["Land"],type:"Beast",source:i},{name:"Spider",challengeRating:0,terrains:["Land"],type:"Beast",source:t},{name:"Vulture",challengeRating:0,terrains:["Land","Air"],type:"Beast",source:t},{name:"Weasel",challengeRating:0,terrains:["Land"],type:"Beast",source:t},{name:"Blood Hawk",challengeRating:.125,terrains:["Land","Air"],type:"Beast",source:t},{name:"Camel",challengeRating:.125,terrains:["Land"],type:"Beast",source:t},{name:"Dolphin",challengeRating:.125,terrains:["Water"],type:"Beast",source:g},{name:"Flying Snake",challengeRating:.125,terrains:["Land","Air","Water"],type:"Beast",source:t},{name:"Giant Crab",challengeRating:.125,terrains:["Land","Water"],type:"Beast",source:t},{name:"Giant Rat",challengeRating:.125,terrains:["Land"],type:"Beast",source:t},{name:"Giant Weasel",challengeRating:.125,terrains:["Land"],type:"Beast",source:t},{name:"Mastiff",challengeRating:.125,terrains:["Land"],type:"Beast",source:t},{name:"Mule",challengeRating:.125,terrains:["Land"],type:"Beast",source:t},{name:"Poisonous Snake",challengeRating:.125,terrains:["Land","Water"],type:"Beast",source:t},{name:"Pony",challengeRating:.125,terrains:["Land"],type:"Beast",source:t},{name:"Stirge",challengeRating:.125,terrains:["Land","Air"],type:"Beast",source:t},{name:"Axe Beak",challengeRating:.25,terrains:["Land"],type:"Beast",source:t},{name:"Boar",challengeRating:.25,terrains:["Land"],type:"Beast",source:t},{name:"Constrictor Snake",challengeRating:.25,terrains:["Land","Water"],type:"Beast",source:t},{name:"Cow",challengeRating:.25,terrains:["Land"],type:"Beast",source:g},{name:"Draft Horse",challengeRating:.25,terrains:["Land"],type:"Beast",source:t},{name:"Elk",challengeRating:.25,terrains:["Land"],type:"Beast",source:t},{name:"Fastieth",challengeRating:.25,terrains:["Land"],type:"Beast",source:l},{name:"Giant Badger",challengeRating:.25,terrains:["Land"],type:"Beast",source:t},{name:"Giant Bat",challengeRating:.25,terrains:["Land","Air"],type:"Beast",source:t},{name:"Giant Centipede",challengeRating:.25,terrains:["Land"],type:"Beast",source:t},{name:"Giant Frog",challengeRating:.25,terrains:["Land","Water"],type:"Beast",source:t},{name:"Giant Lizard",challengeRating:.25,terrains:["Land"],type:"Beast",source:t},{name:"Giant Owl",challengeRating:.25,terrains:["Land","Air"],type:"Beast",source:t},{name:"Giant Poisonous Snake",challengeRating:.25,terrains:["Land","Water"],type:"Beast",source:t},{name:"Giant Wolf Spider",challengeRating:.25,terrains:["Land"],type:"Beast",source:t},{name:"Hadrosaurus",challengeRating:.25,terrains:["Land"],type:"Beast",source:g},{name:"Ox",challengeRating:.25,terrains:["Land"],type:"Beast",source:g},{name:"Panther",challengeRating:.25,terrains:["Land"],type:"Beast",source:t},{name:"Pteranodon",challengeRating:.25,terrains:["Land","Air"],type:"Beast",source:t},{name:"Riding Horse",challengeRating:.25,terrains:["Land"],type:"Beast",source:t},{name:"Stench Kow",challengeRating:.25,terrains:["Land"],type:"Beast",source:g},{name:"Swarm of Bats",challengeRating:.25,terrains:["Land"],type:"Beast",source:t},{name:"Swarm of Rats",challengeRating:.25,terrains:["Air"],type:"Beast",source:t},{name:"Swarm of Ravens",challengeRating:.25,terrains:["Land","Air"],type:"Beast",source:t},{name:"Wolf",challengeRating:.25,terrains:["Land"],type:"Beast",source:t},{name:"Ape",challengeRating:.5,terrains:["Land"],type:"Beast",source:t},{name:"Black Bear",challengeRating:.5,terrains:["Land"],type:"Beast",source:t},{name:"Clawfoot Raptor",challengeRating:.5,terrains:["Land"],type:"Beast",source:d},{name:"Crocodile",challengeRating:.5,terrains:["Land","Water"],type:"Beast",source:t},{name:"Giant Goat",challengeRating:.5,terrains:["Land"],type:"Beast",source:t},{name:"Giant Sea Horse",challengeRating:.5,terrains:["Water"],type:"Beast",source:t},{name:"Giant Wasp",challengeRating:.5,terrains:["Land","Air"],type:"Beast",source:t},{name:"Reef Shark",challengeRating:.5,terrains:["Water"],type:"Beast",source:t},{name:"Swarm of Insects",challengeRating:.5,terrains:["Land","Air"],type:"Beast",source:t},{name:"Swarm of Rot Grubs",challengeRating:.5,terrains:["Land"],type:"Beast",source:g},{name:"Warhorse",challengeRating:.5,terrains:["Land"],type:"Beast",source:t},{name:"Brown Bear",challengeRating:1,terrains:["Land"],type:"Beast",source:t},{name:"Clawfoot",challengeRating:1,terrains:["Land"],type:"Beast",source:l},{name:"Dire Wolf",challengeRating:1,terrains:["Land"],type:"Beast",source:t},{name:"Giant Eagle",challengeRating:1,terrains:["Land","Air"],type:"Beast",source:t},{name:"Giant Hyena",challengeRating:1,terrains:["Land"],type:"Beast",source:t},{name:"Giant Octopus",challengeRating:1,terrains:["Land"],type:"Beast",source:t},{name:"Giant Spider",challengeRating:1,terrains:["Land"],type:"Beast",source:t},{name:"Giant Toad",challengeRating:1,terrains:["Land","Water"],type:"Beast",source:t},{name:"Giant Vulture",challengeRating:1,terrains:["Land","Air"],type:"Beast",source:t},{name:"Ice Spider",challengeRating:1,terrains:["Land"],type:"Beast",source:i},{name:"Lion",challengeRating:1,terrains:["Land"],type:"Beast",source:t},{name:"Swarm of Quippers",challengeRating:1,terrains:["Water"],type:"Beast",source:t},{name:"Tiger",challengeRating:1,terrains:["Land"],type:"Beast",source:t},{name:"Allosaurus",challengeRating:2,terrains:["Land"],type:"Beast",source:t},{name:"Aurochs",challengeRating:2,terrains:["Land"],type:"Beast",source:g},{name:"Cave Bear",challengeRating:2,terrains:["Land","Water"],type:"Beast",source:t},{name:"Giant Boar",challengeRating:2,terrains:["Land"],type:"Beast",source:t},{name:"Ice Spider Queen",challengeRating:2,terrains:["Land"],type:"Beast",source:i},{name:"Giant White Moray Eel",challengeRating:2,terrains:["Water"],type:"Beast",source:t},{name:"Giant Constrictor Snake",challengeRating:2,terrains:["Land","Water"],type:"Beast",source:t},{name:"Giant Elk",challengeRating:2,terrains:["Land"],type:"Beast",source:t},{name:"Hunter Shark",challengeRating:2,terrains:["Water"],type:"Beast",source:t},{name:"Plesiosaurus",challengeRating:2,terrains:["Land","Water"],type:"Beast",source:t},{name:"Polar Bear",challengeRating:2,terrains:["Land","Water"],type:"Beast",source:t},{name:"Rhinoceros",challengeRating:2,terrains:["Land"],type:"Beast",source:t},{name:"Saber-toothed Tiger",challengeRating:2,terrains:["Land"],type:"Beast",source:t},{name:"Swarm of Poisonous Snakes",challengeRating:2,terrains:["Land","Water"],type:"Beast",source:t},{name:"Ankylosaurus",challengeRating:3,terrains:["Land"],type:"Beast",source:t},{name:"Giant Scorpion",challengeRating:3,terrains:["Land"],type:"Beast",source:t},{name:"Giant Snapping Turtle",challengeRating:3,terrains:["Land","Water"],type:"Beast",source:c},{name:"Killer Whale",challengeRating:3,terrains:["Water"],type:"Beast",source:t},{name:"Elephant",challengeRating:3,terrains:["Land"],type:"Beast",source:t},{name:"Stegosaurus",challengeRating:4,terrains:["Land"],type:"Beast",source:g},{name:"Brontosaurus",challengeRating:5,terrains:["Land"],type:"Beast",source:g},{name:"Giant Crocodile",challengeRating:5,terrains:["Land","Water"],type:"Beast",source:t},{name:"Giant Shark",challengeRating:5,terrains:["Water"],type:"Beast",source:t},{name:"Hulking Crab",challengeRating:5,terrains:["Land","Water"],type:"Beast",source:i},{name:"Swarm of Cranium Rats",challengeRating:5,terrains:["Land"],type:"Beast",source:g},{name:"Triceratops",challengeRating:5,terrains:["Land"],type:"Beast",source:t},{name:"Mammoth",challengeRating:6,terrains:["Land"],type:"Beast",source:t},{name:"Giant Ape",challengeRating:7,terrains:["Land"],type:"Beast",source:t},{name:"Tyrannosaurus Rex",challengeRating:8,terrains:["Land"],type:"Beast",source:t}],fey:[{name:"Boggle",challengeRating:.125,terrains:["Land"],type:"Fey",source:g},{name:"Valenar Hawk",challengeRating:.125,terrains:["Land","Air"],type:"Fey",source:l},{name:"Blink Dog",challengeRating:.25,terrains:["Land"],type:"Fey",source:t},{name:"Pixie",challengeRating:.25,terrains:["Land","Air"],type:"Fey",source:a},{name:"Sprite",challengeRating:.25,terrains:["Land","Air"],type:"Fey",source:t},{name:"Darkling",challengeRating:.5,terrains:["Land"],type:"Fey",source:g},{name:"Satyr",challengeRating:.5,terrains:["Land"],type:"Fey",source:t},{name:"Valenar Hound",challengeRating:.5,terrains:["Land"],type:"Fey",source:l},{name:"Valenar Steed",challengeRating:.5,terrains:["Land"],type:"Fey",source:l},{name:"Dryad",challengeRating:1,terrains:["Land"],type:"Fey",source:t},{name:"Quickling",challengeRating:1,terrains:["Land"],type:"Fey",source:g},{name:"Darkling Elder",challengeRating:2,terrains:["Land"],type:"Fey",source:g},{name:"Meanlock",challengeRating:2,terrains:["Land"],type:"Fey",source:g},{name:"Sea Hag",challengeRating:2,terrains:["Land","Water"],type:"Fey",source:t},{name:"Green Hag",challengeRating:3,terrains:["Land"],type:"Fey",source:t},{name:"Redcap",challengeRating:3,terrains:["Land"],type:"Fey",source:g},{name:"Siren",challengeRating:3,terrains:["Land","Water"],type:"Fey",source:u},{name:"Yeth Hound",challengeRating:4,terrains:["Land","Air"],type:"Fey",source:g},{name:"Annis Hag",challengeRating:6,terrains:["Land"],type:"Fey",source:g},{name:"Dusk Hag",challengeRating:6,terrains:["Land"],type:"Fey",source:l},{name:"Bheur Hag",challengeRating:7,terrains:["Land"],type:"Fey",source:g},{name:"Korred",challengeRating:7,terrains:["Land"],type:"Fey",source:g},{name:"Autumn Eladrin",challengeRating:10,terrains:["Land"],type:"Fey",source:s},{name:"Spring Eladrin",challengeRating:10,terrains:["Land"],type:"Fey",source:s},{name:"Summer Eladrin",challengeRating:10,terrains:["Land"],type:"Fey",source:s},{name:"Winter Eladrin",challengeRating:10,terrains:["Land"],type:"Fey",source:s}],elementals:[{name:"Chwinga",challengeRating:0,terrains:["Land","Air","Water"],type:"Elemental",source:c},{name:"Geonid",challengeRating:.25,terrains:["Land"],type:"Elemental",source:o},{name:"Mud Mephit",challengeRating:.25,terrains:["Land","Water","Air"],type:"Elemental",source:a},{name:"Smoke Mephit",challengeRating:.25,terrains:["Land","Air"],type:"Elemental",source:a},{name:"Steam Mephit",challengeRating:.25,terrains:["Land","Air"],type:"Elemental",source:t},{name:"Dust Mephit",challengeRating:.5,terrains:["Land","Air"],type:"Elemental",source:t},{name:"Ice Mephit",challengeRating:.5,terrains:["Land","Air"],type:"Elemental",source:t},{name:"Magma Mephit",challengeRating:.5,terrains:["Land","Air"],type:"Elemental",source:t},{name:"Magmin",challengeRating:.5,terrains:["Land"],type:"Elemental",source:t},{name:"Fire Snake",challengeRating:1,terrains:["Land"],type:"Elemental",source:a},{name:"Azer",challengeRating:2,terrains:["Land"],type:"Elemental",source:t},{name:"Four-Armed Gargoyle",challengeRating:2,terrains:["Land","Air"],type:"Elemental",source:r},{name:"Gargoyle",challengeRating:2,terrains:["Land","Air"],type:"Elemental",source:t},{name:"Flail Snail",challengeRating:3,terrains:["Land"],type:"Elemental",source:g},{name:"Water Weird",challengeRating:3,terrains:["Water"],type:"Elemental",source:a},{name:"Air Elemental",challengeRating:5,terrains:["Air"],type:"Elemental",source:t},{name:"Earth Elemental",challengeRating:5,terrains:["Land"],type:"Elemental",source:t},{name:"Fire Elemental",challengeRating:5,terrains:["Land"],type:"Elemental",source:t},{name:"Water Elemental",challengeRating:5,terrains:["Land","Water"],type:"Elemental",source:t},{name:"Salamander",challengeRating:5,terrains:["Land"],type:"Elemental",source:t},{name:"Xorn",challengeRating:5,terrains:["Land"],type:"Elemental",source:t},{name:"Galeb Duhr",challengeRating:6,terrains:["Land"],type:"Elemental",source:a},{name:"Invisible Stalker",challengeRating:6,terrains:["Air","Land"],type:"Elemental",source:t},{name:"Frost Salamander",challengeRating:9,terrains:["Land"],type:"Elemental",source:s},{name:"Giant Four-Armed Gargoyle",challengeRating:10,terrains:["Air","Land"],type:"Elemental",source:c},{name:"Dao",challengeRating:11,terrains:["Air","Land"],type:"Elemental",source:a},{name:"Djinni",challengeRating:11,terrains:["Air","Land"],type:"Elemental",source:t},{name:"Efreeti",challengeRating:11,terrains:["Air","Land"],type:"Elemental",source:t},{name:"Marid",challengeRating:11,terrains:["Air","Land","Water"],type:"Elemental",source:a},{name:"Phoenix",challengeRating:16,terrains:["Air","Land"],type:"Elemental",source:s},{name:"Leviathan",challengeRating:20,terrains:["Land","Water"],type:"Elemental",source:s},{name:"Zaratan",challengeRating:22,terrains:["Land","Water"],type:"Elemental",source:s},{name:"Elder Tempest",challengeRating:23,terrains:["Air"],type:"Elemental",source:s}]}})),re=ne((function(e,n){Object.defineProperty(n,"__esModule",{value:!0}),n.range=n.randomInt=void 0,n.randomInt=function(e,n){var t=Math.ceil(e),a=Math.floor(n);return Math.floor(Math.random()*(a-t))+t},n.range=function(e,n){if(n<e||e<0||n<0)throw Error("The start and end values of a range must be positive, with end >= start");return Array.from(new Array(n-e),(function(n,t){return t+e}))}})),le=ne((function(e,n){var t=ee&&ee.__spreadArrays||function(){for(var e=0,n=0,t=arguments.length;n<t;n++)e+=arguments[n].length;var a=Array(e),r=0;for(n=0;n<t;n++)for(var l=arguments[n],s=0,i=l.length;s<i;s++,r++)a[r]=l[s];return a};function a(e){return null==e}Object.defineProperty(n,"__esModule",{value:!0}),n.randomCreatures=void 0,n.randomCreatures=function(e){var n=e.challengeRatingMin,r=e.challengeRatingMax,l=e.types,s=e.count,i=e.terrains,o=e.sources,c=Object.values(ae.creatures).reduce((function(e,n){return t(e,n)}),[]);if(!(c=function(e,n){if(!e)return n;for(var a=[],r=function(e){a=t(a,n.filter((function(n){return n.terrains.includes(e)})))},l=0,s=e;l<s.length;l++){r(s[l])}return a}(i,c=function(e,n){var t=n;e&&(t=t.filter((function(n){return e.includes(n.type)})));return t}(l,c=function(e,n,t){var r=t;if(!a(e)){if(void 0===e)throw new Error("challengeRatingMin is undefined");r=r.filter((function(n){return n.challengeRating>=e}))}if(!a(n)){if(void 0===n)throw new Error("challengeRatingMax is undefined");r=r.filter((function(e){return e.challengeRating<=n}))}return r}(n,r,c=function(e,n){var t=n;e&&(t=t.filter((function(n){return null==e?void 0:e.includes(n.source)})));return t}(o,c))))).length)return[];if(null==s)return[c[re.randomInt(0,c.length)]];for(var u=[],g=0,d=re.range(0,s);g<d.length;g++){d[g];u.push(c[re.randomInt(0,c.length)])}return u}})),se=ne((function(e,n){Object.defineProperty(n,"__esModule",{value:!0}),n.conjureMinorElementals=n.conjureWoodlandBeings=n.conjureAnimals=void 0,n.conjureAnimals=function(e){var n=e.challengeRating,t=e.terrains,a=e.sources;if(n>2||n<0)throw new Error("The challengeRating passed to conjureAnimals must be in the range [0, 2]");var r=1;return r=n<=.25?8:n<=.5?4:n<=1?2:1,le.randomCreatures({challengeRatingMin:n,challengeRatingMax:n,terrains:t,types:["Beast"],count:r,sources:a})},n.conjureWoodlandBeings=function(e){var n=e.challengeRating,t=e.terrains,a=e.sources;if(n>2||n<0)throw new Error("The challengeRating passed to conjureWoodlandBeings must be in the range [0, 2]");var r=1;return r=n<=.25?8:n<=.5?4:n<=1?2:1,le.randomCreatures({challengeRatingMin:n,challengeRatingMax:n,terrains:t,types:["Fey"],count:r,sources:a})},n.conjureMinorElementals=function(e){var n=e.challengeRating,t=e.terrains,a=e.sources;if(n>2||n<0)throw new Error("The challengeRating passed to conjureMinorElementals must be in the range [0, 2]");var r=1;return r=n<=.25?8:n<=.5?4:n<=1?2:1,le.randomCreatures({challengeRatingMin:n,challengeRatingMax:n,terrains:t,types:["Elemental"],count:r,sources:a})}})),ie=ne((function(e,n){Object.defineProperty(n,"__esModule",{value:!0}),n.sources=n.conjureMinorElementals=n.conjureWoodlandBeings=n.conjureAnimals=void 0,Object.defineProperty(n,"conjureAnimals",{enumerable:!0,get:function(){return se.conjureAnimals}}),Object.defineProperty(n,"conjureWoodlandBeings",{enumerable:!0,get:function(){return se.conjureWoodlandBeings}}),Object.defineProperty(n,"conjureMinorElementals",{enumerable:!0,get:function(){return se.conjureMinorElementals}}),Object.defineProperty(n,"sources",{enumerable:!0,get:function(){return te.sources}})}));const oe=Z([ie.sources.BR,ie.sources.MM,ie.sources.PHB,ie.sources.DMG]),ce=U(oe,e=>e),ue={spellName:"Conjure Animals",challengeRating:1,terrains:["Land"]};const ge=function(){const{subscribe:e,set:n,update:t}=Z(ue);return{subscribe:e,setSpellName:e=>t(n=>({...n,spellName:e})),setChallengeRating:e=>t(n=>({...n,challengeRating:e})),setTerrains:e=>t(n=>({...n,terrains:e})),reset:()=>n(ue)}}(),de=U(ge,e=>e);function pe(n){let t,a,r,l,s,i,o,c,u,h;return{c(){t=m("button"),a=f("svg"),r=f("line"),l=f("line"),o=f("line"),$(r,"id","top"),$(r,"x1","0"),$(r,"y1","2"),$(r,"x2","32"),$(r,"y2","2"),$(r,"class","svelte-1gn2oj1"),$(l,"id","middle"),$(l,"x1",s=n[1]?"0":"8"),$(l,"y1","12"),$(l,"x2",i=n[1]?"24":"32"),$(l,"y2","12"),$(l,"class","svelte-1gn2oj1"),$(o,"id","bottom"),$(o,"x1","0"),$(o,"y1","22"),$(o,"x2","32"),$(o,"y2","22"),$(o,"class","svelte-1gn2oj1"),$(a,"width","32"),$(a,"height","24"),$(a,"class","svelte-1gn2oj1"),$(t,"class",c=n[2]+" hover:"+n[3]+" cursor-pointer my-4 border-none focus:outline-none svelte-1gn2oj1"),E(t,"open",n[0])},m(e,s){d(e,t,s),g(t,a),g(a,r),g(a,l),g(a,o),u||(h=L(t,"click",n[4]),u=!0)},p(e,[n]){2&n&&s!==(s=e[1]?"0":"8")&&$(l,"x1",s),2&n&&i!==(i=e[1]?"24":"32")&&$(l,"x2",i),12&n&&c!==(c=e[2]+" hover:"+e[3]+" cursor-pointer my-4 border-none focus:outline-none svelte-1gn2oj1")&&$(t,"class",c),13&n&&E(t,"open",e[0])},i:e,o:e,d(e){e&&p(t),u=!1,h()}}}function he(e,n,t){let{open:a=!1}=n,{left:r=!0}=n;let l,s;return e.$$set=e=>{"open"in e&&t(0,a=e.open),"left"in e&&t(1,r=e.left)},e.$$.update=()=>{1&e.$$.dirty&&t(2,l=a?"text-red-500":"text-gray-500"),1&e.$$.dirty&&t(3,s=a?"text-red-700":"text-gray-700")},[a,r,l,s,()=>t(0,a=!a)]}class me extends J{constructor(e){super(),X(this,e,he,pe,l,{open:0,left:1})}}function fe(e){let n,t,a,r,l,s,i,o,c,u,h,f,y,L;function B(n){e[2].call(null,n)}let b={};function v(n){e[3].call(null,n)}void 0!==e[0]&&(b.open=e[0]),r=new me({props:b}),w.push(()=>V(r,"open",B));let x={left:!1};return void 0!==e[1]&&(x.open=e[1]),h=new me({props:x}),w.push(()=>V(h,"open",v)),{c(){n=m("header"),t=m("nav"),a=m("div"),K(r.$$.fragment),i=R(),o=m("h1"),o.textContent="Conjure5e",c=R(),u=m("div"),K(h.$$.fragment),$(a,"class",s=e[1]?"invisible":""),$(a,"data-testid","spellOptionsMenuDiv"),$(o,"class","text-blue-700 text-3xl"),$(u,"class",y=e[0]?"invisible":""),$(u,"data-testid","sourceOptionsMenuDiv"),$(t,"class","flex justify-between w-full"),$(n,"class","flex justify-between bg-gray-200 p-2 items-center text-gray-600\n    border-b-2")},m(e,l){d(e,n,l),g(n,t),g(t,a),q(r,a,null),g(t,i),g(t,o),g(t,c),g(t,u),q(h,u,null),L=!0},p(e,[n]){const t={};!l&&1&n&&(l=!0,t.open=e[0],O(()=>l=!1)),r.$set(t),(!L||2&n&&s!==(s=e[1]?"invisible":""))&&$(a,"class",s);const i={};!f&&2&n&&(f=!0,i.open=e[1],O(()=>f=!1)),h.$set(i),(!L||1&n&&y!==(y=e[0]?"invisible":""))&&$(u,"class",y)},i(e){L||(I(r.$$.fragment,e),I(h.$$.fragment,e),L=!0)},o(e){N(r.$$.fragment,e),N(h.$$.fragment,e),L=!1},d(e){e&&p(n),z(r),z(h)}}}function ye(e,n,t){let{spellOptionsMenu:a=!1}=n,{sourceOptionsMenu:r=!1}=n;return e.$$set=e=>{"spellOptionsMenu"in e&&t(0,a=e.spellOptionsMenu),"sourceOptionsMenu"in e&&t(1,r=e.sourceOptionsMenu)},[a,r,function(e){a=e,t(0,a)},function(e){r=e,t(1,r)}]}class Re extends J{constructor(e){super(),X(this,e,ye,fe,l,{spellOptionsMenu:0,sourceOptionsMenu:1})}}function Le(e){let n,t;return{c(){n=m("h2"),t=y(e[1])},m(e,a){d(e,n,a),g(n,t)},p(e,n){2&n&&b(t,e[1])},d(e){e&&p(n)}}}function $e(e){let n,t,a,r=e[1]&&Le(e);const l=e[5].default,s=o(l,e,e[4],null);return{c(){n=m("aside"),r&&r.c(),t=R(),s&&s.c(),$(n,"class","fixed w-full h-full bg-gray-200 border-r-2 shadow-lg svelte-zcncv0"),E(n,"open",e[0]),E(n,"right",e[3]),E(n,"left",e[2])},m(e,l){d(e,n,l),r&&r.m(n,null),g(n,t),s&&s.m(n,null),a=!0},p(e,[a]){e[1]?r?r.p(e,a):(r=Le(e),r.c(),r.m(n,t)):r&&(r.d(1),r=null),s&&s.p&&16&a&&u(s,l,e,e[4],a,null,null),1&a&&E(n,"open",e[0]),8&a&&E(n,"right",e[3]),4&a&&E(n,"left",e[2])},i(e){a||(I(s,e),a=!0)},o(e){N(s,e),a=!1},d(e){e&&p(n),r&&r.d(),s&&s.d(e)}}}function Be(e,n,t){let a,{$$slots:r={},$$scope:l}=n,{open:s=!1}=n,{title:i=""}=n,{left:o=!0}=n;return e.$$set=e=>{"open"in e&&t(0,s=e.open),"title"in e&&t(1,i=e.title),"left"in e&&t(2,o=e.left),"$$scope"in e&&t(4,l=e.$$scope)},e.$$.update=()=>{4&e.$$.dirty&&t(3,a=!o)},[s,i,o,a,l,r]}class be extends J{constructor(e){super(),X(this,e,Be,$e,l,{open:0,title:1,left:2})}}function ve(e,n,t){const a=e.slice();return a[9]=n[t],a}function xe(e,n,t){const a=e.slice();return a[12]=n[t],a}function Ee(e,n,t){const a=e.slice();return a[15]=n[t],a}function Ae(n){let t,a,r,l=n[15]+"";return{c(){t=m("option"),a=y(l),t.__value=r=n[15],t.value=t.__value},m(e,n){d(e,t,n),g(t,a)},p:e,d(e){e&&p(t)}}}function Me(n){let t,a,r,l=n[12]+"";return{c(){t=m("option"),a=y(l),t.__value=r=n[12],t.value=t.__value},m(e,n){d(e,t,n),g(t,a)},p:e,d(e){e&&p(t)}}}function Se(e){let n,t,a,r,l,s,i,o,c=e[9]+"";return{c(){n=m("label"),t=m("input"),r=R(),l=y(c),s=R(),$(t,"type","checkbox"),t.__value=a=e[9],t.value=t.__value,e[8][0].push(t),$(n,"class","text-lg")},m(a,c){d(a,n,c),g(n,t),t.checked=~e[1].terrains.indexOf(t.__value),g(n,r),g(n,l),g(n,s),i||(o=L(t,"change",e[7]),i=!0)},p(e,n){6&n&&(t.checked=~e[1].terrains.indexOf(t.__value))},d(a){a&&p(n),e[8][0].splice(e[8][0].indexOf(t),1),i=!1,o()}}}function we(n){let t,r,l,s,i,o,c,u,f,B,x,E,A,M,S,w,W=n[2],_=[];for(let e=0;e<W.length;e+=1)_[e]=Ae(Ee(n,W,e));let k=n[3],G=[];for(let e=0;e<k.length;e+=1)G[e]=Me(xe(n,k,e));let O=n[4],C=[];for(let e=0;e<O.length;e+=1)C[e]=Se(ve(n,O,e));return{c(){t=m("h2"),r=y(n[0]),l=R(),s=m("form"),i=m("label"),i.textContent="Spell",o=R(),c=m("select");for(let e=0;e<_.length;e+=1)_[e].c();u=R(),f=m("label"),f.textContent="Challenge Rating of Creatures",B=R(),x=m("select");for(let e=0;e<G.length;e+=1)G[e].c();E=R(),A=m("h2"),A.textContent="Terrains",M=R();for(let e=0;e<C.length;e+=1)C[e].c();$(t,"class","text-blue-700 text-2xl"),$(i,"for","spell-select"),$(i,"class","text-gray-700 text-xl m-1"),$(c,"id","spell-select"),$(c,"name","spell"),void 0===n[1].spellName&&j(()=>n[5].call(c)),$(f,"for","challenge-rating-select"),$(f,"class","text-gray-700 text-xl m-1"),$(x,"id","challenge-rating-select"),$(x,"name","challenge-rating"),void 0===n[1].challengeRating&&j(()=>n[6].call(x)),$(A,"class","text-gray-700 text-xl m-1"),$(s,"name","spell-parameters")},m(e,a){d(e,t,a),g(t,r),d(e,l,a),d(e,s,a),g(s,i),g(s,o),g(s,c);for(let e=0;e<_.length;e+=1)_[e].m(c,null);v(c,n[1].spellName),g(s,u),g(s,f),g(s,B),g(s,x);for(let e=0;e<G.length;e+=1)G[e].m(x,null);v(x,n[1].challengeRating),g(s,E),g(s,A),g(s,M);for(let e=0;e<C.length;e+=1)C[e].m(s,null);S||(w=[L(c,"change",n[5]),L(x,"change",n[6])],S=!0)},p(e,[n]){if(1&n&&b(r,e[0]),4&n){let t;for(W=e[2],t=0;t<W.length;t+=1){const a=Ee(e,W,t);_[t]?_[t].p(a,n):(_[t]=Ae(a),_[t].c(),_[t].m(c,null))}for(;t<_.length;t+=1)_[t].d(1);_.length=W.length}if(6&n&&v(c,e[1].spellName),8&n){let t;for(k=e[3],t=0;t<k.length;t+=1){const a=xe(e,k,t);G[t]?G[t].p(a,n):(G[t]=Me(a),G[t].c(),G[t].m(x,null))}for(;t<G.length;t+=1)G[t].d(1);G.length=k.length}if(6&n&&v(x,e[1].challengeRating),18&n){let t;for(O=e[4],t=0;t<O.length;t+=1){const a=ve(e,O,t);C[t]?C[t].p(a,n):(C[t]=Se(a),C[t].c(),C[t].m(s,null))}for(;t<C.length;t+=1)C[t].d(1);C.length=O.length}},i:e,o:e,d(e){e&&p(t),e&&p(l),e&&p(s),h(_,e),h(G,e),h(C,e),S=!1,a(w)}}}function We(e,n,t){let a;i(e,ge,e=>t(1,a=e));let{heading:r="Spell Parameters"}=n;const l=["Conjure Animals","Conjure Woodland Beings","Conjure Minor Elementals"],s=[[]];return e.$$set=e=>{"heading"in e&&t(0,r=e.heading)},[r,a,l,[0,.125,.25,.5,1,2],["Land","Water","Air"],function(){a.spellName=x(this),ge.set(a),t(2,l)},function(){a.challengeRating=x(this),ge.set(a),t(2,l)},function(){a.terrains=B(s[0],this.__value,this.checked),ge.set(a),t(2,l)},s]}class _e extends J{constructor(e){super(),X(this,e,We,we,l,{heading:0})}}function ke(e,n,t){const a=e.slice();return a[5]=n[t],a}function Ge(e){let n,t,a,r,l,s,i,o,c=e[5]+"";return{c(){n=m("label"),t=m("input"),r=R(),l=y(c),s=R(),$(t,"type","checkbox"),t.__value=a=e[5],t.value=t.__value,e[4][0].push(t),$(n,"class","text-lg")},m(a,c){d(a,n,c),g(n,t),t.checked=~e[1].indexOf(t.__value),g(n,r),g(n,l),g(n,s),i||(o=L(t,"change",e[3]),i=!0)},p(e,n){2&n&&(t.checked=~e[1].indexOf(t.__value))},d(a){a&&p(n),e[4][0].splice(e[4][0].indexOf(t),1),i=!1,o()}}}function je(n){let t,a,r,l,s=n[2],i=[];for(let e=0;e<s.length;e+=1)i[e]=Ge(ke(n,s,e));return{c(){t=m("h2"),a=y(n[0]),r=R(),l=m("form");for(let e=0;e<i.length;e+=1)i[e].c();$(t,"class","text-blue-700 text-2xl"),$(l,"name","sourcebooks"),$(l,"id","select-sourcebooks")},m(e,n){d(e,t,n),g(t,a),d(e,r,n),d(e,l,n);for(let e=0;e<i.length;e+=1)i[e].m(l,null)},p(e,[n]){if(1&n&&b(a,e[0]),6&n){let t;for(s=e[2],t=0;t<s.length;t+=1){const a=ke(e,s,t);i[t]?i[t].p(a,n):(i[t]=Ge(a),i[t].c(),i[t].m(l,null))}for(;t<i.length;t+=1)i[t].d(1);i.length=s.length}},i:e,o:e,d(e){e&&p(t),e&&p(r),e&&p(l),h(i,e)}}}function Oe(e,n,t){let a;i(e,oe,e=>t(1,a=e));let{heading:r="Sourcebooks"}=n,l=Object.values(ie.sources).sort();const s=[[]];return e.$$set=e=>{"heading"in e&&t(0,r=e.heading)},[r,a,l,function(){a=B(s[0],this.__value,this.checked),oe.set(a)},s]}class Ce extends J{constructor(e){super(),X(this,e,Oe,je,l,{heading:0})}}function Fe(e){let n,t;const a=e[1].default,r=o(a,e,e[0],null);return{c(){n=m("div"),r&&r.c(),$(n,"class","box svelte-15i5ke2")},m(e,a){d(e,n,a),r&&r.m(n,null),t=!0},p(e,[n]){r&&r.p&&1&n&&u(r,a,e,e[0],n,null,null)},i(e){t||(I(r,e),t=!0)},o(e){N(r,e),t=!1},d(e){e&&p(n),r&&r.d(e)}}}function Te(e,n,t){let{$$slots:a={},$$scope:r}=n;return e.$$set=e=>{"$$scope"in e&&t(0,r=e.$$scope)},[r,a]}class Pe extends J{constructor(e){super(),X(this,e,Te,Fe,l,{})}}function He(e,n,t){const a=e.slice();return a[14]=n[t],a}function De(e,n,t){const a=e.slice();return a[11]=n[t],a}function Ie(e){let n,t;return n=new _e({}),{c(){K(n.$$.fragment)},m(e,a){q(n,e,a),t=!0},i(e){t||(I(n.$$.fragment,e),t=!0)},o(e){N(n.$$.fragment,e),t=!1},d(e){z(n,e)}}}function Ne(e){let n,t;return n=new Ce({}),{c(){K(n.$$.fragment)},m(e,a){q(n,e,a),t=!0},i(e){t||(I(n.$$.fragment,e),t=!0)},o(e){N(n.$$.fragment,e),t=!1},d(e){z(n,e)}}}function Ve(e){let n,t,a=e[14]+"";return{c(){n=m("li"),t=y(a)},m(e,a){d(e,n,a),g(n,t)},p(e,n){4&n&&a!==(a=e[14]+"")&&b(t,a)},d(e){e&&p(n)}}}function Ke(e){let n,t,a=e[11],r=[];for(let n=0;n<a.length;n+=1)r[n]=Ve(He(e,a,n));return{c(){n=m("ul");for(let e=0;e<r.length;e+=1)r[e].c();t=R()},m(e,a){d(e,n,a);for(let e=0;e<r.length;e+=1)r[e].m(n,null);d(e,t,a)},p(e,t){if(4&t){let l;for(a=e[11],l=0;l<a.length;l+=1){const s=He(e,a,l);r[l]?r[l].p(s,t):(r[l]=Ve(s),r[l].c(),r[l].m(n,null))}for(;l<r.length;l+=1)r[l].d(1);r.length=a.length}},d(e){e&&p(n),h(r,e),e&&p(t)}}}function qe(e){let n,t;return n=new Pe({props:{$$slots:{default:[Ke]},$$scope:{ctx:e}}}),{c(){K(n.$$.fragment)},m(e,a){q(n,e,a),t=!0},p(e,t){const a={};131076&t&&(a.$$scope={dirty:t,ctx:e}),n.$set(a)},i(e){t||(I(n.$$.fragment,e),t=!0)},o(e){N(n.$$.fragment,e),t=!1},d(e){z(n,e)}}}function ze(e){let n,t,r,l,s,i,o,c,u,f,y,B,b,v,x,E,A,M,S;function W(n){e[4].call(null,n)}function _(n){e[5].call(null,n)}let k={};function G(n){e[6].call(null,n)}void 0!==e[0]&&(k.spellOptionsMenu=e[0]),void 0!==e[1]&&(k.sourceOptionsMenu=e[1]),r=new Re({props:k}),w.push(()=>V(r,"spellOptionsMenu",W)),w.push(()=>V(r,"sourceOptionsMenu",_));let j={$$slots:{default:[Ie]},$$scope:{ctx:e}};function C(n){e[7].call(null,n)}void 0!==e[0]&&(j.open=e[0]),o=new be({props:j}),w.push(()=>V(o,"open",G));let F={left:!1,$$slots:{default:[Ne]},$$scope:{ctx:e}};void 0!==e[1]&&(F.open=e[1]),f=new be({props:F}),w.push(()=>V(f,"open",C));let T=e[2],P=[];for(let n=0;n<T.length;n+=1)P[n]=qe(De(e,T,n));const H=e=>N(P[e],1,1,()=>{P[e]=null});return{c(){n=m("link"),t=R(),K(r.$$.fragment),i=R(),K(o.$$.fragment),u=R(),K(f.$$.fragment),B=R(),b=m("div"),v=m("button"),v.textContent="Cast Spell",x=R(),E=m("div");for(let e=0;e<P.length;e+=1)P[e].c();$(n,"href","https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"),$(n,"rel","stylesheet"),$(v,"name","cast-spell"),$(v,"id","cast-spell-button"),$(v,"class","bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4\n      border border-gray-400 rounded shadow"),$(b,"class","flex justify-center m-4"),$(E,"class","flex flex-col justify-center items-center text-center")},m(a,l){g(document.head,n),d(a,t,l),q(r,a,l),d(a,i,l),q(o,a,l),d(a,u,l),q(f,a,l),d(a,B,l),d(a,b,l),g(b,v),d(a,x,l),d(a,E,l);for(let e=0;e<P.length;e+=1)P[e].m(E,null);A=!0,M||(S=L(v,"click",e[8]),M=!0)},p(e,[n]){const t={};!l&&1&n&&(l=!0,t.spellOptionsMenu=e[0],O(()=>l=!1)),!s&&2&n&&(s=!0,t.sourceOptionsMenu=e[1],O(()=>s=!1)),r.$set(t);const i={};131072&n&&(i.$$scope={dirty:n,ctx:e}),!c&&1&n&&(c=!0,i.open=e[0],O(()=>c=!1)),o.$set(i);const u={};if(131072&n&&(u.$$scope={dirty:n,ctx:e}),!y&&2&n&&(y=!0,u.open=e[1],O(()=>y=!1)),f.$set(u),4&n){let t;for(T=e[2],t=0;t<T.length;t+=1){const a=De(e,T,t);P[t]?(P[t].p(a,n),I(P[t],1)):(P[t]=qe(a),P[t].c(),I(P[t],1),P[t].m(E,null))}for(D={r:0,c:[],p:D},t=T.length;t<P.length;t+=1)H(t);D.r||a(D.c),D=D.p}},i(e){if(!A){I(r.$$.fragment,e),I(o.$$.fragment,e),I(f.$$.fragment,e);for(let e=0;e<T.length;e+=1)I(P[e]);A=!0}},o(e){N(r.$$.fragment,e),N(o.$$.fragment,e),N(f.$$.fragment,e),P=P.filter(Boolean);for(let e=0;e<P.length;e+=1)N(P[e]);A=!1},d(e){p(n),e&&p(t),z(r,e),e&&p(i),z(o,e),e&&p(u),z(f,e),e&&p(B),e&&p(b),e&&p(x),e&&p(E),h(P,e),M=!1,S()}}}function Qe(e,n,t){let a,r;i(e,de,e=>t(9,a=e)),i(e,ce,e=>t(10,r=e));let{leftSidebarIsOpen:l=!1}=n,{rightSidebarIsOpen:s=!1}=n,o=[];function c(){let e;e="Conjure Animals"===a.spellName?ie.conjureAnimals:"Conjure Woodland Beings"===a.spellName?ie.conjureWoodlandBeings:ie.conjureMinorElementals;const{terrains:n,challengeRating:l}=a,s=e({terrains:n,challengeRating:l,sources:r}).map(e=>e.name);t(2,o=[s,...o])}return e.$$set=e=>{"leftSidebarIsOpen"in e&&t(0,l=e.leftSidebarIsOpen),"rightSidebarIsOpen"in e&&t(1,s=e.rightSidebarIsOpen)},[l,s,o,c,function(e){l=e,t(0,l)},function(e){s=e,t(1,s)},function(e){l=e,t(0,l)},function(e){s=e,t(1,s)},()=>c()]}return new class extends J{constructor(e){super(),X(this,e,Qe,ze,l,{leftSidebarIsOpen:0,rightSidebarIsOpen:1})}}({target:document.body,props:{}})}();
+
+(function(l, r) { if (l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (window.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(window.document);
+var app = (function () {
+    'use strict';
+
+    function noop() { }
+    function assign(tar, src) {
+        // @ts-ignore
+        for (const k in src)
+            tar[k] = src[k];
+        return tar;
+    }
+    function add_location(element, file, line, column, char) {
+        element.__svelte_meta = {
+            loc: { file, line, column, char }
+        };
+    }
+    function run(fn) {
+        return fn();
+    }
+    function blank_object() {
+        return Object.create(null);
+    }
+    function run_all(fns) {
+        fns.forEach(run);
+    }
+    function is_function(thing) {
+        return typeof thing === 'function';
+    }
+    function safe_not_equal(a, b) {
+        return a != a ? b == b : a !== b || ((a && typeof a === 'object') || typeof a === 'function');
+    }
+    function is_empty(obj) {
+        return Object.keys(obj).length === 0;
+    }
+    function validate_store(store, name) {
+        if (store != null && typeof store.subscribe !== 'function') {
+            throw new Error(`'${name}' is not a store with a 'subscribe' method`);
+        }
+    }
+    function subscribe(store, ...callbacks) {
+        if (store == null) {
+            return noop;
+        }
+        const unsub = store.subscribe(...callbacks);
+        return unsub.unsubscribe ? () => unsub.unsubscribe() : unsub;
+    }
+    function component_subscribe(component, store, callback) {
+        component.$$.on_destroy.push(subscribe(store, callback));
+    }
+    function create_slot(definition, ctx, $$scope, fn) {
+        if (definition) {
+            const slot_ctx = get_slot_context(definition, ctx, $$scope, fn);
+            return definition[0](slot_ctx);
+        }
+    }
+    function get_slot_context(definition, ctx, $$scope, fn) {
+        return definition[1] && fn
+            ? assign($$scope.ctx.slice(), definition[1](fn(ctx)))
+            : $$scope.ctx;
+    }
+    function get_slot_changes(definition, $$scope, dirty, fn) {
+        if (definition[2] && fn) {
+            const lets = definition[2](fn(dirty));
+            if ($$scope.dirty === undefined) {
+                return lets;
+            }
+            if (typeof lets === 'object') {
+                const merged = [];
+                const len = Math.max($$scope.dirty.length, lets.length);
+                for (let i = 0; i < len; i += 1) {
+                    merged[i] = $$scope.dirty[i] | lets[i];
+                }
+                return merged;
+            }
+            return $$scope.dirty | lets;
+        }
+        return $$scope.dirty;
+    }
+    function update_slot(slot, slot_definition, ctx, $$scope, dirty, get_slot_changes_fn, get_slot_context_fn) {
+        const slot_changes = get_slot_changes(slot_definition, $$scope, dirty, get_slot_changes_fn);
+        if (slot_changes) {
+            const slot_context = get_slot_context(slot_definition, ctx, $$scope, get_slot_context_fn);
+            slot.p(slot_context, slot_changes);
+        }
+    }
+
+    function append(target, node) {
+        target.appendChild(node);
+    }
+    function insert(target, node, anchor) {
+        target.insertBefore(node, anchor || null);
+    }
+    function detach(node) {
+        node.parentNode.removeChild(node);
+    }
+    function destroy_each(iterations, detaching) {
+        for (let i = 0; i < iterations.length; i += 1) {
+            if (iterations[i])
+                iterations[i].d(detaching);
+        }
+    }
+    function element(name) {
+        return document.createElement(name);
+    }
+    function svg_element(name) {
+        return document.createElementNS('http://www.w3.org/2000/svg', name);
+    }
+    function text(data) {
+        return document.createTextNode(data);
+    }
+    function space() {
+        return text(' ');
+    }
+    function listen(node, event, handler, options) {
+        node.addEventListener(event, handler, options);
+        return () => node.removeEventListener(event, handler, options);
+    }
+    function attr(node, attribute, value) {
+        if (value == null)
+            node.removeAttribute(attribute);
+        else if (node.getAttribute(attribute) !== value)
+            node.setAttribute(attribute, value);
+    }
+    function get_binding_group_value(group, __value, checked) {
+        const value = new Set();
+        for (let i = 0; i < group.length; i += 1) {
+            if (group[i].checked)
+                value.add(group[i].__value);
+        }
+        if (!checked) {
+            value.delete(__value);
+        }
+        return Array.from(value);
+    }
+    function children(element) {
+        return Array.from(element.childNodes);
+    }
+    function select_option(select, value) {
+        for (let i = 0; i < select.options.length; i += 1) {
+            const option = select.options[i];
+            if (option.__value === value) {
+                option.selected = true;
+                return;
+            }
+        }
+    }
+    function select_value(select) {
+        const selected_option = select.querySelector(':checked') || select.options[0];
+        return selected_option && selected_option.__value;
+    }
+    function toggle_class(element, name, toggle) {
+        element.classList[toggle ? 'add' : 'remove'](name);
+    }
+    function custom_event(type, detail) {
+        const e = document.createEvent('CustomEvent');
+        e.initCustomEvent(type, false, false, detail);
+        return e;
+    }
+
+    let current_component;
+    function set_current_component(component) {
+        current_component = component;
+    }
+
+    const dirty_components = [];
+    const binding_callbacks = [];
+    const render_callbacks = [];
+    const flush_callbacks = [];
+    const resolved_promise = Promise.resolve();
+    let update_scheduled = false;
+    function schedule_update() {
+        if (!update_scheduled) {
+            update_scheduled = true;
+            resolved_promise.then(flush);
+        }
+    }
+    function add_render_callback(fn) {
+        render_callbacks.push(fn);
+    }
+    function add_flush_callback(fn) {
+        flush_callbacks.push(fn);
+    }
+    let flushing = false;
+    const seen_callbacks = new Set();
+    function flush() {
+        if (flushing)
+            return;
+        flushing = true;
+        do {
+            // first, call beforeUpdate functions
+            // and update components
+            for (let i = 0; i < dirty_components.length; i += 1) {
+                const component = dirty_components[i];
+                set_current_component(component);
+                update(component.$$);
+            }
+            set_current_component(null);
+            dirty_components.length = 0;
+            while (binding_callbacks.length)
+                binding_callbacks.pop()();
+            // then, once components are updated, call
+            // afterUpdate functions. This may cause
+            // subsequent updates...
+            for (let i = 0; i < render_callbacks.length; i += 1) {
+                const callback = render_callbacks[i];
+                if (!seen_callbacks.has(callback)) {
+                    // ...so guard against infinite loops
+                    seen_callbacks.add(callback);
+                    callback();
+                }
+            }
+            render_callbacks.length = 0;
+        } while (dirty_components.length);
+        while (flush_callbacks.length) {
+            flush_callbacks.pop()();
+        }
+        update_scheduled = false;
+        flushing = false;
+        seen_callbacks.clear();
+    }
+    function update($$) {
+        if ($$.fragment !== null) {
+            $$.update();
+            run_all($$.before_update);
+            const dirty = $$.dirty;
+            $$.dirty = [-1];
+            $$.fragment && $$.fragment.p($$.ctx, dirty);
+            $$.after_update.forEach(add_render_callback);
+        }
+    }
+    const outroing = new Set();
+    let outros;
+    function group_outros() {
+        outros = {
+            r: 0,
+            c: [],
+            p: outros // parent group
+        };
+    }
+    function check_outros() {
+        if (!outros.r) {
+            run_all(outros.c);
+        }
+        outros = outros.p;
+    }
+    function transition_in(block, local) {
+        if (block && block.i) {
+            outroing.delete(block);
+            block.i(local);
+        }
+    }
+    function transition_out(block, local, detach, callback) {
+        if (block && block.o) {
+            if (outroing.has(block))
+                return;
+            outroing.add(block);
+            outros.c.push(() => {
+                outroing.delete(block);
+                if (callback) {
+                    if (detach)
+                        block.d(1);
+                    callback();
+                }
+            });
+            block.o(local);
+        }
+    }
+
+    const globals = (typeof window !== 'undefined'
+        ? window
+        : typeof globalThis !== 'undefined'
+            ? globalThis
+            : global);
+
+    function bind(component, name, callback) {
+        const index = component.$$.props[name];
+        if (index !== undefined) {
+            component.$$.bound[index] = callback;
+            callback(component.$$.ctx[index]);
+        }
+    }
+    function create_component(block) {
+        block && block.c();
+    }
+    function mount_component(component, target, anchor) {
+        const { fragment, on_mount, on_destroy, after_update } = component.$$;
+        fragment && fragment.m(target, anchor);
+        // onMount happens before the initial afterUpdate
+        add_render_callback(() => {
+            const new_on_destroy = on_mount.map(run).filter(is_function);
+            if (on_destroy) {
+                on_destroy.push(...new_on_destroy);
+            }
+            else {
+                // Edge case - component was destroyed immediately,
+                // most likely as a result of a binding initialising
+                run_all(new_on_destroy);
+            }
+            component.$$.on_mount = [];
+        });
+        after_update.forEach(add_render_callback);
+    }
+    function destroy_component(component, detaching) {
+        const $$ = component.$$;
+        if ($$.fragment !== null) {
+            run_all($$.on_destroy);
+            $$.fragment && $$.fragment.d(detaching);
+            // TODO null out other refs, including component.$$ (but need to
+            // preserve final state?)
+            $$.on_destroy = $$.fragment = null;
+            $$.ctx = [];
+        }
+    }
+    function make_dirty(component, i) {
+        if (component.$$.dirty[0] === -1) {
+            dirty_components.push(component);
+            schedule_update();
+            component.$$.dirty.fill(0);
+        }
+        component.$$.dirty[(i / 31) | 0] |= (1 << (i % 31));
+    }
+    function init(component, options, instance, create_fragment, not_equal, props, dirty = [-1]) {
+        const parent_component = current_component;
+        set_current_component(component);
+        const prop_values = options.props || {};
+        const $$ = component.$$ = {
+            fragment: null,
+            ctx: null,
+            // state
+            props,
+            update: noop,
+            not_equal,
+            bound: blank_object(),
+            // lifecycle
+            on_mount: [],
+            on_destroy: [],
+            before_update: [],
+            after_update: [],
+            context: new Map(parent_component ? parent_component.$$.context : []),
+            // everything else
+            callbacks: blank_object(),
+            dirty,
+            skip_bound: false
+        };
+        let ready = false;
+        $$.ctx = instance
+            ? instance(component, prop_values, (i, ret, ...rest) => {
+                const value = rest.length ? rest[0] : ret;
+                if ($$.ctx && not_equal($$.ctx[i], $$.ctx[i] = value)) {
+                    if (!$$.skip_bound && $$.bound[i])
+                        $$.bound[i](value);
+                    if (ready)
+                        make_dirty(component, i);
+                }
+                return ret;
+            })
+            : [];
+        $$.update();
+        ready = true;
+        run_all($$.before_update);
+        // `false` as a special case of no DOM component
+        $$.fragment = create_fragment ? create_fragment($$.ctx) : false;
+        if (options.target) {
+            if (options.hydrate) {
+                const nodes = children(options.target);
+                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+                $$.fragment && $$.fragment.l(nodes);
+                nodes.forEach(detach);
+            }
+            else {
+                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+                $$.fragment && $$.fragment.c();
+            }
+            if (options.intro)
+                transition_in(component.$$.fragment);
+            mount_component(component, options.target, options.anchor);
+            flush();
+        }
+        set_current_component(parent_component);
+    }
+    class SvelteComponent {
+        $destroy() {
+            destroy_component(this, 1);
+            this.$destroy = noop;
+        }
+        $on(type, callback) {
+            const callbacks = (this.$$.callbacks[type] || (this.$$.callbacks[type] = []));
+            callbacks.push(callback);
+            return () => {
+                const index = callbacks.indexOf(callback);
+                if (index !== -1)
+                    callbacks.splice(index, 1);
+            };
+        }
+        $set($$props) {
+            if (this.$$set && !is_empty($$props)) {
+                this.$$.skip_bound = true;
+                this.$$set($$props);
+                this.$$.skip_bound = false;
+            }
+        }
+    }
+
+    function dispatch_dev(type, detail) {
+        document.dispatchEvent(custom_event(type, Object.assign({ version: '3.26.0' }, detail)));
+    }
+    function append_dev(target, node) {
+        dispatch_dev("SvelteDOMInsert", { target, node });
+        append(target, node);
+    }
+    function insert_dev(target, node, anchor) {
+        dispatch_dev("SvelteDOMInsert", { target, node, anchor });
+        insert(target, node, anchor);
+    }
+    function detach_dev(node) {
+        dispatch_dev("SvelteDOMRemove", { node });
+        detach(node);
+    }
+    function listen_dev(node, event, handler, options, has_prevent_default, has_stop_propagation) {
+        const modifiers = options === true ? ["capture"] : options ? Array.from(Object.keys(options)) : [];
+        if (has_prevent_default)
+            modifiers.push('preventDefault');
+        if (has_stop_propagation)
+            modifiers.push('stopPropagation');
+        dispatch_dev("SvelteDOMAddEventListener", { node, event, handler, modifiers });
+        const dispose = listen(node, event, handler, options);
+        return () => {
+            dispatch_dev("SvelteDOMRemoveEventListener", { node, event, handler, modifiers });
+            dispose();
+        };
+    }
+    function attr_dev(node, attribute, value) {
+        attr(node, attribute, value);
+        if (value == null)
+            dispatch_dev("SvelteDOMRemoveAttribute", { node, attribute });
+        else
+            dispatch_dev("SvelteDOMSetAttribute", { node, attribute, value });
+    }
+    function set_data_dev(text, data) {
+        data = '' + data;
+        if (text.wholeText === data)
+            return;
+        dispatch_dev("SvelteDOMSetData", { node: text, data });
+        text.data = data;
+    }
+    function validate_each_argument(arg) {
+        if (typeof arg !== 'string' && !(arg && typeof arg === 'object' && 'length' in arg)) {
+            let msg = '{#each} only iterates over array-like objects.';
+            if (typeof Symbol === 'function' && arg && Symbol.iterator in arg) {
+                msg += ' You can use a spread to convert this iterable into an array.';
+            }
+            throw new Error(msg);
+        }
+    }
+    function validate_slots(name, slot, keys) {
+        for (const slot_key of Object.keys(slot)) {
+            if (!~keys.indexOf(slot_key)) {
+                console.warn(`<${name}> received an unexpected slot "${slot_key}".`);
+            }
+        }
+    }
+    class SvelteComponentDev extends SvelteComponent {
+        constructor(options) {
+            if (!options || (!options.target && !options.$$inline)) {
+                throw new Error(`'target' is a required option`);
+            }
+            super();
+        }
+        $destroy() {
+            super.$destroy();
+            this.$destroy = () => {
+                console.warn(`Component was already destroyed`); // eslint-disable-line no-console
+            };
+        }
+        $capture_state() { }
+        $inject_state() { }
+    }
+
+    const subscriber_queue = [];
+    /**
+     * Creates a `Readable` store that allows reading by subscription.
+     * @param value initial value
+     * @param {StartStopNotifier}start start and stop notifications for subscriptions
+     */
+    function readable(value, start) {
+        return {
+            subscribe: writable(value, start).subscribe
+        };
+    }
+    /**
+     * Create a `Writable` store that allows both updating and reading by subscription.
+     * @param {*=}value initial value
+     * @param {StartStopNotifier=}start start and stop notifications for subscriptions
+     */
+    function writable(value, start = noop) {
+        let stop;
+        const subscribers = [];
+        function set(new_value) {
+            if (safe_not_equal(value, new_value)) {
+                value = new_value;
+                if (stop) { // store is ready
+                    const run_queue = !subscriber_queue.length;
+                    for (let i = 0; i < subscribers.length; i += 1) {
+                        const s = subscribers[i];
+                        s[1]();
+                        subscriber_queue.push(s, value);
+                    }
+                    if (run_queue) {
+                        for (let i = 0; i < subscriber_queue.length; i += 2) {
+                            subscriber_queue[i][0](subscriber_queue[i + 1]);
+                        }
+                        subscriber_queue.length = 0;
+                    }
+                }
+            }
+        }
+        function update(fn) {
+            set(fn(value));
+        }
+        function subscribe(run, invalidate = noop) {
+            const subscriber = [run, invalidate];
+            subscribers.push(subscriber);
+            if (subscribers.length === 1) {
+                stop = start(set) || noop;
+            }
+            run(value);
+            return () => {
+                const index = subscribers.indexOf(subscriber);
+                if (index !== -1) {
+                    subscribers.splice(index, 1);
+                }
+                if (subscribers.length === 0) {
+                    stop();
+                    stop = null;
+                }
+            };
+        }
+        return { set, update, subscribe };
+    }
+    function derived(stores, fn, initial_value) {
+        const single = !Array.isArray(stores);
+        const stores_array = single
+            ? [stores]
+            : stores;
+        const auto = fn.length < 2;
+        return readable(initial_value, (set) => {
+            let inited = false;
+            const values = [];
+            let pending = 0;
+            let cleanup = noop;
+            const sync = () => {
+                if (pending) {
+                    return;
+                }
+                cleanup();
+                const result = fn(single ? values[0] : values, set);
+                if (auto) {
+                    set(result);
+                }
+                else {
+                    cleanup = is_function(result) ? result : noop;
+                }
+            };
+            const unsubscribers = stores_array.map((store, i) => subscribe(store, (value) => {
+                values[i] = value;
+                pending &= ~(1 << i);
+                if (inited) {
+                    sync();
+                }
+            }, () => {
+                pending |= (1 << i);
+            }));
+            inited = true;
+            sync();
+            return function stop() {
+                run_all(unsubscribers);
+                cleanup();
+            };
+        });
+    }
+
+    var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
+
+    function createCommonjsModule(fn, basedir, module) {
+    	return module = {
+    	  path: basedir,
+    	  exports: {},
+    	  require: function (path, base) {
+          return commonjsRequire(path, (base === undefined || base === null) ? module.path : base);
+        }
+    	}, fn(module, module.exports), module.exports;
+    }
+
+    function commonjsRequire () {
+    	throw new Error('Dynamic requires are not currently supported by @rollup/plugin-commonjs');
+    }
+
+    var sources = createCommonjsModule(function (module, exports) {
+    Object.defineProperty(exports, "__esModule", { value: true });
+    exports.sources = void 0;
+    exports.sources = {
+        BR: 'Basic Rules',
+        PHB: "Player's Handbook",
+        MM: 'Monster Manual',
+        DMG: "Dungeon Master's Guide",
+        DiT: 'Dead in Thay',
+        ERLW: 'Eberron: Rising from the Last War',
+        EEPC: "Elemental Evil Player's Companion",
+        GGtR: "Guildmaster's Guide to Ravnica",
+        LR: 'Locathah Rising',
+        MtoF: "Mordenkainen's Tome of Foes",
+        SKT: "Storm King's Thunder",
+        SCAG: "Sword Coast Adventurer's Guide",
+        TP: 'Tortle Package',
+        ToA: 'Tomb of Annhilation',
+        ToH: 'Tomb of Horrors',
+        VGtM: "Volo's Guide to Monsters",
+        WGtE: "Wayfinder's Guide to Eberron",
+        XGtE: "Xanathar's Guide to Everything"
+    };
+    });
+
+    var creatures = createCommonjsModule(function (module, exports) {
+    Object.defineProperty(exports, "__esModule", { value: true });
+    exports.creatures = void 0;
+    // TODO: add a global parameter somewhere in a configuration file so that I can specify what source books are allowed
+
+    var BR = sources.sources.BR, MM = sources.sources.MM, DiT = sources.sources.DiT, ERLW = sources.sources.ERLW, MtoF = sources.sources.MtoF, SKT = sources.sources.SKT, TP = sources.sources.TP, ToA = sources.sources.ToA, ToH = sources.sources.ToH, VGtM = sources.sources.VGtM, WGtE = sources.sources.WGtE;
+    exports.creatures = {
+        beasts: [
+            {
+                name: 'Frog',
+                challengeRating: 0,
+                terrains: ['Land', 'Water'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Sea Horse',
+                challengeRating: 0,
+                terrains: ['Water'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Baboon',
+                challengeRating: 0,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Badger',
+                challengeRating: 0,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Bat',
+                challengeRating: 0,
+                terrains: ['Land', 'Air'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Cat',
+                challengeRating: 0,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Crab',
+                challengeRating: 0,
+                terrains: ['Land', 'Water'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Deer',
+                challengeRating: 0,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Eagle',
+                challengeRating: 0,
+                terrains: ['Land', 'Air'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Giant Fire Beetle',
+                challengeRating: 0,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Goat',
+                challengeRating: 0,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Hawk',
+                challengeRating: 0,
+                terrains: ['Land', 'Air'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Hyena',
+                challengeRating: 0,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Jackal',
+                challengeRating: 0,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Lizard',
+                challengeRating: 0,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Octopus',
+                challengeRating: 0,
+                terrains: ['Land', 'Water'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Owl',
+                challengeRating: 0,
+                terrains: ['Land', 'Air'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Quipper',
+                challengeRating: 0,
+                terrains: ['Water'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Rat',
+                challengeRating: 0,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Raven',
+                challengeRating: 0,
+                terrains: ['Land', 'Air'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Scorpion',
+                challengeRating: 0,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Sheep',
+                challengeRating: 0,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: SKT
+            },
+            {
+                name: 'Spider',
+                challengeRating: 0,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Vulture',
+                challengeRating: 0,
+                terrains: ['Land', 'Air'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Weasel',
+                challengeRating: 0,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Blood Hawk',
+                challengeRating: 0.125,
+                terrains: ['Land', 'Air'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Camel',
+                challengeRating: 0.125,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Dolphin',
+                challengeRating: 0.125,
+                terrains: ['Water'],
+                type: 'Beast',
+                source: VGtM
+            },
+            {
+                name: 'Flying Snake',
+                challengeRating: 0.125,
+                terrains: ['Land', 'Air', 'Water'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Giant Crab',
+                challengeRating: 0.125,
+                terrains: ['Land', 'Water'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Giant Rat',
+                challengeRating: 0.125,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Giant Weasel',
+                challengeRating: 0.125,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Mastiff',
+                challengeRating: 0.125,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Mule',
+                challengeRating: 0.125,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Poisonous Snake',
+                challengeRating: 0.125,
+                terrains: ['Land', 'Water'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Pony',
+                challengeRating: 0.125,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Stirge',
+                challengeRating: 0.125,
+                terrains: ['Land', 'Air'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Axe Beak',
+                challengeRating: 0.25,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Boar',
+                challengeRating: 0.25,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Constrictor Snake',
+                challengeRating: 0.25,
+                terrains: ['Land', 'Water'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Cow',
+                challengeRating: 0.25,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: VGtM
+            },
+            {
+                name: 'Draft Horse',
+                challengeRating: 0.25,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Elk',
+                challengeRating: 0.25,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Fastieth',
+                challengeRating: 0.25,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: ERLW
+            },
+            {
+                name: 'Giant Badger',
+                challengeRating: 0.25,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Giant Bat',
+                challengeRating: 0.25,
+                terrains: ['Land', 'Air'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Giant Centipede',
+                challengeRating: 0.25,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Giant Frog',
+                challengeRating: 0.25,
+                terrains: ['Land', 'Water'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Giant Lizard',
+                challengeRating: 0.25,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Giant Owl',
+                challengeRating: 0.25,
+                terrains: ['Land', 'Air'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Giant Poisonous Snake',
+                challengeRating: 0.25,
+                terrains: ['Land', 'Water'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Giant Wolf Spider',
+                challengeRating: 0.25,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Hadrosaurus',
+                challengeRating: 0.25,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: VGtM
+            },
+            {
+                name: 'Ox',
+                challengeRating: 0.25,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: VGtM
+            },
+            {
+                name: 'Panther',
+                challengeRating: 0.25,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Pteranodon',
+                challengeRating: 0.25,
+                terrains: ['Land', 'Air'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Riding Horse',
+                challengeRating: 0.25,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Stench Kow',
+                challengeRating: 0.25,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: VGtM
+            },
+            {
+                name: 'Swarm of Bats',
+                challengeRating: 0.25,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Swarm of Rats',
+                challengeRating: 0.25,
+                terrains: ['Air'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Swarm of Ravens',
+                challengeRating: 0.25,
+                terrains: ['Land', 'Air'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Wolf',
+                challengeRating: 0.25,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Ape',
+                challengeRating: 0.5,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Black Bear',
+                challengeRating: 0.5,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Clawfoot Raptor',
+                challengeRating: 0.5,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: WGtE
+            },
+            {
+                name: 'Crocodile',
+                challengeRating: 0.5,
+                terrains: ['Land', 'Water'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Giant Goat',
+                challengeRating: 0.5,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Giant Sea Horse',
+                challengeRating: 0.5,
+                terrains: ['Water'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Giant Wasp',
+                challengeRating: 0.5,
+                terrains: ['Land', 'Air'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Reef Shark',
+                challengeRating: 0.5,
+                terrains: ['Water'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Swarm of Insects',
+                challengeRating: 0.5,
+                terrains: ['Land', 'Air'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Swarm of Rot Grubs',
+                challengeRating: 0.5,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: VGtM
+            },
+            {
+                name: 'Warhorse',
+                challengeRating: 0.5,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Brown Bear',
+                challengeRating: 1.0,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Clawfoot',
+                challengeRating: 1.0,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: ERLW
+            },
+            {
+                name: 'Dire Wolf',
+                challengeRating: 1.0,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Giant Eagle',
+                challengeRating: 1.0,
+                terrains: ['Land', 'Air'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Giant Hyena',
+                challengeRating: 1.0,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Giant Octopus',
+                challengeRating: 1.0,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Giant Spider',
+                challengeRating: 1.0,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Giant Toad',
+                challengeRating: 1.0,
+                terrains: ['Land', 'Water'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Giant Vulture',
+                challengeRating: 1.0,
+                terrains: ['Land', 'Air'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Ice Spider',
+                challengeRating: 1.0,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: SKT
+            },
+            {
+                name: 'Lion',
+                challengeRating: 1.0,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Swarm of Quippers',
+                challengeRating: 1.0,
+                terrains: ['Water'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Tiger',
+                challengeRating: 1.0,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Allosaurus',
+                challengeRating: 2.0,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Aurochs',
+                challengeRating: 2.0,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: VGtM
+            },
+            {
+                name: 'Cave Bear',
+                challengeRating: 2.0,
+                terrains: ['Land', 'Water'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Giant Boar',
+                challengeRating: 2.0,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Ice Spider Queen',
+                challengeRating: 2.0,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: SKT
+            },
+            {
+                name: 'Giant White Moray Eel',
+                challengeRating: 2.0,
+                terrains: ['Water'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Giant Constrictor Snake',
+                challengeRating: 2.0,
+                terrains: ['Land', 'Water'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Giant Elk',
+                challengeRating: 2.0,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Hunter Shark',
+                challengeRating: 2.0,
+                terrains: ['Water'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Plesiosaurus',
+                challengeRating: 2.0,
+                terrains: ['Land', 'Water'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Polar Bear',
+                challengeRating: 2.0,
+                terrains: ['Land', 'Water'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Rhinoceros',
+                challengeRating: 2.0,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Saber-toothed Tiger',
+                challengeRating: 2.0,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Swarm of Poisonous Snakes',
+                challengeRating: 2.0,
+                terrains: ['Land', 'Water'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Ankylosaurus',
+                challengeRating: 3.0,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Giant Scorpion',
+                challengeRating: 3.0,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Giant Snapping Turtle',
+                challengeRating: 3.0,
+                terrains: ['Land', 'Water'],
+                type: 'Beast',
+                source: ToA
+            },
+            {
+                name: 'Killer Whale',
+                challengeRating: 3.0,
+                terrains: ['Water'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Elephant',
+                challengeRating: 3.0,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Stegosaurus',
+                challengeRating: 4.0,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: VGtM
+            },
+            {
+                name: 'Brontosaurus',
+                challengeRating: 5.0,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: VGtM
+            },
+            {
+                name: 'Giant Crocodile',
+                challengeRating: 5.0,
+                terrains: ['Land', 'Water'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Giant Shark',
+                challengeRating: 5.0,
+                terrains: ['Water'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Hulking Crab',
+                challengeRating: 5.0,
+                terrains: ['Land', 'Water'],
+                type: 'Beast',
+                source: SKT
+            },
+            {
+                name: 'Swarm of Cranium Rats',
+                challengeRating: 5.0,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: VGtM
+            },
+            {
+                name: 'Triceratops',
+                challengeRating: 5.0,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Mammoth',
+                challengeRating: 6.0,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Giant Ape',
+                challengeRating: 7.0,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            },
+            {
+                name: 'Tyrannosaurus Rex',
+                challengeRating: 8.0,
+                terrains: ['Land'],
+                type: 'Beast',
+                source: BR
+            }
+        ],
+        fey: [
+            {
+                name: 'Boggle',
+                challengeRating: 0.125,
+                terrains: ['Land'],
+                type: 'Fey',
+                source: VGtM
+            },
+            {
+                name: 'Valenar Hawk',
+                challengeRating: 0.125,
+                terrains: ['Land', 'Air'],
+                type: 'Fey',
+                source: ERLW
+            },
+            {
+                name: 'Blink Dog',
+                challengeRating: 0.25,
+                terrains: ['Land'],
+                type: 'Fey',
+                source: BR
+            },
+            {
+                name: 'Pixie',
+                challengeRating: 0.25,
+                terrains: ['Land', 'Air'],
+                type: 'Fey',
+                source: MM
+            },
+            {
+                name: 'Sprite',
+                challengeRating: 0.25,
+                terrains: ['Land', 'Air'],
+                type: 'Fey',
+                source: BR
+            },
+            {
+                name: 'Darkling',
+                challengeRating: 0.5,
+                terrains: ['Land'],
+                type: 'Fey',
+                source: VGtM
+            },
+            {
+                name: 'Satyr',
+                challengeRating: 0.5,
+                terrains: ['Land'],
+                type: 'Fey',
+                source: BR
+            },
+            {
+                name: 'Valenar Hound',
+                challengeRating: 0.5,
+                terrains: ['Land'],
+                type: 'Fey',
+                source: ERLW
+            },
+            {
+                name: 'Valenar Steed',
+                challengeRating: 0.5,
+                terrains: ['Land'],
+                type: 'Fey',
+                source: ERLW
+            },
+            {
+                name: 'Dryad',
+                challengeRating: 1,
+                terrains: ['Land'],
+                type: 'Fey',
+                source: BR
+            },
+            {
+                name: 'Quickling',
+                challengeRating: 1,
+                terrains: ['Land'],
+                type: 'Fey',
+                source: VGtM
+            },
+            {
+                name: 'Darkling Elder',
+                challengeRating: 2,
+                terrains: ['Land'],
+                type: 'Fey',
+                source: VGtM
+            },
+            {
+                name: 'Meanlock',
+                challengeRating: 2,
+                terrains: ['Land'],
+                type: 'Fey',
+                source: VGtM
+            },
+            {
+                name: 'Sea Hag',
+                challengeRating: 2,
+                terrains: ['Land', 'Water'],
+                type: 'Fey',
+                source: BR
+            },
+            {
+                name: 'Green Hag',
+                challengeRating: 3,
+                terrains: ['Land'],
+                type: 'Fey',
+                source: BR
+            },
+            {
+                name: 'Redcap',
+                challengeRating: 3,
+                terrains: ['Land'],
+                type: 'Fey',
+                source: VGtM
+            },
+            {
+                name: 'Siren',
+                challengeRating: 3,
+                terrains: ['Land', 'Water'],
+                type: 'Fey',
+                source: ToH
+            },
+            {
+                name: 'Yeth Hound',
+                challengeRating: 4,
+                terrains: ['Land', 'Air'],
+                type: 'Fey',
+                source: VGtM
+            },
+            {
+                name: 'Annis Hag',
+                challengeRating: 6,
+                terrains: ['Land'],
+                type: 'Fey',
+                source: VGtM
+            },
+            {
+                name: 'Dusk Hag',
+                challengeRating: 6,
+                terrains: ['Land'],
+                type: 'Fey',
+                source: ERLW
+            },
+            {
+                name: 'Bheur Hag',
+                challengeRating: 7,
+                terrains: ['Land'],
+                type: 'Fey',
+                source: VGtM
+            },
+            {
+                name: 'Korred',
+                challengeRating: 7,
+                terrains: ['Land'],
+                type: 'Fey',
+                source: VGtM
+            },
+            {
+                name: 'Autumn Eladrin',
+                challengeRating: 10,
+                terrains: ['Land'],
+                type: 'Fey',
+                source: MtoF
+            },
+            {
+                name: 'Spring Eladrin',
+                challengeRating: 10,
+                terrains: ['Land'],
+                type: 'Fey',
+                source: MtoF
+            },
+            {
+                name: 'Summer Eladrin',
+                challengeRating: 10,
+                terrains: ['Land'],
+                type: 'Fey',
+                source: MtoF
+            },
+            {
+                name: 'Winter Eladrin',
+                challengeRating: 10,
+                terrains: ['Land'],
+                type: 'Fey',
+                source: MtoF
+            }
+        ],
+        elementals: [
+            {
+                name: 'Chwinga',
+                challengeRating: 0,
+                terrains: ['Land', 'Air', 'Water'],
+                type: 'Elemental',
+                source: ToA
+            },
+            {
+                name: 'Geonid',
+                challengeRating: 0.25,
+                terrains: ['Land'],
+                type: 'Elemental',
+                source: TP
+            },
+            {
+                name: 'Mud Mephit',
+                challengeRating: 0.25,
+                terrains: ['Land', 'Water', 'Air'],
+                type: 'Elemental',
+                source: MM
+            },
+            {
+                name: 'Smoke Mephit',
+                challengeRating: 0.25,
+                terrains: ['Land', 'Air'],
+                type: 'Elemental',
+                source: MM
+            },
+            {
+                name: 'Steam Mephit',
+                challengeRating: 0.25,
+                terrains: ['Land', 'Air'],
+                type: 'Elemental',
+                source: BR
+            },
+            {
+                name: 'Dust Mephit',
+                challengeRating: 0.5,
+                terrains: ['Land', 'Air'],
+                type: 'Elemental',
+                source: BR
+            },
+            {
+                name: 'Ice Mephit',
+                challengeRating: 0.5,
+                terrains: ['Land', 'Air'],
+                type: 'Elemental',
+                source: BR
+            },
+            {
+                name: 'Magma Mephit',
+                challengeRating: 0.5,
+                terrains: ['Land', 'Air'],
+                type: 'Elemental',
+                source: BR
+            },
+            {
+                name: 'Magmin',
+                challengeRating: 0.5,
+                terrains: ['Land'],
+                type: 'Elemental',
+                source: BR
+            },
+            {
+                name: 'Fire Snake',
+                challengeRating: 1,
+                terrains: ['Land'],
+                type: 'Elemental',
+                source: MM
+            },
+            {
+                name: 'Azer',
+                challengeRating: 2,
+                terrains: ['Land'],
+                type: 'Elemental',
+                source: BR
+            },
+            {
+                name: 'Four-Armed Gargoyle',
+                challengeRating: 2,
+                terrains: ['Land', 'Air'],
+                type: 'Elemental',
+                source: DiT
+            },
+            {
+                name: 'Gargoyle',
+                challengeRating: 2,
+                terrains: ['Land', 'Air'],
+                type: 'Elemental',
+                source: BR
+            },
+            {
+                name: 'Flail Snail',
+                challengeRating: 3,
+                terrains: ['Land'],
+                type: 'Elemental',
+                source: VGtM
+            },
+            {
+                name: 'Water Weird',
+                challengeRating: 3,
+                terrains: ['Water'],
+                type: 'Elemental',
+                source: MM
+            },
+            {
+                name: 'Air Elemental',
+                challengeRating: 5,
+                terrains: ['Air'],
+                type: 'Elemental',
+                source: BR
+            },
+            {
+                name: 'Earth Elemental',
+                challengeRating: 5,
+                terrains: ['Land'],
+                type: 'Elemental',
+                source: BR
+            },
+            {
+                name: 'Fire Elemental',
+                challengeRating: 5,
+                terrains: ['Land'],
+                type: 'Elemental',
+                source: BR
+            },
+            {
+                name: 'Water Elemental',
+                challengeRating: 5,
+                terrains: ['Land', 'Water'],
+                type: 'Elemental',
+                source: BR
+            },
+            {
+                name: 'Salamander',
+                challengeRating: 5,
+                terrains: ['Land'],
+                type: 'Elemental',
+                source: BR
+            },
+            {
+                name: 'Xorn',
+                challengeRating: 5,
+                terrains: ['Land'],
+                type: 'Elemental',
+                source: BR
+            },
+            {
+                name: 'Galeb Duhr',
+                challengeRating: 6,
+                terrains: ['Land'],
+                type: 'Elemental',
+                source: MM
+            },
+            {
+                name: 'Invisible Stalker',
+                challengeRating: 6,
+                terrains: ['Air', 'Land'],
+                type: 'Elemental',
+                source: BR
+            },
+            {
+                name: 'Frost Salamander',
+                challengeRating: 9,
+                terrains: ['Land'],
+                type: 'Elemental',
+                source: MtoF
+            },
+            {
+                name: 'Giant Four-Armed Gargoyle',
+                challengeRating: 10,
+                terrains: ['Air', 'Land'],
+                type: 'Elemental',
+                source: ToA
+            },
+            {
+                name: 'Dao',
+                challengeRating: 11,
+                terrains: ['Air', 'Land'],
+                type: 'Elemental',
+                source: MM
+            },
+            {
+                name: 'Djinni',
+                challengeRating: 11,
+                terrains: ['Air', 'Land'],
+                type: 'Elemental',
+                source: BR
+            },
+            {
+                name: 'Efreeti',
+                challengeRating: 11,
+                terrains: ['Air', 'Land'],
+                type: 'Elemental',
+                source: BR
+            },
+            {
+                name: 'Marid',
+                challengeRating: 11,
+                terrains: ['Air', 'Land', 'Water'],
+                type: 'Elemental',
+                source: MM
+            },
+            {
+                name: 'Phoenix',
+                challengeRating: 16,
+                terrains: ['Air', 'Land'],
+                type: 'Elemental',
+                source: MtoF
+            },
+            {
+                name: 'Leviathan',
+                challengeRating: 20,
+                terrains: ['Land', 'Water'],
+                type: 'Elemental',
+                source: MtoF
+            },
+            {
+                name: 'Zaratan',
+                challengeRating: 22,
+                terrains: ['Land', 'Water'],
+                type: 'Elemental',
+                source: MtoF
+            },
+            {
+                name: 'Elder Tempest',
+                challengeRating: 23,
+                terrains: ['Air'],
+                type: 'Elemental',
+                source: MtoF
+            }
+        ]
+    };
+    });
+
+    var util = createCommonjsModule(function (module, exports) {
+    Object.defineProperty(exports, "__esModule", { value: true });
+    exports.range = exports.randomInt = void 0;
+    function randomInt(min, max) {
+        var roundUpMin = Math.ceil(min);
+        var roundDownMax = Math.floor(max);
+        return Math.floor(Math.random() * (roundDownMax - roundUpMin)) + roundUpMin;
+    }
+    exports.randomInt = randomInt;
+    function range(start, end) {
+        if (end < start || start < 0 || end < 0) {
+            throw Error('The start and end values of a range must be positive, with end >= start');
+        }
+        return Array.from(new Array(end - start), function (_, i) { return i + start; });
+    }
+    exports.range = range;
+    });
+
+    var randomCreatures_1 = createCommonjsModule(function (module, exports) {
+    var __spreadArrays = (commonjsGlobal && commonjsGlobal.__spreadArrays) || function () {
+        for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
+        for (var r = Array(s), k = 0, i = 0; i < il; i++)
+            for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
+                r[k] = a[j];
+        return r;
+    };
+    Object.defineProperty(exports, "__esModule", { value: true });
+    exports.randomCreatures = void 0;
+
+
+    function randomCreatures(_a) {
+        var challengeRatingMin = _a.challengeRatingMin, challengeRatingMax = _a.challengeRatingMax, types = _a.types, count = _a.count, terrains = _a.terrains, sources = _a.sources;
+        var creatures$1 = Object.values(creatures.creatures).reduce(function (accumulator, subList) { return __spreadArrays(accumulator, subList); }, []);
+        creatures$1 = filterBySource(sources, creatures$1);
+        creatures$1 = filterByChallengeRating(challengeRatingMin, challengeRatingMax, creatures$1);
+        creatures$1 = filterByType(types, creatures$1);
+        creatures$1 = filterByTerrain(terrains, creatures$1);
+        if (!creatures$1.length) {
+            return [];
+        }
+        if (count === null || count === undefined) {
+            return [creatures$1[util.randomInt(0, creatures$1.length)]];
+        }
+        var result = [];
+        for (var _i = 0, _b = util.range(0, count); _i < _b.length; _i++) {
+            var _ = _b[_i];
+            result.push(creatures$1[util.randomInt(0, creatures$1.length)]);
+        }
+        return result;
+    }
+    exports.randomCreatures = randomCreatures;
+    function filterBySource(sources, creatures) {
+        var result = creatures;
+        if (sources) {
+            result = result.filter(function (creature) { return sources === null || sources === void 0 ? void 0 : sources.includes(creature.source); });
+        }
+        return result;
+    }
+    function filterByChallengeRating(challengeRatingMin, challengeRatingMax, creatures) {
+        var result = creatures;
+        if (!isNullOrUndefined(challengeRatingMin)) {
+            if (challengeRatingMin === undefined) {
+                throw new Error("challengeRatingMin is undefined");
+            }
+            result = result.filter(function (creature) { return creature.challengeRating >= challengeRatingMin; });
+        }
+        if (!isNullOrUndefined(challengeRatingMax)) {
+            if (challengeRatingMax === undefined) {
+                throw new Error("challengeRatingMax is undefined");
+            }
+            result = result.filter(function (creature) { return creature.challengeRating <= challengeRatingMax; });
+        }
+        return result;
+    }
+    function filterByType(types, creatures) {
+        var result = creatures;
+        if (types) {
+            result = result.filter(function (creature) { return types.includes(creature.type); });
+        }
+        return result;
+    }
+    function filterByTerrain(terrains, creatures) {
+        if (!terrains) {
+            return creatures;
+        }
+        var result = [];
+        var _loop_1 = function (terrain) {
+            result = __spreadArrays(result, creatures.filter(function (creature) { return creature.terrains.includes(terrain); }));
+        };
+        for (var _i = 0, terrains_1 = terrains; _i < terrains_1.length; _i++) {
+            var terrain = terrains_1[_i];
+            _loop_1(terrain);
+        }
+        return result;
+    }
+    function isNullOrUndefined(value) {
+        return value === null || value === undefined;
+    }
+    });
+
+    var conjurationSpells = createCommonjsModule(function (module, exports) {
+    Object.defineProperty(exports, "__esModule", { value: true });
+    exports.conjureMinorElementals = exports.conjureWoodlandBeings = exports.conjureAnimals = void 0;
+
+    function conjureAnimals(_a) {
+        var challengeRating = _a.challengeRating, terrains = _a.terrains, sources = _a.sources;
+        if (challengeRating > 2 || challengeRating < 0) {
+            throw new Error('The challengeRating passed to conjureAnimals must be in the range [0, 2]');
+        }
+        var count = 1;
+        if (challengeRating <= 0.25) {
+            count = 8;
+        }
+        else if (challengeRating <= 0.5) {
+            count = 4;
+        }
+        else if (challengeRating <= 1) {
+            count = 2;
+        }
+        else {
+            count = 1;
+        }
+        return randomCreatures_1.randomCreatures({
+            challengeRatingMin: challengeRating,
+            challengeRatingMax: challengeRating,
+            terrains: terrains,
+            types: ['Beast'],
+            count: count,
+            sources: sources
+        });
+    }
+    exports.conjureAnimals = conjureAnimals;
+    function conjureWoodlandBeings(_a) {
+        var challengeRating = _a.challengeRating, terrains = _a.terrains, sources = _a.sources;
+        if (challengeRating > 2 || challengeRating < 0) {
+            throw new Error('The challengeRating passed to conjureWoodlandBeings must be in the range [0, 2]');
+        }
+        var count = 1;
+        if (challengeRating <= 0.25) {
+            count = 8;
+        }
+        else if (challengeRating <= 0.5) {
+            count = 4;
+        }
+        else if (challengeRating <= 1) {
+            count = 2;
+        }
+        else {
+            count = 1;
+        }
+        return randomCreatures_1.randomCreatures({
+            challengeRatingMin: challengeRating,
+            challengeRatingMax: challengeRating,
+            terrains: terrains,
+            types: ['Fey'],
+            count: count,
+            sources: sources
+        });
+    }
+    exports.conjureWoodlandBeings = conjureWoodlandBeings;
+    function conjureMinorElementals(_a) {
+        var challengeRating = _a.challengeRating, terrains = _a.terrains, sources = _a.sources;
+        if (challengeRating > 2 || challengeRating < 0) {
+            throw new Error('The challengeRating passed to conjureMinorElementals must be in the range [0, 2]');
+        }
+        var count = 1;
+        if (challengeRating <= 0.25) {
+            count = 8;
+        }
+        else if (challengeRating <= 0.5) {
+            count = 4;
+        }
+        else if (challengeRating <= 1) {
+            count = 2;
+        }
+        else {
+            count = 1;
+        }
+        return randomCreatures_1.randomCreatures({
+            challengeRatingMin: challengeRating,
+            challengeRatingMax: challengeRating,
+            terrains: terrains,
+            types: ['Elemental'],
+            count: count,
+            sources: sources
+        });
+    }
+    exports.conjureMinorElementals = conjureMinorElementals;
+    });
+
+    var src = createCommonjsModule(function (module, exports) {
+    Object.defineProperty(exports, "__esModule", { value: true });
+    exports.sources = exports.conjureMinorElementals = exports.conjureWoodlandBeings = exports.conjureAnimals = void 0;
+
+    Object.defineProperty(exports, "conjureAnimals", { enumerable: true, get: function () { return conjurationSpells.conjureAnimals; } });
+    Object.defineProperty(exports, "conjureWoodlandBeings", { enumerable: true, get: function () { return conjurationSpells.conjureWoodlandBeings; } });
+    Object.defineProperty(exports, "conjureMinorElementals", { enumerable: true, get: function () { return conjurationSpells.conjureMinorElementals; } });
+
+    Object.defineProperty(exports, "sources", { enumerable: true, get: function () { return sources.sources; } });
+    });
+
+    const writeSourcebooks = writable([
+      src.sources.BR,
+      src.sources.MM,
+      src.sources.PHB,
+      src.sources.DMG,
+    ]);
+
+    const readSourcebooks = derived(
+      writeSourcebooks,
+      ($writeSourcebooks) => $writeSourcebooks
+    );
+
+    const defaultStore = {
+      spellName: "Conjure Animals",
+      challengeRating: 1,
+      terrains: ["Land"],
+    };
+
+    function createWriteSpellParameters() {
+      const { subscribe, set, update } = writable(defaultStore);
+
+      return {
+        subscribe,
+        setSpellName: (spell) =>
+          update((params) => {
+            return { ...params, spellName: spell };
+          }),
+        setChallengeRating: (cr) =>
+          update((params) => {
+            return { ...params, challengeRating: cr };
+          }),
+        setTerrains: (terrains) =>
+          update((params) => {
+            return { ...params, terrains };
+          }),
+        reset: () => set(defaultStore),
+      };
+    }
+
+    const writeSpellParameters = createWriteSpellParameters();
+
+    const readSpellParameters = derived(
+      writeSpellParameters,
+      ($writeSpellParameters) => $writeSpellParameters
+    );
+
+    var name="svelte-app";var version="0.1.0";var scripts={build:"rollup -c",dev:"rollup -c -w",start:"sirv public",validate:"svelte-check"};var devDependencies={"@babel/core":"^7.11.6","@babel/preset-env":"^7.11.5","@rollup/plugin-commonjs":"^14.0.0","@rollup/plugin-json":"^4.1.0","@rollup/plugin-node-resolve":"^8.0.0","@rollup/plugin-typescript":"^6.0.0","@testing-library/jest-dom":"^5.11.4","@testing-library/svelte":"^3.0.0","@tsconfig/svelte":"^1.0.0","@types/jest":"^26.0.14","babel-jest":"^26.3.0",eslint:"^7.9.0","eslint-plugin-jest-dom":"^3.2.3",jest:"^26.4.2","jest-vim-reporter":"^0.0.1",prettier:"^2.1.2",rollup:"^2.3.4","rollup-plugin-livereload":"^2.0.0","rollup-plugin-svelte":"^6.0.0","rollup-plugin-terser":"^7.0.0",svelte:"^3.0.0","svelte-check":"^1.0.0","svelte-htm":"^1.1.1","svelte-jester":"^1.1.5","svelte-preprocess":"^4.3.0","ts-jest":"^26.4.0",tslib:"^2.0.0",typescript:"^3.9.3"};var dependencies={conjure5e:"^1.4.0","sirv-cli":"^1.0.0"};var packageJson = {name:name,version:version,scripts:scripts,devDependencies:devDependencies,dependencies:dependencies};
+
+    function packageVersion() {
+      if (packageJson) {
+        return packageJson.version;
+      } else return "";
+    }
+
+    /* src/components/HamburgerButton.svelte generated by Svelte v3.26.0 */
+
+    const file = "src/components/HamburgerButton.svelte";
+
+    function create_fragment(ctx) {
+    	let button;
+    	let svg;
+    	let line0;
+    	let line1;
+    	let line1_x__value;
+    	let line1_x__value_1;
+    	let line2;
+    	let button_class_value;
+    	let mounted;
+    	let dispose;
+
+    	const block = {
+    		c: function create() {
+    			button = element("button");
+    			svg = svg_element("svg");
+    			line0 = svg_element("line");
+    			line1 = svg_element("line");
+    			line2 = svg_element("line");
+    			attr_dev(line0, "id", "top");
+    			attr_dev(line0, "x1", "0");
+    			attr_dev(line0, "y1", "2");
+    			attr_dev(line0, "x2", "32");
+    			attr_dev(line0, "y2", "2");
+    			attr_dev(line0, "class", "svelte-1gn2oj1");
+    			add_location(line0, file, 44, 4, 851);
+    			attr_dev(line1, "id", "middle");
+    			attr_dev(line1, "x1", line1_x__value = /*left*/ ctx[1] ? "0" : "8");
+    			attr_dev(line1, "y1", "12");
+    			attr_dev(line1, "x2", line1_x__value_1 = /*left*/ ctx[1] ? "24" : "32");
+    			attr_dev(line1, "y2", "12");
+    			attr_dev(line1, "class", "svelte-1gn2oj1");
+    			add_location(line1, file, 45, 4, 902);
+    			attr_dev(line2, "id", "bottom");
+    			attr_dev(line2, "x1", "0");
+    			attr_dev(line2, "y1", "22");
+    			attr_dev(line2, "x2", "32");
+    			attr_dev(line2, "y2", "22");
+    			attr_dev(line2, "class", "svelte-1gn2oj1");
+    			add_location(line2, file, 51, 4, 1019);
+    			attr_dev(svg, "width", "32");
+    			attr_dev(svg, "height", "24");
+    			attr_dev(svg, "class", "svelte-1gn2oj1");
+    			add_location(svg, file, 43, 2, 818);
+    			attr_dev(button, "class", button_class_value = "" + (/*fontColor*/ ctx[2] + " hover:" + /*hoverFontColor*/ ctx[3] + " cursor-pointer my-4 border-none focus:outline-none" + " svelte-1gn2oj1"));
+    			toggle_class(button, "open", /*open*/ ctx[0]);
+    			add_location(button, file, 39, 0, 664);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, button, anchor);
+    			append_dev(button, svg);
+    			append_dev(svg, line0);
+    			append_dev(svg, line1);
+    			append_dev(svg, line2);
+
+    			if (!mounted) {
+    				dispose = listen_dev(button, "click", /*click_handler*/ ctx[4], false, false, false);
+    				mounted = true;
+    			}
+    		},
+    		p: function update(ctx, [dirty]) {
+    			if (dirty & /*left*/ 2 && line1_x__value !== (line1_x__value = /*left*/ ctx[1] ? "0" : "8")) {
+    				attr_dev(line1, "x1", line1_x__value);
+    			}
+
+    			if (dirty & /*left*/ 2 && line1_x__value_1 !== (line1_x__value_1 = /*left*/ ctx[1] ? "24" : "32")) {
+    				attr_dev(line1, "x2", line1_x__value_1);
+    			}
+
+    			if (dirty & /*fontColor, hoverFontColor*/ 12 && button_class_value !== (button_class_value = "" + (/*fontColor*/ ctx[2] + " hover:" + /*hoverFontColor*/ ctx[3] + " cursor-pointer my-4 border-none focus:outline-none" + " svelte-1gn2oj1"))) {
+    				attr_dev(button, "class", button_class_value);
+    			}
+
+    			if (dirty & /*fontColor, hoverFontColor, open*/ 13) {
+    				toggle_class(button, "open", /*open*/ ctx[0]);
+    			}
+    		},
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(button);
+    			mounted = false;
+    			dispose();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance($$self, $$props, $$invalidate) {
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots("HamburgerButton", slots, []);
+    	let { open = false } = $$props;
+    	let { left = true } = $$props;
+    	const writable_props = ["open", "left"];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<HamburgerButton> was created with unknown prop '${key}'`);
+    	});
+
+    	const click_handler = () => $$invalidate(0, open = !open);
+
+    	$$self.$$set = $$props => {
+    		if ("open" in $$props) $$invalidate(0, open = $$props.open);
+    		if ("left" in $$props) $$invalidate(1, left = $$props.left);
+    	};
+
+    	$$self.$capture_state = () => ({ open, left, fontColor, hoverFontColor });
+
+    	$$self.$inject_state = $$props => {
+    		if ("open" in $$props) $$invalidate(0, open = $$props.open);
+    		if ("left" in $$props) $$invalidate(1, left = $$props.left);
+    		if ("fontColor" in $$props) $$invalidate(2, fontColor = $$props.fontColor);
+    		if ("hoverFontColor" in $$props) $$invalidate(3, hoverFontColor = $$props.hoverFontColor);
+    	};
+
+    	let fontColor;
+    	let hoverFontColor;
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	$$self.$$.update = () => {
+    		if ($$self.$$.dirty & /*open*/ 1) {
+    			 $$invalidate(2, fontColor = open ? "text-red-500" : "text-gray-500");
+    		}
+
+    		if ($$self.$$.dirty & /*open*/ 1) {
+    			 $$invalidate(3, hoverFontColor = open ? "text-red-700" : "text-gray-700");
+    		}
+    	};
+
+    	return [open, left, fontColor, hoverFontColor, click_handler];
+    }
+
+    class HamburgerButton extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance, create_fragment, safe_not_equal, { open: 0, left: 1 });
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "HamburgerButton",
+    			options,
+    			id: create_fragment.name
+    		});
+    	}
+
+    	get open() {
+    		throw new Error("<HamburgerButton>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set open(value) {
+    		throw new Error("<HamburgerButton>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get left() {
+    		throw new Error("<HamburgerButton>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set left(value) {
+    		throw new Error("<HamburgerButton>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src/components/Navbar.svelte generated by Svelte v3.26.0 */
+    const file$1 = "src/components/Navbar.svelte";
+
+    function create_fragment$1(ctx) {
+    	let header;
+    	let nav;
+    	let div0;
+    	let hamburgerbutton0;
+    	let updating_open;
+    	let div0_class_value;
+    	let t0;
+    	let h1;
+    	let t1;
+    	let t2;
+    	let div1;
+    	let hamburgerbutton1;
+    	let updating_open_1;
+    	let div1_class_value;
+    	let current;
+
+    	function hamburgerbutton0_open_binding(value) {
+    		/*hamburgerbutton0_open_binding*/ ctx[3].call(null, value);
+    	}
+
+    	let hamburgerbutton0_props = {};
+
+    	if (/*spellOptionsMenu*/ ctx[0] !== void 0) {
+    		hamburgerbutton0_props.open = /*spellOptionsMenu*/ ctx[0];
+    	}
+
+    	hamburgerbutton0 = new HamburgerButton({
+    			props: hamburgerbutton0_props,
+    			$$inline: true
+    		});
+
+    	binding_callbacks.push(() => bind(hamburgerbutton0, "open", hamburgerbutton0_open_binding));
+
+    	function hamburgerbutton1_open_binding(value) {
+    		/*hamburgerbutton1_open_binding*/ ctx[4].call(null, value);
+    	}
+
+    	let hamburgerbutton1_props = { left: false };
+
+    	if (/*sourceOptionsMenu*/ ctx[1] !== void 0) {
+    		hamburgerbutton1_props.open = /*sourceOptionsMenu*/ ctx[1];
+    	}
+
+    	hamburgerbutton1 = new HamburgerButton({
+    			props: hamburgerbutton1_props,
+    			$$inline: true
+    		});
+
+    	binding_callbacks.push(() => bind(hamburgerbutton1, "open", hamburgerbutton1_open_binding));
+
+    	const block = {
+    		c: function create() {
+    			header = element("header");
+    			nav = element("nav");
+    			div0 = element("div");
+    			create_component(hamburgerbutton0.$$.fragment);
+    			t0 = space();
+    			h1 = element("h1");
+    			t1 = text(/*heading*/ ctx[2]);
+    			t2 = space();
+    			div1 = element("div");
+    			create_component(hamburgerbutton1.$$.fragment);
+    			attr_dev(div0, "class", div0_class_value = /*sourceOptionsMenu*/ ctx[1] ? "invisible" : "");
+    			attr_dev(div0, "data-testid", "spellOptionsMenuDiv");
+    			add_location(div0, file$1, 10, 4, 326);
+    			attr_dev(h1, "class", "text-blue-700 text-3xl");
+    			add_location(h1, file$1, 15, 4, 493);
+    			attr_dev(div1, "class", div1_class_value = /*spellOptionsMenu*/ ctx[0] ? "invisible" : "");
+    			attr_dev(div1, "data-testid", "sourceOptionsMenuDiv");
+    			add_location(div1, file$1, 16, 4, 547);
+    			attr_dev(nav, "class", "flex justify-between w-full");
+    			add_location(nav, file$1, 9, 2, 280);
+    			attr_dev(header, "class", "flex justify-between bg-gray-200 p-2 items-center text-gray-600\n    border-b-2");
+    			add_location(header, file$1, 6, 0, 180);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, header, anchor);
+    			append_dev(header, nav);
+    			append_dev(nav, div0);
+    			mount_component(hamburgerbutton0, div0, null);
+    			append_dev(nav, t0);
+    			append_dev(nav, h1);
+    			append_dev(h1, t1);
+    			append_dev(nav, t2);
+    			append_dev(nav, div1);
+    			mount_component(hamburgerbutton1, div1, null);
+    			current = true;
+    		},
+    		p: function update(ctx, [dirty]) {
+    			const hamburgerbutton0_changes = {};
+
+    			if (!updating_open && dirty & /*spellOptionsMenu*/ 1) {
+    				updating_open = true;
+    				hamburgerbutton0_changes.open = /*spellOptionsMenu*/ ctx[0];
+    				add_flush_callback(() => updating_open = false);
+    			}
+
+    			hamburgerbutton0.$set(hamburgerbutton0_changes);
+
+    			if (!current || dirty & /*sourceOptionsMenu*/ 2 && div0_class_value !== (div0_class_value = /*sourceOptionsMenu*/ ctx[1] ? "invisible" : "")) {
+    				attr_dev(div0, "class", div0_class_value);
+    			}
+
+    			if (!current || dirty & /*heading*/ 4) set_data_dev(t1, /*heading*/ ctx[2]);
+    			const hamburgerbutton1_changes = {};
+
+    			if (!updating_open_1 && dirty & /*sourceOptionsMenu*/ 2) {
+    				updating_open_1 = true;
+    				hamburgerbutton1_changes.open = /*sourceOptionsMenu*/ ctx[1];
+    				add_flush_callback(() => updating_open_1 = false);
+    			}
+
+    			hamburgerbutton1.$set(hamburgerbutton1_changes);
+
+    			if (!current || dirty & /*spellOptionsMenu*/ 1 && div1_class_value !== (div1_class_value = /*spellOptionsMenu*/ ctx[0] ? "invisible" : "")) {
+    				attr_dev(div1, "class", div1_class_value);
+    			}
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(hamburgerbutton0.$$.fragment, local);
+    			transition_in(hamburgerbutton1.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(hamburgerbutton0.$$.fragment, local);
+    			transition_out(hamburgerbutton1.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(header);
+    			destroy_component(hamburgerbutton0);
+    			destroy_component(hamburgerbutton1);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$1.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$1($$self, $$props, $$invalidate) {
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots("Navbar", slots, []);
+    	let { heading } = $$props;
+    	let { spellOptionsMenu = false } = $$props;
+    	let { sourceOptionsMenu = false } = $$props;
+    	const writable_props = ["heading", "spellOptionsMenu", "sourceOptionsMenu"];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<Navbar> was created with unknown prop '${key}'`);
+    	});
+
+    	function hamburgerbutton0_open_binding(value) {
+    		spellOptionsMenu = value;
+    		$$invalidate(0, spellOptionsMenu);
+    	}
+
+    	function hamburgerbutton1_open_binding(value) {
+    		sourceOptionsMenu = value;
+    		$$invalidate(1, sourceOptionsMenu);
+    	}
+
+    	$$self.$$set = $$props => {
+    		if ("heading" in $$props) $$invalidate(2, heading = $$props.heading);
+    		if ("spellOptionsMenu" in $$props) $$invalidate(0, spellOptionsMenu = $$props.spellOptionsMenu);
+    		if ("sourceOptionsMenu" in $$props) $$invalidate(1, sourceOptionsMenu = $$props.sourceOptionsMenu);
+    	};
+
+    	$$self.$capture_state = () => ({
+    		HamburgerButton,
+    		heading,
+    		spellOptionsMenu,
+    		sourceOptionsMenu
+    	});
+
+    	$$self.$inject_state = $$props => {
+    		if ("heading" in $$props) $$invalidate(2, heading = $$props.heading);
+    		if ("spellOptionsMenu" in $$props) $$invalidate(0, spellOptionsMenu = $$props.spellOptionsMenu);
+    		if ("sourceOptionsMenu" in $$props) $$invalidate(1, sourceOptionsMenu = $$props.sourceOptionsMenu);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [
+    		spellOptionsMenu,
+    		sourceOptionsMenu,
+    		heading,
+    		hamburgerbutton0_open_binding,
+    		hamburgerbutton1_open_binding
+    	];
+    }
+
+    class Navbar extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+
+    		init(this, options, instance$1, create_fragment$1, safe_not_equal, {
+    			heading: 2,
+    			spellOptionsMenu: 0,
+    			sourceOptionsMenu: 1
+    		});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Navbar",
+    			options,
+    			id: create_fragment$1.name
+    		});
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+
+    		if (/*heading*/ ctx[2] === undefined && !("heading" in props)) {
+    			console.warn("<Navbar> was created without expected prop 'heading'");
+    		}
+    	}
+
+    	get heading() {
+    		throw new Error("<Navbar>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set heading(value) {
+    		throw new Error("<Navbar>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get spellOptionsMenu() {
+    		throw new Error("<Navbar>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set spellOptionsMenu(value) {
+    		throw new Error("<Navbar>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get sourceOptionsMenu() {
+    		throw new Error("<Navbar>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set sourceOptionsMenu(value) {
+    		throw new Error("<Navbar>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src/components/Sidebar.svelte generated by Svelte v3.26.0 */
+
+    const file$2 = "src/components/Sidebar.svelte";
+
+    // (32:2) {#if title}
+    function create_if_block(ctx) {
+    	let h2;
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			h2 = element("h2");
+    			t = text(/*title*/ ctx[1]);
+    			add_location(h2, file$2, 32, 4, 478);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, h2, anchor);
+    			append_dev(h2, t);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*title*/ 2) set_data_dev(t, /*title*/ ctx[1]);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(h2);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block.name,
+    		type: "if",
+    		source: "(32:2) {#if title}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment$2(ctx) {
+    	let aside;
+    	let t;
+    	let current;
+    	let if_block = /*title*/ ctx[1] && create_if_block(ctx);
+    	const default_slot_template = /*#slots*/ ctx[5].default;
+    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[4], null);
+
+    	const block = {
+    		c: function create() {
+    			aside = element("aside");
+    			if (if_block) if_block.c();
+    			t = space();
+    			if (default_slot) default_slot.c();
+    			attr_dev(aside, "class", "fixed w-full h-full bg-gray-200 border-r-2 shadow-lg svelte-zcncv0");
+    			toggle_class(aside, "open", /*open*/ ctx[0]);
+    			toggle_class(aside, "right", /*right*/ ctx[3]);
+    			toggle_class(aside, "left", /*left*/ ctx[2]);
+    			add_location(aside, file$2, 26, 0, 349);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, aside, anchor);
+    			if (if_block) if_block.m(aside, null);
+    			append_dev(aside, t);
+
+    			if (default_slot) {
+    				default_slot.m(aside, null);
+    			}
+
+    			current = true;
+    		},
+    		p: function update(ctx, [dirty]) {
+    			if (/*title*/ ctx[1]) {
+    				if (if_block) {
+    					if_block.p(ctx, dirty);
+    				} else {
+    					if_block = create_if_block(ctx);
+    					if_block.c();
+    					if_block.m(aside, t);
+    				}
+    			} else if (if_block) {
+    				if_block.d(1);
+    				if_block = null;
+    			}
+
+    			if (default_slot) {
+    				if (default_slot.p && dirty & /*$$scope*/ 16) {
+    					update_slot(default_slot, default_slot_template, ctx, /*$$scope*/ ctx[4], dirty, null, null);
+    				}
+    			}
+
+    			if (dirty & /*open*/ 1) {
+    				toggle_class(aside, "open", /*open*/ ctx[0]);
+    			}
+
+    			if (dirty & /*right*/ 8) {
+    				toggle_class(aside, "right", /*right*/ ctx[3]);
+    			}
+
+    			if (dirty & /*left*/ 4) {
+    				toggle_class(aside, "left", /*left*/ ctx[2]);
+    			}
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(default_slot, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(default_slot, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(aside);
+    			if (if_block) if_block.d();
+    			if (default_slot) default_slot.d(detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$2.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$2($$self, $$props, $$invalidate) {
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots("Sidebar", slots, ['default']);
+    	let { open = false } = $$props;
+    	let { title = "" } = $$props;
+    	let { left = true } = $$props;
+    	const writable_props = ["open", "title", "left"];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<Sidebar> was created with unknown prop '${key}'`);
+    	});
+
+    	$$self.$$set = $$props => {
+    		if ("open" in $$props) $$invalidate(0, open = $$props.open);
+    		if ("title" in $$props) $$invalidate(1, title = $$props.title);
+    		if ("left" in $$props) $$invalidate(2, left = $$props.left);
+    		if ("$$scope" in $$props) $$invalidate(4, $$scope = $$props.$$scope);
+    	};
+
+    	$$self.$capture_state = () => ({ open, title, left, right });
+
+    	$$self.$inject_state = $$props => {
+    		if ("open" in $$props) $$invalidate(0, open = $$props.open);
+    		if ("title" in $$props) $$invalidate(1, title = $$props.title);
+    		if ("left" in $$props) $$invalidate(2, left = $$props.left);
+    		if ("right" in $$props) $$invalidate(3, right = $$props.right);
+    	};
+
+    	let right;
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	$$self.$$.update = () => {
+    		if ($$self.$$.dirty & /*left*/ 4) {
+    			 $$invalidate(3, right = !left);
+    		}
+    	};
+
+    	return [open, title, left, right, $$scope, slots];
+    }
+
+    class Sidebar extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$2, create_fragment$2, safe_not_equal, { open: 0, title: 1, left: 2 });
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Sidebar",
+    			options,
+    			id: create_fragment$2.name
+    		});
+    	}
+
+    	get open() {
+    		throw new Error("<Sidebar>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set open(value) {
+    		throw new Error("<Sidebar>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get title() {
+    		throw new Error("<Sidebar>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set title(value) {
+    		throw new Error("<Sidebar>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get left() {
+    		throw new Error("<Sidebar>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set left(value) {
+    		throw new Error("<Sidebar>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src/components/SelectSpellParameters.svelte generated by Svelte v3.26.0 */
+    const file$3 = "src/components/SelectSpellParameters.svelte";
+
+    function get_each_context(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[9] = list[i];
+    	return child_ctx;
+    }
+
+    function get_each_context_1(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[12] = list[i];
+    	return child_ctx;
+    }
+
+    function get_each_context_2(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[15] = list[i];
+    	return child_ctx;
+    }
+
+    // (19:4) {#each spellOptions as spell}
+    function create_each_block_2(ctx) {
+    	let option;
+    	let t_value = /*spell*/ ctx[15] + "";
+    	let t;
+    	let option_value_value;
+
+    	const block = {
+    		c: function create() {
+    			option = element("option");
+    			t = text(t_value);
+    			option.__value = option_value_value = /*spell*/ ctx[15];
+    			option.value = option.__value;
+    			add_location(option, file$3, 19, 6, 645);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, option, anchor);
+    			append_dev(option, t);
+    		},
+    		p: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(option);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block_2.name,
+    		type: "each",
+    		source: "(19:4) {#each spellOptions as spell}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (31:4) {#each crOptions as cr}
+    function create_each_block_1(ctx) {
+    	let option;
+    	let t_value = /*cr*/ ctx[12] + "";
+    	let t;
+    	let option_value_value;
+
+    	const block = {
+    		c: function create() {
+    			option = element("option");
+    			t = text(t_value);
+    			option.__value = option_value_value = /*cr*/ ctx[12];
+    			option.value = option.__value;
+    			add_location(option, file$3, 31, 6, 989);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, option, anchor);
+    			append_dev(option, t);
+    		},
+    		p: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(option);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block_1.name,
+    		type: "each",
+    		source: "(31:4) {#each crOptions as cr}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (37:2) {#each terrainOptions as terrain}
+    function create_each_block(ctx) {
+    	let label;
+    	let input;
+    	let input_value_value;
+    	let t0;
+    	let t1_value = /*terrain*/ ctx[9] + "";
+    	let t1;
+    	let t2;
+    	let mounted;
+    	let dispose;
+
+    	const block = {
+    		c: function create() {
+    			label = element("label");
+    			input = element("input");
+    			t0 = space();
+    			t1 = text(t1_value);
+    			t2 = space();
+    			attr_dev(input, "type", "checkbox");
+    			input.__value = input_value_value = /*terrain*/ ctx[9];
+    			input.value = input.__value;
+    			/*$$binding_groups*/ ctx[8][0].push(input);
+    			add_location(input, file$3, 38, 6, 1171);
+    			attr_dev(label, "class", "text-lg");
+    			add_location(label, file$3, 37, 4, 1141);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, label, anchor);
+    			append_dev(label, input);
+    			input.checked = ~/*$writeSpellParameters*/ ctx[1].terrains.indexOf(input.__value);
+    			append_dev(label, t0);
+    			append_dev(label, t1);
+    			append_dev(label, t2);
+
+    			if (!mounted) {
+    				dispose = listen_dev(input, "change", /*input_change_handler*/ ctx[7]);
+    				mounted = true;
+    			}
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*$writeSpellParameters, spellOptions*/ 6) {
+    				input.checked = ~/*$writeSpellParameters*/ ctx[1].terrains.indexOf(input.__value);
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(label);
+    			/*$$binding_groups*/ ctx[8][0].splice(/*$$binding_groups*/ ctx[8][0].indexOf(input), 1);
+    			mounted = false;
+    			dispose();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block.name,
+    		type: "each",
+    		source: "(37:2) {#each terrainOptions as terrain}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment$3(ctx) {
+    	let h20;
+    	let t0;
+    	let t1;
+    	let form;
+    	let label0;
+    	let t3;
+    	let select0;
+    	let t4;
+    	let label1;
+    	let t6;
+    	let select1;
+    	let t7;
+    	let h21;
+    	let t9;
+    	let mounted;
+    	let dispose;
+    	let each_value_2 = /*spellOptions*/ ctx[2];
+    	validate_each_argument(each_value_2);
+    	let each_blocks_2 = [];
+
+    	for (let i = 0; i < each_value_2.length; i += 1) {
+    		each_blocks_2[i] = create_each_block_2(get_each_context_2(ctx, each_value_2, i));
+    	}
+
+    	let each_value_1 = /*crOptions*/ ctx[3];
+    	validate_each_argument(each_value_1);
+    	let each_blocks_1 = [];
+
+    	for (let i = 0; i < each_value_1.length; i += 1) {
+    		each_blocks_1[i] = create_each_block_1(get_each_context_1(ctx, each_value_1, i));
+    	}
+
+    	let each_value = /*terrainOptions*/ ctx[4];
+    	validate_each_argument(each_value);
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
+    	}
+
+    	const block = {
+    		c: function create() {
+    			h20 = element("h2");
+    			t0 = text(/*heading*/ ctx[0]);
+    			t1 = space();
+    			form = element("form");
+    			label0 = element("label");
+    			label0.textContent = "Spell";
+    			t3 = space();
+    			select0 = element("select");
+
+    			for (let i = 0; i < each_blocks_2.length; i += 1) {
+    				each_blocks_2[i].c();
+    			}
+
+    			t4 = space();
+    			label1 = element("label");
+    			label1.textContent = "Challenge Rating of Creatures";
+    			t6 = space();
+    			select1 = element("select");
+
+    			for (let i = 0; i < each_blocks_1.length; i += 1) {
+    				each_blocks_1[i].c();
+    			}
+
+    			t7 = space();
+    			h21 = element("h2");
+    			h21.textContent = "Terrains";
+    			t9 = space();
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			attr_dev(h20, "class", "text-blue-700 text-2xl");
+    			add_location(h20, file$3, 11, 0, 349);
+    			attr_dev(label0, "for", "spell-select");
+    			attr_dev(label0, "class", "text-gray-700 text-xl m-1");
+    			add_location(label0, file$3, 13, 2, 432);
+    			attr_dev(select0, "id", "spell-select");
+    			attr_dev(select0, "name", "spell");
+    			if (/*$writeSpellParameters*/ ctx[1].spellName === void 0) add_render_callback(() => /*select0_change_handler*/ ctx[5].call(select0));
+    			add_location(select0, file$3, 14, 2, 508);
+    			attr_dev(label1, "for", "challenge-rating-select");
+    			attr_dev(label1, "class", "text-gray-700 text-xl m-1");
+    			add_location(label1, file$3, 23, 2, 711);
+    			attr_dev(select1, "id", "challenge-rating-select");
+    			attr_dev(select1, "name", "challenge-rating");
+    			if (/*$writeSpellParameters*/ ctx[1].challengeRating === void 0) add_render_callback(() => /*select1_change_handler*/ ctx[6].call(select1));
+    			add_location(select1, file$3, 26, 2, 830);
+    			attr_dev(h21, "class", "text-gray-700 text-xl m-1");
+    			add_location(h21, file$3, 35, 2, 1049);
+    			attr_dev(form, "name", "spell-parameters");
+    			add_location(form, file$3, 12, 0, 399);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, h20, anchor);
+    			append_dev(h20, t0);
+    			insert_dev(target, t1, anchor);
+    			insert_dev(target, form, anchor);
+    			append_dev(form, label0);
+    			append_dev(form, t3);
+    			append_dev(form, select0);
+
+    			for (let i = 0; i < each_blocks_2.length; i += 1) {
+    				each_blocks_2[i].m(select0, null);
+    			}
+
+    			select_option(select0, /*$writeSpellParameters*/ ctx[1].spellName);
+    			append_dev(form, t4);
+    			append_dev(form, label1);
+    			append_dev(form, t6);
+    			append_dev(form, select1);
+
+    			for (let i = 0; i < each_blocks_1.length; i += 1) {
+    				each_blocks_1[i].m(select1, null);
+    			}
+
+    			select_option(select1, /*$writeSpellParameters*/ ctx[1].challengeRating);
+    			append_dev(form, t7);
+    			append_dev(form, h21);
+    			append_dev(form, t9);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(form, null);
+    			}
+
+    			if (!mounted) {
+    				dispose = [
+    					listen_dev(select0, "change", /*select0_change_handler*/ ctx[5]),
+    					listen_dev(select1, "change", /*select1_change_handler*/ ctx[6])
+    				];
+
+    				mounted = true;
+    			}
+    		},
+    		p: function update(ctx, [dirty]) {
+    			if (dirty & /*heading*/ 1) set_data_dev(t0, /*heading*/ ctx[0]);
+
+    			if (dirty & /*spellOptions*/ 4) {
+    				each_value_2 = /*spellOptions*/ ctx[2];
+    				validate_each_argument(each_value_2);
+    				let i;
+
+    				for (i = 0; i < each_value_2.length; i += 1) {
+    					const child_ctx = get_each_context_2(ctx, each_value_2, i);
+
+    					if (each_blocks_2[i]) {
+    						each_blocks_2[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks_2[i] = create_each_block_2(child_ctx);
+    						each_blocks_2[i].c();
+    						each_blocks_2[i].m(select0, null);
+    					}
+    				}
+
+    				for (; i < each_blocks_2.length; i += 1) {
+    					each_blocks_2[i].d(1);
+    				}
+
+    				each_blocks_2.length = each_value_2.length;
+    			}
+
+    			if (dirty & /*$writeSpellParameters, spellOptions*/ 6) {
+    				select_option(select0, /*$writeSpellParameters*/ ctx[1].spellName);
+    			}
+
+    			if (dirty & /*crOptions*/ 8) {
+    				each_value_1 = /*crOptions*/ ctx[3];
+    				validate_each_argument(each_value_1);
+    				let i;
+
+    				for (i = 0; i < each_value_1.length; i += 1) {
+    					const child_ctx = get_each_context_1(ctx, each_value_1, i);
+
+    					if (each_blocks_1[i]) {
+    						each_blocks_1[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks_1[i] = create_each_block_1(child_ctx);
+    						each_blocks_1[i].c();
+    						each_blocks_1[i].m(select1, null);
+    					}
+    				}
+
+    				for (; i < each_blocks_1.length; i += 1) {
+    					each_blocks_1[i].d(1);
+    				}
+
+    				each_blocks_1.length = each_value_1.length;
+    			}
+
+    			if (dirty & /*$writeSpellParameters, spellOptions*/ 6) {
+    				select_option(select1, /*$writeSpellParameters*/ ctx[1].challengeRating);
+    			}
+
+    			if (dirty & /*terrainOptions, $writeSpellParameters*/ 18) {
+    				each_value = /*terrainOptions*/ ctx[4];
+    				validate_each_argument(each_value);
+    				let i;
+
+    				for (i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks[i] = create_each_block(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(form, null);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+
+    				each_blocks.length = each_value.length;
+    			}
+    		},
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(h20);
+    			if (detaching) detach_dev(t1);
+    			if (detaching) detach_dev(form);
+    			destroy_each(each_blocks_2, detaching);
+    			destroy_each(each_blocks_1, detaching);
+    			destroy_each(each_blocks, detaching);
+    			mounted = false;
+    			run_all(dispose);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$3.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$3($$self, $$props, $$invalidate) {
+    	let $writeSpellParameters;
+    	validate_store(writeSpellParameters, "writeSpellParameters");
+    	component_subscribe($$self, writeSpellParameters, $$value => $$invalidate(1, $writeSpellParameters = $$value));
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots("SelectSpellParameters", slots, []);
+    	let { heading = "Spell Parameters" } = $$props;
+    	const spellOptions = ["Conjure Animals", "Conjure Woodland Beings", "Conjure Minor Elementals"];
+    	const crOptions = [0, 0.125, 0.25, 0.5, 1, 2];
+    	const terrainOptions = ["Land", "Water", "Air"];
+    	const writable_props = ["heading"];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<SelectSpellParameters> was created with unknown prop '${key}'`);
+    	});
+
+    	const $$binding_groups = [[]];
+
+    	function select0_change_handler() {
+    		$writeSpellParameters.spellName = select_value(this);
+    		writeSpellParameters.set($writeSpellParameters);
+    		$$invalidate(2, spellOptions);
+    	}
+
+    	function select1_change_handler() {
+    		$writeSpellParameters.challengeRating = select_value(this);
+    		writeSpellParameters.set($writeSpellParameters);
+    		$$invalidate(2, spellOptions);
+    	}
+
+    	function input_change_handler() {
+    		$writeSpellParameters.terrains = get_binding_group_value($$binding_groups[0], this.__value, this.checked);
+    		writeSpellParameters.set($writeSpellParameters);
+    		$$invalidate(2, spellOptions);
+    	}
+
+    	$$self.$$set = $$props => {
+    		if ("heading" in $$props) $$invalidate(0, heading = $$props.heading);
+    	};
+
+    	$$self.$capture_state = () => ({
+    		writeSpellParameters,
+    		heading,
+    		spellOptions,
+    		crOptions,
+    		terrainOptions,
+    		$writeSpellParameters
+    	});
+
+    	$$self.$inject_state = $$props => {
+    		if ("heading" in $$props) $$invalidate(0, heading = $$props.heading);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [
+    		heading,
+    		$writeSpellParameters,
+    		spellOptions,
+    		crOptions,
+    		terrainOptions,
+    		select0_change_handler,
+    		select1_change_handler,
+    		input_change_handler,
+    		$$binding_groups
+    	];
+    }
+
+    class SelectSpellParameters extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$3, create_fragment$3, safe_not_equal, { heading: 0 });
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "SelectSpellParameters",
+    			options,
+    			id: create_fragment$3.name
+    		});
+    	}
+
+    	get heading() {
+    		throw new Error("<SelectSpellParameters>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set heading(value) {
+    		throw new Error("<SelectSpellParameters>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src/components/SelectSourcebooks.svelte generated by Svelte v3.26.0 */
+
+    const { Object: Object_1 } = globals;
+    const file$4 = "src/components/SelectSourcebooks.svelte";
+
+    function get_each_context$1(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[5] = list[i];
+    	return child_ctx;
+    }
+
+    // (10:2) {#each sourceBookTitles as sourcebook}
+    function create_each_block$1(ctx) {
+    	let label;
+    	let input;
+    	let input_value_value;
+    	let t0;
+    	let t1_value = /*sourcebook*/ ctx[5] + "";
+    	let t1;
+    	let t2;
+    	let mounted;
+    	let dispose;
+
+    	const block = {
+    		c: function create() {
+    			label = element("label");
+    			input = element("input");
+    			t0 = space();
+    			t1 = text(t1_value);
+    			t2 = space();
+    			attr_dev(input, "type", "checkbox");
+    			input.__value = input_value_value = /*sourcebook*/ ctx[5];
+    			input.value = input.__value;
+    			/*$$binding_groups*/ ctx[4][0].push(input);
+    			add_location(input, file$4, 11, 6, 395);
+    			attr_dev(label, "class", "text-lg");
+    			add_location(label, file$4, 10, 4, 365);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, label, anchor);
+    			append_dev(label, input);
+    			input.checked = ~/*$writeSourcebooks*/ ctx[1].indexOf(input.__value);
+    			append_dev(label, t0);
+    			append_dev(label, t1);
+    			append_dev(label, t2);
+
+    			if (!mounted) {
+    				dispose = listen_dev(input, "change", /*input_change_handler*/ ctx[3]);
+    				mounted = true;
+    			}
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*$writeSourcebooks*/ 2) {
+    				input.checked = ~/*$writeSourcebooks*/ ctx[1].indexOf(input.__value);
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(label);
+    			/*$$binding_groups*/ ctx[4][0].splice(/*$$binding_groups*/ ctx[4][0].indexOf(input), 1);
+    			mounted = false;
+    			dispose();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block$1.name,
+    		type: "each",
+    		source: "(10:2) {#each sourceBookTitles as sourcebook}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment$4(ctx) {
+    	let h2;
+    	let t0;
+    	let t1;
+    	let form;
+    	let each_value = /*sourceBookTitles*/ ctx[2];
+    	validate_each_argument(each_value);
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block$1(get_each_context$1(ctx, each_value, i));
+    	}
+
+    	const block = {
+    		c: function create() {
+    			h2 = element("h2");
+    			t0 = text(/*heading*/ ctx[0]);
+    			t1 = space();
+    			form = element("form");
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			attr_dev(h2, "class", "text-blue-700 text-2xl");
+    			add_location(h2, file$4, 6, 0, 219);
+    			attr_dev(form, "name", "sourcebooks");
+    			attr_dev(form, "id", "select-sourcebooks");
+    			add_location(form, file$4, 8, 0, 270);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, h2, anchor);
+    			append_dev(h2, t0);
+    			insert_dev(target, t1, anchor);
+    			insert_dev(target, form, anchor);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(form, null);
+    			}
+    		},
+    		p: function update(ctx, [dirty]) {
+    			if (dirty & /*heading*/ 1) set_data_dev(t0, /*heading*/ ctx[0]);
+
+    			if (dirty & /*sourceBookTitles, $writeSourcebooks*/ 6) {
+    				each_value = /*sourceBookTitles*/ ctx[2];
+    				validate_each_argument(each_value);
+    				let i;
+
+    				for (i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context$1(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks[i] = create_each_block$1(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(form, null);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+
+    				each_blocks.length = each_value.length;
+    			}
+    		},
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(h2);
+    			if (detaching) detach_dev(t1);
+    			if (detaching) detach_dev(form);
+    			destroy_each(each_blocks, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$4.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$4($$self, $$props, $$invalidate) {
+    	let $writeSourcebooks;
+    	validate_store(writeSourcebooks, "writeSourcebooks");
+    	component_subscribe($$self, writeSourcebooks, $$value => $$invalidate(1, $writeSourcebooks = $$value));
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots("SelectSourcebooks", slots, []);
+    	let { heading = "Sourcebooks" } = $$props;
+    	let sourceBookTitles = Object.values(src.sources).sort();
+    	const writable_props = ["heading"];
+
+    	Object_1.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<SelectSourcebooks> was created with unknown prop '${key}'`);
+    	});
+
+    	const $$binding_groups = [[]];
+
+    	function input_change_handler() {
+    		$writeSourcebooks = get_binding_group_value($$binding_groups[0], this.__value, this.checked);
+    		writeSourcebooks.set($writeSourcebooks);
+    	}
+
+    	$$self.$$set = $$props => {
+    		if ("heading" in $$props) $$invalidate(0, heading = $$props.heading);
+    	};
+
+    	$$self.$capture_state = () => ({
+    		writeSourcebooks,
+    		sources: src.sources,
+    		heading,
+    		sourceBookTitles,
+    		$writeSourcebooks
+    	});
+
+    	$$self.$inject_state = $$props => {
+    		if ("heading" in $$props) $$invalidate(0, heading = $$props.heading);
+    		if ("sourceBookTitles" in $$props) $$invalidate(2, sourceBookTitles = $$props.sourceBookTitles);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [
+    		heading,
+    		$writeSourcebooks,
+    		sourceBookTitles,
+    		input_change_handler,
+    		$$binding_groups
+    	];
+    }
+
+    class SelectSourcebooks extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$4, create_fragment$4, safe_not_equal, { heading: 0 });
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "SelectSourcebooks",
+    			options,
+    			id: create_fragment$4.name
+    		});
+    	}
+
+    	get heading() {
+    		throw new Error("<SelectSourcebooks>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set heading(value) {
+    		throw new Error("<SelectSourcebooks>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src/components/ResultBox.svelte generated by Svelte v3.26.0 */
+
+    const file$5 = "src/components/ResultBox.svelte";
+
+    function create_fragment$5(ctx) {
+    	let div;
+    	let current;
+    	const default_slot_template = /*#slots*/ ctx[1].default;
+    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[0], null);
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+    			if (default_slot) default_slot.c();
+    			attr_dev(div, "class", "box svelte-15i5ke2");
+    			add_location(div, file$5, 11, 0, 191);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+
+    			if (default_slot) {
+    				default_slot.m(div, null);
+    			}
+
+    			current = true;
+    		},
+    		p: function update(ctx, [dirty]) {
+    			if (default_slot) {
+    				if (default_slot.p && dirty & /*$$scope*/ 1) {
+    					update_slot(default_slot, default_slot_template, ctx, /*$$scope*/ ctx[0], dirty, null, null);
+    				}
+    			}
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(default_slot, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(default_slot, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div);
+    			if (default_slot) default_slot.d(detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$5.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$5($$self, $$props, $$invalidate) {
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots("ResultBox", slots, ['default']);
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<ResultBox> was created with unknown prop '${key}'`);
+    	});
+
+    	$$self.$$set = $$props => {
+    		if ("$$scope" in $$props) $$invalidate(0, $$scope = $$props.$$scope);
+    	};
+
+    	return [$$scope, slots];
+    }
+
+    class ResultBox extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$5, create_fragment$5, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "ResultBox",
+    			options,
+    			id: create_fragment$5.name
+    		});
+    	}
+    }
+
+    /* src/App.svelte generated by Svelte v3.26.0 */
+    const file$6 = "src/App.svelte";
+
+    function get_each_context_1$1(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[15] = list[i];
+    	return child_ctx;
+    }
+
+    function get_each_context$2(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[12] = list[i];
+    	return child_ctx;
+    }
+
+    // (48:0) <Sidebar bind:open={leftSidebarIsOpen}>
+    function create_default_slot_2(ctx) {
+    	let selectspellparameters;
+    	let current;
+    	selectspellparameters = new SelectSpellParameters({ $$inline: true });
+
+    	const block = {
+    		c: function create() {
+    			create_component(selectspellparameters.$$.fragment);
+    		},
+    		m: function mount(target, anchor) {
+    			mount_component(selectspellparameters, target, anchor);
+    			current = true;
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(selectspellparameters.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(selectspellparameters.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			destroy_component(selectspellparameters, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot_2.name,
+    		type: "slot",
+    		source: "(48:0) <Sidebar bind:open={leftSidebarIsOpen}>",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (51:0) <Sidebar bind:open={rightSidebarIsOpen} left={false}>
+    function create_default_slot_1(ctx) {
+    	let selectsourcebooks;
+    	let current;
+    	selectsourcebooks = new SelectSourcebooks({ $$inline: true });
+
+    	const block = {
+    		c: function create() {
+    			create_component(selectsourcebooks.$$.fragment);
+    		},
+    		m: function mount(target, anchor) {
+    			mount_component(selectsourcebooks, target, anchor);
+    			current = true;
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(selectsourcebooks.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(selectsourcebooks.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			destroy_component(selectsourcebooks, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot_1.name,
+    		type: "slot",
+    		source: "(51:0) <Sidebar bind:open={rightSidebarIsOpen} left={false}>",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (67:8) {#each result as creature}
+    function create_each_block_1$1(ctx) {
+    	let li;
+    	let t_value = /*creature*/ ctx[15] + "";
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			li = element("li");
+    			t = text(t_value);
+    			add_location(li, file$6, 67, 10, 2235);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, li, anchor);
+    			append_dev(li, t);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*results*/ 4 && t_value !== (t_value = /*creature*/ ctx[15] + "")) set_data_dev(t, t_value);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(li);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block_1$1.name,
+    		type: "each",
+    		source: "(67:8) {#each result as creature}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (65:4) <ResultBox>
+    function create_default_slot(ctx) {
+    	let ul;
+    	let t;
+    	let each_value_1 = /*result*/ ctx[12];
+    	validate_each_argument(each_value_1);
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value_1.length; i += 1) {
+    		each_blocks[i] = create_each_block_1$1(get_each_context_1$1(ctx, each_value_1, i));
+    	}
+
+    	const block = {
+    		c: function create() {
+    			ul = element("ul");
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			t = space();
+    			add_location(ul, file$6, 65, 6, 2185);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, ul, anchor);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(ul, null);
+    			}
+
+    			insert_dev(target, t, anchor);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*results*/ 4) {
+    				each_value_1 = /*result*/ ctx[12];
+    				validate_each_argument(each_value_1);
+    				let i;
+
+    				for (i = 0; i < each_value_1.length; i += 1) {
+    					const child_ctx = get_each_context_1$1(ctx, each_value_1, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks[i] = create_each_block_1$1(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(ul, null);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+
+    				each_blocks.length = each_value_1.length;
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(ul);
+    			destroy_each(each_blocks, detaching);
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot.name,
+    		type: "slot",
+    		source: "(65:4) <ResultBox>",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (64:2) {#each results as result}
+    function create_each_block$2(ctx) {
+    	let resultbox;
+    	let current;
+
+    	resultbox = new ResultBox({
+    			props: {
+    				$$slots: { default: [create_default_slot] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	const block = {
+    		c: function create() {
+    			create_component(resultbox.$$.fragment);
+    		},
+    		m: function mount(target, anchor) {
+    			mount_component(resultbox, target, anchor);
+    			current = true;
+    		},
+    		p: function update(ctx, dirty) {
+    			const resultbox_changes = {};
+
+    			if (dirty & /*$$scope, results*/ 262148) {
+    				resultbox_changes.$$scope = { dirty, ctx };
+    			}
+
+    			resultbox.$set(resultbox_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(resultbox.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(resultbox.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			destroy_component(resultbox, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block$2.name,
+    		type: "each",
+    		source: "(64:2) {#each results as result}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment$6(ctx) {
+    	let link;
+    	let t0;
+    	let navbar;
+    	let updating_spellOptionsMenu;
+    	let updating_sourceOptionsMenu;
+    	let t1;
+    	let sidebar0;
+    	let updating_open;
+    	let t2;
+    	let sidebar1;
+    	let updating_open_1;
+    	let t3;
+    	let div0;
+    	let button;
+    	let t5;
+    	let div1;
+    	let current;
+    	let mounted;
+    	let dispose;
+
+    	function navbar_spellOptionsMenu_binding(value) {
+    		/*navbar_spellOptionsMenu_binding*/ ctx[5].call(null, value);
+    	}
+
+    	function navbar_sourceOptionsMenu_binding(value) {
+    		/*navbar_sourceOptionsMenu_binding*/ ctx[6].call(null, value);
+    	}
+
+    	let navbar_props = {
+    		heading: "Conjure5e" + (/*appVersion*/ ctx[3] ? ` ${/*appVersion*/ ctx[3]}` : "")
+    	};
+
+    	if (/*leftSidebarIsOpen*/ ctx[0] !== void 0) {
+    		navbar_props.spellOptionsMenu = /*leftSidebarIsOpen*/ ctx[0];
+    	}
+
+    	if (/*rightSidebarIsOpen*/ ctx[1] !== void 0) {
+    		navbar_props.sourceOptionsMenu = /*rightSidebarIsOpen*/ ctx[1];
+    	}
+
+    	navbar = new Navbar({ props: navbar_props, $$inline: true });
+    	binding_callbacks.push(() => bind(navbar, "spellOptionsMenu", navbar_spellOptionsMenu_binding));
+    	binding_callbacks.push(() => bind(navbar, "sourceOptionsMenu", navbar_sourceOptionsMenu_binding));
+
+    	function sidebar0_open_binding(value) {
+    		/*sidebar0_open_binding*/ ctx[7].call(null, value);
+    	}
+
+    	let sidebar0_props = {
+    		$$slots: { default: [create_default_slot_2] },
+    		$$scope: { ctx }
+    	};
+
+    	if (/*leftSidebarIsOpen*/ ctx[0] !== void 0) {
+    		sidebar0_props.open = /*leftSidebarIsOpen*/ ctx[0];
+    	}
+
+    	sidebar0 = new Sidebar({ props: sidebar0_props, $$inline: true });
+    	binding_callbacks.push(() => bind(sidebar0, "open", sidebar0_open_binding));
+
+    	function sidebar1_open_binding(value) {
+    		/*sidebar1_open_binding*/ ctx[8].call(null, value);
+    	}
+
+    	let sidebar1_props = {
+    		left: false,
+    		$$slots: { default: [create_default_slot_1] },
+    		$$scope: { ctx }
+    	};
+
+    	if (/*rightSidebarIsOpen*/ ctx[1] !== void 0) {
+    		sidebar1_props.open = /*rightSidebarIsOpen*/ ctx[1];
+    	}
+
+    	sidebar1 = new Sidebar({ props: sidebar1_props, $$inline: true });
+    	binding_callbacks.push(() => bind(sidebar1, "open", sidebar1_open_binding));
+    	let each_value = /*results*/ ctx[2];
+    	validate_each_argument(each_value);
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block$2(get_each_context$2(ctx, each_value, i));
+    	}
+
+    	const out = i => transition_out(each_blocks[i], 1, 1, () => {
+    		each_blocks[i] = null;
+    	});
+
+    	const block = {
+    		c: function create() {
+    			link = element("link");
+    			t0 = space();
+    			create_component(navbar.$$.fragment);
+    			t1 = space();
+    			create_component(sidebar0.$$.fragment);
+    			t2 = space();
+    			create_component(sidebar1.$$.fragment);
+    			t3 = space();
+    			div0 = element("div");
+    			button = element("button");
+    			button.textContent = "Cast Spell";
+    			t5 = space();
+    			div1 = element("div");
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			attr_dev(link, "href", "https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css");
+    			attr_dev(link, "rel", "stylesheet");
+    			add_location(link, file$6, 39, 2, 1353);
+    			attr_dev(button, "name", "cast-spell");
+    			attr_dev(button, "id", "cast-spell-button");
+    			attr_dev(button, "class", "bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4\n      border border-gray-400 rounded shadow");
+    			add_location(button, file$6, 55, 2, 1834);
+    			attr_dev(div0, "class", "flex justify-center m-4");
+    			add_location(div0, file$6, 54, 0, 1794);
+    			attr_dev(div1, "class", "flex flex-col justify-center items-center text-center");
+    			add_location(div1, file$6, 62, 0, 2067);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			append_dev(document.head, link);
+    			insert_dev(target, t0, anchor);
+    			mount_component(navbar, target, anchor);
+    			insert_dev(target, t1, anchor);
+    			mount_component(sidebar0, target, anchor);
+    			insert_dev(target, t2, anchor);
+    			mount_component(sidebar1, target, anchor);
+    			insert_dev(target, t3, anchor);
+    			insert_dev(target, div0, anchor);
+    			append_dev(div0, button);
+    			insert_dev(target, t5, anchor);
+    			insert_dev(target, div1, anchor);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(div1, null);
+    			}
+
+    			current = true;
+
+    			if (!mounted) {
+    				dispose = listen_dev(button, "click", /*click_handler*/ ctx[9], false, false, false);
+    				mounted = true;
+    			}
+    		},
+    		p: function update(ctx, [dirty]) {
+    			const navbar_changes = {};
+
+    			if (!updating_spellOptionsMenu && dirty & /*leftSidebarIsOpen*/ 1) {
+    				updating_spellOptionsMenu = true;
+    				navbar_changes.spellOptionsMenu = /*leftSidebarIsOpen*/ ctx[0];
+    				add_flush_callback(() => updating_spellOptionsMenu = false);
+    			}
+
+    			if (!updating_sourceOptionsMenu && dirty & /*rightSidebarIsOpen*/ 2) {
+    				updating_sourceOptionsMenu = true;
+    				navbar_changes.sourceOptionsMenu = /*rightSidebarIsOpen*/ ctx[1];
+    				add_flush_callback(() => updating_sourceOptionsMenu = false);
+    			}
+
+    			navbar.$set(navbar_changes);
+    			const sidebar0_changes = {};
+
+    			if (dirty & /*$$scope*/ 262144) {
+    				sidebar0_changes.$$scope = { dirty, ctx };
+    			}
+
+    			if (!updating_open && dirty & /*leftSidebarIsOpen*/ 1) {
+    				updating_open = true;
+    				sidebar0_changes.open = /*leftSidebarIsOpen*/ ctx[0];
+    				add_flush_callback(() => updating_open = false);
+    			}
+
+    			sidebar0.$set(sidebar0_changes);
+    			const sidebar1_changes = {};
+
+    			if (dirty & /*$$scope*/ 262144) {
+    				sidebar1_changes.$$scope = { dirty, ctx };
+    			}
+
+    			if (!updating_open_1 && dirty & /*rightSidebarIsOpen*/ 2) {
+    				updating_open_1 = true;
+    				sidebar1_changes.open = /*rightSidebarIsOpen*/ ctx[1];
+    				add_flush_callback(() => updating_open_1 = false);
+    			}
+
+    			sidebar1.$set(sidebar1_changes);
+
+    			if (dirty & /*results*/ 4) {
+    				each_value = /*results*/ ctx[2];
+    				validate_each_argument(each_value);
+    				let i;
+
+    				for (i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context$2(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(child_ctx, dirty);
+    						transition_in(each_blocks[i], 1);
+    					} else {
+    						each_blocks[i] = create_each_block$2(child_ctx);
+    						each_blocks[i].c();
+    						transition_in(each_blocks[i], 1);
+    						each_blocks[i].m(div1, null);
+    					}
+    				}
+
+    				group_outros();
+
+    				for (i = each_value.length; i < each_blocks.length; i += 1) {
+    					out(i);
+    				}
+
+    				check_outros();
+    			}
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(navbar.$$.fragment, local);
+    			transition_in(sidebar0.$$.fragment, local);
+    			transition_in(sidebar1.$$.fragment, local);
+
+    			for (let i = 0; i < each_value.length; i += 1) {
+    				transition_in(each_blocks[i]);
+    			}
+
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(navbar.$$.fragment, local);
+    			transition_out(sidebar0.$$.fragment, local);
+    			transition_out(sidebar1.$$.fragment, local);
+    			each_blocks = each_blocks.filter(Boolean);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				transition_out(each_blocks[i]);
+    			}
+
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			detach_dev(link);
+    			if (detaching) detach_dev(t0);
+    			destroy_component(navbar, detaching);
+    			if (detaching) detach_dev(t1);
+    			destroy_component(sidebar0, detaching);
+    			if (detaching) detach_dev(t2);
+    			destroy_component(sidebar1, detaching);
+    			if (detaching) detach_dev(t3);
+    			if (detaching) detach_dev(div0);
+    			if (detaching) detach_dev(t5);
+    			if (detaching) detach_dev(div1);
+    			destroy_each(each_blocks, detaching);
+    			mounted = false;
+    			dispose();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$6.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$6($$self, $$props, $$invalidate) {
+    	let $readSpellParameters;
+    	let $readSourcebooks;
+    	validate_store(readSpellParameters, "readSpellParameters");
+    	component_subscribe($$self, readSpellParameters, $$value => $$invalidate(10, $readSpellParameters = $$value));
+    	validate_store(readSourcebooks, "readSourcebooks");
+    	component_subscribe($$self, readSourcebooks, $$value => $$invalidate(11, $readSourcebooks = $$value));
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots("App", slots, []);
+    	let { leftSidebarIsOpen = false } = $$props;
+    	let { rightSidebarIsOpen = false } = $$props;
+    	let results = [];
+    	const appVersion = packageVersion();
+
+    	function cast() {
+    		let spell;
+
+    		if ($readSpellParameters.spellName === "Conjure Animals") {
+    			spell = src.conjureAnimals;
+    		} else if ($readSpellParameters.spellName === "Conjure Woodland Beings") {
+    			spell = src.conjureWoodlandBeings;
+    		} else {
+    			spell = src.conjureMinorElementals;
+    		}
+
+    		const { terrains, challengeRating } = $readSpellParameters;
+    		const sources = $readSourcebooks;
+    		const result = spell({ terrains, challengeRating, sources }).map(creature => creature.name);
+    		$$invalidate(2, results = [result, ...results]);
+    	}
+
+    	const writable_props = ["leftSidebarIsOpen", "rightSidebarIsOpen"];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<App> was created with unknown prop '${key}'`);
+    	});
+
+    	function navbar_spellOptionsMenu_binding(value) {
+    		leftSidebarIsOpen = value;
+    		$$invalidate(0, leftSidebarIsOpen);
+    	}
+
+    	function navbar_sourceOptionsMenu_binding(value) {
+    		rightSidebarIsOpen = value;
+    		$$invalidate(1, rightSidebarIsOpen);
+    	}
+
+    	function sidebar0_open_binding(value) {
+    		leftSidebarIsOpen = value;
+    		$$invalidate(0, leftSidebarIsOpen);
+    	}
+
+    	function sidebar1_open_binding(value) {
+    		rightSidebarIsOpen = value;
+    		$$invalidate(1, rightSidebarIsOpen);
+    	}
+
+    	const click_handler = () => cast();
+
+    	$$self.$$set = $$props => {
+    		if ("leftSidebarIsOpen" in $$props) $$invalidate(0, leftSidebarIsOpen = $$props.leftSidebarIsOpen);
+    		if ("rightSidebarIsOpen" in $$props) $$invalidate(1, rightSidebarIsOpen = $$props.rightSidebarIsOpen);
+    	};
+
+    	$$self.$capture_state = () => ({
+    		readSourcebooks,
+    		readSpellParameters,
+    		conjureAnimals: src.conjureAnimals,
+    		conjureMinorElementals: src.conjureMinorElementals,
+    		conjureWoodlandBeings: src.conjureWoodlandBeings,
+    		packageVersion,
+    		Navbar,
+    		Sidebar,
+    		SelectSpellParameters,
+    		SelectSourcebooks,
+    		ResultBox,
+    		leftSidebarIsOpen,
+    		rightSidebarIsOpen,
+    		results,
+    		appVersion,
+    		cast,
+    		$readSpellParameters,
+    		$readSourcebooks
+    	});
+
+    	$$self.$inject_state = $$props => {
+    		if ("leftSidebarIsOpen" in $$props) $$invalidate(0, leftSidebarIsOpen = $$props.leftSidebarIsOpen);
+    		if ("rightSidebarIsOpen" in $$props) $$invalidate(1, rightSidebarIsOpen = $$props.rightSidebarIsOpen);
+    		if ("results" in $$props) $$invalidate(2, results = $$props.results);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [
+    		leftSidebarIsOpen,
+    		rightSidebarIsOpen,
+    		results,
+    		appVersion,
+    		cast,
+    		navbar_spellOptionsMenu_binding,
+    		navbar_sourceOptionsMenu_binding,
+    		sidebar0_open_binding,
+    		sidebar1_open_binding,
+    		click_handler
+    	];
+    }
+
+    class App extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+
+    		init(this, options, instance$6, create_fragment$6, safe_not_equal, {
+    			leftSidebarIsOpen: 0,
+    			rightSidebarIsOpen: 1
+    		});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "App",
+    			options,
+    			id: create_fragment$6.name
+    		});
+    	}
+
+    	get leftSidebarIsOpen() {
+    		throw new Error("<App>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set leftSidebarIsOpen(value) {
+    		throw new Error("<App>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get rightSidebarIsOpen() {
+    		throw new Error("<App>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set rightSidebarIsOpen(value) {
+    		throw new Error("<App>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    const app = new App({
+        target: document.body,
+        props: {},
+    });
+
+    return app;
+
+}());
 //# sourceMappingURL=bundle.js.map

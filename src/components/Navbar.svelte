@@ -1,8 +1,9 @@
-<script>
+<script lang="ts">
   import HamburgerButton from "./HamburgerButton.svelte";
 
-  export let spellOptionsMenu = false;
-  export let sourceOptionsMenu = false;
+  export let heading: string;
+  export let spellOptionsMenu: boolean = false;
+  export let sourceOptionsMenu: boolean = false;
 </script>
 
 <header
@@ -14,7 +15,7 @@
       data-testid="spellOptionsMenuDiv">
       <HamburgerButton bind:open={spellOptionsMenu} />
     </div>
-    <h1 class="text-blue-700 text-3xl">Conjure5e</h1>
+    <h1 class="text-blue-700 text-3xl">{heading}</h1>
     <div
       class={spellOptionsMenu ? 'invisible' : ''}
       data-testid="sourceOptionsMenuDiv">

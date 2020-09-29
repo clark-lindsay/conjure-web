@@ -6,6 +6,7 @@
     conjureMinorElementals,
     conjureWoodlandBeings,
   } from "conjure5e";
+  import { packageVersion } from "./getPackageInfo";
 
   import Navbar from "./components/Navbar.svelte";
   import Sidebar from "./components/Sidebar.svelte";
@@ -16,6 +17,7 @@
   export let leftSidebarIsOpen: boolean = false;
   export let rightSidebarIsOpen: boolean = false;
   let results = [];
+  const appVersion: string = packageVersion();
 
   function cast() {
     let spell;
@@ -46,6 +48,7 @@
     rel="stylesheet" />
 </svelte:head>
 <Navbar
+  heading="Conjure5e{appVersion ? ` ${appVersion}` : ''}"
   bind:spellOptionsMenu={leftSidebarIsOpen}
   bind:sourceOptionsMenu={rightSidebarIsOpen} />
 <Sidebar bind:open={leftSidebarIsOpen}>
