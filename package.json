@@ -38,7 +38,7 @@
     "typescript": "^3.9.3"
   },
   "dependencies": {
-    "conjure5e": "^1.4.0",
+    "conjure5e": "^1.4.1",
     "sirv-cli": "^1.0.0"
   }
 }
