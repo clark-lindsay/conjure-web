@@ -1,0 +1,39 @@
+name: Deploy
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: install modules
+        run: yarn
+        continue-on-error: false
+
+      - name: run tests
+        run: yarn jest
+        continue-on-error: false
+
+      - name: build static app
+        run: yarn build
+        continue-on-error: false
+
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.5.6 
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "conjure5e" 
+          heroku_email: "clarklindsay96@gmail.com"
+          buildpack: "https://github.com/heroku/heroku-buildpack-static.git"
+          appdir: "public"
+          healthcheck: "https://conjure5e.herokuapp.com/"
+          rollbackonhealthcheckfailed: true
