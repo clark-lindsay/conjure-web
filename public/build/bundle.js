@@ -2102,7 +2102,7 @@ var app = (function () {
       ($writeSpellParameters) => $writeSpellParameters
     );
 
-    var name="svelte-app";var version="0.1.3";var scripts={build:"rollup -c",dev:"rollup -c -w",start:"sirv public",validate:"svelte-check"};var devDependencies={"@babel/core":"^7.11.6","@babel/preset-env":"^7.11.5","@rollup/plugin-commonjs":"^14.0.0","@rollup/plugin-json":"^4.1.0","@rollup/plugin-node-resolve":"^8.0.0","@rollup/plugin-typescript":"^6.0.0","@testing-library/jest-dom":"^5.11.4","@testing-library/svelte":"^3.0.0","@tsconfig/svelte":"^1.0.0","@types/jest":"^26.0.14","babel-jest":"^26.3.0",eslint:"^7.9.0","eslint-plugin-jest-dom":"^3.2.3",jest:"^26.4.2","jest-vim-reporter":"^0.0.1",prettier:"^2.1.2",rollup:"^2.3.4","rollup-plugin-livereload":"^2.0.0","rollup-plugin-svelte":"^6.0.0","rollup-plugin-terser":"^7.0.0",svelte:"^3.0.0","svelte-check":"^1.0.0","svelte-htm":"^1.1.1","svelte-jester":"^1.1.5","svelte-preprocess":"^4.3.0","ts-jest":"^26.4.0",tslib:"^2.0.0",typescript:"^3.9.3"};var dependencies={conjure5e:"^1.4.1","sirv-cli":"^1.0.0"};var packageJson = {name:name,version:version,scripts:scripts,devDependencies:devDependencies,dependencies:dependencies};
+    var name="svelte-app";var version="0.1.3";var scripts={build:"rollup -c",dev:"rollup -c -w",start:"sirv public",validate:"svelte-check"};var devDependencies={"@babel/core":"^7.11.6","@babel/preset-env":"^7.11.5","@rollup/plugin-commonjs":"^14.0.0","@rollup/plugin-json":"^4.1.0","@rollup/plugin-node-resolve":"^8.0.0","@rollup/plugin-typescript":"^6.0.0","@testing-library/jest-dom":"^5.11.4","@testing-library/svelte":"^3.0.0","@tsconfig/svelte":"^1.0.0","@types/jest":"^26.0.14","@types/node":"^14.11.2","babel-jest":"^26.3.0",eslint:"^7.9.0","eslint-plugin-jest-dom":"^3.2.3","eslint-plugin-svelte3":"^2.7.3",jest:"^26.4.2","jest-vim-reporter":"^0.0.1",prettier:"^2.1.2",rollup:"^2.3.4","rollup-plugin-livereload":"^2.0.0","rollup-plugin-svelte":"^6.0.0","rollup-plugin-terser":"^7.0.0",svelte:"^3.0.0","svelte-check":"^1.0.0","svelte-htm":"^1.1.1","svelte-jester":"^1.1.5","svelte-preprocess":"^4.3.0","ts-jest":"^26.4.0",tslib:"^2.0.0",typescript:"^3.9.3"};var dependencies={conjure5e:"^1.4.1","sirv-cli":"^1.0.0"};var packageJson = {name:name,version:version,scripts:scripts,devDependencies:devDependencies,dependencies:dependencies};
 
     function packageVersion() {
       if (packageJson) {
@@ -2139,28 +2139,28 @@ var app = (function () {
     			attr_dev(line0, "x2", "32");
     			attr_dev(line0, "y2", "2");
     			attr_dev(line0, "class", "svelte-1gn2oj1");
-    			add_location(line0, file, 44, 4, 851);
+    			add_location(line0, file, 44, 4, 901);
     			attr_dev(line1, "id", "middle");
     			attr_dev(line1, "x1", line1_x__value = /*left*/ ctx[1] ? "0" : "8");
     			attr_dev(line1, "y1", "12");
     			attr_dev(line1, "x2", line1_x__value_1 = /*left*/ ctx[1] ? "24" : "32");
     			attr_dev(line1, "y2", "12");
     			attr_dev(line1, "class", "svelte-1gn2oj1");
-    			add_location(line1, file, 45, 4, 902);
+    			add_location(line1, file, 45, 4, 952);
     			attr_dev(line2, "id", "bottom");
     			attr_dev(line2, "x1", "0");
     			attr_dev(line2, "y1", "22");
     			attr_dev(line2, "x2", "32");
     			attr_dev(line2, "y2", "22");
     			attr_dev(line2, "class", "svelte-1gn2oj1");
-    			add_location(line2, file, 51, 4, 1019);
+    			add_location(line2, file, 51, 4, 1069);
     			attr_dev(svg, "width", "32");
     			attr_dev(svg, "height", "24");
     			attr_dev(svg, "class", "svelte-1gn2oj1");
-    			add_location(svg, file, 43, 2, 818);
+    			add_location(svg, file, 43, 2, 868);
     			attr_dev(button, "class", button_class_value = "" + (/*fontColor*/ ctx[2] + " hover:" + /*hoverFontColor*/ ctx[3] + " cursor-pointer my-4 border-none focus:outline-none" + " svelte-1gn2oj1"));
     			toggle_class(button, "open", /*open*/ ctx[0]);
-    			add_location(button, file, 39, 0, 664);
+    			add_location(button, file, 39, 0, 714);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2359,16 +2359,16 @@ var app = (function () {
     			create_component(hamburgerbutton1.$$.fragment);
     			attr_dev(div0, "class", div0_class_value = /*sourceOptionsMenu*/ ctx[1] ? "invisible" : "");
     			attr_dev(div0, "data-testid", "spellOptionsMenuDiv");
-    			add_location(div0, file$1, 10, 4, 326);
+    			add_location(div0, file$1, 10, 4, 367);
     			attr_dev(h1, "class", "text-blue-700 text-3xl");
-    			add_location(h1, file$1, 15, 4, 493);
+    			add_location(h1, file$1, 15, 4, 534);
     			attr_dev(div1, "class", div1_class_value = /*spellOptionsMenu*/ ctx[0] ? "invisible" : "");
     			attr_dev(div1, "data-testid", "sourceOptionsMenuDiv");
-    			add_location(div1, file$1, 16, 4, 547);
+    			add_location(div1, file$1, 16, 4, 588);
     			attr_dev(nav, "class", "flex justify-between w-full");
-    			add_location(nav, file$1, 9, 2, 280);
+    			add_location(nav, file$1, 9, 2, 321);
     			attr_dev(header, "class", "flex justify-between bg-gray-200 p-2 items-center text-gray-600\n    border-b-2");
-    			add_location(header, file$1, 6, 0, 180);
+    			add_location(header, file$1, 6, 0, 221);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2563,7 +2563,7 @@ var app = (function () {
     			h2 = element("h2");
     			t = text(/*title*/ ctx[1]);
     			attr_dev(h2, "class", "absolute");
-    			add_location(h2, file$2, 33, 4, 507);
+    			add_location(h2, file$2, 33, 4, 549);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h2, anchor);
@@ -2606,7 +2606,7 @@ var app = (function () {
     			toggle_class(aside, "open", /*open*/ ctx[0]);
     			toggle_class(aside, "right", /*right*/ ctx[3]);
     			toggle_class(aside, "left", /*left*/ ctx[2]);
-    			add_location(aside, file$2, 26, 0, 349);
+    			add_location(aside, file$2, 26, 0, 391);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2796,7 +2796,7 @@ var app = (function () {
     			t = text(t_value);
     			option.__value = option_value_value = /*spell*/ ctx[15];
     			option.value = option.__value;
-    			add_location(option, file$3, 22, 6, 686);
+    			add_location(option, file$3, 22, 6, 742);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -2832,7 +2832,7 @@ var app = (function () {
     			t = text(t_value);
     			option.__value = option_value_value = /*cr*/ ctx[12];
     			option.value = option.__value;
-    			add_location(option, file$3, 35, 6, 1058);
+    			add_location(option, file$3, 35, 6, 1114);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -2878,9 +2878,9 @@ var app = (function () {
     			input.__value = input_value_value = /*terrain*/ ctx[9];
     			input.value = input.__value;
     			/*$$binding_groups*/ ctx[8][0].push(input);
-    			add_location(input, file$3, 42, 6, 1256);
+    			add_location(input, file$3, 42, 6, 1312);
     			attr_dev(label, "class", "text-lg my-1 mx-2");
-    			add_location(label, file$3, 41, 4, 1216);
+    			add_location(label, file$3, 41, 4, 1272);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, label, anchor);
@@ -2995,27 +2995,27 @@ var app = (function () {
     			}
 
     			attr_dev(h20, "class", "text-blue-700 text-2xl mx-2");
-    			add_location(h20, file$3, 11, 0, 349);
+    			add_location(h20, file$3, 11, 0, 405);
     			attr_dev(label0, "for", "spell-select");
     			attr_dev(label0, "class", "text-gray-700 text-xl my-1 mx-2");
-    			add_location(label0, file$3, 13, 2, 437);
+    			add_location(label0, file$3, 13, 2, 493);
     			attr_dev(select0, "id", "spell-select");
     			attr_dev(select0, "name", "spell");
     			attr_dev(select0, "class", "my-1 mx-2");
     			if (/*$writeSpellParameters*/ ctx[1].spellName === void 0) add_render_callback(() => /*select0_change_handler*/ ctx[5].call(select0));
-    			add_location(select0, file$3, 16, 2, 527);
+    			add_location(select0, file$3, 16, 2, 583);
     			attr_dev(label1, "for", "challenge-rating-select");
     			attr_dev(label1, "class", "text-gray-700 text-xl my-1 mx-2");
-    			add_location(label1, file$3, 26, 2, 752);
+    			add_location(label1, file$3, 26, 2, 808);
     			attr_dev(select1, "id", "challenge-rating-select");
     			attr_dev(select1, "class", "my-1 mx-2");
     			attr_dev(select1, "name", "challenge-rating");
     			if (/*$writeSpellParameters*/ ctx[1].challengeRating === void 0) add_render_callback(() => /*select1_change_handler*/ ctx[6].call(select1));
-    			add_location(select1, file$3, 29, 2, 877);
+    			add_location(select1, file$3, 29, 2, 933);
     			attr_dev(h21, "class", "text-gray-700 text-xl my-1 mx-2");
-    			add_location(h21, file$3, 39, 2, 1118);
+    			add_location(h21, file$3, 39, 2, 1174);
     			attr_dev(form, "name", "spell-parameters");
-    			add_location(form, file$3, 12, 0, 404);
+    			add_location(form, file$3, 12, 0, 460);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -3295,9 +3295,9 @@ var app = (function () {
     			input.__value = input_value_value = /*sourcebook*/ ctx[5];
     			input.value = input.__value;
     			/*$$binding_groups*/ ctx[4][0].push(input);
-    			add_location(input, file$4, 15, 8, 551);
+    			add_location(input, file$4, 15, 8, 603);
     			attr_dev(label, "class", "text-lg mx-2 my-1");
-    			add_location(label, file$4, 14, 6, 509);
+    			add_location(label, file$4, 14, 6, 561);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, label, anchor);
@@ -3363,13 +3363,13 @@ var app = (function () {
     			}
 
     			attr_dev(h2, "class", "text-blue-700 text-2xl mx-2");
-    			add_location(h2, file$4, 6, 0, 219);
+    			add_location(h2, file$4, 6, 0, 271);
     			attr_dev(form, "name", "sourcebooks");
     			attr_dev(form, "id", "select-sourcebooks");
     			attr_dev(form, "class", "overflow-visible overflow-auto box-border pb-8");
-    			add_location(form, file$4, 9, 2, 343);
+    			add_location(form, file$4, 9, 2, 395);
     			attr_dev(div, "class", "overflow-visible overflow-auto box-border pb-8 mb-4");
-    			add_location(div, file$4, 8, 0, 275);
+    			add_location(div, file$4, 8, 0, 327);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -3701,7 +3701,7 @@ var app = (function () {
     		c: function create() {
     			li = element("li");
     			t = text(t_value);
-    			add_location(li, file$6, 67, 10, 2235);
+    			add_location(li, file$6, 67, 10, 2273);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -3747,7 +3747,7 @@ var app = (function () {
     			}
 
     			t = space();
-    			add_location(ul, file$6, 65, 6, 2185);
+    			add_location(ul, file$6, 65, 6, 2223);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, ul, anchor);
@@ -3967,15 +3967,15 @@ var app = (function () {
 
     			attr_dev(link, "href", "https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css");
     			attr_dev(link, "rel", "stylesheet");
-    			add_location(link, file$6, 39, 2, 1353);
+    			add_location(link, file$6, 39, 2, 1391);
     			attr_dev(button, "name", "cast-spell");
     			attr_dev(button, "id", "cast-spell-button");
     			attr_dev(button, "class", "bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4\n      border border-gray-400 rounded shadow");
-    			add_location(button, file$6, 55, 2, 1834);
+    			add_location(button, file$6, 55, 2, 1872);
     			attr_dev(div0, "class", "flex justify-center m-4");
-    			add_location(div0, file$6, 54, 0, 1794);
+    			add_location(div0, file$6, 54, 0, 1832);
     			attr_dev(div1, "class", "flex flex-col justify-center items-center text-center");
-    			add_location(div1, file$6, 62, 0, 2067);
+    			add_location(div1, file$6, 62, 0, 2105);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
