@@ -27,7 +27,7 @@
 
 <aside
   class="fixed w-full h-full bg-gray-200 border-r-2 shadow-lg overflow-auto
-    box-border"
+    box-border z-50"
   class:open
   class:right
   class:left>
