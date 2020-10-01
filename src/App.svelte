@@ -74,7 +74,7 @@
 
 {#if disableCastButton}
   <Alert
-    mainText="Uh-Oh!"
+    mainText="That's a nat 1."
     secondaryText="Your current options will not generate any creatueres! Maybe try adding more sourcebooks?" />
 {/if}
 <div class="flex justify-center m-4">
