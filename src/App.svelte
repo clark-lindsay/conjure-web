@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { beforeUpdate, tick } from "svelte";
+  import { beforeUpdate } from "svelte";
   import { readSourcebooks } from "./stores/readSourcebooks";
   import { readSpellParameters } from "./stores/readSpellParameters";
   import {
@@ -22,7 +22,6 @@
 
   const appVersion: string = packageVersion();
   let disableCastButton: boolean = false;
-  $: cursorNotAllowed = disableCastButton;
   let results = [];
 
   beforeUpdate(() => {

@@ -186,10 +186,6 @@ var app = (function () {
             resolved_promise.then(flush);
         }
     }
-    function tick() {
-        schedule_update();
-        return resolved_promise;
-    }
     function add_render_callback(fn) {
         render_callbacks.push(fn);
     }
@@ -3950,17 +3946,17 @@ var app = (function () {
 
     function get_each_context_1$1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[17] = list[i];
+    	child_ctx[16] = list[i];
     	return child_ctx;
     }
 
     function get_each_context$2(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[14] = list[i];
+    	child_ctx[13] = list[i];
     	return child_ctx;
     }
 
-    // (61:0) <Sidebar bind:open={leftSidebarIsOpen}>
+    // (60:0) <Sidebar bind:open={leftSidebarIsOpen}>
     function create_default_slot_2(ctx) {
     	let selectspellparameters;
     	let current;
@@ -3992,14 +3988,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2.name,
     		type: "slot",
-    		source: "(61:0) <Sidebar bind:open={leftSidebarIsOpen}>",
+    		source: "(60:0) <Sidebar bind:open={leftSidebarIsOpen}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (64:0) <Sidebar bind:open={rightSidebarIsOpen} left={false}>
+    // (63:0) <Sidebar bind:open={rightSidebarIsOpen} left={false}>
     function create_default_slot_1(ctx) {
     	let selectsourcebooks;
     	let current;
@@ -4031,14 +4027,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(64:0) <Sidebar bind:open={rightSidebarIsOpen} left={false}>",
+    		source: "(63:0) <Sidebar bind:open={rightSidebarIsOpen} left={false}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (68:0) {#if disableCastButton}
+    // (67:0) {#if disableCastButton}
     function create_if_block$2(ctx) {
     	let alert;
     	let current;
@@ -4077,31 +4073,31 @@ var app = (function () {
     		block,
     		id: create_if_block$2.name,
     		type: "if",
-    		source: "(68:0) {#if disableCastButton}",
+    		source: "(67:0) {#if disableCastButton}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (80:8) {#each result as creature}
+    // (79:8) {#each result as creature}
     function create_each_block_1$1(ctx) {
     	let li;
-    	let t_value = /*creature*/ ctx[17] + "";
+    	let t_value = /*creature*/ ctx[16] + "";
     	let t;
 
     	const block = {
     		c: function create() {
     			li = element("li");
     			t = text(t_value);
-    			add_location(li, file$8, 80, 10, 2719);
+    			add_location(li, file$8, 79, 10, 2672);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
     			append_dev(li, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*results*/ 8 && t_value !== (t_value = /*creature*/ ctx[17] + "")) set_data_dev(t, t_value);
+    			if (dirty & /*results*/ 8 && t_value !== (t_value = /*creature*/ ctx[16] + "")) set_data_dev(t, t_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(li);
@@ -4112,18 +4108,18 @@ var app = (function () {
     		block,
     		id: create_each_block_1$1.name,
     		type: "each",
-    		source: "(80:8) {#each result as creature}",
+    		source: "(79:8) {#each result as creature}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (78:4) <ResultBox>
+    // (77:4) <ResultBox>
     function create_default_slot(ctx) {
     	let ul;
     	let t;
-    	let each_value_1 = /*result*/ ctx[14];
+    	let each_value_1 = /*result*/ ctx[13];
     	validate_each_argument(each_value_1);
     	let each_blocks = [];
 
@@ -4140,7 +4136,7 @@ var app = (function () {
     			}
 
     			t = space();
-    			add_location(ul, file$8, 78, 6, 2669);
+    			add_location(ul, file$8, 77, 6, 2622);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, ul, anchor);
@@ -4153,7 +4149,7 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*results*/ 8) {
-    				each_value_1 = /*result*/ ctx[14];
+    				each_value_1 = /*result*/ ctx[13];
     				validate_each_argument(each_value_1);
     				let i;
 
@@ -4187,14 +4183,14 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(78:4) <ResultBox>",
+    		source: "(77:4) <ResultBox>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (77:2) {#each results as result}
+    // (76:2) {#each results as result}
     function create_each_block$2(ctx) {
     	let resultbox;
     	let current;
@@ -4218,7 +4214,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const resultbox_changes = {};
 
-    			if (dirty & /*$$scope, results*/ 1048584) {
+    			if (dirty & /*$$scope, results*/ 524296) {
     				resultbox_changes.$$scope = { dirty, ctx };
     			}
 
@@ -4242,7 +4238,7 @@ var app = (function () {
     		block,
     		id: create_each_block$2.name,
     		type: "each",
-    		source: "(77:2) {#each results as result}",
+    		source: "(76:2) {#each results as result}",
     		ctx
     	});
 
@@ -4370,11 +4366,11 @@ var app = (function () {
 
     			attr_dev(link, "href", "https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css");
     			attr_dev(link, "rel", "stylesheet");
-    			add_location(link, file$8, 52, 2, 1826);
+    			add_location(link, file$8, 51, 2, 1779);
     			attr_dev(div0, "class", "flex justify-center m-4");
-    			add_location(div0, file$8, 72, 0, 2441);
+    			add_location(div0, file$8, 71, 0, 2394);
     			attr_dev(div1, "class", "flex flex-col justify-center items-center text-center");
-    			add_location(div1, file$8, 75, 0, 2551);
+    			add_location(div1, file$8, 74, 0, 2504);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -4419,7 +4415,7 @@ var app = (function () {
     			navbar.$set(navbar_changes);
     			const sidebar0_changes = {};
 
-    			if (dirty & /*$$scope*/ 1048576) {
+    			if (dirty & /*$$scope*/ 524288) {
     				sidebar0_changes.$$scope = { dirty, ctx };
     			}
 
@@ -4432,7 +4428,7 @@ var app = (function () {
     			sidebar0.$set(sidebar0_changes);
     			const sidebar1_changes = {};
 
-    			if (dirty & /*$$scope*/ 1048576) {
+    			if (dirty & /*$$scope*/ 524288) {
     				sidebar1_changes.$$scope = { dirty, ctx };
     			}
 
@@ -4559,9 +4555,9 @@ var app = (function () {
     	let $readSpellParameters;
     	let $readSourcebooks;
     	validate_store(readSpellParameters, "readSpellParameters");
-    	component_subscribe($$self, readSpellParameters, $$value => $$invalidate(11, $readSpellParameters = $$value));
+    	component_subscribe($$self, readSpellParameters, $$value => $$invalidate(10, $readSpellParameters = $$value));
     	validate_store(readSourcebooks, "readSourcebooks");
-    	component_subscribe($$self, readSourcebooks, $$value => $$invalidate(12, $readSourcebooks = $$value));
+    	component_subscribe($$self, readSourcebooks, $$value => $$invalidate(11, $readSourcebooks = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots("App", slots, []);
     	let { leftSidebarIsOpen = false } = $$props;
@@ -4633,7 +4629,6 @@ var app = (function () {
 
     	$$self.$capture_state = () => ({
     		beforeUpdate,
-    		tick,
     		readSourcebooks,
     		readSpellParameters,
     		conjureAnimals: src.conjureAnimals,
@@ -4654,7 +4649,6 @@ var app = (function () {
     		results,
     		cast,
     		generateCreatuers,
-    		cursorNotAllowed,
     		$readSpellParameters,
     		$readSourcebooks
     	});
@@ -4664,20 +4658,11 @@ var app = (function () {
     		if ("rightSidebarIsOpen" in $$props) $$invalidate(1, rightSidebarIsOpen = $$props.rightSidebarIsOpen);
     		if ("disableCastButton" in $$props) $$invalidate(2, disableCastButton = $$props.disableCastButton);
     		if ("results" in $$props) $$invalidate(3, results = $$props.results);
-    		if ("cursorNotAllowed" in $$props) cursorNotAllowed = $$props.cursorNotAllowed;
     	};
-
-    	let cursorNotAllowed;
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
-
-    	$$self.$$.update = () => {
-    		if ($$self.$$.dirty & /*disableCastButton*/ 4) {
-    			 cursorNotAllowed = disableCastButton;
-    		}
-    	};
 
     	return [
     		leftSidebarIsOpen,
