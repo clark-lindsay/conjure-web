@@ -1,18 +1,16 @@
 {
-	"extends": "eslint:recommended",
+  "extends": "eslint:recommended",
   "parserOptions": {
     "ecmaVersion": 2019,
     "sourceType": "module"
   },
   "env": {
     "es6": true,
-		"node": true,
+    "node": true,
     "browser": true,
-		"jest": true
+    "jest": true
   },
-  "plugins": [
-    "svelte3"
-  ],
+  "plugins": ["svelte3"],
   "overrides": [
     {
       "files": ["*.svelte"],
@@ -20,6 +18,6 @@
     }
   ],
   "rules": {
-		"semi": "error"
+    "semi": "error"
   }
 }
