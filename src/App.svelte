@@ -28,6 +28,9 @@
   let disableCastButton: boolean = false;
   interface Result {
     creatures: string[];
+    spellName: string;
+    challengeRating: number;
+    terrains: string[];
     id: number;
   }
   let results: Result[] = [];
@@ -43,7 +46,16 @@
 
   function cast() {
     const newCreatures = generateCreatures();
-    results = [{ creatures: newCreatures, id: results.length }, ...results];
+    results = [
+      {
+        creatures: newCreatures,
+        spellName: $readSpellParameters.spellName,
+        challengeRating: $readSpellParameters.challengeRating,
+        terrains: $readSpellParameters.terrains,
+        id: results.length,
+      },
+      ...results,
+    ];
   }
 
   function generateCreatures(): string[] {
@@ -90,7 +102,10 @@
   </div>
 {/if}
 <div class="flex justify-center m-4">
-  <CastButton handleClick={cast} disabled={disableCastButton} />
+  <CastButton
+    name={`Cast ${$readSpellParameters.spellName}`}
+    handleClick={cast}
+    disabled={disableCastButton} />
 </div>
 <div class="flex flex-col justify-center items-center text-center">
   {#each results as result (result.id)}
@@ -98,7 +113,10 @@
       in:receive={{ key: result.id }}
       out:send={{ key: result.id }}
       animate:flip={{ duration: 200 }}>
-      <ResultBox>
+      <ResultBox
+        heading={result.spellName}
+        challengeRating={result.challengeRating}
+        terrains={result.terrains}>
         <ul>
           {#each result.creatures as creature}
             <li>{creature}</li>

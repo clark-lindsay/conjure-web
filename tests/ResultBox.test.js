@@ -10,9 +10,34 @@ test("supports slotted content", () => {
       <p>Test Paragraph</p>
     <//>
   `);
-  const heading = getByRole("heading");
+  const testHeading = getByRole("heading", { name: "Test Header" });
   const paragraph = getByText("Test Paragraph");
 
-  expect(heading).toBeInTheDocument();
+  expect(testHeading).toBeInTheDocument();
   expect(paragraph).toBeInTheDocument();
+});
+
+test("accepts a heading, that will be rendered as a semantic heading, with a default of Result", async () => {
+  const { getByRole, component } = render(ResultBox);
+
+  expect(getByRole("heading", { name: "Result" })).toBeInTheDocument();
+
+  await component.$set({ heading: "test" });
+
+  expect(getByRole("heading", { name: "test" })).toBeInTheDocument();
+});
+
+test("accepts a challenge rating and a terrain list, but only displays something if they are given", async () => {
+  const { getByText, component } = render(ResultBox);
+
+  await component.$set({ terrains: ["Land", "Water"] });
+  expect(getByText("Land, Water")).toBeInTheDocument();
+
+  await component.$set({ challengeRating: 1, terrains: [] });
+  expect(getByText("CR1")).toBeInTheDocument();
+  expect(() => getByText("Land, Water")).toThrow();
+
+  await component.$set({ terrains: ["Land", "Water", "Air"] });
+  expect(getByText("CR1")).toBeInTheDocument();
+  expect(getByText("Land, Water, Air")).toBeInTheDocument();
 });

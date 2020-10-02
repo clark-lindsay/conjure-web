@@ -8,8 +8,8 @@
   <button
     {name}
     id="cast-spell-button"
-    class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4
-      border border-gray-400 rounded shadow cursor-not-allowed">
+    class="bg-white hover:bg-red-100 text-red-700 font-semibold py-2 px-4 border
+      border-red-400 rounded shadow cursor-not-allowed">
     {name}
   </button>
 {:else}

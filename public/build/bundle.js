@@ -2700,7 +2700,7 @@ var app = (function () {
       ($writeSpellParameters) => $writeSpellParameters
     );
 
-    var name="svelte-app";var version="0.2.1";var scripts={build:"rollup -c",dev:"rollup -c -w",start:"sirv public",validate:"svelte-check"};var devDependencies={"@babel/core":"^7.11.6","@babel/preset-env":"^7.11.5","@rollup/plugin-commonjs":"^14.0.0","@rollup/plugin-json":"^4.1.0","@rollup/plugin-node-resolve":"^8.0.0","@rollup/plugin-typescript":"^6.0.0","@testing-library/jest-dom":"^5.11.4","@testing-library/svelte":"^3.0.0","@tsconfig/svelte":"^1.0.0","@types/jest":"^26.0.14","@types/node":"^14.11.2","babel-jest":"^26.3.0",eslint:"^7.9.0","eslint-plugin-jest-dom":"^3.2.3","eslint-plugin-svelte3":"^2.7.3",jest:"^26.4.2","jest-vim-reporter":"^0.0.1",prettier:"^2.1.2",rollup:"^2.3.4","rollup-plugin-livereload":"^2.0.0","rollup-plugin-svelte":"^6.0.0","rollup-plugin-terser":"^7.0.0",svelte:"^3.0.0","svelte-check":"^1.0.0","svelte-htm":"^1.1.1","svelte-jester":"^1.1.5","svelte-preprocess":"^4.3.0","ts-jest":"^26.4.0",tslib:"^2.0.0",typescript:"^3.9.3"};var dependencies={conjure5e:"^1.4.1","sirv-cli":"^1.0.0"};var packageJson = {name:name,version:version,scripts:scripts,devDependencies:devDependencies,dependencies:dependencies};
+    var name="svelte-app";var version="0.3.0";var scripts={build:"rollup -c",dev:"rollup -c -w",start:"sirv public",validate:"svelte-check"};var devDependencies={"@babel/core":"^7.11.6","@babel/preset-env":"^7.11.5","@rollup/plugin-commonjs":"^14.0.0","@rollup/plugin-json":"^4.1.0","@rollup/plugin-node-resolve":"^8.0.0","@rollup/plugin-typescript":"^6.0.0","@testing-library/jest-dom":"^5.11.4","@testing-library/svelte":"^3.0.0","@tsconfig/svelte":"^1.0.0","@types/jest":"^26.0.14","@types/node":"^14.11.2","babel-jest":"^26.3.0",eslint:"^7.9.0","eslint-plugin-jest-dom":"^3.2.3","eslint-plugin-svelte3":"^2.7.3",jest:"^26.4.2","jest-vim-reporter":"^0.0.1",prettier:"^2.1.2",rollup:"^2.3.4","rollup-plugin-livereload":"^2.0.0","rollup-plugin-svelte":"^6.0.0","rollup-plugin-terser":"^7.0.0",svelte:"^3.0.0","svelte-check":"^1.0.0","svelte-htm":"^1.1.1","svelte-jester":"^1.1.5","svelte-preprocess":"^4.3.0","ts-jest":"^26.4.0",tslib:"^2.0.0",typescript:"^3.9.3"};var dependencies={conjure5e:"^1.4.1","sirv-cli":"^1.0.0"};var packageJson = {name:name,version:version,scripts:scripts,devDependencies:devDependencies,dependencies:dependencies};
 
     function packageVersion() {
       if (packageJson) {
@@ -4126,35 +4126,177 @@ var app = (function () {
 
     const file$5 = "src/components/ResultBox.svelte";
 
-    function create_fragment$5(ctx) {
-    	let div;
-    	let current;
-    	const default_slot_template = /*#slots*/ ctx[1].default;
-    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[0], null);
+    // (21:6) {#if challengeRating}
+    function create_if_block_1(ctx) {
+    	let p;
+    	let t0;
+    	let t1;
 
     	const block = {
     		c: function create() {
-    			div = element("div");
+    			p = element("p");
+    			t0 = text("CR");
+    			t1 = text(/*challengeRating*/ ctx[1]);
+    			attr_dev(p, "class", "text-blue-700 mr-2");
+    			add_location(p, file$5, 21, 8, 537);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, p, anchor);
+    			append_dev(p, t0);
+    			append_dev(p, t1);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*challengeRating*/ 2) set_data_dev(t1, /*challengeRating*/ ctx[1]);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(p);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_1.name,
+    		type: "if",
+    		source: "(21:6) {#if challengeRating}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (24:6) {#if terrains.length !== 0}
+    function create_if_block$1(ctx) {
+    	let p;
+    	let t_value = /*terrains*/ ctx[2].toString().split(",").join(", ") + "";
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			p = element("p");
+    			t = text(t_value);
+    			attr_dev(p, "class", "text-blue-700 mr-2");
+    			add_location(p, file$5, 24, 8, 645);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, p, anchor);
+    			append_dev(p, t);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*terrains*/ 4 && t_value !== (t_value = /*terrains*/ ctx[2].toString().split(",").join(", ") + "")) set_data_dev(t, t_value);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(p);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block$1.name,
+    		type: "if",
+    		source: "(24:6) {#if terrains.length !== 0}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment$5(ctx) {
+    	let div2;
+    	let div1;
+    	let h3;
+    	let t0;
+    	let t1;
+    	let div0;
+    	let t2;
+    	let t3;
+    	let hr;
+    	let t4;
+    	let current;
+    	let if_block0 = /*challengeRating*/ ctx[1] && create_if_block_1(ctx);
+    	let if_block1 = /*terrains*/ ctx[2].length !== 0 && create_if_block$1(ctx);
+    	const default_slot_template = /*#slots*/ ctx[4].default;
+    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[3], null);
+
+    	const block = {
+    		c: function create() {
+    			div2 = element("div");
+    			div1 = element("div");
+    			h3 = element("h3");
+    			t0 = text(/*heading*/ ctx[0]);
+    			t1 = space();
+    			div0 = element("div");
+    			if (if_block0) if_block0.c();
+    			t2 = space();
+    			if (if_block1) if_block1.c();
+    			t3 = space();
+    			hr = element("hr");
+    			t4 = space();
     			if (default_slot) default_slot.c();
-    			attr_dev(div, "class", "box svelte-15i5ke2");
-    			add_location(div, file$5, 11, 0, 191);
+    			attr_dev(h3, "class", "text-blue-700 text-lg mr-2");
+    			add_location(h3, file$5, 18, 4, 408);
+    			attr_dev(div0, "class", "flex justify-between");
+    			add_location(div0, file$5, 19, 4, 466);
+    			attr_dev(div1, "class", "flex-col text-center");
+    			add_location(div1, file$5, 17, 2, 369);
+    			add_location(hr, file$5, 30, 2, 777);
+    			attr_dev(div2, "class", "box svelte-15i5ke2");
+    			add_location(div2, file$5, 16, 0, 349);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div, anchor);
+    			insert_dev(target, div2, anchor);
+    			append_dev(div2, div1);
+    			append_dev(div1, h3);
+    			append_dev(h3, t0);
+    			append_dev(div1, t1);
+    			append_dev(div1, div0);
+    			if (if_block0) if_block0.m(div0, null);
+    			append_dev(div0, t2);
+    			if (if_block1) if_block1.m(div0, null);
+    			append_dev(div2, t3);
+    			append_dev(div2, hr);
+    			append_dev(div2, t4);
 
     			if (default_slot) {
-    				default_slot.m(div, null);
+    				default_slot.m(div2, null);
     			}
 
     			current = true;
     		},
     		p: function update(ctx, [dirty]) {
+    			if (!current || dirty & /*heading*/ 1) set_data_dev(t0, /*heading*/ ctx[0]);
+
+    			if (/*challengeRating*/ ctx[1]) {
+    				if (if_block0) {
+    					if_block0.p(ctx, dirty);
+    				} else {
+    					if_block0 = create_if_block_1(ctx);
+    					if_block0.c();
+    					if_block0.m(div0, t2);
+    				}
+    			} else if (if_block0) {
+    				if_block0.d(1);
+    				if_block0 = null;
+    			}
+
+    			if (/*terrains*/ ctx[2].length !== 0) {
+    				if (if_block1) {
+    					if_block1.p(ctx, dirty);
+    				} else {
+    					if_block1 = create_if_block$1(ctx);
+    					if_block1.c();
+    					if_block1.m(div0, null);
+    				}
+    			} else if (if_block1) {
+    				if_block1.d(1);
+    				if_block1 = null;
+    			}
+
     			if (default_slot) {
-    				if (default_slot.p && dirty & /*$$scope*/ 1) {
-    					update_slot(default_slot, default_slot_template, ctx, /*$$scope*/ ctx[0], dirty, null, null);
+    				if (default_slot.p && dirty & /*$$scope*/ 8) {
+    					update_slot(default_slot, default_slot_template, ctx, /*$$scope*/ ctx[3], dirty, null, null);
     				}
     			}
     		},
@@ -4168,7 +4310,9 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div);
+    			if (detaching) detach_dev(div2);
+    			if (if_block0) if_block0.d();
+    			if (if_block1) if_block1.d();
     			if (default_slot) default_slot.d(detaching);
     		}
     	};
@@ -4187,23 +4331,46 @@ var app = (function () {
     function instance$5($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots("ResultBox", slots, ['default']);
-    	const writable_props = [];
+    	let { heading = "Result" } = $$props;
+    	let { challengeRating } = $$props;
+    	let { terrains = [] } = $$props;
+    	const writable_props = ["heading", "challengeRating", "terrains"];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<ResultBox> was created with unknown prop '${key}'`);
     	});
 
     	$$self.$$set = $$props => {
-    		if ("$$scope" in $$props) $$invalidate(0, $$scope = $$props.$$scope);
+    		if ("heading" in $$props) $$invalidate(0, heading = $$props.heading);
+    		if ("challengeRating" in $$props) $$invalidate(1, challengeRating = $$props.challengeRating);
+    		if ("terrains" in $$props) $$invalidate(2, terrains = $$props.terrains);
+    		if ("$$scope" in $$props) $$invalidate(3, $$scope = $$props.$$scope);
     	};
 
-    	return [$$scope, slots];
+    	$$self.$capture_state = () => ({ heading, challengeRating, terrains });
+
+    	$$self.$inject_state = $$props => {
+    		if ("heading" in $$props) $$invalidate(0, heading = $$props.heading);
+    		if ("challengeRating" in $$props) $$invalidate(1, challengeRating = $$props.challengeRating);
+    		if ("terrains" in $$props) $$invalidate(2, terrains = $$props.terrains);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [heading, challengeRating, terrains, $$scope, slots];
     }
 
     class ResultBox extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$5, create_fragment$5, safe_not_equal, {});
+
+    		init(this, options, instance$5, create_fragment$5, safe_not_equal, {
+    			heading: 0,
+    			challengeRating: 1,
+    			terrains: 2
+    		});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -4211,6 +4378,37 @@ var app = (function () {
     			options,
     			id: create_fragment$5.name
     		});
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+
+    		if (/*challengeRating*/ ctx[1] === undefined && !("challengeRating" in props)) {
+    			console.warn("<ResultBox> was created without expected prop 'challengeRating'");
+    		}
+    	}
+
+    	get heading() {
+    		throw new Error("<ResultBox>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set heading(value) {
+    		throw new Error("<ResultBox>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get challengeRating() {
+    		throw new Error("<ResultBox>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set challengeRating(value) {
+    		throw new Error("<ResultBox>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get terrains() {
+    		throw new Error("<ResultBox>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set terrains(value) {
+    		throw new Error("<ResultBox>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
 
@@ -4233,7 +4431,7 @@ var app = (function () {
     			attr_dev(button, "name", /*name*/ ctx[0]);
     			attr_dev(button, "id", "cast-spell-button");
     			attr_dev(button, "class", "bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4\n      border border-gray-400 rounded shadow");
-    			add_location(button, file$6, 14, 2, 426);
+    			add_location(button, file$6, 14, 2, 423);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, button, anchor);
@@ -4281,7 +4479,7 @@ var app = (function () {
     }
 
     // (6:0) {#if disabled}
-    function create_if_block$1(ctx) {
+    function create_if_block$2(ctx) {
     	let button;
     	let t;
 
@@ -4291,7 +4489,7 @@ var app = (function () {
     			t = text(/*name*/ ctx[0]);
     			attr_dev(button, "name", /*name*/ ctx[0]);
     			attr_dev(button, "id", "cast-spell-button");
-    			attr_dev(button, "class", "bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4\n      border border-gray-400 rounded shadow cursor-not-allowed");
+    			attr_dev(button, "class", "bg-white hover:bg-red-100 text-red-700 font-semibold py-2 px-4 border\n      border-red-400 rounded shadow cursor-not-allowed");
     			add_location(button, file$6, 6, 2, 206);
     		},
     		m: function mount(target, anchor) {
@@ -4312,7 +4510,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$1.name,
+    		id: create_if_block$2.name,
     		type: "if",
     		source: "(6:0) {#if disabled}",
     		ctx
@@ -4325,7 +4523,7 @@ var app = (function () {
     	let if_block_anchor;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*disabled*/ ctx[1]) return create_if_block$1;
+    		if (/*disabled*/ ctx[1]) return create_if_block$2;
     		return create_else_block;
     	}
 
@@ -4583,7 +4781,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (66:0) <Sidebar bind:open={leftSidebarIsOpen}>
+    // (75:0) <Sidebar bind:open={leftSidebarIsOpen}>
     function create_default_slot_2(ctx) {
     	let selectspellparameters;
     	let current;
@@ -4615,14 +4813,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2.name,
     		type: "slot",
-    		source: "(66:0) <Sidebar bind:open={leftSidebarIsOpen}>",
+    		source: "(75:0) <Sidebar bind:open={leftSidebarIsOpen}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (69:0) <Sidebar bind:open={rightSidebarIsOpen} left={false}>
+    // (78:0) <Sidebar bind:open={rightSidebarIsOpen} left={false}>
     function create_default_slot_1(ctx) {
     	let selectsourcebooks;
     	let current;
@@ -4654,15 +4852,15 @@ var app = (function () {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(69:0) <Sidebar bind:open={rightSidebarIsOpen} left={false}>",
+    		source: "(78:0) <Sidebar bind:open={rightSidebarIsOpen} left={false}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (73:0) {#if disableCastButton}
-    function create_if_block$2(ctx) {
+    // (82:0) {#if disableCastButton}
+    function create_if_block$3(ctx) {
     	let div;
     	let alert;
     	let div_transition;
@@ -4680,7 +4878,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			create_component(alert.$$.fragment);
-    			add_location(div, file$8, 73, 2, 2450);
+    			add_location(div, file$8, 82, 2, 2681);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -4713,16 +4911,16 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$2.name,
+    		id: create_if_block$3.name,
     		type: "if",
-    		source: "(73:0) {#if disableCastButton}",
+    		source: "(82:0) {#if disableCastButton}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (91:10) {#each result.creatures as creature}
+    // (106:10) {#each result.creatures as creature}
     function create_each_block_1$1(ctx) {
     	let li;
     	let t_value = /*creature*/ ctx[16] + "";
@@ -4732,7 +4930,7 @@ var app = (function () {
     		c: function create() {
     			li = element("li");
     			t = text(t_value);
-    			add_location(li, file$8, 91, 12, 3096);
+    			add_location(li, file$8, 106, 12, 3506);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -4750,14 +4948,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1$1.name,
     		type: "each",
-    		source: "(91:10) {#each result.creatures as creature}",
+    		source: "(106:10) {#each result.creatures as creature}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (89:6) <ResultBox>
+    // (101:6) <ResultBox         heading={result.spellName}         challengeRating={result.challengeRating}         terrains={result.terrains}>
     function create_default_slot(ctx) {
     	let ul;
     	let each_value_1 = /*result*/ ctx[13].creatures;
@@ -4776,7 +4974,7 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(ul, file$8, 89, 8, 3032);
+    			add_location(ul, file$8, 104, 8, 3442);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, ul, anchor);
@@ -4820,14 +5018,14 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(89:6) <ResultBox>",
+    		source: "(101:6) <ResultBox         heading={result.spellName}         challengeRating={result.challengeRating}         terrains={result.terrains}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (84:2) {#each results as result (result.id)}
+    // (96:2) {#each results as result (result.id)}
     function create_each_block$2(key_1, ctx) {
     	let div;
     	let resultbox;
@@ -4840,6 +5038,9 @@ var app = (function () {
 
     	resultbox = new ResultBox({
     			props: {
+    				heading: /*result*/ ctx[13].spellName,
+    				challengeRating: /*result*/ ctx[13].challengeRating,
+    				terrains: /*result*/ ctx[13].terrains,
     				$$slots: { default: [create_default_slot] },
     				$$scope: { ctx }
     			},
@@ -4853,7 +5054,7 @@ var app = (function () {
     			div = element("div");
     			create_component(resultbox.$$.fragment);
     			t = space();
-    			add_location(div, file$8, 84, 4, 2887);
+    			add_location(div, file$8, 96, 4, 3178);
     			this.first = div;
     		},
     		m: function mount(target, anchor) {
@@ -4865,6 +5066,9 @@ var app = (function () {
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
     			const resultbox_changes = {};
+    			if (dirty & /*results*/ 8) resultbox_changes.heading = /*result*/ ctx[13].spellName;
+    			if (dirty & /*results*/ 8) resultbox_changes.challengeRating = /*result*/ ctx[13].challengeRating;
+    			if (dirty & /*results*/ 8) resultbox_changes.terrains = /*result*/ ctx[13].terrains;
 
     			if (dirty & /*$$scope, results*/ 524296) {
     				resultbox_changes.$$scope = { dirty, ctx };
@@ -4913,7 +5117,7 @@ var app = (function () {
     		block,
     		id: create_each_block$2.name,
     		type: "each",
-    		source: "(84:2) {#each results as result (result.id)}",
+    		source: "(96:2) {#each results as result (result.id)}",
     		ctx
     	});
 
@@ -4943,15 +5147,15 @@ var app = (function () {
     	let current;
 
     	function navbar_spellOptionsMenu_binding(value) {
-    		/*navbar_spellOptionsMenu_binding*/ ctx[6].call(null, value);
+    		/*navbar_spellOptionsMenu_binding*/ ctx[7].call(null, value);
     	}
 
     	function navbar_sourceOptionsMenu_binding(value) {
-    		/*navbar_sourceOptionsMenu_binding*/ ctx[7].call(null, value);
+    		/*navbar_sourceOptionsMenu_binding*/ ctx[8].call(null, value);
     	}
 
     	let navbar_props = {
-    		heading: "Conjure5e" + (/*appVersion*/ ctx[4] ? ` ${/*appVersion*/ ctx[4]}` : "")
+    		heading: "Conjure5e" + (/*appVersion*/ ctx[5] ? ` ${/*appVersion*/ ctx[5]}` : "")
     	};
 
     	if (/*leftSidebarIsOpen*/ ctx[0] !== void 0) {
@@ -4967,7 +5171,7 @@ var app = (function () {
     	binding_callbacks.push(() => bind(navbar, "sourceOptionsMenu", navbar_sourceOptionsMenu_binding));
 
     	function sidebar0_open_binding(value) {
-    		/*sidebar0_open_binding*/ ctx[8].call(null, value);
+    		/*sidebar0_open_binding*/ ctx[9].call(null, value);
     	}
 
     	let sidebar0_props = {
@@ -4983,7 +5187,7 @@ var app = (function () {
     	binding_callbacks.push(() => bind(sidebar0, "open", sidebar0_open_binding));
 
     	function sidebar1_open_binding(value) {
-    		/*sidebar1_open_binding*/ ctx[9].call(null, value);
+    		/*sidebar1_open_binding*/ ctx[10].call(null, value);
     	}
 
     	let sidebar1_props = {
@@ -4998,11 +5202,12 @@ var app = (function () {
 
     	sidebar1 = new Sidebar({ props: sidebar1_props, $$inline: true });
     	binding_callbacks.push(() => bind(sidebar1, "open", sidebar1_open_binding));
-    	let if_block = /*disableCastButton*/ ctx[2] && create_if_block$2(ctx);
+    	let if_block = /*disableCastButton*/ ctx[2] && create_if_block$3(ctx);
 
     	castbutton = new CastButton({
     			props: {
-    				handleClick: /*cast*/ ctx[5],
+    				name: `Cast ${/*$readSpellParameters*/ ctx[4].spellName}`,
+    				handleClick: /*cast*/ ctx[6],
     				disabled: /*disableCastButton*/ ctx[2]
     			},
     			$$inline: true
@@ -5042,11 +5247,11 @@ var app = (function () {
 
     			attr_dev(link, "href", "https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css");
     			attr_dev(link, "rel", "stylesheet");
-    			add_location(link, file$8, 56, 2, 1982);
+    			add_location(link, file$8, 65, 2, 2213);
     			attr_dev(div0, "class", "flex justify-center m-4");
-    			add_location(div0, file$8, 79, 0, 2665);
+    			add_location(div0, file$8, 88, 0, 2896);
     			attr_dev(div1, "class", "flex flex-col justify-center items-center text-center");
-    			add_location(div1, file$8, 82, 0, 2775);
+    			add_location(div1, file$8, 94, 0, 3066);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -5122,7 +5327,7 @@ var app = (function () {
     						transition_in(if_block, 1);
     					}
     				} else {
-    					if_block = create_if_block$2(ctx);
+    					if_block = create_if_block$3(ctx);
     					if_block.c();
     					transition_in(if_block, 1);
     					if_block.m(t4.parentNode, t4);
@@ -5138,6 +5343,7 @@ var app = (function () {
     			}
 
     			const castbutton_changes = {};
+    			if (dirty & /*$readSpellParameters*/ 16) castbutton_changes.name = `Cast ${/*$readSpellParameters*/ ctx[4].spellName}`;
     			if (dirty & /*disableCastButton*/ 4) castbutton_changes.disabled = /*disableCastButton*/ ctx[2];
     			castbutton.$set(castbutton_changes);
 
@@ -5216,7 +5422,7 @@ var app = (function () {
     	let $readSpellParameters;
     	let $readSourcebooks;
     	validate_store(readSpellParameters, "readSpellParameters");
-    	component_subscribe($$self, readSpellParameters, $$value => $$invalidate(10, $readSpellParameters = $$value));
+    	component_subscribe($$self, readSpellParameters, $$value => $$invalidate(4, $readSpellParameters = $$value));
     	validate_store(readSourcebooks, "readSourcebooks");
     	component_subscribe($$self, readSourcebooks, $$value => $$invalidate(11, $readSourcebooks = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
@@ -5244,6 +5450,9 @@ var app = (function () {
     		$$invalidate(3, results = [
     			{
     				creatures: newCreatures,
+    				spellName: $readSpellParameters.spellName,
+    				challengeRating: $readSpellParameters.challengeRating,
+    				terrains: $readSpellParameters.terrains,
     				id: results.length
     			},
     			...results
@@ -5343,6 +5552,7 @@ var app = (function () {
     		rightSidebarIsOpen,
     		disableCastButton,
     		results,
+    		$readSpellParameters,
     		appVersion,
     		cast,
     		navbar_spellOptionsMenu_binding,
