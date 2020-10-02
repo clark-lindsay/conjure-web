@@ -3,15 +3,15 @@ import { render, fireEvent } from "@testing-library/svelte";
 import App from "../src/App.svelte";
 
 test("contains a button labelled Cast Spell", () => {
-  const { getByText } = render(App);
-  const button = getByText("Cast Spell");
+  const { getByRole } = render(App);
+  const button = getByRole("button", { name: "Cast Conjure Animals" });
 
   expect(button).toBeInTheDocument();
 });
 
 test("after the user clicks the Cast button, a new result appears", async () => {
   const { getByRole } = render(App);
-  const castButton = getByRole("button", { name: "Cast Spell" });
+  const castButton = getByRole("button", { name: "Cast Conjure Animals" });
 
   expect(() => getByRole("list")).toThrow();
   await fireEvent.click(castButton);
@@ -26,7 +26,7 @@ test("if the user selects no sourcebooks, then the cast button will be disabled,
 
   const sourceButton = getByTestId("sourceOptionsMenuDiv");
 
-  expect(getByRole("button", { name: "Cast Spell" })).not.toHaveClass(
+  expect(getByRole("button", { name: "Cast Conjure Animals" })).not.toHaveClass(
     "cursor-not-allowed"
   );
 
@@ -37,13 +37,12 @@ test("if the user selects no sourcebooks, then the cast button will be disabled,
   }
   await fireEvent.click(sourceButton);
 
-  expect(getByRole("button", { name: "Cast Spell" })).toHaveClass(
+  expect(getByRole("button", { name: "Cast Conjure Animals" })).toHaveClass(
     "cursor-not-allowed"
   );
   expect(getByRole("alert")).toBeInTheDocument();
 
-  await fireEvent.click(getByRole("button", { name: "Cast Spell" }));
+  await fireEvent.click(getByRole("button", { name: "Cast Conjure Animals" }));
 
   expect(() => getByRole("list")).toThrow();
 });
-
