@@ -21,8 +21,8 @@
   import CastButton from "./components/CastButton.svelte";
   import Alert from "./components/Alert.svelte";
 
-  export let leftSidebarIsOpen: boolean = false;
-  export let rightSidebarIsOpen: boolean = false;
+  let leftSidebarIsOpen: boolean = false;
+  let rightSidebarIsOpen: boolean = false;
 
   const appVersion: string = packageVersion();
   let disableCastButton: boolean = false;
@@ -83,46 +83,50 @@
     rel="stylesheet" />
 </svelte:head>
 
-<Navbar
-  heading="Conjure5e{appVersion ? ` ${appVersion}` : ''}"
-  bind:spellOptionsMenu={leftSidebarIsOpen}
-  bind:sourceOptionsMenu={rightSidebarIsOpen} />
-<Sidebar bind:open={leftSidebarIsOpen}>
-  <SelectSpellParameters />
-</Sidebar>
-<Sidebar bind:open={rightSidebarIsOpen} left={false}>
-  <SelectSourcebooks />
-</Sidebar>
+<div
+  class={leftSidebarIsOpen || rightSidebarIsOpen ? 'overflow-hidden h-full' : ''}
+  data-testid="body-div">
+  <Navbar
+    heading="Conjure5e{appVersion ? ` ${appVersion}` : ''}"
+    bind:spellOptionsMenu={leftSidebarIsOpen}
+    bind:sourceOptionsMenu={rightSidebarIsOpen} />
+  <Sidebar bind:open={leftSidebarIsOpen}>
+    <SelectSpellParameters />
+  </Sidebar>
+  <Sidebar bind:open={rightSidebarIsOpen} left={false}>
+    <SelectSourcebooks />
+  </Sidebar>
 
-{#if disableCastButton}
-  <div transition:fade={{ duration: 400 }}>
-    <Alert
-      mainText="That's a nat 1."
-      secondaryText="Your current options will not generate any creatures! Maybe try adding more sourcebooks?" />
-  </div>
-{/if}
-<div class="flex justify-center m-4">
-  <CastButton
-    name={`Cast ${$readSpellParameters.spellName}`}
-    handleClick={cast}
-    disabled={disableCastButton} />
-</div>
-<div class="flex flex-col justify-center items-center text-center">
-  {#each results as result (result.id)}
-    <div
-      in:receive={{ key: result.id }}
-      out:send={{ key: result.id }}
-      animate:flip={{ duration: 200 }}>
-      <ResultBox
-        heading={result.spellName}
-        challengeRating={result.challengeRating}
-        terrains={result.terrains}>
-        <ul>
-          {#each result.creatures as creature}
-            <li>{creature}</li>
-          {/each}
-        </ul>
-      </ResultBox>
+  {#if disableCastButton}
+    <div transition:fade={{ duration: 400 }}>
+      <Alert
+        mainText="That's a nat 1."
+        secondaryText="Your current options will not generate any creatures! Maybe try adding more sourcebooks?" />
     </div>
-  {/each}
+  {/if}
+  <div class="flex justify-center m-4">
+    <CastButton
+      name={`Cast ${$readSpellParameters.spellName}`}
+      handleClick={cast}
+      disabled={disableCastButton} />
+  </div>
+  <div class="flex flex-col justify-center items-center text-center">
+    {#each results as result (result.id)}
+      <div
+        in:receive={{ key: result.id }}
+        out:send={{ key: result.id }}
+        animate:flip={{ duration: 200 }}>
+        <ResultBox
+          heading={result.spellName}
+          challengeRating={result.challengeRating}
+          terrains={result.terrains}>
+          <ul>
+            {#each result.creatures as creature}
+              <li>{creature}</li>
+            {/each}
+          </ul>
+        </ResultBox>
+      </div>
+    {/each}
+  </div>
 </div>

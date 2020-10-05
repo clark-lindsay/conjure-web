@@ -2700,7 +2700,7 @@ var app = (function () {
       ($writeSpellParameters) => $writeSpellParameters
     );
 
-    var name="svelte-app";var version="0.3.0";var scripts={build:"rollup -c",dev:"rollup -c -w",start:"sirv public",validate:"svelte-check"};var devDependencies={"@babel/core":"^7.11.6","@babel/preset-env":"^7.11.5","@rollup/plugin-commonjs":"^14.0.0","@rollup/plugin-json":"^4.1.0","@rollup/plugin-node-resolve":"^8.0.0","@rollup/plugin-typescript":"^6.0.0","@testing-library/jest-dom":"^5.11.4","@testing-library/svelte":"^3.0.0","@tsconfig/svelte":"^1.0.0","@types/jest":"^26.0.14","@types/node":"^14.11.2","babel-jest":"^26.3.0",eslint:"^7.9.0","eslint-plugin-jest-dom":"^3.2.3","eslint-plugin-svelte3":"^2.7.3",jest:"^26.4.2","jest-vim-reporter":"^0.0.1",prettier:"^2.1.2",rollup:"^2.3.4","rollup-plugin-livereload":"^2.0.0","rollup-plugin-svelte":"^6.0.0","rollup-plugin-terser":"^7.0.0",svelte:"^3.0.0","svelte-check":"^1.0.0","svelte-htm":"^1.1.1","svelte-jester":"^1.1.5","svelte-preprocess":"^4.3.0","ts-jest":"^26.4.0",tslib:"^2.0.0",typescript:"^3.9.3"};var dependencies={conjure5e:"^1.4.1","sirv-cli":"^1.0.0"};var packageJson = {name:name,version:version,scripts:scripts,devDependencies:devDependencies,dependencies:dependencies};
+    var name="svelte-app";var version="0.3.1";var scripts={build:"rollup -c",dev:"rollup -c -w",start:"sirv public",validate:"svelte-check"};var devDependencies={"@babel/core":"^7.11.6","@babel/preset-env":"^7.11.5","@rollup/plugin-commonjs":"^14.0.0","@rollup/plugin-json":"^4.1.0","@rollup/plugin-node-resolve":"^8.0.0","@rollup/plugin-typescript":"^6.0.0","@testing-library/jest-dom":"^5.11.4","@testing-library/svelte":"^3.0.0","@tsconfig/svelte":"^1.0.0","@types/jest":"^26.0.14","@types/node":"^14.11.2","babel-jest":"^26.3.0",eslint:"^7.9.0","eslint-plugin-jest-dom":"^3.2.3","eslint-plugin-svelte3":"^2.7.3",jest:"^26.4.2","jest-vim-reporter":"^0.0.1",prettier:"^2.1.2",rollup:"^2.3.4","rollup-plugin-livereload":"^2.0.0","rollup-plugin-svelte":"^6.0.0","rollup-plugin-terser":"^7.0.0",svelte:"^3.0.0","svelte-check":"^1.0.0","svelte-htm":"^1.1.1","svelte-jester":"^1.1.5","svelte-preprocess":"^4.3.0","ts-jest":"^26.4.0",tslib:"^2.0.0",typescript:"^3.9.3"};var dependencies={conjure5e:"^1.4.1","sirv-cli":"^1.0.0"};var packageJson = {name:name,version:version,scripts:scripts,devDependencies:devDependencies,dependencies:dependencies};
 
     function packageVersion() {
       if (packageJson) {
@@ -4781,7 +4781,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (75:0) <Sidebar bind:open={leftSidebarIsOpen}>
+    // (78:2) <Sidebar bind:open={leftSidebarIsOpen}>
     function create_default_slot_2(ctx) {
     	let selectspellparameters;
     	let current;
@@ -4813,14 +4813,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2.name,
     		type: "slot",
-    		source: "(75:0) <Sidebar bind:open={leftSidebarIsOpen}>",
+    		source: "(78:2) <Sidebar bind:open={leftSidebarIsOpen}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (78:0) <Sidebar bind:open={rightSidebarIsOpen} left={false}>
+    // (81:2) <Sidebar bind:open={rightSidebarIsOpen} left={false}>
     function create_default_slot_1(ctx) {
     	let selectsourcebooks;
     	let current;
@@ -4852,14 +4852,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(78:0) <Sidebar bind:open={rightSidebarIsOpen} left={false}>",
+    		source: "(81:2) <Sidebar bind:open={rightSidebarIsOpen} left={false}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (82:0) {#if disableCastButton}
+    // (85:2) {#if disableCastButton}
     function create_if_block$3(ctx) {
     	let div;
     	let alert;
@@ -4878,7 +4878,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			create_component(alert.$$.fragment);
-    			add_location(div, file$8, 82, 2, 2681);
+    			add_location(div, file$8, 85, 4, 2804);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -4913,14 +4913,14 @@ var app = (function () {
     		block,
     		id: create_if_block$3.name,
     		type: "if",
-    		source: "(82:0) {#if disableCastButton}",
+    		source: "(85:2) {#if disableCastButton}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (106:10) {#each result.creatures as creature}
+    // (109:12) {#each result.creatures as creature}
     function create_each_block_1$1(ctx) {
     	let li;
     	let t_value = /*creature*/ ctx[16] + "";
@@ -4930,7 +4930,7 @@ var app = (function () {
     		c: function create() {
     			li = element("li");
     			t = text(t_value);
-    			add_location(li, file$8, 106, 12, 3506);
+    			add_location(li, file$8, 109, 14, 3677);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -4948,14 +4948,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1$1.name,
     		type: "each",
-    		source: "(106:10) {#each result.creatures as creature}",
+    		source: "(109:12) {#each result.creatures as creature}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (101:6) <ResultBox         heading={result.spellName}         challengeRating={result.challengeRating}         terrains={result.terrains}>
+    // (104:8) <ResultBox           heading={result.spellName}           challengeRating={result.challengeRating}           terrains={result.terrains}>
     function create_default_slot(ctx) {
     	let ul;
     	let each_value_1 = /*result*/ ctx[13].creatures;
@@ -4974,7 +4974,7 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(ul, file$8, 104, 8, 3442);
+    			add_location(ul, file$8, 107, 10, 3609);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, ul, anchor);
@@ -5018,14 +5018,14 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(101:6) <ResultBox         heading={result.spellName}         challengeRating={result.challengeRating}         terrains={result.terrains}>",
+    		source: "(104:8) <ResultBox           heading={result.spellName}           challengeRating={result.challengeRating}           terrains={result.terrains}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (96:2) {#each results as result (result.id)}
+    // (99:4) {#each results as result (result.id)}
     function create_each_block$2(key_1, ctx) {
     	let div;
     	let resultbox;
@@ -5054,7 +5054,7 @@ var app = (function () {
     			div = element("div");
     			create_component(resultbox.$$.fragment);
     			t = space();
-    			add_location(div, file$8, 96, 4, 3178);
+    			add_location(div, file$8, 99, 6, 3329);
     			this.first = div;
     		},
     		m: function mount(target, anchor) {
@@ -5117,7 +5117,7 @@ var app = (function () {
     		block,
     		id: create_each_block$2.name,
     		type: "each",
-    		source: "(96:2) {#each results as result (result.id)}",
+    		source: "(99:4) {#each results as result (result.id)}",
     		ctx
     	});
 
@@ -5127,6 +5127,7 @@ var app = (function () {
     function create_fragment$8(ctx) {
     	let link;
     	let t0;
+    	let div2;
     	let navbar;
     	let updating_spellOptionsMenu;
     	let updating_sourceOptionsMenu;
@@ -5144,6 +5145,7 @@ var app = (function () {
     	let div1;
     	let each_blocks = [];
     	let each_1_lookup = new Map();
+    	let div2_class_value;
     	let current;
 
     	function navbar_spellOptionsMenu_binding(value) {
@@ -5228,6 +5230,7 @@ var app = (function () {
     		c: function create() {
     			link = element("link");
     			t0 = space();
+    			div2 = element("div");
     			create_component(navbar.$$.fragment);
     			t1 = space();
     			create_component(sidebar0.$$.fragment);
@@ -5247,11 +5250,18 @@ var app = (function () {
 
     			attr_dev(link, "href", "https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css");
     			attr_dev(link, "rel", "stylesheet");
-    			add_location(link, file$8, 65, 2, 2213);
+    			add_location(link, file$8, 65, 2, 2199);
     			attr_dev(div0, "class", "flex justify-center m-4");
-    			add_location(div0, file$8, 88, 0, 2896);
+    			add_location(div0, file$8, 91, 2, 3031);
     			attr_dev(div1, "class", "flex flex-col justify-center items-center text-center");
-    			add_location(div1, file$8, 94, 0, 3066);
+    			add_location(div1, file$8, 97, 2, 3213);
+
+    			attr_dev(div2, "class", div2_class_value = /*leftSidebarIsOpen*/ ctx[0] || /*rightSidebarIsOpen*/ ctx[1]
+    			? "overflow-hidden h-full"
+    			: "");
+
+    			attr_dev(div2, "data-testid", "body-div");
+    			add_location(div2, file$8, 70, 0, 2313);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -5259,18 +5269,19 @@ var app = (function () {
     		m: function mount(target, anchor) {
     			append_dev(document.head, link);
     			insert_dev(target, t0, anchor);
-    			mount_component(navbar, target, anchor);
-    			insert_dev(target, t1, anchor);
-    			mount_component(sidebar0, target, anchor);
-    			insert_dev(target, t2, anchor);
-    			mount_component(sidebar1, target, anchor);
-    			insert_dev(target, t3, anchor);
-    			if (if_block) if_block.m(target, anchor);
-    			insert_dev(target, t4, anchor);
-    			insert_dev(target, div0, anchor);
+    			insert_dev(target, div2, anchor);
+    			mount_component(navbar, div2, null);
+    			append_dev(div2, t1);
+    			mount_component(sidebar0, div2, null);
+    			append_dev(div2, t2);
+    			mount_component(sidebar1, div2, null);
+    			append_dev(div2, t3);
+    			if (if_block) if_block.m(div2, null);
+    			append_dev(div2, t4);
+    			append_dev(div2, div0);
     			mount_component(castbutton, div0, null);
-    			insert_dev(target, t5, anchor);
-    			insert_dev(target, div1, anchor);
+    			append_dev(div2, t5);
+    			append_dev(div2, div1);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].m(div1, null);
@@ -5330,7 +5341,7 @@ var app = (function () {
     					if_block = create_if_block$3(ctx);
     					if_block.c();
     					transition_in(if_block, 1);
-    					if_block.m(t4.parentNode, t4);
+    					if_block.m(div2, t4);
     				}
     			} else if (if_block) {
     				group_outros();
@@ -5356,6 +5367,12 @@ var app = (function () {
     				each_blocks = update_keyed_each(each_blocks, dirty, get_key, 1, ctx, each_value, each_1_lookup, div1, fix_and_outro_and_destroy_block, create_each_block$2, null, get_each_context$2);
     				for (let i = 0; i < each_blocks.length; i += 1) each_blocks[i].a();
     				check_outros();
+    			}
+
+    			if (!current || dirty & /*leftSidebarIsOpen, rightSidebarIsOpen*/ 3 && div2_class_value !== (div2_class_value = /*leftSidebarIsOpen*/ ctx[0] || /*rightSidebarIsOpen*/ ctx[1]
+    			? "overflow-hidden h-full"
+    			: "")) {
+    				attr_dev(div2, "class", div2_class_value);
     			}
     		},
     		i: function intro(local) {
@@ -5388,18 +5405,12 @@ var app = (function () {
     		d: function destroy(detaching) {
     			detach_dev(link);
     			if (detaching) detach_dev(t0);
-    			destroy_component(navbar, detaching);
-    			if (detaching) detach_dev(t1);
-    			destroy_component(sidebar0, detaching);
-    			if (detaching) detach_dev(t2);
-    			destroy_component(sidebar1, detaching);
-    			if (detaching) detach_dev(t3);
-    			if (if_block) if_block.d(detaching);
-    			if (detaching) detach_dev(t4);
-    			if (detaching) detach_dev(div0);
+    			if (detaching) detach_dev(div2);
+    			destroy_component(navbar);
+    			destroy_component(sidebar0);
+    			destroy_component(sidebar1);
+    			if (if_block) if_block.d();
     			destroy_component(castbutton);
-    			if (detaching) detach_dev(t5);
-    			if (detaching) detach_dev(div1);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].d();
@@ -5428,8 +5439,8 @@ var app = (function () {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots("App", slots, []);
     	
-    	let { leftSidebarIsOpen = false } = $$props;
-    	let { rightSidebarIsOpen = false } = $$props;
+    	let leftSidebarIsOpen = false;
+    	let rightSidebarIsOpen = false;
     	const appVersion = packageVersion();
     	let disableCastButton = false;
     	let results = [];
@@ -5475,7 +5486,7 @@ var app = (function () {
     		return spell({ terrains, challengeRating, sources }).map(creature => creature.name);
     	}
 
-    	const writable_props = ["leftSidebarIsOpen", "rightSidebarIsOpen"];
+    	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<App> was created with unknown prop '${key}'`);
@@ -5500,11 +5511,6 @@ var app = (function () {
     		rightSidebarIsOpen = value;
     		$$invalidate(1, rightSidebarIsOpen);
     	}
-
-    	$$self.$$set = $$props => {
-    		if ("leftSidebarIsOpen" in $$props) $$invalidate(0, leftSidebarIsOpen = $$props.leftSidebarIsOpen);
-    		if ("rightSidebarIsOpen" in $$props) $$invalidate(1, rightSidebarIsOpen = $$props.rightSidebarIsOpen);
-    	};
 
     	$$self.$capture_state = () => ({
     		beforeUpdate,
@@ -5565,11 +5571,7 @@ var app = (function () {
     class App extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-
-    		init(this, options, instance$8, create_fragment$8, safe_not_equal, {
-    			leftSidebarIsOpen: 0,
-    			rightSidebarIsOpen: 1
-    		});
+    		init(this, options, instance$8, create_fragment$8, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -5577,22 +5579,6 @@ var app = (function () {
     			options,
     			id: create_fragment$8.name
     		});
-    	}
-
-    	get leftSidebarIsOpen() {
-    		throw new Error("<App>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set leftSidebarIsOpen(value) {
-    		throw new Error("<App>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get rightSidebarIsOpen() {
-    		throw new Error("<App>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set rightSidebarIsOpen(value) {
-    		throw new Error("<App>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
 
