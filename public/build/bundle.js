@@ -2704,7 +2704,7 @@ var app = (function () {
       ($writeSpellParameters) => $writeSpellParameters
     );
 
-    var name="svelte-app";var version="0.3.1";var scripts={build:"rollup -c",dev:"rollup -c -w",start:"sirv public",validate:"svelte-check"};var devDependencies={"@babel/core":"^7.11.6","@babel/preset-env":"^7.11.5","@rollup/plugin-commonjs":"^14.0.0","@rollup/plugin-json":"^4.1.0","@rollup/plugin-node-resolve":"^8.0.0","@rollup/plugin-typescript":"^6.0.0","@testing-library/jest-dom":"^5.11.4","@testing-library/svelte":"^3.0.0","@tsconfig/svelte":"^1.0.0","@types/jest":"^26.0.14","@types/node":"^14.11.2","babel-jest":"^26.3.0",eslint:"^7.9.0","eslint-plugin-jest-dom":"^3.2.3","eslint-plugin-svelte3":"^2.7.3",jest:"^26.4.2","jest-vim-reporter":"^0.0.1",prettier:"^2.1.2",rollup:"^2.3.4","rollup-plugin-livereload":"^2.0.0","rollup-plugin-svelte":"^6.0.0","rollup-plugin-terser":"^7.0.0",svelte:"^3.0.0","svelte-check":"^1.0.0","svelte-htm":"^1.1.1","svelte-jester":"^1.1.5","svelte-preprocess":"^4.3.0","ts-jest":"^26.4.0",tslib:"^2.0.0",typescript:"^3.9.3"};var dependencies={conjure5e:"^1.4.1","sirv-cli":"^1.0.0"};var packageJson = {name:name,version:version,scripts:scripts,devDependencies:devDependencies,dependencies:dependencies};
+    var name="svelte-app";var version="0.4.0";var scripts={build:"rollup -c",dev:"rollup -c -w",start:"sirv public",validate:"svelte-check"};var devDependencies={"@babel/core":"^7.11.6","@babel/preset-env":"^7.11.5","@rollup/plugin-commonjs":"^14.0.0","@rollup/plugin-json":"^4.1.0","@rollup/plugin-node-resolve":"^8.0.0","@rollup/plugin-typescript":"^6.0.0","@testing-library/jest-dom":"^5.11.4","@testing-library/svelte":"^3.0.0","@tsconfig/svelte":"^1.0.0","@types/jest":"^26.0.14","@types/node":"^14.11.2","babel-jest":"^26.3.0",eslint:"^7.9.0","eslint-plugin-jest-dom":"^3.2.3","eslint-plugin-svelte3":"^2.7.3",jest:"^26.4.2","jest-vim-reporter":"^0.0.1",prettier:"^2.1.2",rollup:"^2.3.4","rollup-plugin-livereload":"^2.0.0","rollup-plugin-svelte":"^6.0.0","rollup-plugin-terser":"^7.0.0",svelte:"^3.0.0","svelte-check":"^1.0.0","svelte-htm":"^1.1.1","svelte-jester":"^1.1.5","svelte-preprocess":"^4.3.0","ts-jest":"^26.4.0",tslib:"^2.0.0",typescript:"^3.9.3"};var dependencies={conjure5e:"^1.4.1","sirv-cli":"^1.0.0"};var packageJson = {name:name,version:version,scripts:scripts,devDependencies:devDependencies,dependencies:dependencies};
 
     function packageVersion() {
       if (packageJson) {
@@ -3387,13 +3387,13 @@ var app = (function () {
 
     function get_each_context(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[13] = list[i];
+    	child_ctx[12] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[16] = list[i];
+    	child_ctx[15] = list[i];
     	return child_ctx;
     }
 
@@ -3403,7 +3403,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (44:4) {#each spellOptions as spell}
+    // (34:4) {#each spellOptions as spell}
     function create_each_block_2(ctx) {
     	let option;
     	let t_value = /*spell*/ ctx[3] + "";
@@ -3416,7 +3416,7 @@ var app = (function () {
     			t = text(t_value);
     			option.__value = option_value_value = /*spell*/ ctx[3];
     			option.value = option.__value;
-    			add_location(option, file$3, 44, 6, 1397);
+    			add_location(option, file$3, 34, 6, 1156);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -3432,20 +3432,20 @@ var app = (function () {
     		block,
     		id: create_each_block_2.name,
     		type: "each",
-    		source: "(44:4) {#each spellOptions as spell}",
+    		source: "(34:4) {#each spellOptions as spell}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (50:2) {#each terrainOptions as terrain}
+    // (40:2) {#each terrainOptions as terrain}
     function create_each_block_1(ctx) {
     	let label;
     	let input;
     	let input_value_value;
     	let t0;
-    	let t1_value = /*terrain*/ ctx[16] + "";
+    	let t1_value = /*terrain*/ ctx[15] + "";
     	let t1;
     	let mounted;
     	let dispose;
@@ -3457,12 +3457,12 @@ var app = (function () {
     			t0 = space();
     			t1 = text(t1_value);
     			attr_dev(input, "type", "checkbox");
-    			input.__value = input_value_value = /*terrain*/ ctx[16];
+    			input.__value = input_value_value = /*terrain*/ ctx[15];
     			input.value = input.__value;
     			/*$$binding_groups*/ ctx[9][0].push(input);
-    			add_location(input, file$3, 51, 6, 1601);
+    			add_location(input, file$3, 41, 6, 1360);
     			attr_dev(label, "class", "text-lg my-1 mx-2");
-    			add_location(label, file$3, 50, 4, 1561);
+    			add_location(label, file$3, 40, 4, 1320);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, label, anchor);
@@ -3493,17 +3493,17 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(50:2) {#each terrainOptions as terrain}",
+    		source: "(40:2) {#each terrainOptions as terrain}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (68:4) {#each crOptions.filter((cr) => {       if (spell({           terrains: $writeSpellParameters.terrains,           challengeRating: cr,           sources: $readSourcebooks,         }).length > 0) {         return true;       }       return false;     }) as cr}
+    // (58:4) {#each crOptions.filter((cr) => {       if (spell({           terrains: $writeSpellParameters.terrains,           challengeRating: cr,           sources: $readSourcebooks,         }).length > 0) {         return true;       }       return false;     }) as cr}
     function create_each_block(ctx) {
     	let option;
-    	let t_value = /*cr*/ ctx[13] + "";
+    	let t_value = /*cr*/ ctx[12] + "";
     	let t;
     	let option_value_value;
 
@@ -3511,18 +3511,18 @@ var app = (function () {
     		c: function create() {
     			option = element("option");
     			t = text(t_value);
-    			option.__value = option_value_value = /*cr*/ ctx[13];
+    			option.__value = option_value_value = /*cr*/ ctx[12];
     			option.value = option.__value;
-    			add_location(option, file$3, 77, 6, 2295);
+    			add_location(option, file$3, 67, 6, 2054);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
     			append_dev(option, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*spell, $writeSpellParameters, $readSourcebooks*/ 14 && t_value !== (t_value = /*cr*/ ctx[13] + "")) set_data_dev(t, t_value);
+    			if (dirty & /*spell, $writeSpellParameters, $readSourcebooks*/ 14 && t_value !== (t_value = /*cr*/ ctx[12] + "")) set_data_dev(t, t_value);
 
-    			if (dirty & /*spell, $writeSpellParameters, $readSourcebooks, spellOptions*/ 30 && option_value_value !== (option_value_value = /*cr*/ ctx[13])) {
+    			if (dirty & /*spell, $writeSpellParameters, $readSourcebooks, spellOptions*/ 30 && option_value_value !== (option_value_value = /*cr*/ ctx[12])) {
     				prop_dev(option, "__value", option_value_value);
     				option.value = option.__value;
     			}
@@ -3536,7 +3536,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(68:4) {#each crOptions.filter((cr) => {       if (spell({           terrains: $writeSpellParameters.terrains,           challengeRating: cr,           sources: $readSourcebooks,         }).length > 0) {         return true;       }       return false;     }) as cr}",
+    		source: "(58:4) {#each crOptions.filter((cr) => {       if (spell({           terrains: $writeSpellParameters.terrains,           challengeRating: cr,           sources: $readSourcebooks,         }).length > 0) {         return true;       }       return false;     }) as cr}",
     		ctx
     	});
 
@@ -3619,27 +3619,27 @@ var app = (function () {
     			}
 
     			attr_dev(h20, "class", "text-blue-700 text-2xl mx-2");
-    			add_location(h20, file$3, 33, 0, 1060);
+    			add_location(h20, file$3, 23, 0, 819);
     			attr_dev(label0, "for", "spell-select");
     			attr_dev(label0, "class", "text-gray-700 text-xl my-1 mx-2");
-    			add_location(label0, file$3, 35, 2, 1148);
+    			add_location(label0, file$3, 25, 2, 907);
     			attr_dev(select0, "id", "spell-select");
     			attr_dev(select0, "name", "spell");
     			attr_dev(select0, "class", "my-1 mx-2");
     			if (/*$writeSpellParameters*/ ctx[1].spellName === void 0) add_render_callback(() => /*select0_change_handler*/ ctx[7].call(select0));
-    			add_location(select0, file$3, 38, 2, 1238);
+    			add_location(select0, file$3, 28, 2, 997);
     			attr_dev(h21, "class", "text-gray-700 text-xl my-1 mx-2");
-    			add_location(h21, file$3, 48, 2, 1463);
+    			add_location(h21, file$3, 38, 2, 1222);
     			attr_dev(label1, "for", "challenge-rating-select");
     			attr_dev(label1, "class", "text-gray-700 text-xl my-1 mx-2");
-    			add_location(label1, file$3, 59, 2, 1753);
+    			add_location(label1, file$3, 49, 2, 1512);
     			attr_dev(select1, "id", "challenge-rating-select");
     			attr_dev(select1, "class", "my-1 mx-2");
     			attr_dev(select1, "name", "challenge-rating");
     			if (/*$writeSpellParameters*/ ctx[1].challengeRating === void 0) add_render_callback(() => /*select1_change_handler*/ ctx[11].call(select1));
-    			add_location(select1, file$3, 62, 2, 1878);
+    			add_location(select1, file$3, 52, 2, 1637);
     			attr_dev(form, "name", "spell-parameters");
-    			add_location(form, file$3, 34, 0, 1115);
+    			add_location(form, file$3, 24, 0, 874);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -3808,19 +3808,6 @@ var app = (function () {
     	let spell;
     	const crOptions = [0, 0.125, 0.25, 0.5, 1, 2];
     	const terrainOptions = ["Land", "Water", "Air"];
-
-    	function forNonEmptyResults(challengeRating) {
-    		if (spell({
-    			terrains: $writeSpellParameters.terrains,
-    			challengeRating,
-    			sources: $readSourcebooks
-    		}).length > 0) {
-    			return true;
-    		}
-
-    		return false;
-    	}
-
     	const writable_props = ["heading"];
 
     	Object.keys($$props).forEach(key => {
@@ -3874,7 +3861,6 @@ var app = (function () {
     		spell,
     		crOptions,
     		terrainOptions,
-    		forNonEmptyResults,
     		$writeSpellParameters,
     		$readSourcebooks
     	});

@@ -24,19 +24,6 @@
   }
   const crOptions: number[] = [0, 0.125, 0.25, 0.5, 1, 2];
   const terrainOptions: string[] = ["Land", "Water", "Air"];
-
-  function forNonEmptyResults(challengeRating: number): boolean {
-    if (
-      spell({
-        terrains: $writeSpellParameters.terrains,
-        challengeRating,
-        sources: $readSourcebooks,
-      }).length > 0
-    ) {
-      return true;
-    }
-    return false;
-  }
 </script>
 
 <h2 class="text-blue-700 text-2xl mx-2">{heading}</h2>
