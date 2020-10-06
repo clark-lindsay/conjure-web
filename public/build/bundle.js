@@ -946,6 +946,10 @@ var app = (function () {
         else
             dispatch_dev("SvelteDOMSetAttribute", { node, attribute, value });
     }
+    function prop_dev(node, property, value) {
+        node[property] = value;
+        dispatch_dev("SvelteDOMSetProperty", { node, property, value });
+    }
     function set_data_dev(text, data) {
         data = '' + data;
         if (text.wholeText === data)
@@ -2700,7 +2704,7 @@ var app = (function () {
       ($writeSpellParameters) => $writeSpellParameters
     );
 
-    var name="svelte-app";var version="0.3.1";var scripts={build:"rollup -c",dev:"rollup -c -w",start:"sirv public",validate:"svelte-check"};var devDependencies={"@babel/core":"^7.11.6","@babel/preset-env":"^7.11.5","@rollup/plugin-commonjs":"^14.0.0","@rollup/plugin-json":"^4.1.0","@rollup/plugin-node-resolve":"^8.0.0","@rollup/plugin-typescript":"^6.0.0","@testing-library/jest-dom":"^5.11.4","@testing-library/svelte":"^3.0.0","@tsconfig/svelte":"^1.0.0","@types/jest":"^26.0.14","@types/node":"^14.11.2","babel-jest":"^26.3.0",eslint:"^7.9.0","eslint-plugin-jest-dom":"^3.2.3","eslint-plugin-svelte3":"^2.7.3",jest:"^26.4.2","jest-vim-reporter":"^0.0.1",prettier:"^2.1.2",rollup:"^2.3.4","rollup-plugin-livereload":"^2.0.0","rollup-plugin-svelte":"^6.0.0","rollup-plugin-terser":"^7.0.0",svelte:"^3.0.0","svelte-check":"^1.0.0","svelte-htm":"^1.1.1","svelte-jester":"^1.1.5","svelte-preprocess":"^4.3.0","ts-jest":"^26.4.0",tslib:"^2.0.0",typescript:"^3.9.3"};var dependencies={conjure5e:"^1.4.1","sirv-cli":"^1.0.0"};var packageJson = {name:name,version:version,scripts:scripts,devDependencies:devDependencies,dependencies:dependencies};
+    var name="svelte-app";var version="0.4.0";var scripts={build:"rollup -c",dev:"rollup -c -w",start:"sirv public",validate:"svelte-check"};var devDependencies={"@babel/core":"^7.11.6","@babel/preset-env":"^7.11.5","@rollup/plugin-commonjs":"^14.0.0","@rollup/plugin-json":"^4.1.0","@rollup/plugin-node-resolve":"^8.0.0","@rollup/plugin-typescript":"^6.0.0","@testing-library/jest-dom":"^5.11.4","@testing-library/svelte":"^3.0.0","@tsconfig/svelte":"^1.0.0","@types/jest":"^26.0.14","@types/node":"^14.11.2","babel-jest":"^26.3.0",eslint:"^7.9.0","eslint-plugin-jest-dom":"^3.2.3","eslint-plugin-svelte3":"^2.7.3",jest:"^26.4.2","jest-vim-reporter":"^0.0.1",prettier:"^2.1.2",rollup:"^2.3.4","rollup-plugin-livereload":"^2.0.0","rollup-plugin-svelte":"^6.0.0","rollup-plugin-terser":"^7.0.0",svelte:"^3.0.0","svelte-check":"^1.0.0","svelte-htm":"^1.1.1","svelte-jester":"^1.1.5","svelte-preprocess":"^4.3.0","ts-jest":"^26.4.0",tslib:"^2.0.0",typescript:"^3.9.3"};var dependencies={conjure5e:"^1.4.1","sirv-cli":"^1.0.0"};var packageJson = {name:name,version:version,scripts:scripts,devDependencies:devDependencies,dependencies:dependencies};
 
     function packageVersion() {
       if (packageJson) {
@@ -3383,26 +3387,26 @@ var app = (function () {
 
     function get_each_context(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[9] = list[i];
+    	child_ctx[12] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[12] = list[i];
+    	child_ctx[15] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_2(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[15] = list[i];
+    	child_ctx[3] = list[i];
     	return child_ctx;
     }
 
-    // (22:4) {#each spellOptions as spell}
+    // (34:4) {#each spellOptions as spell}
     function create_each_block_2(ctx) {
     	let option;
-    	let t_value = /*spell*/ ctx[15] + "";
+    	let t_value = /*spell*/ ctx[3] + "";
     	let t;
     	let option_value_value;
 
@@ -3410,9 +3414,9 @@ var app = (function () {
     		c: function create() {
     			option = element("option");
     			t = text(t_value);
-    			option.__value = option_value_value = /*spell*/ ctx[15];
+    			option.__value = option_value_value = /*spell*/ ctx[3];
     			option.value = option.__value;
-    			add_location(option, file$3, 22, 6, 742);
+    			add_location(option, file$3, 34, 6, 1156);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -3428,15 +3432,76 @@ var app = (function () {
     		block,
     		id: create_each_block_2.name,
     		type: "each",
-    		source: "(22:4) {#each spellOptions as spell}",
+    		source: "(34:4) {#each spellOptions as spell}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (35:4) {#each crOptions as cr}
+    // (40:2) {#each terrainOptions as terrain}
     function create_each_block_1(ctx) {
+    	let label;
+    	let input;
+    	let input_value_value;
+    	let t0;
+    	let t1_value = /*terrain*/ ctx[15] + "";
+    	let t1;
+    	let mounted;
+    	let dispose;
+
+    	const block = {
+    		c: function create() {
+    			label = element("label");
+    			input = element("input");
+    			t0 = space();
+    			t1 = text(t1_value);
+    			attr_dev(input, "type", "checkbox");
+    			input.__value = input_value_value = /*terrain*/ ctx[15];
+    			input.value = input.__value;
+    			/*$$binding_groups*/ ctx[9][0].push(input);
+    			add_location(input, file$3, 41, 6, 1360);
+    			attr_dev(label, "class", "text-lg my-1 mx-2");
+    			add_location(label, file$3, 40, 4, 1320);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, label, anchor);
+    			append_dev(label, input);
+    			input.checked = ~/*$writeSpellParameters*/ ctx[1].terrains.indexOf(input.__value);
+    			append_dev(label, t0);
+    			append_dev(label, t1);
+
+    			if (!mounted) {
+    				dispose = listen_dev(input, "change", /*input_change_handler*/ ctx[8]);
+    				mounted = true;
+    			}
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*$writeSpellParameters, spellOptions*/ 18) {
+    				input.checked = ~/*$writeSpellParameters*/ ctx[1].terrains.indexOf(input.__value);
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(label);
+    			/*$$binding_groups*/ ctx[9][0].splice(/*$$binding_groups*/ ctx[9][0].indexOf(input), 1);
+    			mounted = false;
+    			dispose();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block_1.name,
+    		type: "each",
+    		source: "(40:2) {#each terrainOptions as terrain}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (58:4) {#each crOptions.filter((cr) => {       if (spell({           terrains: $writeSpellParameters.terrains,           challengeRating: cr,           sources: $readSourcebooks,         }).length > 0) {         return true;       }       return false;     }) as cr}
+    function create_each_block(ctx) {
     	let option;
     	let t_value = /*cr*/ ctx[12] + "";
     	let t;
@@ -3448,13 +3513,20 @@ var app = (function () {
     			t = text(t_value);
     			option.__value = option_value_value = /*cr*/ ctx[12];
     			option.value = option.__value;
-    			add_location(option, file$3, 35, 6, 1114);
+    			add_location(option, file$3, 67, 6, 2054);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
     			append_dev(option, t);
     		},
-    		p: noop,
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*spell, $writeSpellParameters, $readSourcebooks*/ 14 && t_value !== (t_value = /*cr*/ ctx[12] + "")) set_data_dev(t, t_value);
+
+    			if (dirty & /*spell, $writeSpellParameters, $readSourcebooks, spellOptions*/ 30 && option_value_value !== (option_value_value = /*cr*/ ctx[12])) {
+    				prop_dev(option, "__value", option_value_value);
+    				option.value = option.__value;
+    			}
+    		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(option);
     		}
@@ -3462,73 +3534,9 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_each_block_1.name,
-    		type: "each",
-    		source: "(35:4) {#each crOptions as cr}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (41:2) {#each terrainOptions as terrain}
-    function create_each_block(ctx) {
-    	let label;
-    	let input;
-    	let input_value_value;
-    	let t0;
-    	let t1_value = /*terrain*/ ctx[9] + "";
-    	let t1;
-    	let t2;
-    	let mounted;
-    	let dispose;
-
-    	const block = {
-    		c: function create() {
-    			label = element("label");
-    			input = element("input");
-    			t0 = space();
-    			t1 = text(t1_value);
-    			t2 = space();
-    			attr_dev(input, "type", "checkbox");
-    			input.__value = input_value_value = /*terrain*/ ctx[9];
-    			input.value = input.__value;
-    			/*$$binding_groups*/ ctx[8][0].push(input);
-    			add_location(input, file$3, 42, 6, 1312);
-    			attr_dev(label, "class", "text-lg my-1 mx-2");
-    			add_location(label, file$3, 41, 4, 1272);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, label, anchor);
-    			append_dev(label, input);
-    			input.checked = ~/*$writeSpellParameters*/ ctx[1].terrains.indexOf(input.__value);
-    			append_dev(label, t0);
-    			append_dev(label, t1);
-    			append_dev(label, t2);
-
-    			if (!mounted) {
-    				dispose = listen_dev(input, "change", /*input_change_handler*/ ctx[7]);
-    				mounted = true;
-    			}
-    		},
-    		p: function update(ctx, dirty) {
-    			if (dirty & /*$writeSpellParameters, spellOptions*/ 6) {
-    				input.checked = ~/*$writeSpellParameters*/ ctx[1].terrains.indexOf(input.__value);
-    			}
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(label);
-    			/*$$binding_groups*/ ctx[8][0].splice(/*$$binding_groups*/ ctx[8][0].indexOf(input), 1);
-    			mounted = false;
-    			dispose();
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(41:2) {#each terrainOptions as terrain}",
+    		source: "(58:4) {#each crOptions.filter((cr) => {       if (spell({           terrains: $writeSpellParameters.terrains,           challengeRating: cr,           sources: $readSourcebooks,         }).length > 0) {         return true;       }       return false;     }) as cr}",
     		ctx
     	});
 
@@ -3544,15 +3552,15 @@ var app = (function () {
     	let t3;
     	let select0;
     	let t4;
-    	let label1;
-    	let t6;
-    	let select1;
-    	let t7;
     	let h21;
+    	let t6;
+    	let t7;
+    	let label1;
     	let t9;
+    	let select1;
     	let mounted;
     	let dispose;
-    	let each_value_2 = /*spellOptions*/ ctx[2];
+    	let each_value_2 = /*spellOptions*/ ctx[4];
     	validate_each_argument(each_value_2);
     	let each_blocks_2 = [];
 
@@ -3560,7 +3568,7 @@ var app = (function () {
     		each_blocks_2[i] = create_each_block_2(get_each_context_2(ctx, each_value_2, i));
     	}
 
-    	let each_value_1 = /*crOptions*/ ctx[3];
+    	let each_value_1 = /*terrainOptions*/ ctx[6];
     	validate_each_argument(each_value_1);
     	let each_blocks_1 = [];
 
@@ -3568,7 +3576,7 @@ var app = (function () {
     		each_blocks_1[i] = create_each_block_1(get_each_context_1(ctx, each_value_1, i));
     	}
 
-    	let each_value = /*terrainOptions*/ ctx[4];
+    	let each_value = /*crOptions*/ ctx[5].filter(/*func*/ ctx[10]);
     	validate_each_argument(each_value);
     	let each_blocks = [];
 
@@ -3592,46 +3600,46 @@ var app = (function () {
     			}
 
     			t4 = space();
-    			label1 = element("label");
-    			label1.textContent = "Challenge Rating of Creatures";
+    			h21 = element("h2");
+    			h21.textContent = "Terrains";
     			t6 = space();
-    			select1 = element("select");
 
     			for (let i = 0; i < each_blocks_1.length; i += 1) {
     				each_blocks_1[i].c();
     			}
 
     			t7 = space();
-    			h21 = element("h2");
-    			h21.textContent = "Terrains";
+    			label1 = element("label");
+    			label1.textContent = "Challenge Rating of Creatures";
     			t9 = space();
+    			select1 = element("select");
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
 
     			attr_dev(h20, "class", "text-blue-700 text-2xl mx-2");
-    			add_location(h20, file$3, 11, 0, 405);
+    			add_location(h20, file$3, 23, 0, 819);
     			attr_dev(label0, "for", "spell-select");
     			attr_dev(label0, "class", "text-gray-700 text-xl my-1 mx-2");
-    			add_location(label0, file$3, 13, 2, 493);
+    			add_location(label0, file$3, 25, 2, 907);
     			attr_dev(select0, "id", "spell-select");
     			attr_dev(select0, "name", "spell");
     			attr_dev(select0, "class", "my-1 mx-2");
-    			if (/*$writeSpellParameters*/ ctx[1].spellName === void 0) add_render_callback(() => /*select0_change_handler*/ ctx[5].call(select0));
-    			add_location(select0, file$3, 16, 2, 583);
+    			if (/*$writeSpellParameters*/ ctx[1].spellName === void 0) add_render_callback(() => /*select0_change_handler*/ ctx[7].call(select0));
+    			add_location(select0, file$3, 28, 2, 997);
+    			attr_dev(h21, "class", "text-gray-700 text-xl my-1 mx-2");
+    			add_location(h21, file$3, 38, 2, 1222);
     			attr_dev(label1, "for", "challenge-rating-select");
     			attr_dev(label1, "class", "text-gray-700 text-xl my-1 mx-2");
-    			add_location(label1, file$3, 26, 2, 808);
+    			add_location(label1, file$3, 49, 2, 1512);
     			attr_dev(select1, "id", "challenge-rating-select");
     			attr_dev(select1, "class", "my-1 mx-2");
     			attr_dev(select1, "name", "challenge-rating");
-    			if (/*$writeSpellParameters*/ ctx[1].challengeRating === void 0) add_render_callback(() => /*select1_change_handler*/ ctx[6].call(select1));
-    			add_location(select1, file$3, 29, 2, 933);
-    			attr_dev(h21, "class", "text-gray-700 text-xl my-1 mx-2");
-    			add_location(h21, file$3, 39, 2, 1174);
+    			if (/*$writeSpellParameters*/ ctx[1].challengeRating === void 0) add_render_callback(() => /*select1_change_handler*/ ctx[11].call(select1));
+    			add_location(select1, file$3, 52, 2, 1637);
     			attr_dev(form, "name", "spell-parameters");
-    			add_location(form, file$3, 12, 0, 460);
+    			add_location(form, file$3, 24, 0, 874);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -3651,27 +3659,28 @@ var app = (function () {
 
     			select_option(select0, /*$writeSpellParameters*/ ctx[1].spellName);
     			append_dev(form, t4);
-    			append_dev(form, label1);
+    			append_dev(form, h21);
     			append_dev(form, t6);
-    			append_dev(form, select1);
 
     			for (let i = 0; i < each_blocks_1.length; i += 1) {
-    				each_blocks_1[i].m(select1, null);
+    				each_blocks_1[i].m(form, null);
+    			}
+
+    			append_dev(form, t7);
+    			append_dev(form, label1);
+    			append_dev(form, t9);
+    			append_dev(form, select1);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(select1, null);
     			}
 
     			select_option(select1, /*$writeSpellParameters*/ ctx[1].challengeRating);
-    			append_dev(form, t7);
-    			append_dev(form, h21);
-    			append_dev(form, t9);
-
-    			for (let i = 0; i < each_blocks.length; i += 1) {
-    				each_blocks[i].m(form, null);
-    			}
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(select0, "change", /*select0_change_handler*/ ctx[5]),
-    					listen_dev(select1, "change", /*select1_change_handler*/ ctx[6])
+    					listen_dev(select0, "change", /*select0_change_handler*/ ctx[7]),
+    					listen_dev(select1, "change", /*select1_change_handler*/ ctx[11])
     				];
 
     				mounted = true;
@@ -3680,8 +3689,8 @@ var app = (function () {
     		p: function update(ctx, [dirty]) {
     			if (dirty & /*heading*/ 1) set_data_dev(t0, /*heading*/ ctx[0]);
 
-    			if (dirty & /*spellOptions*/ 4) {
-    				each_value_2 = /*spellOptions*/ ctx[2];
+    			if (dirty & /*spellOptions*/ 16) {
+    				each_value_2 = /*spellOptions*/ ctx[4];
     				validate_each_argument(each_value_2);
     				let i;
 
@@ -3704,12 +3713,12 @@ var app = (function () {
     				each_blocks_2.length = each_value_2.length;
     			}
 
-    			if (dirty & /*$writeSpellParameters, spellOptions*/ 6) {
+    			if (dirty & /*$writeSpellParameters, spellOptions*/ 18) {
     				select_option(select0, /*$writeSpellParameters*/ ctx[1].spellName);
     			}
 
-    			if (dirty & /*crOptions*/ 8) {
-    				each_value_1 = /*crOptions*/ ctx[3];
+    			if (dirty & /*terrainOptions, $writeSpellParameters*/ 66) {
+    				each_value_1 = /*terrainOptions*/ ctx[6];
     				validate_each_argument(each_value_1);
     				let i;
 
@@ -3721,7 +3730,7 @@ var app = (function () {
     					} else {
     						each_blocks_1[i] = create_each_block_1(child_ctx);
     						each_blocks_1[i].c();
-    						each_blocks_1[i].m(select1, null);
+    						each_blocks_1[i].m(form, t7);
     					}
     				}
 
@@ -3732,12 +3741,8 @@ var app = (function () {
     				each_blocks_1.length = each_value_1.length;
     			}
 
-    			if (dirty & /*$writeSpellParameters, spellOptions*/ 6) {
-    				select_option(select1, /*$writeSpellParameters*/ ctx[1].challengeRating);
-    			}
-
-    			if (dirty & /*terrainOptions, $writeSpellParameters*/ 18) {
-    				each_value = /*terrainOptions*/ ctx[4];
+    			if (dirty & /*crOptions, spell, $writeSpellParameters, $readSourcebooks*/ 46) {
+    				each_value = /*crOptions*/ ctx[5].filter(/*func*/ ctx[10]);
     				validate_each_argument(each_value);
     				let i;
 
@@ -3749,7 +3754,7 @@ var app = (function () {
     					} else {
     						each_blocks[i] = create_each_block(child_ctx);
     						each_blocks[i].c();
-    						each_blocks[i].m(form, null);
+    						each_blocks[i].m(select1, null);
     					}
     				}
 
@@ -3758,6 +3763,10 @@ var app = (function () {
     				}
 
     				each_blocks.length = each_value.length;
+    			}
+
+    			if (dirty & /*$writeSpellParameters, spellOptions*/ 18) {
+    				select_option(select1, /*$writeSpellParameters*/ ctx[1].challengeRating);
     			}
     		},
     		i: noop,
@@ -3787,12 +3796,16 @@ var app = (function () {
 
     function instance$3($$self, $$props, $$invalidate) {
     	let $writeSpellParameters;
+    	let $readSourcebooks;
     	validate_store(writeSpellParameters, "writeSpellParameters");
     	component_subscribe($$self, writeSpellParameters, $$value => $$invalidate(1, $writeSpellParameters = $$value));
+    	validate_store(readSourcebooks, "readSourcebooks");
+    	component_subscribe($$self, readSourcebooks, $$value => $$invalidate(2, $readSourcebooks = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots("SelectSpellParameters", slots, []);
     	let { heading = "Spell Parameters" } = $$props;
     	const spellOptions = ["Conjure Animals", "Conjure Woodland Beings", "Conjure Minor Elementals"];
+    	let spell;
     	const crOptions = [0, 0.125, 0.25, 0.5, 1, 2];
     	const terrainOptions = ["Land", "Water", "Air"];
     	const writable_props = ["heading"];
@@ -3806,19 +3819,31 @@ var app = (function () {
     	function select0_change_handler() {
     		$writeSpellParameters.spellName = select_value(this);
     		writeSpellParameters.set($writeSpellParameters);
-    		$$invalidate(2, spellOptions);
-    	}
-
-    	function select1_change_handler() {
-    		$writeSpellParameters.challengeRating = select_value(this);
-    		writeSpellParameters.set($writeSpellParameters);
-    		$$invalidate(2, spellOptions);
+    		$$invalidate(4, spellOptions);
     	}
 
     	function input_change_handler() {
     		$writeSpellParameters.terrains = get_binding_group_value($$binding_groups[0], this.__value, this.checked);
     		writeSpellParameters.set($writeSpellParameters);
-    		$$invalidate(2, spellOptions);
+    		$$invalidate(4, spellOptions);
+    	}
+
+    	const func = cr => {
+    		if (spell({
+    			terrains: $writeSpellParameters.terrains,
+    			challengeRating: cr,
+    			sources: $readSourcebooks
+    		}).length > 0) {
+    			return true;
+    		}
+
+    		return false;
+    	};
+
+    	function select1_change_handler() {
+    		$writeSpellParameters.challengeRating = select_value(this);
+    		writeSpellParameters.set($writeSpellParameters);
+    		$$invalidate(4, spellOptions);
     	}
 
     	$$self.$$set = $$props => {
@@ -3826,32 +3851,54 @@ var app = (function () {
     	};
 
     	$$self.$capture_state = () => ({
+    		conjureAnimals: src.conjureAnimals,
+    		conjureWoodlandBeings: src.conjureWoodlandBeings,
+    		conjureMinorElementals: src.conjureMinorElementals,
     		writeSpellParameters,
+    		readSourcebooks,
     		heading,
     		spellOptions,
+    		spell,
     		crOptions,
     		terrainOptions,
-    		$writeSpellParameters
+    		$writeSpellParameters,
+    		$readSourcebooks
     	});
 
     	$$self.$inject_state = $$props => {
     		if ("heading" in $$props) $$invalidate(0, heading = $$props.heading);
+    		if ("spell" in $$props) $$invalidate(3, spell = $$props.spell);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
+    	$$self.$$.update = () => {
+    		if ($$self.$$.dirty & /*$writeSpellParameters*/ 2) {
+    			 if ($writeSpellParameters.spellName === "Conjure Animals") {
+    				$$invalidate(3, spell = src.conjureAnimals);
+    			} else if ($writeSpellParameters.spellName === "Conjure Woodland Beings") {
+    				$$invalidate(3, spell = src.conjureWoodlandBeings);
+    			} else {
+    				$$invalidate(3, spell = src.conjureMinorElementals);
+    			}
+    		}
+    	};
+
     	return [
     		heading,
     		$writeSpellParameters,
+    		$readSourcebooks,
+    		spell,
     		spellOptions,
     		crOptions,
     		terrainOptions,
     		select0_change_handler,
-    		select1_change_handler,
     		input_change_handler,
-    		$$binding_groups
+    		$$binding_groups,
+    		func,
+    		select1_change_handler
     	];
     }
 
