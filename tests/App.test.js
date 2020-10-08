@@ -1,17 +1,22 @@
 import { render, fireEvent } from "@testing-library/svelte";
 
-import App from "../src/App.svelte";
+import ResponsiveApp from "../src/ResponsiveApp.svelte";
 
-describe("the App component", () => {
+describe("the ResponsiveApp component, rendered in viewports up to 1024 px wide", () => {
   it("contains a button labelled Cast Spell", () => {
-    const { getByRole } = render(App);
+    const { getByRole } = render(ResponsiveApp, {
+      props: { containerWidth: 800 },
+    });
     const button = getByRole("button", { name: "Cast Conjure Animals" });
 
     expect(button).toBeInTheDocument();
   });
 
   it("after the user clicks the Cast button, a new result appears", async () => {
-    const { getByRole } = render(App);
+    const { getByRole } = render(ResponsiveApp, {
+      props: { containerWidth: 800 },
+    });
+
     const castButton = getByRole("button", { name: "Cast Conjure Animals" });
 
     expect(() => getByRole("list")).toThrow();
@@ -23,7 +28,9 @@ describe("the App component", () => {
     // the reason that I am getting the cast button every time I need it
     // is because it is rendered conditionally; grabbing it once at the start
     // will mean that it may be stale when we try to test it
-    const { getByRole, getAllByRole, getByTestId } = render(App);
+    const { getByRole, getAllByRole, getByTestId } = render(ResponsiveApp, {
+      props: { containerWidth: 800 },
+    });
 
     const sourceButton = getByTestId("sourceOptionsMenuDiv");
 
@@ -51,7 +58,10 @@ describe("the App component", () => {
   });
 
   it("opening either of the sidebar menus toggles the presence of the overflow-hidden and h-full classes on the body div", async () => {
-    const { getByTestId, getAllByRole } = render(App);
+    const { getByTestId, getAllByRole } = render(ResponsiveApp, {
+      props: { containerWidth: 800 },
+    });
+
     const sourceButton = getAllByRole("button", { name: "" })[1];
     const spellParametersButton = getAllByRole("button", { name: "" })[0];
 
@@ -74,5 +84,15 @@ describe("the App component", () => {
       "overflow-hidden",
       "h-full"
     );
+  });
+});
+
+describe("the ResponsiveApp component rendered in a viewport >= 1024 px wide", () => {
+  it("renders a heading with the viewport size", () => {
+    const { getByRole } = render(ResponsiveApp, {
+      props: { containerWidth: 1024 },
+    });
+
+    expect(getByRole("heading", { name: "1024" })).toBeInTheDocument();
   });
 });
