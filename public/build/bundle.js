@@ -1254,1225 +1254,1232 @@ var app = (function () {
     exports.creatures = {
         beasts: [
             {
-                name: 'Frog',
+                name: "Frog",
                 challengeRating: 0,
-                terrains: ['Land', 'Water'],
-                type: 'Beast',
+                terrains: ["Land", "Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Sea Horse',
+                name: "Sea Horse",
                 challengeRating: 0,
-                terrains: ['Water'],
-                type: 'Beast',
+                terrains: ["Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Baboon',
+                name: "Baboon",
                 challengeRating: 0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Badger',
+                name: "Badger",
                 challengeRating: 0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Bat',
+                name: "Bat",
                 challengeRating: 0,
-                terrains: ['Land', 'Air'],
-                type: 'Beast',
+                terrains: ["Land", "Air"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Cat',
+                name: "Cat",
                 challengeRating: 0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Crab',
+                name: "Crab",
                 challengeRating: 0,
-                terrains: ['Land', 'Water'],
-                type: 'Beast',
+                terrains: ["Land", "Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Deer',
+                name: "Deer",
                 challengeRating: 0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Eagle',
+                name: "Eagle",
                 challengeRating: 0,
-                terrains: ['Land', 'Air'],
-                type: 'Beast',
+                terrains: ["Land", "Air"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Fire Beetle',
+                name: "Giant Fire Beetle",
                 challengeRating: 0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Goat',
+                name: "Goat",
                 challengeRating: 0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Hawk',
+                name: "Hawk",
                 challengeRating: 0,
-                terrains: ['Land', 'Air'],
-                type: 'Beast',
+                terrains: ["Land", "Air"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Hyena',
+                name: "Hyena",
                 challengeRating: 0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Jackal',
+                name: "Jackal",
                 challengeRating: 0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Lizard',
+                name: "Lizard",
                 challengeRating: 0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Octopus',
+                name: "Octopus",
                 challengeRating: 0,
-                terrains: ['Land', 'Water'],
-                type: 'Beast',
+                terrains: ["Land", "Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Owl',
+                name: "Owl",
                 challengeRating: 0,
-                terrains: ['Land', 'Air'],
-                type: 'Beast',
+                terrains: ["Land", "Air"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Quipper',
+                name: "Quipper",
                 challengeRating: 0,
-                terrains: ['Water'],
-                type: 'Beast',
+                terrains: ["Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Rat',
+                name: "Rat",
                 challengeRating: 0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Raven',
+                name: "Raven",
                 challengeRating: 0,
-                terrains: ['Land', 'Air'],
-                type: 'Beast',
+                terrains: ["Land", "Air"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Scorpion',
+                name: "Scorpion",
                 challengeRating: 0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Sheep',
+                name: "Sheep",
                 challengeRating: 0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: SKT
             },
             {
-                name: 'Spider',
+                name: "Spider",
                 challengeRating: 0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Vulture',
+                name: "Vulture",
                 challengeRating: 0,
-                terrains: ['Land', 'Air'],
-                type: 'Beast',
+                terrains: ["Land", "Air"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Weasel',
+                name: "Weasel",
                 challengeRating: 0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Blood Hawk',
+                name: "Blood Hawk",
                 challengeRating: 0.125,
-                terrains: ['Land', 'Air'],
-                type: 'Beast',
+                terrains: ["Land", "Air"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Camel',
+                name: "Camel",
                 challengeRating: 0.125,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Dolphin',
+                name: "Dolphin",
                 challengeRating: 0.125,
-                terrains: ['Water'],
-                type: 'Beast',
+                terrains: ["Water"],
+                type: "Beast",
                 source: VGtM
             },
             {
-                name: 'Flying Snake',
+                name: "Flying Snake",
                 challengeRating: 0.125,
-                terrains: ['Land', 'Air', 'Water'],
-                type: 'Beast',
+                terrains: ["Land", "Air", "Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Crab',
+                name: "Giant Crab",
                 challengeRating: 0.125,
-                terrains: ['Land', 'Water'],
-                type: 'Beast',
+                terrains: ["Land", "Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Rat',
+                name: "Giant Rat",
                 challengeRating: 0.125,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Weasel',
+                name: "Giant Weasel",
                 challengeRating: 0.125,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Mastiff',
+                name: "Mastiff",
                 challengeRating: 0.125,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Mule',
+                name: "Mule",
                 challengeRating: 0.125,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Poisonous Snake',
+                name: "Poisonous Snake",
                 challengeRating: 0.125,
-                terrains: ['Land', 'Water'],
-                type: 'Beast',
+                terrains: ["Land", "Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Pony',
+                name: "Pony",
                 challengeRating: 0.125,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Stirge',
+                name: "Stirge",
                 challengeRating: 0.125,
-                terrains: ['Land', 'Air'],
-                type: 'Beast',
+                terrains: ["Land", "Air"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Axe Beak',
+                name: "Axe Beak",
                 challengeRating: 0.25,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Boar',
+                name: "Boar",
                 challengeRating: 0.25,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Constrictor Snake',
+                name: "Constrictor Snake",
                 challengeRating: 0.25,
-                terrains: ['Land', 'Water'],
-                type: 'Beast',
+                terrains: ["Land", "Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Cow',
+                name: "Cow",
                 challengeRating: 0.25,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: VGtM
             },
             {
-                name: 'Draft Horse',
+                name: "Draft Horse",
                 challengeRating: 0.25,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Elk',
+                name: "Elk",
                 challengeRating: 0.25,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Fastieth',
+                name: "Fastieth",
                 challengeRating: 0.25,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: ERLW
             },
             {
-                name: 'Giant Badger',
+                name: "Giant Badger",
                 challengeRating: 0.25,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Bat',
+                name: "Giant Bat",
                 challengeRating: 0.25,
-                terrains: ['Land', 'Air'],
-                type: 'Beast',
+                terrains: ["Land", "Air"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Centipede',
+                name: "Giant Centipede",
                 challengeRating: 0.25,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Frog',
+                name: "Giant Frog",
                 challengeRating: 0.25,
-                terrains: ['Land', 'Water'],
-                type: 'Beast',
+                terrains: ["Land", "Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Lizard',
+                name: "Giant Lizard",
                 challengeRating: 0.25,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Owl',
+                name: "Giant Owl",
                 challengeRating: 0.25,
-                terrains: ['Land', 'Air'],
-                type: 'Beast',
+                terrains: ["Land", "Air"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Poisonous Snake',
+                name: "Giant Poisonous Snake",
                 challengeRating: 0.25,
-                terrains: ['Land', 'Water'],
-                type: 'Beast',
+                terrains: ["Land", "Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Wolf Spider',
+                name: "Giant Wolf Spider",
                 challengeRating: 0.25,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Hadrosaurus',
+                name: "Hadrosaurus",
                 challengeRating: 0.25,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: VGtM
             },
             {
-                name: 'Ox',
+                name: "Ox",
                 challengeRating: 0.25,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: VGtM
             },
             {
-                name: 'Panther',
+                name: "Panther",
                 challengeRating: 0.25,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Pteranodon',
+                name: "Pteranodon",
                 challengeRating: 0.25,
-                terrains: ['Land', 'Air'],
-                type: 'Beast',
+                terrains: ["Land", "Air"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Riding Horse',
+                name: "Riding Horse",
                 challengeRating: 0.25,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Stench Kow',
+                name: "Stench Kow",
                 challengeRating: 0.25,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: VGtM
             },
             {
-                name: 'Swarm of Bats',
+                name: "Swarm of Bats",
                 challengeRating: 0.25,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Air"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Swarm of Rats',
+                name: "Swarm of Rats",
                 challengeRating: 0.25,
-                terrains: ['Air'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Swarm of Ravens',
+                name: "Swarm of Ravens",
                 challengeRating: 0.25,
-                terrains: ['Land', 'Air'],
-                type: 'Beast',
+                terrains: ["Land", "Air"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Wolf',
+                name: "Wolf",
                 challengeRating: 0.25,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Ape',
+                name: "Ape",
                 challengeRating: 0.5,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Black Bear',
+                name: "Black Bear",
                 challengeRating: 0.5,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Clawfoot Raptor',
+                name: "Clawfoot Raptor",
                 challengeRating: 0.5,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: WGtE
             },
             {
-                name: 'Crocodile',
+                name: "Crocodile",
                 challengeRating: 0.5,
-                terrains: ['Land', 'Water'],
-                type: 'Beast',
+                terrains: ["Land", "Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Goat',
+                name: "Giant Goat",
                 challengeRating: 0.5,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Sea Horse',
+                name: "Giant Sea Horse",
                 challengeRating: 0.5,
-                terrains: ['Water'],
-                type: 'Beast',
+                terrains: ["Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Wasp',
+                name: "Giant Wasp",
                 challengeRating: 0.5,
-                terrains: ['Land', 'Air'],
-                type: 'Beast',
+                terrains: ["Land", "Air"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Reef Shark',
+                name: "Reef Shark",
                 challengeRating: 0.5,
-                terrains: ['Water'],
-                type: 'Beast',
+                terrains: ["Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Swarm of Insects',
+                name: "Swarm of Insects",
                 challengeRating: 0.5,
-                terrains: ['Land', 'Air'],
-                type: 'Beast',
+                terrains: ["Land", "Air"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Swarm of Rot Grubs',
+                name: "Swarm of Rot Grubs",
                 challengeRating: 0.5,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: VGtM
             },
             {
-                name: 'Warhorse',
+                name: "Warhorse",
                 challengeRating: 0.5,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Brown Bear',
+                name: "Brown Bear",
                 challengeRating: 1.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Clawfoot',
+                name: "Clawfoot",
                 challengeRating: 1.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: ERLW
             },
             {
-                name: 'Dire Wolf',
+                name: "Dire Wolf",
                 challengeRating: 1.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Eagle',
+                name: "Giant Eagle",
                 challengeRating: 1.0,
-                terrains: ['Land', 'Air'],
-                type: 'Beast',
+                terrains: ["Land", "Air"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Hyena',
+                name: "Giant Hyena",
                 challengeRating: 1.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Octopus',
+                name: "Giant Octopus",
                 challengeRating: 1.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Spider',
+                name: "Giant Spider",
                 challengeRating: 1.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Toad',
+                name: "Giant Toad",
                 challengeRating: 1.0,
-                terrains: ['Land', 'Water'],
-                type: 'Beast',
+                terrains: ["Land", "Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Vulture',
+                name: "Giant Vulture",
                 challengeRating: 1.0,
-                terrains: ['Land', 'Air'],
-                type: 'Beast',
+                terrains: ["Land", "Air"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Ice Spider',
+                name: "Ice Spider",
                 challengeRating: 1.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: SKT
             },
             {
-                name: 'Lion',
+                name: "Lion",
                 challengeRating: 1.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Swarm of Quippers',
+                name: "Swarm of Quippers",
                 challengeRating: 1.0,
-                terrains: ['Water'],
-                type: 'Beast',
+                terrains: ["Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Tiger',
+                name: "Tiger",
                 challengeRating: 1.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Allosaurus',
+                name: "Allosaurus",
                 challengeRating: 2.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Aurochs',
+                name: "Aurochs",
                 challengeRating: 2.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: VGtM
             },
             {
-                name: 'Cave Bear',
+                name: "Cave Bear",
                 challengeRating: 2.0,
-                terrains: ['Land', 'Water'],
-                type: 'Beast',
+                terrains: ["Land", "Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Boar',
+                name: "Giant Boar",
                 challengeRating: 2.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Ice Spider Queen',
+                name: "Ice Spider Queen",
                 challengeRating: 2.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: SKT
             },
             {
-                name: 'Giant White Moray Eel',
+                name: "Giant White Moray Eel",
                 challengeRating: 2.0,
-                terrains: ['Water'],
-                type: 'Beast',
+                terrains: ["Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Constrictor Snake',
+                name: "Giant Constrictor Snake",
                 challengeRating: 2.0,
-                terrains: ['Land', 'Water'],
-                type: 'Beast',
+                terrains: ["Land", "Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Elk',
+                name: "Giant Elk",
                 challengeRating: 2.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Hunter Shark',
+                name: "Hunter Shark",
                 challengeRating: 2.0,
-                terrains: ['Water'],
-                type: 'Beast',
+                terrains: ["Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Plesiosaurus',
+                name: "Plesiosaurus",
                 challengeRating: 2.0,
-                terrains: ['Land', 'Water'],
-                type: 'Beast',
+                terrains: ["Land", "Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Polar Bear',
+                name: "Polar Bear",
                 challengeRating: 2.0,
-                terrains: ['Land', 'Water'],
-                type: 'Beast',
+                terrains: ["Land", "Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Rhinoceros',
+                name: "Quetzalcoatlus",
                 challengeRating: 2.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land", "Air"],
+                type: "Beast",
+                source: VGtM
+            },
+            {
+                name: "Rhinoceros",
+                challengeRating: 2.0,
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Saber-toothed Tiger',
+                name: "Saber-toothed Tiger",
                 challengeRating: 2.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Swarm of Poisonous Snakes',
+                name: "Swarm of Poisonous Snakes",
                 challengeRating: 2.0,
-                terrains: ['Land', 'Water'],
-                type: 'Beast',
+                terrains: ["Land", "Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Ankylosaurus',
+                name: "Ankylosaurus",
                 challengeRating: 3.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Scorpion',
+                name: "Giant Scorpion",
                 challengeRating: 3.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Snapping Turtle',
+                name: "Giant Snapping Turtle",
                 challengeRating: 3.0,
-                terrains: ['Land', 'Water'],
-                type: 'Beast',
+                terrains: ["Land", "Water"],
+                type: "Beast",
                 source: ToA
             },
             {
-                name: 'Killer Whale',
+                name: "Killer Whale",
                 challengeRating: 3.0,
-                terrains: ['Water'],
-                type: 'Beast',
+                terrains: ["Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Elephant',
+                name: "Elephant",
                 challengeRating: 3.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Stegosaurus',
+                name: "Stegosaurus",
                 challengeRating: 4.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: VGtM
             },
             {
-                name: 'Brontosaurus',
+                name: "Brontosaurus",
                 challengeRating: 5.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: VGtM
             },
             {
-                name: 'Giant Crocodile',
+                name: "Giant Crocodile",
                 challengeRating: 5.0,
-                terrains: ['Land', 'Water'],
-                type: 'Beast',
+                terrains: ["Land", "Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Shark',
+                name: "Giant Shark",
                 challengeRating: 5.0,
-                terrains: ['Water'],
-                type: 'Beast',
+                terrains: ["Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Hulking Crab',
+                name: "Hulking Crab",
                 challengeRating: 5.0,
-                terrains: ['Land', 'Water'],
-                type: 'Beast',
+                terrains: ["Land", "Water"],
+                type: "Beast",
                 source: SKT
             },
             {
-                name: 'Swarm of Cranium Rats',
+                name: "Swarm of Cranium Rats",
                 challengeRating: 5.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: VGtM
             },
             {
-                name: 'Triceratops',
+                name: "Triceratops",
                 challengeRating: 5.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Mammoth',
+                name: "Mammoth",
                 challengeRating: 6.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Ape',
+                name: "Giant Ape",
                 challengeRating: 7.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Tyrannosaurus Rex',
+                name: "Tyrannosaurus Rex",
                 challengeRating: 8.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             }
         ],
         fey: [
             {
-                name: 'Boggle',
+                name: "Boggle",
                 challengeRating: 0.125,
-                terrains: ['Land'],
-                type: 'Fey',
+                terrains: ["Land"],
+                type: "Fey",
                 source: VGtM
             },
             {
-                name: 'Valenar Hawk',
+                name: "Valenar Hawk",
                 challengeRating: 0.125,
-                terrains: ['Land', 'Air'],
-                type: 'Fey',
+                terrains: ["Land", "Air"],
+                type: "Fey",
                 source: ERLW
             },
             {
-                name: 'Blink Dog',
+                name: "Blink Dog",
                 challengeRating: 0.25,
-                terrains: ['Land'],
-                type: 'Fey',
+                terrains: ["Land"],
+                type: "Fey",
                 source: BR
             },
             {
-                name: 'Pixie',
+                name: "Pixie",
                 challengeRating: 0.25,
-                terrains: ['Land', 'Air'],
-                type: 'Fey',
+                terrains: ["Land", "Air"],
+                type: "Fey",
                 source: MM
             },
             {
-                name: 'Sprite',
+                name: "Sprite",
                 challengeRating: 0.25,
-                terrains: ['Land', 'Air'],
-                type: 'Fey',
+                terrains: ["Land", "Air"],
+                type: "Fey",
                 source: BR
             },
             {
-                name: 'Darkling',
+                name: "Darkling",
                 challengeRating: 0.5,
-                terrains: ['Land'],
-                type: 'Fey',
+                terrains: ["Land"],
+                type: "Fey",
                 source: VGtM
             },
             {
-                name: 'Satyr',
+                name: "Satyr",
                 challengeRating: 0.5,
-                terrains: ['Land'],
-                type: 'Fey',
+                terrains: ["Land"],
+                type: "Fey",
                 source: BR
             },
             {
-                name: 'Valenar Hound',
+                name: "Valenar Hound",
                 challengeRating: 0.5,
-                terrains: ['Land'],
-                type: 'Fey',
+                terrains: ["Land"],
+                type: "Fey",
                 source: ERLW
             },
             {
-                name: 'Valenar Steed',
+                name: "Valenar Steed",
                 challengeRating: 0.5,
-                terrains: ['Land'],
-                type: 'Fey',
+                terrains: ["Land"],
+                type: "Fey",
                 source: ERLW
             },
             {
-                name: 'Dryad',
+                name: "Dryad",
                 challengeRating: 1,
-                terrains: ['Land'],
-                type: 'Fey',
+                terrains: ["Land"],
+                type: "Fey",
                 source: BR
             },
             {
-                name: 'Quickling',
+                name: "Quickling",
                 challengeRating: 1,
-                terrains: ['Land'],
-                type: 'Fey',
+                terrains: ["Land"],
+                type: "Fey",
                 source: VGtM
             },
             {
-                name: 'Darkling Elder',
+                name: "Darkling Elder",
                 challengeRating: 2,
-                terrains: ['Land'],
-                type: 'Fey',
+                terrains: ["Land"],
+                type: "Fey",
                 source: VGtM
             },
             {
-                name: 'Meanlock',
+                name: "Meanlock",
                 challengeRating: 2,
-                terrains: ['Land'],
-                type: 'Fey',
+                terrains: ["Land"],
+                type: "Fey",
                 source: VGtM
             },
             {
-                name: 'Sea Hag',
+                name: "Sea Hag",
                 challengeRating: 2,
-                terrains: ['Land', 'Water'],
-                type: 'Fey',
+                terrains: ["Land", "Water"],
+                type: "Fey",
                 source: BR
             },
             {
-                name: 'Green Hag',
+                name: "Green Hag",
                 challengeRating: 3,
-                terrains: ['Land'],
-                type: 'Fey',
+                terrains: ["Land"],
+                type: "Fey",
                 source: BR
             },
             {
-                name: 'Redcap',
+                name: "Redcap",
                 challengeRating: 3,
-                terrains: ['Land'],
-                type: 'Fey',
+                terrains: ["Land"],
+                type: "Fey",
                 source: VGtM
             },
             {
-                name: 'Siren',
+                name: "Siren",
                 challengeRating: 3,
-                terrains: ['Land', 'Water'],
-                type: 'Fey',
+                terrains: ["Land", "Water"],
+                type: "Fey",
                 source: ToH
             },
             {
-                name: 'Yeth Hound',
+                name: "Yeth Hound",
                 challengeRating: 4,
-                terrains: ['Land', 'Air'],
-                type: 'Fey',
+                terrains: ["Land", "Air"],
+                type: "Fey",
                 source: VGtM
             },
             {
-                name: 'Annis Hag',
+                name: "Annis Hag",
                 challengeRating: 6,
-                terrains: ['Land'],
-                type: 'Fey',
+                terrains: ["Land"],
+                type: "Fey",
                 source: VGtM
             },
             {
-                name: 'Dusk Hag',
+                name: "Dusk Hag",
                 challengeRating: 6,
-                terrains: ['Land'],
-                type: 'Fey',
+                terrains: ["Land"],
+                type: "Fey",
                 source: ERLW
             },
             {
-                name: 'Bheur Hag',
+                name: "Bheur Hag",
                 challengeRating: 7,
-                terrains: ['Land'],
-                type: 'Fey',
+                terrains: ["Land"],
+                type: "Fey",
                 source: VGtM
             },
             {
-                name: 'Korred',
+                name: "Korred",
                 challengeRating: 7,
-                terrains: ['Land'],
-                type: 'Fey',
+                terrains: ["Land"],
+                type: "Fey",
                 source: VGtM
             },
             {
-                name: 'Autumn Eladrin',
+                name: "Autumn Eladrin",
                 challengeRating: 10,
-                terrains: ['Land'],
-                type: 'Fey',
+                terrains: ["Land"],
+                type: "Fey",
                 source: MtoF
             },
             {
-                name: 'Spring Eladrin',
+                name: "Spring Eladrin",
                 challengeRating: 10,
-                terrains: ['Land'],
-                type: 'Fey',
+                terrains: ["Land"],
+                type: "Fey",
                 source: MtoF
             },
             {
-                name: 'Summer Eladrin',
+                name: "Summer Eladrin",
                 challengeRating: 10,
-                terrains: ['Land'],
-                type: 'Fey',
+                terrains: ["Land"],
+                type: "Fey",
                 source: MtoF
             },
             {
-                name: 'Winter Eladrin',
+                name: "Winter Eladrin",
                 challengeRating: 10,
-                terrains: ['Land'],
-                type: 'Fey',
+                terrains: ["Land"],
+                type: "Fey",
                 source: MtoF
             }
         ],
         elementals: [
             {
-                name: 'Chwinga',
+                name: "Chwinga",
                 challengeRating: 0,
-                terrains: ['Land', 'Air', 'Water'],
-                type: 'Elemental',
+                terrains: ["Land", "Air", "Water"],
+                type: "Elemental",
                 source: ToA
             },
             {
-                name: 'Geonid',
+                name: "Geonid",
                 challengeRating: 0.25,
-                terrains: ['Land'],
-                type: 'Elemental',
+                terrains: ["Land"],
+                type: "Elemental",
                 source: TP
             },
             {
-                name: 'Mud Mephit',
+                name: "Mud Mephit",
                 challengeRating: 0.25,
-                terrains: ['Land', 'Water', 'Air'],
-                type: 'Elemental',
+                terrains: ["Land", "Water", "Air"],
+                type: "Elemental",
                 source: MM
             },
             {
-                name: 'Smoke Mephit',
+                name: "Smoke Mephit",
                 challengeRating: 0.25,
-                terrains: ['Land', 'Air'],
-                type: 'Elemental',
+                terrains: ["Land", "Air"],
+                type: "Elemental",
                 source: MM
             },
             {
-                name: 'Steam Mephit',
+                name: "Steam Mephit",
                 challengeRating: 0.25,
-                terrains: ['Land', 'Air'],
-                type: 'Elemental',
+                terrains: ["Land", "Air"],
+                type: "Elemental",
                 source: BR
             },
             {
-                name: 'Dust Mephit',
+                name: "Dust Mephit",
                 challengeRating: 0.5,
-                terrains: ['Land', 'Air'],
-                type: 'Elemental',
+                terrains: ["Land", "Air"],
+                type: "Elemental",
                 source: BR
             },
             {
-                name: 'Ice Mephit',
+                name: "Ice Mephit",
                 challengeRating: 0.5,
-                terrains: ['Land', 'Air'],
-                type: 'Elemental',
+                terrains: ["Land", "Air"],
+                type: "Elemental",
                 source: BR
             },
             {
-                name: 'Magma Mephit',
+                name: "Magma Mephit",
                 challengeRating: 0.5,
-                terrains: ['Land', 'Air'],
-                type: 'Elemental',
+                terrains: ["Land", "Air"],
+                type: "Elemental",
                 source: BR
             },
             {
-                name: 'Magmin',
+                name: "Magmin",
                 challengeRating: 0.5,
-                terrains: ['Land'],
-                type: 'Elemental',
+                terrains: ["Land"],
+                type: "Elemental",
                 source: BR
             },
             {
-                name: 'Fire Snake',
+                name: "Fire Snake",
                 challengeRating: 1,
-                terrains: ['Land'],
-                type: 'Elemental',
+                terrains: ["Land"],
+                type: "Elemental",
                 source: MM
             },
             {
-                name: 'Azer',
+                name: "Azer",
                 challengeRating: 2,
-                terrains: ['Land'],
-                type: 'Elemental',
+                terrains: ["Land"],
+                type: "Elemental",
                 source: BR
             },
             {
-                name: 'Four-Armed Gargoyle',
+                name: "Four-Armed Gargoyle",
                 challengeRating: 2,
-                terrains: ['Land', 'Air'],
-                type: 'Elemental',
+                terrains: ["Land", "Air"],
+                type: "Elemental",
                 source: DiT
             },
             {
-                name: 'Gargoyle',
+                name: "Gargoyle",
                 challengeRating: 2,
-                terrains: ['Land', 'Air'],
-                type: 'Elemental',
+                terrains: ["Land", "Air"],
+                type: "Elemental",
                 source: BR
             },
             {
-                name: 'Flail Snail',
+                name: "Flail Snail",
                 challengeRating: 3,
-                terrains: ['Land'],
-                type: 'Elemental',
+                terrains: ["Land"],
+                type: "Elemental",
                 source: VGtM
             },
             {
-                name: 'Water Weird',
+                name: "Water Weird",
                 challengeRating: 3,
-                terrains: ['Water'],
-                type: 'Elemental',
+                terrains: ["Water"],
+                type: "Elemental",
                 source: MM
             },
             {
-                name: 'Air Elemental',
+                name: "Air Elemental",
                 challengeRating: 5,
-                terrains: ['Air'],
-                type: 'Elemental',
+                terrains: ["Air"],
+                type: "Elemental",
                 source: BR
             },
             {
-                name: 'Earth Elemental',
+                name: "Earth Elemental",
                 challengeRating: 5,
-                terrains: ['Land'],
-                type: 'Elemental',
+                terrains: ["Land"],
+                type: "Elemental",
                 source: BR
             },
             {
-                name: 'Fire Elemental',
+                name: "Fire Elemental",
                 challengeRating: 5,
-                terrains: ['Land'],
-                type: 'Elemental',
+                terrains: ["Land"],
+                type: "Elemental",
                 source: BR
             },
             {
-                name: 'Water Elemental',
+                name: "Water Elemental",
                 challengeRating: 5,
-                terrains: ['Land', 'Water'],
-                type: 'Elemental',
+                terrains: ["Land", "Water"],
+                type: "Elemental",
                 source: BR
             },
             {
-                name: 'Salamander',
+                name: "Salamander",
                 challengeRating: 5,
-                terrains: ['Land'],
-                type: 'Elemental',
+                terrains: ["Land"],
+                type: "Elemental",
                 source: BR
             },
             {
-                name: 'Xorn',
+                name: "Xorn",
                 challengeRating: 5,
-                terrains: ['Land'],
-                type: 'Elemental',
+                terrains: ["Land"],
+                type: "Elemental",
                 source: BR
             },
             {
-                name: 'Galeb Duhr',
+                name: "Galeb Duhr",
                 challengeRating: 6,
-                terrains: ['Land'],
-                type: 'Elemental',
+                terrains: ["Land"],
+                type: "Elemental",
                 source: MM
             },
             {
-                name: 'Invisible Stalker',
+                name: "Invisible Stalker",
                 challengeRating: 6,
-                terrains: ['Air', 'Land'],
-                type: 'Elemental',
+                terrains: ["Air", "Land"],
+                type: "Elemental",
                 source: BR
             },
             {
-                name: 'Frost Salamander',
+                name: "Frost Salamander",
                 challengeRating: 9,
-                terrains: ['Land'],
-                type: 'Elemental',
+                terrains: ["Land"],
+                type: "Elemental",
                 source: MtoF
             },
             {
-                name: 'Giant Four-Armed Gargoyle',
+                name: "Giant Four-Armed Gargoyle",
                 challengeRating: 10,
-                terrains: ['Air', 'Land'],
-                type: 'Elemental',
+                terrains: ["Air", "Land"],
+                type: "Elemental",
                 source: ToA
             },
             {
-                name: 'Dao',
+                name: "Dao",
                 challengeRating: 11,
-                terrains: ['Air', 'Land'],
-                type: 'Elemental',
+                terrains: ["Air", "Land"],
+                type: "Elemental",
                 source: MM
             },
             {
-                name: 'Djinni',
+                name: "Djinni",
                 challengeRating: 11,
-                terrains: ['Air', 'Land'],
-                type: 'Elemental',
+                terrains: ["Air", "Land"],
+                type: "Elemental",
                 source: BR
             },
             {
-                name: 'Efreeti',
+                name: "Efreeti",
                 challengeRating: 11,
-                terrains: ['Air', 'Land'],
-                type: 'Elemental',
+                terrains: ["Air", "Land"],
+                type: "Elemental",
                 source: BR
             },
             {
-                name: 'Marid',
+                name: "Marid",
                 challengeRating: 11,
-                terrains: ['Air', 'Land', 'Water'],
-                type: 'Elemental',
+                terrains: ["Air", "Land", "Water"],
+                type: "Elemental",
                 source: MM
             },
             {
-                name: 'Phoenix',
+                name: "Phoenix",
                 challengeRating: 16,
-                terrains: ['Air', 'Land'],
-                type: 'Elemental',
+                terrains: ["Air", "Land"],
+                type: "Elemental",
                 source: MtoF
             },
             {
-                name: 'Leviathan',
+                name: "Leviathan",
                 challengeRating: 20,
-                terrains: ['Land', 'Water'],
-                type: 'Elemental',
+                terrains: ["Land", "Water"],
+                type: "Elemental",
                 source: MtoF
             },
             {
-                name: 'Zaratan',
+                name: "Zaratan",
                 challengeRating: 22,
-                terrains: ['Land', 'Water'],
-                type: 'Elemental',
+                terrains: ["Land", "Water"],
+                type: "Elemental",
                 source: MtoF
             },
             {
-                name: 'Elder Tempest',
+                name: "Elder Tempest",
                 challengeRating: 23,
-                terrains: ['Air'],
-                type: 'Elemental',
+                terrains: ["Air"],
+                type: "Elemental",
                 source: MtoF
             }
         ]
@@ -2704,7 +2711,7 @@ var app = (function () {
       ($writeSpellParameters) => $writeSpellParameters
     );
 
-    var name="svelte-app";var version="0.4.0";var scripts={build:"rollup -c",dev:"rollup -c -w",start:"sirv public",validate:"svelte-check"};var devDependencies={"@babel/core":"^7.11.6","@babel/preset-env":"^7.11.5","@rollup/plugin-commonjs":"^14.0.0","@rollup/plugin-json":"^4.1.0","@rollup/plugin-node-resolve":"^8.0.0","@rollup/plugin-typescript":"^6.0.0","@testing-library/jest-dom":"^5.11.4","@testing-library/svelte":"^3.0.0","@tsconfig/svelte":"^1.0.0","@types/jest":"^26.0.14","@types/node":"^14.11.2","babel-jest":"^26.3.0",eslint:"^7.9.0","eslint-plugin-jest-dom":"^3.2.3","eslint-plugin-svelte3":"^2.7.3",jest:"^26.4.2","jest-vim-reporter":"^0.0.1",prettier:"^2.1.2",rollup:"^2.3.4","rollup-plugin-livereload":"^2.0.0","rollup-plugin-svelte":"^6.0.0","rollup-plugin-terser":"^7.0.0",svelte:"^3.0.0","svelte-check":"^1.0.0","svelte-htm":"^1.1.1","svelte-jester":"^1.1.5","svelte-preprocess":"^4.3.0","ts-jest":"^26.4.0",tslib:"^2.0.0",typescript:"^3.9.3"};var dependencies={conjure5e:"^1.4.1","sirv-cli":"^1.0.0"};var packageJson = {name:name,version:version,scripts:scripts,devDependencies:devDependencies,dependencies:dependencies};
+    var name="conjure-web";var version="0.4.1";var scripts={build:"rollup -c",dev:"rollup -c -w",start:"sirv public",validate:"svelte-check"};var devDependencies={"@babel/core":"^7.11.6","@babel/preset-env":"^7.11.5","@rollup/plugin-commonjs":"^14.0.0","@rollup/plugin-json":"^4.1.0","@rollup/plugin-node-resolve":"^8.0.0","@rollup/plugin-typescript":"^6.0.0","@testing-library/jest-dom":"^5.11.4","@testing-library/svelte":"^3.0.0","@tsconfig/svelte":"^1.0.0","@types/jest":"^26.0.14","@types/node":"^14.11.2","babel-jest":"^26.3.0",eslint:"^7.9.0","eslint-plugin-jest-dom":"^3.2.3","eslint-plugin-svelte3":"^2.7.3",jest:"^26.4.2","jest-vim-reporter":"^0.0.1",prettier:"^2.1.2",rollup:"^2.3.4","rollup-plugin-livereload":"^2.0.0","rollup-plugin-svelte":"^6.0.0","rollup-plugin-terser":"^7.0.0",svelte:"^3.0.0","svelte-check":"^1.0.0","svelte-htm":"^1.1.1","svelte-jester":"^1.1.5","svelte-preprocess":"^4.3.0","ts-jest":"^26.4.0",tslib:"^2.0.0",typescript:"^3.9.3"};var dependencies={conjure5e:"^1.4.6","sirv-cli":"^1.0.0"};var packageJson = {name:name,version:version,scripts:scripts,devDependencies:devDependencies,dependencies:dependencies};
 
     function packageVersion() {
       if (packageJson) {
