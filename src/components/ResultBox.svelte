@@ -20,7 +20,7 @@
     <h3 class="text-blue-700 text-lg mr-2">{heading}</h3>
     <div class="flex justify-between">
       {#if challengeRating}
-        <p class="text-blue-700 mr-2">CR{challengeRating}</p>
+        <p class="text-blue-700 mr-2">CR: {challengeRating}</p>
       {/if}
       {#if terrains.length !== 0}
         <p class="text-blue-700 mr-2">
