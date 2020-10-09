@@ -1872,10 +1872,10 @@ concat-map@0.0.1:
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
   integrity sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=
 
-conjure5e@^1.4.1:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/conjure5e/-/conjure5e-1.4.1.tgz#679a82967104c79b48f7970a668382ae5ba0b91b"
-  integrity sha512-44xU4Ughf1FgXLNF5j26q9oSrdds7GAorjMTLbb4LBvFgAC/nGtBC9ZfwbbL0GNmRA+arCUhaM5oTshCU7GCaw==
+conjure5e@^1.4.3:
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/conjure5e/-/conjure5e-1.4.3.tgz#df026aa51ab3733a9b0ec85dd847eef09bbe6099"
+  integrity sha512-Hm3RpyKqK8Gwa03mhzE8Qve69kn2sFFDMQYARJhQwGCbCS/T/FYzwARTMEo0G+gBqmH27dslb1J8mXybekEPeg==
 
 console-clear@^1.1.0:
   version "1.1.1"
