@@ -133,6 +133,48 @@
       {/each}
     </div>
   {:else}
-    <h1>{containerWidth}</h1>
+    <h1>Conjure5e</h1>
+    <div class="flex overflow-hidden h-full">
+      <div class="flex w-1/2 mr-2">
+        <SelectSourcebooks />
+        <div>
+          <SelectSpellParameters />
+          {#if disableCastButton}
+            <div transition:fade={{ duration: 200 }}>
+              <Alert
+                mainText="That's a nat 1."
+                secondaryText="Your current options will not generate any creatures! Maybe try adding more sourcebooks?" />
+            </div>
+          {/if}
+          <div class="justify-center m-4">
+            <CastButton
+              name={`Cast ${$readSpellParameters.spellName}`}
+              handleClick={cast}
+              disabled={disableCastButton} />
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-wrap w-1/2 content-start overflow-y-auto max-h-screen">
+        {#each results as result (result.id)}
+          <div
+            class="m-1"
+            in:receive={{ key: result.id }}
+            out:send={{ key: result.id }}
+            animate:flip={{ duration: 400 }}>
+            <ResultBox
+              heading={result.spellName}
+              challengeRating={result.challengeRating}
+              terrains={result.terrains}>
+              <ul>
+                {#each result.creatures as creature}
+                  <li>{creature}</li>
+                {/each}
+              </ul>
+            </ResultBox>
+          </div>
+        {/each}
+      </div>
+    </div>
   {/if}
 </div>

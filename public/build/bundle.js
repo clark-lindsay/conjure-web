@@ -1308,1225 +1308,1232 @@ var app = (function () {
     exports.creatures = {
         beasts: [
             {
-                name: 'Frog',
+                name: "Frog",
                 challengeRating: 0,
-                terrains: ['Land', 'Water'],
-                type: 'Beast',
+                terrains: ["Land", "Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Sea Horse',
+                name: "Sea Horse",
                 challengeRating: 0,
-                terrains: ['Water'],
-                type: 'Beast',
+                terrains: ["Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Baboon',
+                name: "Baboon",
                 challengeRating: 0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Badger',
+                name: "Badger",
                 challengeRating: 0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Bat',
+                name: "Bat",
                 challengeRating: 0,
-                terrains: ['Land', 'Air'],
-                type: 'Beast',
+                terrains: ["Land", "Air"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Cat',
+                name: "Cat",
                 challengeRating: 0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Crab',
+                name: "Crab",
                 challengeRating: 0,
-                terrains: ['Land', 'Water'],
-                type: 'Beast',
+                terrains: ["Land", "Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Deer',
+                name: "Deer",
                 challengeRating: 0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Eagle',
+                name: "Eagle",
                 challengeRating: 0,
-                terrains: ['Land', 'Air'],
-                type: 'Beast',
+                terrains: ["Land", "Air"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Fire Beetle',
+                name: "Giant Fire Beetle",
                 challengeRating: 0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Goat',
+                name: "Goat",
                 challengeRating: 0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Hawk',
+                name: "Hawk",
                 challengeRating: 0,
-                terrains: ['Land', 'Air'],
-                type: 'Beast',
+                terrains: ["Land", "Air"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Hyena',
+                name: "Hyena",
                 challengeRating: 0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Jackal',
+                name: "Jackal",
                 challengeRating: 0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Lizard',
+                name: "Lizard",
                 challengeRating: 0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Octopus',
+                name: "Octopus",
                 challengeRating: 0,
-                terrains: ['Land', 'Water'],
-                type: 'Beast',
+                terrains: ["Land", "Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Owl',
+                name: "Owl",
                 challengeRating: 0,
-                terrains: ['Land', 'Air'],
-                type: 'Beast',
+                terrains: ["Land", "Air"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Quipper',
+                name: "Quipper",
                 challengeRating: 0,
-                terrains: ['Water'],
-                type: 'Beast',
+                terrains: ["Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Rat',
+                name: "Rat",
                 challengeRating: 0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Raven',
+                name: "Raven",
                 challengeRating: 0,
-                terrains: ['Land', 'Air'],
-                type: 'Beast',
+                terrains: ["Land", "Air"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Scorpion',
+                name: "Scorpion",
                 challengeRating: 0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Sheep',
+                name: "Sheep",
                 challengeRating: 0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: SKT
             },
             {
-                name: 'Spider',
+                name: "Spider",
                 challengeRating: 0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Vulture',
+                name: "Vulture",
                 challengeRating: 0,
-                terrains: ['Land', 'Air'],
-                type: 'Beast',
+                terrains: ["Land", "Air"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Weasel',
+                name: "Weasel",
                 challengeRating: 0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Blood Hawk',
+                name: "Blood Hawk",
                 challengeRating: 0.125,
-                terrains: ['Land', 'Air'],
-                type: 'Beast',
+                terrains: ["Land", "Air"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Camel',
+                name: "Camel",
                 challengeRating: 0.125,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Dolphin',
+                name: "Dolphin",
                 challengeRating: 0.125,
-                terrains: ['Water'],
-                type: 'Beast',
+                terrains: ["Water"],
+                type: "Beast",
                 source: VGtM
             },
             {
-                name: 'Flying Snake',
+                name: "Flying Snake",
                 challengeRating: 0.125,
-                terrains: ['Land', 'Air', 'Water'],
-                type: 'Beast',
+                terrains: ["Land", "Air", "Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Crab',
+                name: "Giant Crab",
                 challengeRating: 0.125,
-                terrains: ['Land', 'Water'],
-                type: 'Beast',
+                terrains: ["Land", "Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Rat',
+                name: "Giant Rat",
                 challengeRating: 0.125,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Weasel',
+                name: "Giant Weasel",
                 challengeRating: 0.125,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Mastiff',
+                name: "Mastiff",
                 challengeRating: 0.125,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Mule',
+                name: "Mule",
                 challengeRating: 0.125,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Poisonous Snake',
+                name: "Poisonous Snake",
                 challengeRating: 0.125,
-                terrains: ['Land', 'Water'],
-                type: 'Beast',
+                terrains: ["Land", "Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Pony',
+                name: "Pony",
                 challengeRating: 0.125,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Stirge',
+                name: "Stirge",
                 challengeRating: 0.125,
-                terrains: ['Land', 'Air'],
-                type: 'Beast',
+                terrains: ["Land", "Air"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Axe Beak',
+                name: "Axe Beak",
                 challengeRating: 0.25,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Boar',
+                name: "Boar",
                 challengeRating: 0.25,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Constrictor Snake',
+                name: "Constrictor Snake",
                 challengeRating: 0.25,
-                terrains: ['Land', 'Water'],
-                type: 'Beast',
+                terrains: ["Land", "Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Cow',
+                name: "Cow",
                 challengeRating: 0.25,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: VGtM
             },
             {
-                name: 'Draft Horse',
+                name: "Draft Horse",
                 challengeRating: 0.25,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Elk',
+                name: "Elk",
                 challengeRating: 0.25,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Fastieth',
+                name: "Fastieth",
                 challengeRating: 0.25,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: ERLW
             },
             {
-                name: 'Giant Badger',
+                name: "Giant Badger",
                 challengeRating: 0.25,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Bat',
+                name: "Giant Bat",
                 challengeRating: 0.25,
-                terrains: ['Land', 'Air'],
-                type: 'Beast',
+                terrains: ["Land", "Air"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Centipede',
+                name: "Giant Centipede",
                 challengeRating: 0.25,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Frog',
+                name: "Giant Frog",
                 challengeRating: 0.25,
-                terrains: ['Land', 'Water'],
-                type: 'Beast',
+                terrains: ["Land", "Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Lizard',
+                name: "Giant Lizard",
                 challengeRating: 0.25,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Owl',
+                name: "Giant Owl",
                 challengeRating: 0.25,
-                terrains: ['Land', 'Air'],
-                type: 'Beast',
+                terrains: ["Land", "Air"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Poisonous Snake',
+                name: "Giant Poisonous Snake",
                 challengeRating: 0.25,
-                terrains: ['Land', 'Water'],
-                type: 'Beast',
+                terrains: ["Land", "Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Wolf Spider',
+                name: "Giant Wolf Spider",
                 challengeRating: 0.25,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Hadrosaurus',
+                name: "Hadrosaurus",
                 challengeRating: 0.25,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: VGtM
             },
             {
-                name: 'Ox',
+                name: "Ox",
                 challengeRating: 0.25,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: VGtM
             },
             {
-                name: 'Panther',
+                name: "Panther",
                 challengeRating: 0.25,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Pteranodon',
+                name: "Pteranodon",
                 challengeRating: 0.25,
-                terrains: ['Land', 'Air'],
-                type: 'Beast',
+                terrains: ["Land", "Air"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Riding Horse',
+                name: "Riding Horse",
                 challengeRating: 0.25,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Stench Kow',
+                name: "Stench Kow",
                 challengeRating: 0.25,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: VGtM
             },
             {
-                name: 'Swarm of Bats',
+                name: "Swarm of Bats",
                 challengeRating: 0.25,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Air"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Swarm of Rats',
+                name: "Swarm of Rats",
                 challengeRating: 0.25,
-                terrains: ['Air'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Swarm of Ravens',
+                name: "Swarm of Ravens",
                 challengeRating: 0.25,
-                terrains: ['Land', 'Air'],
-                type: 'Beast',
+                terrains: ["Land", "Air"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Wolf',
+                name: "Wolf",
                 challengeRating: 0.25,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Ape',
+                name: "Ape",
                 challengeRating: 0.5,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Black Bear',
+                name: "Black Bear",
                 challengeRating: 0.5,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Clawfoot Raptor',
+                name: "Clawfoot Raptor",
                 challengeRating: 0.5,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: WGtE
             },
             {
-                name: 'Crocodile',
+                name: "Crocodile",
                 challengeRating: 0.5,
-                terrains: ['Land', 'Water'],
-                type: 'Beast',
+                terrains: ["Land", "Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Goat',
+                name: "Giant Goat",
                 challengeRating: 0.5,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Sea Horse',
+                name: "Giant Sea Horse",
                 challengeRating: 0.5,
-                terrains: ['Water'],
-                type: 'Beast',
+                terrains: ["Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Wasp',
+                name: "Giant Wasp",
                 challengeRating: 0.5,
-                terrains: ['Land', 'Air'],
-                type: 'Beast',
+                terrains: ["Land", "Air"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Reef Shark',
+                name: "Reef Shark",
                 challengeRating: 0.5,
-                terrains: ['Water'],
-                type: 'Beast',
+                terrains: ["Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Swarm of Insects',
+                name: "Swarm of Insects",
                 challengeRating: 0.5,
-                terrains: ['Land', 'Air'],
-                type: 'Beast',
+                terrains: ["Land", "Air"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Swarm of Rot Grubs',
+                name: "Swarm of Rot Grubs",
                 challengeRating: 0.5,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: VGtM
             },
             {
-                name: 'Warhorse',
+                name: "Warhorse",
                 challengeRating: 0.5,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Brown Bear',
+                name: "Brown Bear",
                 challengeRating: 1.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Clawfoot',
+                name: "Clawfoot",
                 challengeRating: 1.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: ERLW
             },
             {
-                name: 'Dire Wolf',
+                name: "Dire Wolf",
                 challengeRating: 1.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Eagle',
+                name: "Giant Eagle",
                 challengeRating: 1.0,
-                terrains: ['Land', 'Air'],
-                type: 'Beast',
+                terrains: ["Land", "Air"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Hyena',
+                name: "Giant Hyena",
                 challengeRating: 1.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Octopus',
+                name: "Giant Octopus",
                 challengeRating: 1.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Spider',
+                name: "Giant Spider",
                 challengeRating: 1.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Toad',
+                name: "Giant Toad",
                 challengeRating: 1.0,
-                terrains: ['Land', 'Water'],
-                type: 'Beast',
+                terrains: ["Land", "Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Vulture',
+                name: "Giant Vulture",
                 challengeRating: 1.0,
-                terrains: ['Land', 'Air'],
-                type: 'Beast',
+                terrains: ["Land", "Air"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Ice Spider',
+                name: "Ice Spider",
                 challengeRating: 1.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: SKT
             },
             {
-                name: 'Lion',
+                name: "Lion",
                 challengeRating: 1.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Swarm of Quippers',
+                name: "Swarm of Quippers",
                 challengeRating: 1.0,
-                terrains: ['Water'],
-                type: 'Beast',
+                terrains: ["Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Tiger',
+                name: "Tiger",
                 challengeRating: 1.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Allosaurus',
+                name: "Allosaurus",
                 challengeRating: 2.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Aurochs',
+                name: "Aurochs",
                 challengeRating: 2.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: VGtM
             },
             {
-                name: 'Cave Bear',
+                name: "Cave Bear",
                 challengeRating: 2.0,
-                terrains: ['Land', 'Water'],
-                type: 'Beast',
+                terrains: ["Land", "Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Boar',
+                name: "Giant Boar",
                 challengeRating: 2.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Ice Spider Queen',
+                name: "Ice Spider Queen",
                 challengeRating: 2.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: SKT
             },
             {
-                name: 'Giant White Moray Eel',
+                name: "Giant White Moray Eel",
                 challengeRating: 2.0,
-                terrains: ['Water'],
-                type: 'Beast',
+                terrains: ["Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Constrictor Snake',
+                name: "Giant Constrictor Snake",
                 challengeRating: 2.0,
-                terrains: ['Land', 'Water'],
-                type: 'Beast',
+                terrains: ["Land", "Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Elk',
+                name: "Giant Elk",
                 challengeRating: 2.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Hunter Shark',
+                name: "Hunter Shark",
                 challengeRating: 2.0,
-                terrains: ['Water'],
-                type: 'Beast',
+                terrains: ["Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Plesiosaurus',
+                name: "Plesiosaurus",
                 challengeRating: 2.0,
-                terrains: ['Land', 'Water'],
-                type: 'Beast',
+                terrains: ["Land", "Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Polar Bear',
+                name: "Polar Bear",
                 challengeRating: 2.0,
-                terrains: ['Land', 'Water'],
-                type: 'Beast',
+                terrains: ["Land", "Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Rhinoceros',
+                name: "Quetzalcoatlus",
                 challengeRating: 2.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land", "Air"],
+                type: "Beast",
+                source: VGtM
+            },
+            {
+                name: "Rhinoceros",
+                challengeRating: 2.0,
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Saber-toothed Tiger',
+                name: "Saber-toothed Tiger",
                 challengeRating: 2.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Swarm of Poisonous Snakes',
+                name: "Swarm of Poisonous Snakes",
                 challengeRating: 2.0,
-                terrains: ['Land', 'Water'],
-                type: 'Beast',
+                terrains: ["Land", "Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Ankylosaurus',
+                name: "Ankylosaurus",
                 challengeRating: 3.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Scorpion',
+                name: "Giant Scorpion",
                 challengeRating: 3.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Snapping Turtle',
+                name: "Giant Snapping Turtle",
                 challengeRating: 3.0,
-                terrains: ['Land', 'Water'],
-                type: 'Beast',
+                terrains: ["Land", "Water"],
+                type: "Beast",
                 source: ToA
             },
             {
-                name: 'Killer Whale',
+                name: "Killer Whale",
                 challengeRating: 3.0,
-                terrains: ['Water'],
-                type: 'Beast',
+                terrains: ["Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Elephant',
+                name: "Elephant",
                 challengeRating: 3.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Stegosaurus',
+                name: "Stegosaurus",
                 challengeRating: 4.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: VGtM
             },
             {
-                name: 'Brontosaurus',
+                name: "Brontosaurus",
                 challengeRating: 5.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: VGtM
             },
             {
-                name: 'Giant Crocodile',
+                name: "Giant Crocodile",
                 challengeRating: 5.0,
-                terrains: ['Land', 'Water'],
-                type: 'Beast',
+                terrains: ["Land", "Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Shark',
+                name: "Giant Shark",
                 challengeRating: 5.0,
-                terrains: ['Water'],
-                type: 'Beast',
+                terrains: ["Water"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Hulking Crab',
+                name: "Hulking Crab",
                 challengeRating: 5.0,
-                terrains: ['Land', 'Water'],
-                type: 'Beast',
+                terrains: ["Land", "Water"],
+                type: "Beast",
                 source: SKT
             },
             {
-                name: 'Swarm of Cranium Rats',
+                name: "Swarm of Cranium Rats",
                 challengeRating: 5.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: VGtM
             },
             {
-                name: 'Triceratops',
+                name: "Triceratops",
                 challengeRating: 5.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Mammoth',
+                name: "Mammoth",
                 challengeRating: 6.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Giant Ape',
+                name: "Giant Ape",
                 challengeRating: 7.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             },
             {
-                name: 'Tyrannosaurus Rex',
+                name: "Tyrannosaurus Rex",
                 challengeRating: 8.0,
-                terrains: ['Land'],
-                type: 'Beast',
+                terrains: ["Land"],
+                type: "Beast",
                 source: BR
             }
         ],
         fey: [
             {
-                name: 'Boggle',
+                name: "Boggle",
                 challengeRating: 0.125,
-                terrains: ['Land'],
-                type: 'Fey',
+                terrains: ["Land"],
+                type: "Fey",
                 source: VGtM
             },
             {
-                name: 'Valenar Hawk',
+                name: "Valenar Hawk",
                 challengeRating: 0.125,
-                terrains: ['Land', 'Air'],
-                type: 'Fey',
+                terrains: ["Land", "Air"],
+                type: "Fey",
                 source: ERLW
             },
             {
-                name: 'Blink Dog',
+                name: "Blink Dog",
                 challengeRating: 0.25,
-                terrains: ['Land'],
-                type: 'Fey',
+                terrains: ["Land"],
+                type: "Fey",
                 source: BR
             },
             {
-                name: 'Pixie',
+                name: "Pixie",
                 challengeRating: 0.25,
-                terrains: ['Land', 'Air'],
-                type: 'Fey',
+                terrains: ["Land", "Air"],
+                type: "Fey",
                 source: MM
             },
             {
-                name: 'Sprite',
+                name: "Sprite",
                 challengeRating: 0.25,
-                terrains: ['Land', 'Air'],
-                type: 'Fey',
+                terrains: ["Land", "Air"],
+                type: "Fey",
                 source: BR
             },
             {
-                name: 'Darkling',
+                name: "Darkling",
                 challengeRating: 0.5,
-                terrains: ['Land'],
-                type: 'Fey',
+                terrains: ["Land"],
+                type: "Fey",
                 source: VGtM
             },
             {
-                name: 'Satyr',
+                name: "Satyr",
                 challengeRating: 0.5,
-                terrains: ['Land'],
-                type: 'Fey',
+                terrains: ["Land"],
+                type: "Fey",
                 source: BR
             },
             {
-                name: 'Valenar Hound',
+                name: "Valenar Hound",
                 challengeRating: 0.5,
-                terrains: ['Land'],
-                type: 'Fey',
+                terrains: ["Land"],
+                type: "Fey",
                 source: ERLW
             },
             {
-                name: 'Valenar Steed',
+                name: "Valenar Steed",
                 challengeRating: 0.5,
-                terrains: ['Land'],
-                type: 'Fey',
+                terrains: ["Land"],
+                type: "Fey",
                 source: ERLW
             },
             {
-                name: 'Dryad',
+                name: "Dryad",
                 challengeRating: 1,
-                terrains: ['Land'],
-                type: 'Fey',
+                terrains: ["Land"],
+                type: "Fey",
                 source: BR
             },
             {
-                name: 'Quickling',
+                name: "Quickling",
                 challengeRating: 1,
-                terrains: ['Land'],
-                type: 'Fey',
+                terrains: ["Land"],
+                type: "Fey",
                 source: VGtM
             },
             {
-                name: 'Darkling Elder',
+                name: "Darkling Elder",
                 challengeRating: 2,
-                terrains: ['Land'],
-                type: 'Fey',
+                terrains: ["Land"],
+                type: "Fey",
                 source: VGtM
             },
             {
-                name: 'Meanlock',
+                name: "Meanlock",
                 challengeRating: 2,
-                terrains: ['Land'],
-                type: 'Fey',
+                terrains: ["Land"],
+                type: "Fey",
                 source: VGtM
             },
             {
-                name: 'Sea Hag',
+                name: "Sea Hag",
                 challengeRating: 2,
-                terrains: ['Land', 'Water'],
-                type: 'Fey',
+                terrains: ["Land", "Water"],
+                type: "Fey",
                 source: BR
             },
             {
-                name: 'Green Hag',
+                name: "Green Hag",
                 challengeRating: 3,
-                terrains: ['Land'],
-                type: 'Fey',
+                terrains: ["Land"],
+                type: "Fey",
                 source: BR
             },
             {
-                name: 'Redcap',
+                name: "Redcap",
                 challengeRating: 3,
-                terrains: ['Land'],
-                type: 'Fey',
+                terrains: ["Land"],
+                type: "Fey",
                 source: VGtM
             },
             {
-                name: 'Siren',
+                name: "Siren",
                 challengeRating: 3,
-                terrains: ['Land', 'Water'],
-                type: 'Fey',
+                terrains: ["Land", "Water"],
+                type: "Fey",
                 source: ToH
             },
             {
-                name: 'Yeth Hound',
+                name: "Yeth Hound",
                 challengeRating: 4,
-                terrains: ['Land', 'Air'],
-                type: 'Fey',
+                terrains: ["Land", "Air"],
+                type: "Fey",
                 source: VGtM
             },
             {
-                name: 'Annis Hag',
+                name: "Annis Hag",
                 challengeRating: 6,
-                terrains: ['Land'],
-                type: 'Fey',
+                terrains: ["Land"],
+                type: "Fey",
                 source: VGtM
             },
             {
-                name: 'Dusk Hag',
+                name: "Dusk Hag",
                 challengeRating: 6,
-                terrains: ['Land'],
-                type: 'Fey',
+                terrains: ["Land"],
+                type: "Fey",
                 source: ERLW
             },
             {
-                name: 'Bheur Hag',
+                name: "Bheur Hag",
                 challengeRating: 7,
-                terrains: ['Land'],
-                type: 'Fey',
+                terrains: ["Land"],
+                type: "Fey",
                 source: VGtM
             },
             {
-                name: 'Korred',
+                name: "Korred",
                 challengeRating: 7,
-                terrains: ['Land'],
-                type: 'Fey',
+                terrains: ["Land"],
+                type: "Fey",
                 source: VGtM
             },
             {
-                name: 'Autumn Eladrin',
+                name: "Autumn Eladrin",
                 challengeRating: 10,
-                terrains: ['Land'],
-                type: 'Fey',
+                terrains: ["Land"],
+                type: "Fey",
                 source: MtoF
             },
             {
-                name: 'Spring Eladrin',
+                name: "Spring Eladrin",
                 challengeRating: 10,
-                terrains: ['Land'],
-                type: 'Fey',
+                terrains: ["Land"],
+                type: "Fey",
                 source: MtoF
             },
             {
-                name: 'Summer Eladrin',
+                name: "Summer Eladrin",
                 challengeRating: 10,
-                terrains: ['Land'],
-                type: 'Fey',
+                terrains: ["Land"],
+                type: "Fey",
                 source: MtoF
             },
             {
-                name: 'Winter Eladrin',
+                name: "Winter Eladrin",
                 challengeRating: 10,
-                terrains: ['Land'],
-                type: 'Fey',
+                terrains: ["Land"],
+                type: "Fey",
                 source: MtoF
             }
         ],
         elementals: [
             {
-                name: 'Chwinga',
+                name: "Chwinga",
                 challengeRating: 0,
-                terrains: ['Land', 'Air', 'Water'],
-                type: 'Elemental',
+                terrains: ["Land", "Air", "Water"],
+                type: "Elemental",
                 source: ToA
             },
             {
-                name: 'Geonid',
+                name: "Geonid",
                 challengeRating: 0.25,
-                terrains: ['Land'],
-                type: 'Elemental',
+                terrains: ["Land"],
+                type: "Elemental",
                 source: TP
             },
             {
-                name: 'Mud Mephit',
+                name: "Mud Mephit",
                 challengeRating: 0.25,
-                terrains: ['Land', 'Water', 'Air'],
-                type: 'Elemental',
+                terrains: ["Land", "Water", "Air"],
+                type: "Elemental",
                 source: MM
             },
             {
-                name: 'Smoke Mephit',
+                name: "Smoke Mephit",
                 challengeRating: 0.25,
-                terrains: ['Land', 'Air'],
-                type: 'Elemental',
+                terrains: ["Land", "Air"],
+                type: "Elemental",
                 source: MM
             },
             {
-                name: 'Steam Mephit',
+                name: "Steam Mephit",
                 challengeRating: 0.25,
-                terrains: ['Land', 'Air'],
-                type: 'Elemental',
+                terrains: ["Land", "Air"],
+                type: "Elemental",
                 source: BR
             },
             {
-                name: 'Dust Mephit',
+                name: "Dust Mephit",
                 challengeRating: 0.5,
-                terrains: ['Land', 'Air'],
-                type: 'Elemental',
+                terrains: ["Land", "Air"],
+                type: "Elemental",
                 source: BR
             },
             {
-                name: 'Ice Mephit',
+                name: "Ice Mephit",
                 challengeRating: 0.5,
-                terrains: ['Land', 'Air'],
-                type: 'Elemental',
+                terrains: ["Land", "Air"],
+                type: "Elemental",
                 source: BR
             },
             {
-                name: 'Magma Mephit',
+                name: "Magma Mephit",
                 challengeRating: 0.5,
-                terrains: ['Land', 'Air'],
-                type: 'Elemental',
+                terrains: ["Land", "Air"],
+                type: "Elemental",
                 source: BR
             },
             {
-                name: 'Magmin',
+                name: "Magmin",
                 challengeRating: 0.5,
-                terrains: ['Land'],
-                type: 'Elemental',
+                terrains: ["Land"],
+                type: "Elemental",
                 source: BR
             },
             {
-                name: 'Fire Snake',
+                name: "Fire Snake",
                 challengeRating: 1,
-                terrains: ['Land'],
-                type: 'Elemental',
+                terrains: ["Land"],
+                type: "Elemental",
                 source: MM
             },
             {
-                name: 'Azer',
+                name: "Azer",
                 challengeRating: 2,
-                terrains: ['Land'],
-                type: 'Elemental',
+                terrains: ["Land"],
+                type: "Elemental",
                 source: BR
             },
             {
-                name: 'Four-Armed Gargoyle',
+                name: "Four-Armed Gargoyle",
                 challengeRating: 2,
-                terrains: ['Land', 'Air'],
-                type: 'Elemental',
+                terrains: ["Land", "Air"],
+                type: "Elemental",
                 source: DiT
             },
             {
-                name: 'Gargoyle',
+                name: "Gargoyle",
                 challengeRating: 2,
-                terrains: ['Land', 'Air'],
-                type: 'Elemental',
+                terrains: ["Land", "Air"],
+                type: "Elemental",
                 source: BR
             },
             {
-                name: 'Flail Snail',
+                name: "Flail Snail",
                 challengeRating: 3,
-                terrains: ['Land'],
-                type: 'Elemental',
+                terrains: ["Land"],
+                type: "Elemental",
                 source: VGtM
             },
             {
-                name: 'Water Weird',
+                name: "Water Weird",
                 challengeRating: 3,
-                terrains: ['Water'],
-                type: 'Elemental',
+                terrains: ["Water"],
+                type: "Elemental",
                 source: MM
             },
             {
-                name: 'Air Elemental',
+                name: "Air Elemental",
                 challengeRating: 5,
-                terrains: ['Air'],
-                type: 'Elemental',
+                terrains: ["Air"],
+                type: "Elemental",
                 source: BR
             },
             {
-                name: 'Earth Elemental',
+                name: "Earth Elemental",
                 challengeRating: 5,
-                terrains: ['Land'],
-                type: 'Elemental',
+                terrains: ["Land"],
+                type: "Elemental",
                 source: BR
             },
             {
-                name: 'Fire Elemental',
+                name: "Fire Elemental",
                 challengeRating: 5,
-                terrains: ['Land'],
-                type: 'Elemental',
+                terrains: ["Land"],
+                type: "Elemental",
                 source: BR
             },
             {
-                name: 'Water Elemental',
+                name: "Water Elemental",
                 challengeRating: 5,
-                terrains: ['Land', 'Water'],
-                type: 'Elemental',
+                terrains: ["Land", "Water"],
+                type: "Elemental",
                 source: BR
             },
             {
-                name: 'Salamander',
+                name: "Salamander",
                 challengeRating: 5,
-                terrains: ['Land'],
-                type: 'Elemental',
+                terrains: ["Land"],
+                type: "Elemental",
                 source: BR
             },
             {
-                name: 'Xorn',
+                name: "Xorn",
                 challengeRating: 5,
-                terrains: ['Land'],
-                type: 'Elemental',
+                terrains: ["Land"],
+                type: "Elemental",
                 source: BR
             },
             {
-                name: 'Galeb Duhr',
+                name: "Galeb Duhr",
                 challengeRating: 6,
-                terrains: ['Land'],
-                type: 'Elemental',
+                terrains: ["Land"],
+                type: "Elemental",
                 source: MM
             },
             {
-                name: 'Invisible Stalker',
+                name: "Invisible Stalker",
                 challengeRating: 6,
-                terrains: ['Air', 'Land'],
-                type: 'Elemental',
+                terrains: ["Air", "Land"],
+                type: "Elemental",
                 source: BR
             },
             {
-                name: 'Frost Salamander',
+                name: "Frost Salamander",
                 challengeRating: 9,
-                terrains: ['Land'],
-                type: 'Elemental',
+                terrains: ["Land"],
+                type: "Elemental",
                 source: MtoF
             },
             {
-                name: 'Giant Four-Armed Gargoyle',
+                name: "Giant Four-Armed Gargoyle",
                 challengeRating: 10,
-                terrains: ['Air', 'Land'],
-                type: 'Elemental',
+                terrains: ["Air", "Land"],
+                type: "Elemental",
                 source: ToA
             },
             {
-                name: 'Dao',
+                name: "Dao",
                 challengeRating: 11,
-                terrains: ['Air', 'Land'],
-                type: 'Elemental',
+                terrains: ["Air", "Land"],
+                type: "Elemental",
                 source: MM
             },
             {
-                name: 'Djinni',
+                name: "Djinni",
                 challengeRating: 11,
-                terrains: ['Air', 'Land'],
-                type: 'Elemental',
+                terrains: ["Air", "Land"],
+                type: "Elemental",
                 source: BR
             },
             {
-                name: 'Efreeti',
+                name: "Efreeti",
                 challengeRating: 11,
-                terrains: ['Air', 'Land'],
-                type: 'Elemental',
+                terrains: ["Air", "Land"],
+                type: "Elemental",
                 source: BR
             },
             {
-                name: 'Marid',
+                name: "Marid",
                 challengeRating: 11,
-                terrains: ['Air', 'Land', 'Water'],
-                type: 'Elemental',
+                terrains: ["Air", "Land", "Water"],
+                type: "Elemental",
                 source: MM
             },
             {
-                name: 'Phoenix',
+                name: "Phoenix",
                 challengeRating: 16,
-                terrains: ['Air', 'Land'],
-                type: 'Elemental',
+                terrains: ["Air", "Land"],
+                type: "Elemental",
                 source: MtoF
             },
             {
-                name: 'Leviathan',
+                name: "Leviathan",
                 challengeRating: 20,
-                terrains: ['Land', 'Water'],
-                type: 'Elemental',
+                terrains: ["Land", "Water"],
+                type: "Elemental",
                 source: MtoF
             },
             {
-                name: 'Zaratan',
+                name: "Zaratan",
                 challengeRating: 22,
-                terrains: ['Land', 'Water'],
-                type: 'Elemental',
+                terrains: ["Land", "Water"],
+                type: "Elemental",
                 source: MtoF
             },
             {
-                name: 'Elder Tempest',
+                name: "Elder Tempest",
                 challengeRating: 23,
-                terrains: ['Air'],
-                type: 'Elemental',
+                terrains: ["Air"],
+                type: "Elemental",
                 source: MtoF
             }
         ]
@@ -2758,7 +2765,7 @@ var app = (function () {
       ($writeSpellParameters) => $writeSpellParameters
     );
 
-    var name="svelte-app";var version="0.4.0";var scripts={build:"rollup -c",dev:"rollup -c -w",start:"sirv public",validate:"svelte-check"};var devDependencies={"@babel/core":"^7.11.6","@babel/preset-env":"^7.11.5","@rollup/plugin-commonjs":"^14.0.0","@rollup/plugin-json":"^4.1.0","@rollup/plugin-node-resolve":"^8.0.0","@rollup/plugin-typescript":"^6.0.0","@testing-library/jest-dom":"^5.11.4","@testing-library/svelte":"^3.0.0","@tsconfig/svelte":"^1.0.0","@types/jest":"^26.0.14","@types/node":"^14.11.2","babel-jest":"^26.3.0",eslint:"^7.9.0","eslint-plugin-jest-dom":"^3.2.3","eslint-plugin-svelte3":"^2.7.3",jest:"^26.4.2","jest-vim-reporter":"^0.0.1",prettier:"^2.1.2",rollup:"^2.3.4","rollup-plugin-livereload":"^2.0.0","rollup-plugin-svelte":"^6.0.0","rollup-plugin-terser":"^7.0.0",svelte:"^3.0.0","svelte-check":"^1.0.0","svelte-htm":"^1.1.1","svelte-jester":"^1.1.5","svelte-preprocess":"^4.3.0","ts-jest":"^26.4.0",tslib:"^2.0.0",typescript:"^3.9.3"};var dependencies={conjure5e:"^1.4.1","sirv-cli":"^1.0.0"};var packageJson = {name:name,version:version,scripts:scripts,devDependencies:devDependencies,dependencies:dependencies};
+    var name="svelte-app";var version="0.4.1";var scripts={build:"rollup -c",dev:"rollup -c -w",start:"sirv public",validate:"svelte-check"};var devDependencies={"@babel/core":"^7.11.6","@babel/preset-env":"^7.11.5","@rollup/plugin-commonjs":"^14.0.0","@rollup/plugin-json":"^4.1.0","@rollup/plugin-node-resolve":"^8.0.0","@rollup/plugin-typescript":"^6.0.0","@testing-library/jest-dom":"^5.11.4","@testing-library/svelte":"^3.0.0","@tsconfig/svelte":"^1.0.0","@types/jest":"^26.0.14","@types/node":"^14.11.2","babel-jest":"^26.3.0",eslint:"^7.9.0","eslint-plugin-jest-dom":"^3.2.3","eslint-plugin-svelte3":"^2.7.3",jest:"^26.4.2","jest-vim-reporter":"^0.0.1",prettier:"^2.1.2",rollup:"^2.3.4","rollup-plugin-livereload":"^2.0.0","rollup-plugin-svelte":"^6.0.0","rollup-plugin-terser":"^7.0.0",svelte:"^3.0.0","svelte-check":"^1.0.0","svelte-htm":"^1.1.1","svelte-jester":"^1.1.5","svelte-preprocess":"^4.3.0","ts-jest":"^26.4.0",tslib:"^2.0.0",typescript:"^3.9.3"};var dependencies={conjure5e:"^1.4.3","sirv-cli":"^1.0.0"};var packageJson = {name:name,version:version,scripts:scripts,devDependencies:devDependencies,dependencies:dependencies};
 
     function packageVersion() {
       if (packageJson) {
@@ -3457,7 +3464,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (34:4) {#each spellOptions as spell}
+    // (35:6) {#each spellOptions as spell}
     function create_each_block_2(ctx) {
     	let option;
     	let t_value = /*spell*/ ctx[3] + "";
@@ -3470,7 +3477,7 @@ var app = (function () {
     			t = text(t_value);
     			option.__value = option_value_value = /*spell*/ ctx[3];
     			option.value = option.__value;
-    			add_location(option, file$3, 34, 6, 1156);
+    			add_location(option, file$3, 35, 8, 1200);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -3486,14 +3493,14 @@ var app = (function () {
     		block,
     		id: create_each_block_2.name,
     		type: "each",
-    		source: "(34:4) {#each spellOptions as spell}",
+    		source: "(35:6) {#each spellOptions as spell}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (40:2) {#each terrainOptions as terrain}
+    // (41:4) {#each terrainOptions as terrain}
     function create_each_block_1(ctx) {
     	let label;
     	let input;
@@ -3514,9 +3521,9 @@ var app = (function () {
     			input.__value = input_value_value = /*terrain*/ ctx[15];
     			input.value = input.__value;
     			/*$$binding_groups*/ ctx[9][0].push(input);
-    			add_location(input, file$3, 41, 6, 1360);
+    			add_location(input, file$3, 42, 8, 1416);
     			attr_dev(label, "class", "text-lg my-1 mx-2");
-    			add_location(label, file$3, 40, 4, 1320);
+    			add_location(label, file$3, 41, 6, 1374);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, label, anchor);
@@ -3547,14 +3554,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(40:2) {#each terrainOptions as terrain}",
+    		source: "(41:4) {#each terrainOptions as terrain}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (58:4) {#each crOptions.filter((cr) => {       if (spell({           terrains: $writeSpellParameters.terrains,           challengeRating: cr,           sources: $readSourcebooks,         }).length > 0) {         return true;       }       return false;     }) as cr}
+    // (59:6) {#each crOptions.filter((cr) => {         if (spell({             terrains: $writeSpellParameters.terrains,             challengeRating: cr,             sources: $readSourcebooks,           }).length > 0) {           return true;         }         return false;       }) as cr}
     function create_each_block(ctx) {
     	let option;
     	let t_value = /*cr*/ ctx[12] + "";
@@ -3567,7 +3574,7 @@ var app = (function () {
     			t = text(t_value);
     			option.__value = option_value_value = /*cr*/ ctx[12];
     			option.value = option.__value;
-    			add_location(option, file$3, 67, 6, 2054);
+    			add_location(option, file$3, 68, 8, 2160);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -3590,7 +3597,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(58:4) {#each crOptions.filter((cr) => {       if (spell({           terrains: $writeSpellParameters.terrains,           challengeRating: cr,           sources: $readSourcebooks,         }).length > 0) {         return true;       }       return false;     }) as cr}",
+    		source: "(59:6) {#each crOptions.filter((cr) => {         if (spell({             terrains: $writeSpellParameters.terrains,             challengeRating: cr,             sources: $readSourcebooks,           }).length > 0) {           return true;         }         return false;       }) as cr}",
     		ctx
     	});
 
@@ -3598,6 +3605,7 @@ var app = (function () {
     }
 
     function create_fragment$3(ctx) {
+    	let div;
     	let h20;
     	let t0;
     	let t1;
@@ -3640,6 +3648,7 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
+    			div = element("div");
     			h20 = element("h2");
     			t0 = text(/*heading*/ ctx[0]);
     			t1 = space();
@@ -3673,36 +3682,39 @@ var app = (function () {
     			}
 
     			attr_dev(h20, "class", "text-blue-700 text-2xl mx-2");
-    			add_location(h20, file$3, 23, 0, 819);
+    			add_location(h20, file$3, 24, 2, 841);
     			attr_dev(label0, "for", "spell-select");
     			attr_dev(label0, "class", "text-gray-700 text-xl my-1 mx-2");
-    			add_location(label0, file$3, 25, 2, 907);
+    			add_location(label0, file$3, 26, 4, 933);
     			attr_dev(select0, "id", "spell-select");
     			attr_dev(select0, "name", "spell");
     			attr_dev(select0, "class", "my-1 mx-2");
     			if (/*$writeSpellParameters*/ ctx[1].spellName === void 0) add_render_callback(() => /*select0_change_handler*/ ctx[7].call(select0));
-    			add_location(select0, file$3, 28, 2, 997);
+    			add_location(select0, file$3, 29, 4, 1029);
     			attr_dev(h21, "class", "text-gray-700 text-xl my-1 mx-2");
-    			add_location(h21, file$3, 38, 2, 1222);
+    			add_location(h21, file$3, 39, 4, 1272);
     			attr_dev(label1, "for", "challenge-rating-select");
     			attr_dev(label1, "class", "text-gray-700 text-xl my-1 mx-2");
-    			add_location(label1, file$3, 49, 2, 1512);
+    			add_location(label1, file$3, 50, 4, 1582);
     			attr_dev(select1, "id", "challenge-rating-select");
     			attr_dev(select1, "class", "my-1 mx-2");
     			attr_dev(select1, "name", "challenge-rating");
     			if (/*$writeSpellParameters*/ ctx[1].challengeRating === void 0) add_render_callback(() => /*select1_change_handler*/ ctx[11].call(select1));
-    			add_location(select1, file$3, 52, 2, 1637);
+    			add_location(select1, file$3, 53, 4, 1713);
     			attr_dev(form, "name", "spell-parameters");
-    			add_location(form, file$3, 24, 0, 874);
+    			add_location(form, file$3, 25, 2, 898);
+    			attr_dev(div, "class", "block");
+    			add_location(div, file$3, 23, 0, 819);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, h20, anchor);
+    			insert_dev(target, div, anchor);
+    			append_dev(div, h20);
     			append_dev(h20, t0);
-    			insert_dev(target, t1, anchor);
-    			insert_dev(target, form, anchor);
+    			append_dev(div, t1);
+    			append_dev(div, form);
     			append_dev(form, label0);
     			append_dev(form, t3);
     			append_dev(form, select0);
@@ -3826,9 +3838,7 @@ var app = (function () {
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(h20);
-    			if (detaching) detach_dev(t1);
-    			if (detaching) detach_dev(form);
+    			if (detaching) detach_dev(div);
     			destroy_each(each_blocks_2, detaching);
     			destroy_each(each_blocks_1, detaching);
     			destroy_each(each_blocks, detaching);
@@ -3989,7 +3999,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (14:4) {#each sourceBookTitles as sourcebook}
+    // (15:6) {#each sourceBookTitles as sourcebook}
     function create_each_block$1(ctx) {
     	let label;
     	let input;
@@ -4012,9 +4022,9 @@ var app = (function () {
     			input.__value = input_value_value = /*sourcebook*/ ctx[5];
     			input.value = input.__value;
     			/*$$binding_groups*/ ctx[4][0].push(input);
-    			add_location(input, file$4, 15, 8, 603);
+    			add_location(input, file$4, 16, 10, 641);
     			attr_dev(label, "class", "text-lg mx-2 my-1");
-    			add_location(label, file$4, 14, 6, 561);
+    			add_location(label, file$4, 15, 8, 597);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, label, anchor);
@@ -4046,7 +4056,7 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(14:4) {#each sourceBookTitles as sourcebook}",
+    		source: "(15:6) {#each sourceBookTitles as sourcebook}",
     		ctx
     	});
 
@@ -4054,10 +4064,11 @@ var app = (function () {
     }
 
     function create_fragment$4(ctx) {
+    	let div1;
     	let h2;
     	let t0;
     	let t1;
-    	let div;
+    	let div0;
     	let form;
     	let each_value = /*sourceBookTitles*/ ctx[2];
     	validate_each_argument(each_value);
@@ -4069,10 +4080,11 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
+    			div1 = element("div");
     			h2 = element("h2");
     			t0 = text(/*heading*/ ctx[0]);
     			t1 = space();
-    			div = element("div");
+    			div0 = element("div");
     			form = element("form");
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -4080,23 +4092,26 @@ var app = (function () {
     			}
 
     			attr_dev(h2, "class", "text-blue-700 text-2xl mx-2");
-    			add_location(h2, file$4, 6, 0, 271);
+    			add_location(h2, file$4, 7, 2, 293);
     			attr_dev(form, "name", "sourcebooks");
     			attr_dev(form, "id", "select-sourcebooks");
     			attr_dev(form, "class", "overflow-visible overflow-auto box-border pb-8");
-    			add_location(form, file$4, 9, 2, 395);
-    			attr_dev(div, "class", "overflow-visible overflow-auto box-border pb-8 mb-4");
-    			add_location(div, file$4, 8, 0, 327);
+    			add_location(form, file$4, 10, 4, 421);
+    			attr_dev(div0, "class", "overflow-visible overflow-auto box-border pb-8 mb-4");
+    			add_location(div0, file$4, 9, 2, 351);
+    			attr_dev(div1, "class", "block");
+    			add_location(div1, file$4, 6, 0, 271);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, h2, anchor);
+    			insert_dev(target, div1, anchor);
+    			append_dev(div1, h2);
     			append_dev(h2, t0);
-    			insert_dev(target, t1, anchor);
-    			insert_dev(target, div, anchor);
-    			append_dev(div, form);
+    			append_dev(div1, t1);
+    			append_dev(div1, div0);
+    			append_dev(div0, form);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].m(form, null);
@@ -4132,9 +4147,7 @@ var app = (function () {
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(h2);
-    			if (detaching) detach_dev(t1);
-    			if (detaching) detach_dev(div);
+    			if (detaching) detach_dev(div1);
     			destroy_each(each_blocks, detaching);
     		}
     	};
@@ -4236,7 +4249,7 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			p = element("p");
-    			t0 = text("CR");
+    			t0 = text("CR: ");
     			t1 = text(/*challengeRating*/ ctx[1]);
     			attr_dev(p, "class", "text-blue-700 mr-2");
     			add_location(p, file$5, 21, 8, 537);
@@ -4276,7 +4289,7 @@ var app = (function () {
     			p = element("p");
     			t = text(t_value);
     			attr_dev(p, "class", "text-blue-700 mr-2");
-    			add_location(p, file$5, 24, 8, 645);
+    			add_location(p, file$5, 24, 8, 647);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -4302,7 +4315,7 @@ var app = (function () {
     }
 
     function create_fragment$5(ctx) {
-    	let div2;
+    	let div3;
     	let div1;
     	let h3;
     	let t0;
@@ -4312,6 +4325,7 @@ var app = (function () {
     	let t3;
     	let hr;
     	let t4;
+    	let div2;
     	let current;
     	let if_block0 = /*challengeRating*/ ctx[1] && create_if_block_1(ctx);
     	let if_block1 = /*terrains*/ ctx[2].length !== 0 && create_if_block$1(ctx);
@@ -4320,7 +4334,7 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			div2 = element("div");
+    			div3 = element("div");
     			div1 = element("div");
     			h3 = element("h3");
     			t0 = text(/*heading*/ ctx[0]);
@@ -4332,6 +4346,7 @@ var app = (function () {
     			t3 = space();
     			hr = element("hr");
     			t4 = space();
+    			div2 = element("div");
     			if (default_slot) default_slot.c();
     			attr_dev(h3, "class", "text-blue-700 text-lg mr-2");
     			add_location(h3, file$5, 18, 4, 408);
@@ -4339,16 +4354,18 @@ var app = (function () {
     			add_location(div0, file$5, 19, 4, 466);
     			attr_dev(div1, "class", "flex-col text-center");
     			add_location(div1, file$5, 17, 2, 369);
-    			add_location(hr, file$5, 30, 2, 777);
-    			attr_dev(div2, "class", "box svelte-15i5ke2");
-    			add_location(div2, file$5, 16, 0, 349);
+    			add_location(hr, file$5, 30, 2, 779);
+    			attr_dev(div2, "class", "text-center");
+    			add_location(div2, file$5, 31, 2, 788);
+    			attr_dev(div3, "class", "box svelte-15i5ke2");
+    			add_location(div3, file$5, 16, 0, 349);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div2, anchor);
-    			append_dev(div2, div1);
+    			insert_dev(target, div3, anchor);
+    			append_dev(div3, div1);
     			append_dev(div1, h3);
     			append_dev(h3, t0);
     			append_dev(div1, t1);
@@ -4356,9 +4373,10 @@ var app = (function () {
     			if (if_block0) if_block0.m(div0, null);
     			append_dev(div0, t2);
     			if (if_block1) if_block1.m(div0, null);
-    			append_dev(div2, t3);
-    			append_dev(div2, hr);
-    			append_dev(div2, t4);
+    			append_dev(div3, t3);
+    			append_dev(div3, hr);
+    			append_dev(div3, t4);
+    			append_dev(div3, div2);
 
     			if (default_slot) {
     				default_slot.m(div2, null);
@@ -4411,7 +4429,7 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div2);
+    			if (detaching) detach_dev(div3);
     			if (if_block0) if_block0.d();
     			if (if_block1) if_block1.d();
     			if (default_slot) default_slot.d(detaching);
@@ -4870,6 +4888,18 @@ var app = (function () {
     /* src/ResponsiveApp.svelte generated by Svelte v3.29.0 */
     const file$8 = "src/ResponsiveApp.svelte";
 
+    function get_each_context_3(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[17] = list[i];
+    	return child_ctx;
+    }
+
+    function get_each_context_2$1(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[14] = list[i];
+    	return child_ctx;
+    }
+
     function get_each_context_1$1(ctx, list, i) {
     	const child_ctx = ctx.slice();
     	child_ctx[17] = list[i];
@@ -4885,25 +4915,178 @@ var app = (function () {
     // (120:2) {:else}
     function create_else_block$1(ctx) {
     	let h1;
-    	let t;
+    	let t1;
+    	let div4;
+    	let div2;
+    	let selectsourcebooks;
+    	let t2;
+    	let div1;
+    	let selectspellparameters;
+    	let t3;
+    	let t4;
+    	let div0;
+    	let castbutton;
+    	let t5;
+    	let div3;
+    	let each_blocks = [];
+    	let each_1_lookup = new Map();
+    	let current;
+    	selectsourcebooks = new SelectSourcebooks({ $$inline: true });
+    	selectspellparameters = new SelectSpellParameters({ $$inline: true });
+    	let if_block = /*disableCastButton*/ ctx[3] && create_if_block_2(ctx);
+
+    	castbutton = new CastButton({
+    			props: {
+    				name: `Cast ${/*$readSpellParameters*/ ctx[5].spellName}`,
+    				handleClick: /*cast*/ ctx[7],
+    				disabled: /*disableCastButton*/ ctx[3]
+    			},
+    			$$inline: true
+    		});
+
+    	let each_value_2 = /*results*/ ctx[4];
+    	validate_each_argument(each_value_2);
+    	const get_key = ctx => /*result*/ ctx[14].id;
+    	validate_each_keys(ctx, each_value_2, get_each_context_2$1, get_key);
+
+    	for (let i = 0; i < each_value_2.length; i += 1) {
+    		let child_ctx = get_each_context_2$1(ctx, each_value_2, i);
+    		let key = get_key(child_ctx);
+    		each_1_lookup.set(key, each_blocks[i] = create_each_block_2$1(key, child_ctx));
+    	}
 
     	const block = {
     		c: function create() {
     			h1 = element("h1");
-    			t = text(/*containerWidth*/ ctx[0]);
+    			h1.textContent = "Conjure5e";
+    			t1 = space();
+    			div4 = element("div");
+    			div2 = element("div");
+    			create_component(selectsourcebooks.$$.fragment);
+    			t2 = space();
+    			div1 = element("div");
+    			create_component(selectspellparameters.$$.fragment);
+    			t3 = space();
+    			if (if_block) if_block.c();
+    			t4 = space();
+    			div0 = element("div");
+    			create_component(castbutton.$$.fragment);
+    			t5 = space();
+    			div3 = element("div");
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
     			add_location(h1, file$8, 120, 4, 3966);
+    			attr_dev(div0, "class", "justify-center m-4");
+    			add_location(div0, file$8, 133, 10, 4468);
+    			add_location(div1, file$8, 124, 8, 4105);
+    			attr_dev(div2, "class", "flex w-1/2 mr-2");
+    			add_location(div2, file$8, 122, 6, 4037);
+    			attr_dev(div3, "class", "flex flex-wrap w-1/2 content-start overflow-y-auto max-h-screen");
+    			add_location(div3, file$8, 141, 6, 4717);
+    			attr_dev(div4, "class", "flex overflow-hidden h-full");
+    			add_location(div4, file$8, 121, 4, 3989);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h1, anchor);
-    			append_dev(h1, t);
+    			insert_dev(target, t1, anchor);
+    			insert_dev(target, div4, anchor);
+    			append_dev(div4, div2);
+    			mount_component(selectsourcebooks, div2, null);
+    			append_dev(div2, t2);
+    			append_dev(div2, div1);
+    			mount_component(selectspellparameters, div1, null);
+    			append_dev(div1, t3);
+    			if (if_block) if_block.m(div1, null);
+    			append_dev(div1, t4);
+    			append_dev(div1, div0);
+    			mount_component(castbutton, div0, null);
+    			append_dev(div4, t5);
+    			append_dev(div4, div3);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(div3, null);
+    			}
+
+    			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*containerWidth*/ 1) set_data_dev(t, /*containerWidth*/ ctx[0]);
+    			if (/*disableCastButton*/ ctx[3]) {
+    				if (if_block) {
+    					if (dirty & /*disableCastButton*/ 8) {
+    						transition_in(if_block, 1);
+    					}
+    				} else {
+    					if_block = create_if_block_2(ctx);
+    					if_block.c();
+    					transition_in(if_block, 1);
+    					if_block.m(div1, t4);
+    				}
+    			} else if (if_block) {
+    				group_outros();
+
+    				transition_out(if_block, 1, 1, () => {
+    					if_block = null;
+    				});
+
+    				check_outros();
+    			}
+
+    			const castbutton_changes = {};
+    			if (dirty & /*$readSpellParameters*/ 32) castbutton_changes.name = `Cast ${/*$readSpellParameters*/ ctx[5].spellName}`;
+    			if (dirty & /*disableCastButton*/ 8) castbutton_changes.disabled = /*disableCastButton*/ ctx[3];
+    			castbutton.$set(castbutton_changes);
+
+    			if (dirty & /*results*/ 16) {
+    				const each_value_2 = /*results*/ ctx[4];
+    				validate_each_argument(each_value_2);
+    				group_outros();
+    				for (let i = 0; i < each_blocks.length; i += 1) each_blocks[i].r();
+    				validate_each_keys(ctx, each_value_2, get_each_context_2$1, get_key);
+    				each_blocks = update_keyed_each(each_blocks, dirty, get_key, 1, ctx, each_value_2, each_1_lookup, div3, fix_and_outro_and_destroy_block, create_each_block_2$1, null, get_each_context_2$1);
+    				for (let i = 0; i < each_blocks.length; i += 1) each_blocks[i].a();
+    				check_outros();
+    			}
     		},
-    		i: noop,
-    		o: noop,
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(selectsourcebooks.$$.fragment, local);
+    			transition_in(selectspellparameters.$$.fragment, local);
+    			transition_in(if_block);
+    			transition_in(castbutton.$$.fragment, local);
+
+    			for (let i = 0; i < each_value_2.length; i += 1) {
+    				transition_in(each_blocks[i]);
+    			}
+
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(selectsourcebooks.$$.fragment, local);
+    			transition_out(selectspellparameters.$$.fragment, local);
+    			transition_out(if_block);
+    			transition_out(castbutton.$$.fragment, local);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				transition_out(each_blocks[i]);
+    			}
+
+    			current = false;
+    		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(h1);
+    			if (detaching) detach_dev(t1);
+    			if (detaching) detach_dev(div4);
+    			destroy_component(selectsourcebooks);
+    			destroy_component(selectspellparameters);
+    			if (if_block) if_block.d();
+    			destroy_component(castbutton);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].d();
+    			}
     		}
     	};
 
@@ -5079,7 +5262,7 @@ var app = (function () {
     			navbar.$set(navbar_changes);
     			const sidebar0_changes = {};
 
-    			if (dirty & /*$$scope*/ 1048576) {
+    			if (dirty & /*$$scope*/ 16777216) {
     				sidebar0_changes.$$scope = { dirty, ctx };
     			}
 
@@ -5092,7 +5275,7 @@ var app = (function () {
     			sidebar0.$set(sidebar0_changes);
     			const sidebar1_changes = {};
 
-    			if (dirty & /*$$scope*/ 1048576) {
+    			if (dirty & /*$$scope*/ 16777216) {
     				sidebar1_changes.$$scope = { dirty, ctx };
     			}
 
@@ -5193,6 +5376,272 @@ var app = (function () {
     		id: create_if_block$3.name,
     		type: "if",
     		source: "(76:2) {#if containerWidth < 1024}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (127:10) {#if disableCastButton}
+    function create_if_block_2(ctx) {
+    	let div;
+    	let alert;
+    	let div_transition;
+    	let current;
+
+    	alert = new Alert({
+    			props: {
+    				mainText: "That's a nat 1.",
+    				secondaryText: "Your current options will not generate any creatures! Maybe try adding more sourcebooks?"
+    			},
+    			$$inline: true
+    		});
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+    			create_component(alert.$$.fragment);
+    			add_location(div, file$8, 127, 12, 4193);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+    			mount_component(alert, div, null);
+    			current = true;
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(alert.$$.fragment, local);
+
+    			add_render_callback(() => {
+    				if (!div_transition) div_transition = create_bidirectional_transition(div, fade, { duration: 200 }, true);
+    				div_transition.run(1);
+    			});
+
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(alert.$$.fragment, local);
+    			if (!div_transition) div_transition = create_bidirectional_transition(div, fade, { duration: 200 }, false);
+    			div_transition.run(0);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div);
+    			destroy_component(alert);
+    			if (detaching && div_transition) div_transition.end();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_2.name,
+    		type: "if",
+    		source: "(127:10) {#if disableCastButton}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (155:16) {#each result.creatures as creature}
+    function create_each_block_3(ctx) {
+    	let li;
+    	let t_value = /*creature*/ ctx[17] + "";
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			li = element("li");
+    			t = text(t_value);
+    			add_location(li, file$8, 155, 18, 5271);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, li, anchor);
+    			append_dev(li, t);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*results*/ 16 && t_value !== (t_value = /*creature*/ ctx[17] + "")) set_data_dev(t, t_value);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(li);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block_3.name,
+    		type: "each",
+    		source: "(155:16) {#each result.creatures as creature}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (150:12) <ResultBox               heading={result.spellName}               challengeRating={result.challengeRating}               terrains={result.terrains}>
+    function create_default_slot_3(ctx) {
+    	let ul;
+    	let each_value_3 = /*result*/ ctx[14].creatures;
+    	validate_each_argument(each_value_3);
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value_3.length; i += 1) {
+    		each_blocks[i] = create_each_block_3(get_each_context_3(ctx, each_value_3, i));
+    	}
+
+    	const block = {
+    		c: function create() {
+    			ul = element("ul");
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			add_location(ul, file$8, 153, 14, 5195);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, ul, anchor);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(ul, null);
+    			}
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*results*/ 16) {
+    				each_value_3 = /*result*/ ctx[14].creatures;
+    				validate_each_argument(each_value_3);
+    				let i;
+
+    				for (i = 0; i < each_value_3.length; i += 1) {
+    					const child_ctx = get_each_context_3(ctx, each_value_3, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks[i] = create_each_block_3(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(ul, null);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+
+    				each_blocks.length = each_value_3.length;
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(ul);
+    			destroy_each(each_blocks, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot_3.name,
+    		type: "slot",
+    		source: "(150:12) <ResultBox               heading={result.spellName}               challengeRating={result.challengeRating}               terrains={result.terrains}>",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (144:8) {#each results as result (result.id)}
+    function create_each_block_2$1(key_1, ctx) {
+    	let div;
+    	let resultbox;
+    	let t;
+    	let div_intro;
+    	let div_outro;
+    	let rect;
+    	let stop_animation = noop;
+    	let current;
+
+    	resultbox = new ResultBox({
+    			props: {
+    				heading: /*result*/ ctx[14].spellName,
+    				challengeRating: /*result*/ ctx[14].challengeRating,
+    				terrains: /*result*/ ctx[14].terrains,
+    				$$slots: { default: [create_default_slot_3] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	const block = {
+    		key: key_1,
+    		first: null,
+    		c: function create() {
+    			div = element("div");
+    			create_component(resultbox.$$.fragment);
+    			t = space();
+    			attr_dev(div, "class", "m-1");
+    			add_location(div, file$8, 144, 10, 4859);
+    			this.first = div;
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+    			mount_component(resultbox, div, null);
+    			append_dev(div, t);
+    			current = true;
+    		},
+    		p: function update(new_ctx, dirty) {
+    			ctx = new_ctx;
+    			const resultbox_changes = {};
+    			if (dirty & /*results*/ 16) resultbox_changes.heading = /*result*/ ctx[14].spellName;
+    			if (dirty & /*results*/ 16) resultbox_changes.challengeRating = /*result*/ ctx[14].challengeRating;
+    			if (dirty & /*results*/ 16) resultbox_changes.terrains = /*result*/ ctx[14].terrains;
+
+    			if (dirty & /*$$scope, results*/ 16777232) {
+    				resultbox_changes.$$scope = { dirty, ctx };
+    			}
+
+    			resultbox.$set(resultbox_changes);
+    		},
+    		r: function measure() {
+    			rect = div.getBoundingClientRect();
+    		},
+    		f: function fix() {
+    			fix_position(div);
+    			stop_animation();
+    			add_transform(div, rect);
+    		},
+    		a: function animate() {
+    			stop_animation();
+    			stop_animation = create_animation(div, rect, flip, { duration: 400 });
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(resultbox.$$.fragment, local);
+
+    			add_render_callback(() => {
+    				if (div_outro) div_outro.end(1);
+    				if (!div_intro) div_intro = create_in_transition(div, receive, { key: /*result*/ ctx[14].id });
+    				div_intro.start();
+    			});
+
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(resultbox.$$.fragment, local);
+    			if (div_intro) div_intro.invalidate();
+    			div_outro = create_out_transition(div, send, { key: /*result*/ ctx[14].id });
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div);
+    			destroy_component(resultbox);
+    			if (detaching && div_outro) div_outro.end();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block_2$1.name,
+    		type: "each",
+    		source: "(144:8) {#each results as result (result.id)}",
     		ctx
     	});
 
@@ -5488,7 +5937,7 @@ var app = (function () {
     			if (dirty & /*results*/ 16) resultbox_changes.challengeRating = /*result*/ ctx[14].challengeRating;
     			if (dirty & /*results*/ 16) resultbox_changes.terrains = /*result*/ ctx[14].terrains;
 
-    			if (dirty & /*$$scope, results*/ 1048592) {
+    			if (dirty & /*$$scope, results*/ 16777232) {
     				resultbox_changes.$$scope = { dirty, ctx };
     			}
 

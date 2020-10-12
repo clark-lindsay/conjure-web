@@ -87,12 +87,4 @@ describe("the ResponsiveApp component, rendered in viewports up to 1024 px wide"
   });
 });
 
-describe("the ResponsiveApp component rendered in a viewport >= 1024 px wide", () => {
-  it("renders a heading with the viewport size", () => {
-    const { getByRole } = render(ResponsiveApp, {
-      props: { containerWidth: 1024 },
-    });
-
-    expect(getByRole("heading", { name: "1024" })).toBeInTheDocument();
-  });
-});
+describe("the ResponsiveApp component rendered in a viewport >= 1024 px wide", () => {});

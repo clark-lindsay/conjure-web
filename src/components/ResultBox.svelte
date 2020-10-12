@@ -30,5 +30,7 @@
     </div>
   </div>
   <hr />
-  <slot />
+  <div class="text-center">
+    <slot />
+  </div>
 </div>
