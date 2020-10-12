@@ -134,7 +134,7 @@
       {/each}
     </div>
   {:else}
-    <Navbar heading="Conjure5e" />
+    <Navbar heading="Conjure5e{appVersion ? ` ${appVersion}` : ''}" />
     <div class="flex overflow-hidden h-full">
       <div class="flex w-1/2 mr-2">
         <SelectSourcebooks />
