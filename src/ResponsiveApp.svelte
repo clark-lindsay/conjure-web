@@ -14,6 +14,7 @@
   import { send, receive } from "./animations";
 
   import Navbar from "./components/Navbar.svelte";
+  import MobileNavbar from "./components/MobileNavbar.svelte";
   import Sidebar from "./components/Sidebar.svelte";
   import SelectSpellParameters from "./components/SelectSpellParameters.svelte";
   import SelectSourcebooks from "./components/SelectSourcebooks.svelte";
@@ -89,7 +90,7 @@
     w-full"
   data-testid="body-div">
   {#if containerWidth < 1024}
-    <Navbar
+    <MobileNavbar
       heading="Conjure5e{appVersion ? ` ${appVersion}` : ''}"
       bind:spellOptionsMenu={leftSidebarIsOpen}
       bind:sourceOptionsMenu={rightSidebarIsOpen} />
@@ -133,7 +134,7 @@
       {/each}
     </div>
   {:else}
-    <h1>Conjure5e</h1>
+    <Navbar heading="Conjure5e" />
     <div class="flex overflow-hidden h-full">
       <div class="flex w-1/2 mr-2">
         <SelectSourcebooks />
