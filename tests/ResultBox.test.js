@@ -34,10 +34,10 @@ test("accepts a challenge rating and a terrain list, but only displays something
   expect(getByText("Land, Water")).toBeInTheDocument();
 
   await component.$set({ challengeRating: 1, terrains: [] });
-  expect(getByText("CR1")).toBeInTheDocument();
+  expect(getByText("CR: 1")).toBeInTheDocument();
   expect(() => getByText("Land, Water")).toThrow();
 
   await component.$set({ terrains: ["Land", "Water", "Air"] });
-  expect(getByText("CR1")).toBeInTheDocument();
+  expect(getByText("CR: 1")).toBeInTheDocument();
   expect(getByText("Land, Water, Air")).toBeInTheDocument();
 });

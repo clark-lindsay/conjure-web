@@ -1,31 +1,25 @@
-import { render, fireEvent } from "@testing-library/svelte";
-
+import { render } from "@testing-library/svelte";
+import html from "svelte-htm";
 import Navbar from "../src/components/Navbar.svelte";
 
-test("renders with the supplied heading, and two buttons", () => {
-  const { getByRole, getAllByRole } = render(Navbar, { heading: "Conjure5e" });
+describe("the Navbar component", () => {
+  it("renders with a given heading", () => {
+    const { getByRole } = render(Navbar, { heading: "test" });
 
-  const heading = getByRole("heading", { name: "Conjure5e" });
-  const buttons = getAllByRole("button");
+    expect(getByRole("heading", { name: "test" })).toBeInTheDocument();
+  });
 
-  expect(heading).toBeInTheDocument();
-  expect(buttons).toHaveLength(2);
-});
+  it("supports named slotted content", () => {
+    const { getByRole, getByText } = render(html`
+      $<${Navbar} heading="head">
+        <h1 slot="left">Test Header</h1>
+        <p slot="right">Test Paragraph</p>
+      <//>
+    `);
+    const testHeading = getByRole("heading", { name: "Test Header" });
+    const paragraph = getByText("Test Paragraph");
 
-test("when one button is clicked, the other button becomes invisible", async () => {
-  const { getAllByRole, getByTestId } = render(Navbar, { heading: "test" });
-  const spellOptionsButton = getAllByRole("button")[0];
-  const sourceOptionsButton = getAllByRole("button")[1];
-
-  expect(getByTestId("sourceOptionsMenuDiv")).not.toHaveClass("invisible");
-  await fireEvent.click(spellOptionsButton);
-  expect(getByTestId("sourceOptionsMenuDiv")).toHaveClass("invisible");
-  await fireEvent.click(spellOptionsButton);
-  expect(getByTestId("sourceOptionsMenuDiv")).not.toHaveClass("invisible");
-
-  expect(getByTestId("spellOptionsMenuDiv")).not.toHaveClass("invisible");
-  await fireEvent.click(sourceOptionsButton);
-  expect(getByTestId("spellOptionsMenuDiv")).toHaveClass("invisible");
-  await fireEvent.click(sourceOptionsButton);
-  expect(getByTestId("spellOptionsMenuDiv")).not.toHaveClass("invisible");
+    expect(testHeading).toBeInTheDocument();
+    expect(paragraph).toBeInTheDocument();
+  });
 });
