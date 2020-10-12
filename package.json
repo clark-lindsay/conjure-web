@@ -1,6 +1,6 @@
 {
-  "name": "svelte-app",
   "version": "0.5.0",
+  "name": "conjure-web",
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
@@ -40,7 +40,7 @@
     "typescript": "^3.9.3"
   },
   "dependencies": {
-    "conjure5e": "^1.4.3",
+    "conjure5e": "^1.4.6",
     "sirv-cli": "^1.0.0"
   }
 }
