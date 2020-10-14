@@ -87,4 +87,28 @@ describe("the ResponsiveApp component, rendered in viewports up to 1024 px wide"
   });
 });
 
-describe("the ResponsiveApp component rendered in a viewport >= 1024 px wide", () => {});
+describe("the ResponsiveApp component rendered in a viewport >= 1024 px wide", () => {
+  it("has an About button, which opens a sidebar", async () => {
+    const { getByRole } = render(ResponsiveApp, {
+      props: { containerWidth: 1024 },
+    });
+
+    expect(getByRole("button", { name: "About" })).toBeInTheDocument();
+
+    expect(getByRole("complementary")).not.toHaveClass("open");
+    await fireEvent.click(getByRole("button", { name: "About" }));
+    expect(getByRole("complementary")).toHaveClass("open");
+  });
+
+  it("closes the About sidebar if the user clicks anywhere in the main app", async () => {
+    const { getByRole } = render(ResponsiveApp, {
+      props: { containerWidth: 1024 },
+    });
+
+    await fireEvent.click(getByRole("button", { name: "About" }));
+    expect(getByRole("complementary")).toHaveClass("open");
+
+    await fireEvent.click(getByRole("heading", { name: "Sourcebooks" }));
+    expect(getByRole("complementary")).not.toHaveClass("open");
+  });
+});

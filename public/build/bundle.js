@@ -3498,7 +3498,7 @@ var app = (function () {
 
     const file$3 = "src/components/Sidebar.svelte";
 
-    // (33:2) {#if title}
+    // (34:2) {#if title}
     function create_if_block(ctx) {
     	let h2;
     	let t;
@@ -3508,7 +3508,7 @@ var app = (function () {
     			h2 = element("h2");
     			t = text(/*title*/ ctx[1]);
     			attr_dev(h2, "class", "absolute");
-    			add_location(h2, file$3, 33, 4, 554);
+    			add_location(h2, file$3, 34, 4, 612);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h2, anchor);
@@ -3526,7 +3526,7 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(33:2) {#if title}",
+    		source: "(34:2) {#if title}",
     		ctx
     	});
 
@@ -3536,10 +3536,11 @@ var app = (function () {
     function create_fragment$3(ctx) {
     	let aside;
     	let t;
+    	let aside_class_value;
     	let current;
     	let if_block = /*title*/ ctx[1] && create_if_block(ctx);
-    	const default_slot_template = /*#slots*/ ctx[5].default;
-    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[4], null);
+    	const default_slot_template = /*#slots*/ ctx[6].default;
+    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[5], null);
 
     	const block = {
     		c: function create() {
@@ -3547,11 +3548,11 @@ var app = (function () {
     			if (if_block) if_block.c();
     			t = space();
     			if (default_slot) default_slot.c();
-    			attr_dev(aside, "class", "fixed w-full h-full bg-gray-200 border-r-2 shadow-lg overflow-auto\n    box-border z-50 svelte-zcncv0");
+    			attr_dev(aside, "class", aside_class_value = "fixed " + (/*halfScreen*/ ctx[3] ? "w-1/2" : "w-full") + " h-full bg-gray-200 border-r-2 shadow-lg\n    overflow-auto box-border z-50" + " svelte-zcncv0");
     			toggle_class(aside, "open", /*open*/ ctx[0]);
-    			toggle_class(aside, "right", /*right*/ ctx[3]);
+    			toggle_class(aside, "right", /*right*/ ctx[4]);
     			toggle_class(aside, "left", /*left*/ ctx[2]);
-    			add_location(aside, file$3, 26, 0, 391);
+    			add_location(aside, file$3, 27, 0, 422);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -3582,20 +3583,24 @@ var app = (function () {
     			}
 
     			if (default_slot) {
-    				if (default_slot.p && dirty & /*$$scope*/ 16) {
-    					update_slot(default_slot, default_slot_template, ctx, /*$$scope*/ ctx[4], dirty, null, null);
+    				if (default_slot.p && dirty & /*$$scope*/ 32) {
+    					update_slot(default_slot, default_slot_template, ctx, /*$$scope*/ ctx[5], dirty, null, null);
     				}
     			}
 
-    			if (dirty & /*open*/ 1) {
+    			if (!current || dirty & /*halfScreen*/ 8 && aside_class_value !== (aside_class_value = "fixed " + (/*halfScreen*/ ctx[3] ? "w-1/2" : "w-full") + " h-full bg-gray-200 border-r-2 shadow-lg\n    overflow-auto box-border z-50" + " svelte-zcncv0")) {
+    				attr_dev(aside, "class", aside_class_value);
+    			}
+
+    			if (dirty & /*halfScreen, open*/ 9) {
     				toggle_class(aside, "open", /*open*/ ctx[0]);
     			}
 
-    			if (dirty & /*right*/ 8) {
-    				toggle_class(aside, "right", /*right*/ ctx[3]);
+    			if (dirty & /*halfScreen, right*/ 24) {
+    				toggle_class(aside, "right", /*right*/ ctx[4]);
     			}
 
-    			if (dirty & /*left*/ 4) {
+    			if (dirty & /*halfScreen, left*/ 12) {
     				toggle_class(aside, "left", /*left*/ ctx[2]);
     			}
     		},
@@ -3632,7 +3637,8 @@ var app = (function () {
     	let { open = false } = $$props;
     	let { title = "" } = $$props;
     	let { left = true } = $$props;
-    	const writable_props = ["open", "title", "left"];
+    	let { halfScreen = false } = $$props;
+    	const writable_props = ["open", "title", "left", "halfScreen"];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<Sidebar> was created with unknown prop '${key}'`);
@@ -3642,16 +3648,18 @@ var app = (function () {
     		if ("open" in $$props) $$invalidate(0, open = $$props.open);
     		if ("title" in $$props) $$invalidate(1, title = $$props.title);
     		if ("left" in $$props) $$invalidate(2, left = $$props.left);
-    		if ("$$scope" in $$props) $$invalidate(4, $$scope = $$props.$$scope);
+    		if ("halfScreen" in $$props) $$invalidate(3, halfScreen = $$props.halfScreen);
+    		if ("$$scope" in $$props) $$invalidate(5, $$scope = $$props.$$scope);
     	};
 
-    	$$self.$capture_state = () => ({ open, title, left, right });
+    	$$self.$capture_state = () => ({ open, title, left, halfScreen, right });
 
     	$$self.$inject_state = $$props => {
     		if ("open" in $$props) $$invalidate(0, open = $$props.open);
     		if ("title" in $$props) $$invalidate(1, title = $$props.title);
     		if ("left" in $$props) $$invalidate(2, left = $$props.left);
-    		if ("right" in $$props) $$invalidate(3, right = $$props.right);
+    		if ("halfScreen" in $$props) $$invalidate(3, halfScreen = $$props.halfScreen);
+    		if ("right" in $$props) $$invalidate(4, right = $$props.right);
     	};
 
     	let right;
@@ -3662,17 +3670,23 @@ var app = (function () {
 
     	$$self.$$.update = () => {
     		if ($$self.$$.dirty & /*left*/ 4) {
-    			 $$invalidate(3, right = !left);
+    			 $$invalidate(4, right = !left);
     		}
     	};
 
-    	return [open, title, left, right, $$scope, slots];
+    	return [open, title, left, halfScreen, right, $$scope, slots];
     }
 
     class Sidebar extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$3, create_fragment$3, safe_not_equal, { open: 0, title: 1, left: 2 });
+
+    		init(this, options, instance$3, create_fragment$3, safe_not_equal, {
+    			open: 0,
+    			title: 1,
+    			left: 2,
+    			halfScreen: 3
+    		});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -3703,6 +3717,14 @@ var app = (function () {
     	}
 
     	set left(value) {
+    		throw new Error("<Sidebar>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get halfScreen() {
+    		throw new Error("<Sidebar>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set halfScreen(value) {
     		throw new Error("<Sidebar>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
@@ -5149,60 +5171,237 @@ var app = (function () {
     	}
     }
 
+    /* src/components/About.svelte generated by Svelte v3.29.0 */
+
+    const file$9 = "src/components/About.svelte";
+
+    function create_fragment$9(ctx) {
+    	let h2;
+    	let t1;
+    	let div;
+    	let t3;
+    	let details0;
+    	let summary0;
+    	let t5;
+    	let a0;
+    	let t7;
+    	let t8;
+    	let details1;
+    	let summary1;
+    	let t10;
+    	let t11;
+    	let details2;
+    	let summary2;
+    	let t13;
+    	let a1;
+    	let t15;
+
+    	const block = {
+    		c: function create() {
+    			h2 = element("h2");
+    			h2.textContent = "About";
+    			t1 = space();
+    			div = element("div");
+    			div.textContent = "This application was written to handle some of the odd ruling and mechanics of\n  conjuration spells that summon multiple creatures in the 5th edition of\n  Dungeons and Dragons.";
+    			t3 = space();
+    			details0 = element("details");
+    			summary0 = element("summary");
+    			summary0.textContent = "Why does it work the way it does?";
+    			t5 = text("\n  The method used here was derived from this ");
+    			a0 = element("a");
+    			a0.textContent = "Sage\n    Advice Compendium";
+    			t7 = text(". Some minor tweaks were made to make an automated\n  method of summoning creatures more viable for more people.");
+    			t8 = space();
+    			details1 = element("details");
+    			summary1 = element("summary");
+    			summary1.textContent = "How do the parameters work?";
+    			t10 = text("\n  On desktop, you should see the parameters on the left side of your screen, and\n  on mobile they are broken into two menus, opened by the \"hamburger buttons\" at\n  the top left and top right of your screen. The sourcebooks that you select\n  determine what creatures can be generated, so you should only select\n  sourcebooks that you have access to, or that pertain to the setting of your\n  game. The terrain settings determine what terrains the summoned creatures will\n  be able to traverse. Selecting \"Land\" will add creatures with a walking speed\n  to the pool of possibilities, and similarly \"Water\" will add creatures with a\n  swimming speed, and \"Air\" will add creatures with a flying speed. Lastly, the\n  challenge rating determines the challenge rating of the summoned creatures, as\n  well as the number of creatures summoned (as detailed by the spell\n  descriptions).");
+    			t11 = space();
+    			details2 = element("details");
+    			summary2 = element("summary");
+    			summary2.textContent = "Issues, ideas, and contributing";
+    			t13 = text("\n  If you have any issues or ideas for the application, or ideas for other\n  digital tools that you would like to see for D&D, or you would like to\n  contribute to the code for this project, please visit its ");
+    			a1 = element("a");
+    			a1.textContent = "home on github";
+    			t15 = text(".");
+    			attr_dev(h2, "class", "text-blue-600 text-2xl mx-2");
+    			add_location(h2, file$9, 0, 0, 0);
+    			attr_dev(div, "class", "mx-2");
+    			add_location(div, file$9, 1, 0, 51);
+    			attr_dev(summary0, "class", "text-blue-600 text-lg mx-2");
+    			add_location(summary0, file$9, 7, 2, 281);
+    			attr_dev(a0, "class", "text-blue-400");
+    			attr_dev(a0, "href", "https://media.wizards.com/2015/downloads/dnd/SA_Compendium_1.02.pdf");
+    			add_location(a0, file$9, 10, 45, 422);
+    			attr_dev(details0, "class", "ml-4");
+    			add_location(details0, file$9, 6, 0, 256);
+    			attr_dev(summary1, "class", "text-blue-600 text-lg mx-2");
+    			add_location(summary1, file$9, 17, 2, 708);
+    			attr_dev(details1, "class", "ml-4");
+    			add_location(details1, file$9, 16, 0, 683);
+    			attr_dev(summary2, "class", "text-blue-600 text-lg mx-2");
+    			add_location(summary2, file$9, 34, 2, 1710);
+    			attr_dev(a1, "class", "text-blue-400");
+    			attr_dev(a1, "href", "https://github.com/clark-lindsay/conjure-web");
+    			add_location(a1, file$9, 39, 60, 2015);
+    			attr_dev(details2, "class", "ml-4");
+    			add_location(details2, file$9, 33, 0, 1685);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, h2, anchor);
+    			insert_dev(target, t1, anchor);
+    			insert_dev(target, div, anchor);
+    			insert_dev(target, t3, anchor);
+    			insert_dev(target, details0, anchor);
+    			append_dev(details0, summary0);
+    			append_dev(details0, t5);
+    			append_dev(details0, a0);
+    			append_dev(details0, t7);
+    			insert_dev(target, t8, anchor);
+    			insert_dev(target, details1, anchor);
+    			append_dev(details1, summary1);
+    			append_dev(details1, t10);
+    			insert_dev(target, t11, anchor);
+    			insert_dev(target, details2, anchor);
+    			append_dev(details2, summary2);
+    			append_dev(details2, t13);
+    			append_dev(details2, a1);
+    			append_dev(details2, t15);
+    		},
+    		p: noop,
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(h2);
+    			if (detaching) detach_dev(t1);
+    			if (detaching) detach_dev(div);
+    			if (detaching) detach_dev(t3);
+    			if (detaching) detach_dev(details0);
+    			if (detaching) detach_dev(t8);
+    			if (detaching) detach_dev(details1);
+    			if (detaching) detach_dev(t11);
+    			if (detaching) detach_dev(details2);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$9.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$9($$self, $$props) {
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots("About", slots, []);
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<About> was created with unknown prop '${key}'`);
+    	});
+
+    	return [];
+    }
+
+    class About extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$9, create_fragment$9, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "About",
+    			options,
+    			id: create_fragment$9.name
+    		});
+    	}
+    }
+
     /* src/ResponsiveApp.svelte generated by Svelte v3.29.0 */
-    const file$9 = "src/ResponsiveApp.svelte";
+    const file$a = "src/ResponsiveApp.svelte";
 
     function get_each_context_3(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[17] = list[i];
+    	child_ctx[20] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_2$1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[14] = list[i];
+    	child_ctx[17] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_1$1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[17] = list[i];
+    	child_ctx[20] = list[i];
     	return child_ctx;
     }
 
     function get_each_context$2(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[14] = list[i];
+    	child_ctx[17] = list[i];
     	return child_ctx;
     }
 
-    // (121:2) {:else}
+    // (122:2) {:else}
     function create_else_block$1(ctx) {
     	let navbar;
     	let t0;
+    	let sidebar;
+    	let updating_open;
+    	let t1;
     	let div4;
     	let div2;
     	let selectsourcebooks;
-    	let t1;
+    	let t2;
     	let div1;
     	let selectspellparameters;
-    	let t2;
     	let t3;
+    	let t4;
     	let div0;
     	let castbutton;
-    	let t4;
+    	let t5;
     	let div3;
     	let each_blocks = [];
     	let each_1_lookup = new Map();
     	let current;
+    	let mounted;
+    	let dispose;
 
     	navbar = new Navbar({
     			props: {
-    				heading: "Conjure5e" + (/*appVersion*/ ctx[6] ? ` ${/*appVersion*/ ctx[6]}` : "")
+    				heading: "Conjure5e" + (/*appVersion*/ ctx[6] ? ` ${/*appVersion*/ ctx[6]}` : ""),
+    				$$slots: { right: [create_right_slot$1] },
+    				$$scope: { ctx }
     			},
     			$$inline: true
     		});
 
+    	function sidebar_open_binding(value) {
+    		/*sidebar_open_binding*/ ctx[13].call(null, value);
+    	}
+
+    	let sidebar_props = {
+    		halfScreen: true,
+    		left: false,
+    		$$slots: { default: [create_default_slot_4] },
+    		$$scope: { ctx }
+    	};
+
+    	if (/*rightSidebarIsOpen*/ ctx[2] !== void 0) {
+    		sidebar_props.open = /*rightSidebarIsOpen*/ ctx[2];
+    	}
+
+    	sidebar = new Sidebar({ props: sidebar_props, $$inline: true });
+    	binding_callbacks.push(() => bind(sidebar, "open", sidebar_open_binding));
     	selectsourcebooks = new SelectSourcebooks({ $$inline: true });
     	selectspellparameters = new SelectSpellParameters({ $$inline: true });
     	let if_block = /*disableCastButton*/ ctx[3] && create_if_block_2(ctx);
@@ -5218,7 +5417,7 @@ var app = (function () {
 
     	let each_value_2 = /*results*/ ctx[4];
     	validate_each_argument(each_value_2);
-    	const get_key = ctx => /*result*/ ctx[14].id;
+    	const get_key = ctx => /*result*/ ctx[17].id;
     	validate_each_keys(ctx, each_value_2, get_each_context_2$1, get_key);
 
     	for (let i = 0; i < each_value_2.length; i += 1) {
@@ -5231,18 +5430,20 @@ var app = (function () {
     		c: function create() {
     			create_component(navbar.$$.fragment);
     			t0 = space();
+    			create_component(sidebar.$$.fragment);
+    			t1 = space();
     			div4 = element("div");
     			div2 = element("div");
     			create_component(selectsourcebooks.$$.fragment);
-    			t1 = space();
+    			t2 = space();
     			div1 = element("div");
     			create_component(selectspellparameters.$$.fragment);
-    			t2 = space();
-    			if (if_block) if_block.c();
     			t3 = space();
+    			if (if_block) if_block.c();
+    			t4 = space();
     			div0 = element("div");
     			create_component(castbutton.$$.fragment);
-    			t4 = space();
+    			t5 = space();
     			div3 = element("div");
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -5250,30 +5451,32 @@ var app = (function () {
     			}
 
     			attr_dev(div0, "class", "justify-center m-4");
-    			add_location(div0, file$9, 134, 10, 4583);
-    			add_location(div1, file$9, 125, 8, 4220);
+    			add_location(div0, file$a, 151, 10, 5045);
+    			add_location(div1, file$a, 142, 8, 4682);
     			attr_dev(div2, "class", "flex w-1/2 mr-2");
-    			add_location(div2, file$9, 123, 6, 4152);
+    			add_location(div2, file$a, 140, 6, 4614);
     			attr_dev(div3, "class", "flex flex-wrap w-1/2 content-start overflow-y-auto max-h-screen");
-    			add_location(div3, file$9, 142, 6, 4832);
+    			add_location(div3, file$a, 159, 6, 5294);
     			attr_dev(div4, "class", "flex overflow-hidden h-full");
-    			add_location(div4, file$9, 122, 4, 4104);
+    			add_location(div4, file$a, 135, 4, 4491);
     		},
     		m: function mount(target, anchor) {
     			mount_component(navbar, target, anchor);
     			insert_dev(target, t0, anchor);
+    			mount_component(sidebar, target, anchor);
+    			insert_dev(target, t1, anchor);
     			insert_dev(target, div4, anchor);
     			append_dev(div4, div2);
     			mount_component(selectsourcebooks, div2, null);
-    			append_dev(div2, t1);
+    			append_dev(div2, t2);
     			append_dev(div2, div1);
     			mount_component(selectspellparameters, div1, null);
-    			append_dev(div1, t2);
-    			if (if_block) if_block.m(div1, null);
     			append_dev(div1, t3);
+    			if (if_block) if_block.m(div1, null);
+    			append_dev(div1, t4);
     			append_dev(div1, div0);
     			mount_component(castbutton, div0, null);
-    			append_dev(div4, t4);
+    			append_dev(div4, t5);
     			append_dev(div4, div3);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -5281,8 +5484,34 @@ var app = (function () {
     			}
 
     			current = true;
+
+    			if (!mounted) {
+    				dispose = listen_dev(div4, "click", /*click_handler_1*/ ctx[14], false, false, false);
+    				mounted = true;
+    			}
     		},
     		p: function update(ctx, dirty) {
+    			const navbar_changes = {};
+
+    			if (dirty & /*$$scope, rightSidebarIsOpen*/ 134217732) {
+    				navbar_changes.$$scope = { dirty, ctx };
+    			}
+
+    			navbar.$set(navbar_changes);
+    			const sidebar_changes = {};
+
+    			if (dirty & /*$$scope*/ 134217728) {
+    				sidebar_changes.$$scope = { dirty, ctx };
+    			}
+
+    			if (!updating_open && dirty & /*rightSidebarIsOpen*/ 4) {
+    				updating_open = true;
+    				sidebar_changes.open = /*rightSidebarIsOpen*/ ctx[2];
+    				add_flush_callback(() => updating_open = false);
+    			}
+
+    			sidebar.$set(sidebar_changes);
+
     			if (/*disableCastButton*/ ctx[3]) {
     				if (if_block) {
     					if (dirty & /*disableCastButton*/ 8) {
@@ -5292,7 +5521,7 @@ var app = (function () {
     					if_block = create_if_block_2(ctx);
     					if_block.c();
     					transition_in(if_block, 1);
-    					if_block.m(div1, t3);
+    					if_block.m(div1, t4);
     				}
     			} else if (if_block) {
     				group_outros();
@@ -5323,6 +5552,7 @@ var app = (function () {
     		i: function intro(local) {
     			if (current) return;
     			transition_in(navbar.$$.fragment, local);
+    			transition_in(sidebar.$$.fragment, local);
     			transition_in(selectsourcebooks.$$.fragment, local);
     			transition_in(selectspellparameters.$$.fragment, local);
     			transition_in(if_block);
@@ -5336,6 +5566,7 @@ var app = (function () {
     		},
     		o: function outro(local) {
     			transition_out(navbar.$$.fragment, local);
+    			transition_out(sidebar.$$.fragment, local);
     			transition_out(selectsourcebooks.$$.fragment, local);
     			transition_out(selectspellparameters.$$.fragment, local);
     			transition_out(if_block);
@@ -5350,6 +5581,8 @@ var app = (function () {
     		d: function destroy(detaching) {
     			destroy_component(navbar, detaching);
     			if (detaching) detach_dev(t0);
+    			destroy_component(sidebar, detaching);
+    			if (detaching) detach_dev(t1);
     			if (detaching) detach_dev(div4);
     			destroy_component(selectsourcebooks);
     			destroy_component(selectspellparameters);
@@ -5359,6 +5592,9 @@ var app = (function () {
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].d();
     			}
+
+    			mounted = false;
+    			dispose();
     		}
     	};
 
@@ -5366,14 +5602,14 @@ var app = (function () {
     		block,
     		id: create_else_block$1.name,
     		type: "else",
-    		source: "(121:2) {:else}",
+    		source: "(122:2) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (77:2) {#if containerWidth < 1024}
+    // (78:2) {#if containerWidth < 1024}
     function create_if_block$3(ctx) {
     	let mobilenavbar;
     	let updating_spellOptionsMenu;
@@ -5467,7 +5703,7 @@ var app = (function () {
 
     	let each_value = /*results*/ ctx[4];
     	validate_each_argument(each_value);
-    	const get_key = ctx => /*result*/ ctx[14].id;
+    	const get_key = ctx => /*result*/ ctx[17].id;
     	validate_each_keys(ctx, each_value, get_each_context$2, get_key);
 
     	for (let i = 0; i < each_value.length; i += 1) {
@@ -5496,9 +5732,9 @@ var app = (function () {
     			}
 
     			attr_dev(div0, "class", "flex justify-center m-4");
-    			add_location(div0, file$9, 95, 4, 3214);
+    			add_location(div0, file$a, 96, 4, 3261);
     			attr_dev(div1, "class", "flex flex-col justify-center items-center text-center");
-    			add_location(div1, file$9, 101, 4, 3408);
+    			add_location(div1, file$a, 102, 4, 3455);
     		},
     		m: function mount(target, anchor) {
     			mount_component(mobilenavbar, target, anchor);
@@ -5538,7 +5774,7 @@ var app = (function () {
     			mobilenavbar.$set(mobilenavbar_changes);
     			const sidebar0_changes = {};
 
-    			if (dirty & /*$$scope*/ 16777216) {
+    			if (dirty & /*$$scope*/ 134217728) {
     				sidebar0_changes.$$scope = { dirty, ctx };
     			}
 
@@ -5551,7 +5787,7 @@ var app = (function () {
     			sidebar0.$set(sidebar0_changes);
     			const sidebar1_changes = {};
 
-    			if (dirty & /*$$scope*/ 16777216) {
+    			if (dirty & /*$$scope*/ 134217728) {
     				sidebar1_changes.$$scope = { dirty, ctx };
     			}
 
@@ -5651,14 +5887,105 @@ var app = (function () {
     		block,
     		id: create_if_block$3.name,
     		type: "if",
-    		source: "(77:2) {#if containerWidth < 1024}",
+    		source: "(78:2) {#if containerWidth < 1024}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (128:10) {#if disableCastButton}
+    // (124:6) <button         on:click={() => (rightSidebarIsOpen = !rightSidebarIsOpen)}         slot="right"         class="text-blue-700 text-xl p-2">
+    function create_right_slot$1(ctx) {
+    	let button;
+
+    	let t_value = (/*rightSidebarIsOpen*/ ctx[2]
+    	? "Close Sidebar"
+    	: "About") + "";
+
+    	let t;
+    	let mounted;
+    	let dispose;
+
+    	const block = {
+    		c: function create() {
+    			button = element("button");
+    			t = text(t_value);
+    			attr_dev(button, "slot", "right");
+    			attr_dev(button, "class", "text-blue-700 text-xl p-2");
+    			add_location(button, file$a, 123, 6, 4151);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, button, anchor);
+    			append_dev(button, t);
+
+    			if (!mounted) {
+    				dispose = listen_dev(button, "click", /*click_handler*/ ctx[12], false, false, false);
+    				mounted = true;
+    			}
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*rightSidebarIsOpen*/ 4 && t_value !== (t_value = (/*rightSidebarIsOpen*/ ctx[2]
+    			? "Close Sidebar"
+    			: "About") + "")) set_data_dev(t, t_value);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(button);
+    			mounted = false;
+    			dispose();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_right_slot$1.name,
+    		type: "slot",
+    		source: "(124:6) <button         on:click={() => (rightSidebarIsOpen = !rightSidebarIsOpen)}         slot=\\\"right\\\"         class=\\\"text-blue-700 text-xl p-2\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (132:4) <Sidebar halfScreen={true} bind:open={rightSidebarIsOpen} left={false}>
+    function create_default_slot_4(ctx) {
+    	let about;
+    	let current;
+    	about = new About({ $$inline: true });
+
+    	const block = {
+    		c: function create() {
+    			create_component(about.$$.fragment);
+    		},
+    		m: function mount(target, anchor) {
+    			mount_component(about, target, anchor);
+    			current = true;
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(about.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(about.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			destroy_component(about, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot_4.name,
+    		type: "slot",
+    		source: "(132:4) <Sidebar halfScreen={true} bind:open={rightSidebarIsOpen} left={false}>",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (145:10) {#if disableCastButton}
     function create_if_block_2(ctx) {
     	let div;
     	let alert;
@@ -5677,7 +6004,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			create_component(alert.$$.fragment);
-    			add_location(div, file$9, 128, 12, 4308);
+    			add_location(div, file$a, 145, 12, 4770);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -5712,31 +6039,31 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(128:10) {#if disableCastButton}",
+    		source: "(145:10) {#if disableCastButton}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (156:16) {#each result.creatures as creature}
+    // (173:16) {#each result.creatures as creature}
     function create_each_block_3(ctx) {
     	let li;
-    	let t_value = /*creature*/ ctx[17] + "";
+    	let t_value = /*creature*/ ctx[20] + "";
     	let t;
 
     	const block = {
     		c: function create() {
     			li = element("li");
     			t = text(t_value);
-    			add_location(li, file$9, 156, 18, 5386);
+    			add_location(li, file$a, 173, 18, 5848);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
     			append_dev(li, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*results*/ 16 && t_value !== (t_value = /*creature*/ ctx[17] + "")) set_data_dev(t, t_value);
+    			if (dirty & /*results*/ 16 && t_value !== (t_value = /*creature*/ ctx[20] + "")) set_data_dev(t, t_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(li);
@@ -5747,17 +6074,17 @@ var app = (function () {
     		block,
     		id: create_each_block_3.name,
     		type: "each",
-    		source: "(156:16) {#each result.creatures as creature}",
+    		source: "(173:16) {#each result.creatures as creature}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (151:12) <ResultBox               heading={result.spellName}               challengeRating={result.challengeRating}               terrains={result.terrains}>
+    // (168:12) <ResultBox               heading={result.spellName}               challengeRating={result.challengeRating}               terrains={result.terrains}>
     function create_default_slot_3(ctx) {
     	let ul;
-    	let each_value_3 = /*result*/ ctx[14].creatures;
+    	let each_value_3 = /*result*/ ctx[17].creatures;
     	validate_each_argument(each_value_3);
     	let each_blocks = [];
 
@@ -5773,7 +6100,7 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(ul, file$9, 154, 14, 5310);
+    			add_location(ul, file$a, 171, 14, 5772);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, ul, anchor);
@@ -5784,7 +6111,7 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*results*/ 16) {
-    				each_value_3 = /*result*/ ctx[14].creatures;
+    				each_value_3 = /*result*/ ctx[17].creatures;
     				validate_each_argument(each_value_3);
     				let i;
 
@@ -5817,14 +6144,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_3.name,
     		type: "slot",
-    		source: "(151:12) <ResultBox               heading={result.spellName}               challengeRating={result.challengeRating}               terrains={result.terrains}>",
+    		source: "(168:12) <ResultBox               heading={result.spellName}               challengeRating={result.challengeRating}               terrains={result.terrains}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (145:8) {#each results as result (result.id)}
+    // (162:8) {#each results as result (result.id)}
     function create_each_block_2$1(key_1, ctx) {
     	let div;
     	let resultbox;
@@ -5837,9 +6164,9 @@ var app = (function () {
 
     	resultbox = new ResultBox({
     			props: {
-    				heading: /*result*/ ctx[14].spellName,
-    				challengeRating: /*result*/ ctx[14].challengeRating,
-    				terrains: /*result*/ ctx[14].terrains,
+    				heading: /*result*/ ctx[17].spellName,
+    				challengeRating: /*result*/ ctx[17].challengeRating,
+    				terrains: /*result*/ ctx[17].terrains,
     				$$slots: { default: [create_default_slot_3] },
     				$$scope: { ctx }
     			},
@@ -5854,7 +6181,7 @@ var app = (function () {
     			create_component(resultbox.$$.fragment);
     			t = space();
     			attr_dev(div, "class", "m-1");
-    			add_location(div, file$9, 145, 10, 4974);
+    			add_location(div, file$a, 162, 10, 5436);
     			this.first = div;
     		},
     		m: function mount(target, anchor) {
@@ -5866,11 +6193,11 @@ var app = (function () {
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
     			const resultbox_changes = {};
-    			if (dirty & /*results*/ 16) resultbox_changes.heading = /*result*/ ctx[14].spellName;
-    			if (dirty & /*results*/ 16) resultbox_changes.challengeRating = /*result*/ ctx[14].challengeRating;
-    			if (dirty & /*results*/ 16) resultbox_changes.terrains = /*result*/ ctx[14].terrains;
+    			if (dirty & /*results*/ 16) resultbox_changes.heading = /*result*/ ctx[17].spellName;
+    			if (dirty & /*results*/ 16) resultbox_changes.challengeRating = /*result*/ ctx[17].challengeRating;
+    			if (dirty & /*results*/ 16) resultbox_changes.terrains = /*result*/ ctx[17].terrains;
 
-    			if (dirty & /*$$scope, results*/ 16777232) {
+    			if (dirty & /*$$scope, results*/ 134217744) {
     				resultbox_changes.$$scope = { dirty, ctx };
     			}
 
@@ -5894,7 +6221,7 @@ var app = (function () {
 
     			add_render_callback(() => {
     				if (div_outro) div_outro.end(1);
-    				if (!div_intro) div_intro = create_in_transition(div, receive, { key: /*result*/ ctx[14].id });
+    				if (!div_intro) div_intro = create_in_transition(div, receive, { key: /*result*/ ctx[17].id });
     				div_intro.start();
     			});
 
@@ -5903,7 +6230,7 @@ var app = (function () {
     		o: function outro(local) {
     			transition_out(resultbox.$$.fragment, local);
     			if (div_intro) div_intro.invalidate();
-    			div_outro = create_out_transition(div, send, { key: /*result*/ ctx[14].id });
+    			div_outro = create_out_transition(div, send, { key: /*result*/ ctx[17].id });
     			current = false;
     		},
     		d: function destroy(detaching) {
@@ -5917,14 +6244,14 @@ var app = (function () {
     		block,
     		id: create_each_block_2$1.name,
     		type: "each",
-    		source: "(145:8) {#each results as result (result.id)}",
+    		source: "(162:8) {#each results as result (result.id)}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (82:4) <Sidebar bind:open={leftSidebarIsOpen}>
+    // (83:4) <Sidebar bind:open={leftSidebarIsOpen}>
     function create_default_slot_2(ctx) {
     	let selectspellparameters;
     	let current;
@@ -5956,14 +6283,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2.name,
     		type: "slot",
-    		source: "(82:4) <Sidebar bind:open={leftSidebarIsOpen}>",
+    		source: "(83:4) <Sidebar bind:open={leftSidebarIsOpen}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (85:4) <Sidebar bind:open={rightSidebarIsOpen} left={false}>
+    // (86:4) <Sidebar bind:open={rightSidebarIsOpen} left={false}>
     function create_default_slot_1(ctx) {
     	let selectsourcebooks;
     	let current;
@@ -5995,14 +6322,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(85:4) <Sidebar bind:open={rightSidebarIsOpen} left={false}>",
+    		source: "(86:4) <Sidebar bind:open={rightSidebarIsOpen} left={false}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (89:4) {#if disableCastButton}
+    // (90:4) {#if disableCastButton}
     function create_if_block_1$1(ctx) {
     	let div;
     	let alert;
@@ -6021,7 +6348,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			create_component(alert.$$.fragment);
-    			add_location(div, file$9, 89, 6, 2975);
+    			add_location(div, file$a, 90, 6, 3022);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -6056,31 +6383,31 @@ var app = (function () {
     		block,
     		id: create_if_block_1$1.name,
     		type: "if",
-    		source: "(89:4) {#if disableCastButton}",
+    		source: "(90:4) {#if disableCastButton}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (113:14) {#each result.creatures as creature}
+    // (114:14) {#each result.creatures as creature}
     function create_each_block_1$1(ctx) {
     	let li;
-    	let t_value = /*creature*/ ctx[17] + "";
+    	let t_value = /*creature*/ ctx[20] + "";
     	let t;
 
     	const block = {
     		c: function create() {
     			li = element("li");
     			t = text(t_value);
-    			add_location(li, file$9, 113, 16, 3896);
+    			add_location(li, file$a, 114, 16, 3943);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
     			append_dev(li, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*results*/ 16 && t_value !== (t_value = /*creature*/ ctx[17] + "")) set_data_dev(t, t_value);
+    			if (dirty & /*results*/ 16 && t_value !== (t_value = /*creature*/ ctx[20] + "")) set_data_dev(t, t_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(li);
@@ -6091,17 +6418,17 @@ var app = (function () {
     		block,
     		id: create_each_block_1$1.name,
     		type: "each",
-    		source: "(113:14) {#each result.creatures as creature}",
+    		source: "(114:14) {#each result.creatures as creature}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (108:10) <ResultBox             heading={result.spellName}             challengeRating={result.challengeRating}             terrains={result.terrains}>
+    // (109:10) <ResultBox             heading={result.spellName}             challengeRating={result.challengeRating}             terrains={result.terrains}>
     function create_default_slot$1(ctx) {
     	let ul;
-    	let each_value_1 = /*result*/ ctx[14].creatures;
+    	let each_value_1 = /*result*/ ctx[17].creatures;
     	validate_each_argument(each_value_1);
     	let each_blocks = [];
 
@@ -6117,7 +6444,7 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(ul, file$9, 111, 12, 3824);
+    			add_location(ul, file$a, 112, 12, 3871);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, ul, anchor);
@@ -6128,7 +6455,7 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*results*/ 16) {
-    				each_value_1 = /*result*/ ctx[14].creatures;
+    				each_value_1 = /*result*/ ctx[17].creatures;
     				validate_each_argument(each_value_1);
     				let i;
 
@@ -6161,14 +6488,14 @@ var app = (function () {
     		block,
     		id: create_default_slot$1.name,
     		type: "slot",
-    		source: "(108:10) <ResultBox             heading={result.spellName}             challengeRating={result.challengeRating}             terrains={result.terrains}>",
+    		source: "(109:10) <ResultBox             heading={result.spellName}             challengeRating={result.challengeRating}             terrains={result.terrains}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (103:6) {#each results as result (result.id)}
+    // (104:6) {#each results as result (result.id)}
     function create_each_block$2(key_1, ctx) {
     	let div;
     	let resultbox;
@@ -6181,9 +6508,9 @@ var app = (function () {
 
     	resultbox = new ResultBox({
     			props: {
-    				heading: /*result*/ ctx[14].spellName,
-    				challengeRating: /*result*/ ctx[14].challengeRating,
-    				terrains: /*result*/ ctx[14].terrains,
+    				heading: /*result*/ ctx[17].spellName,
+    				challengeRating: /*result*/ ctx[17].challengeRating,
+    				terrains: /*result*/ ctx[17].terrains,
     				$$slots: { default: [create_default_slot$1] },
     				$$scope: { ctx }
     			},
@@ -6197,7 +6524,7 @@ var app = (function () {
     			div = element("div");
     			create_component(resultbox.$$.fragment);
     			t = space();
-    			add_location(div, file$9, 103, 8, 3528);
+    			add_location(div, file$a, 104, 8, 3575);
     			this.first = div;
     		},
     		m: function mount(target, anchor) {
@@ -6209,11 +6536,11 @@ var app = (function () {
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
     			const resultbox_changes = {};
-    			if (dirty & /*results*/ 16) resultbox_changes.heading = /*result*/ ctx[14].spellName;
-    			if (dirty & /*results*/ 16) resultbox_changes.challengeRating = /*result*/ ctx[14].challengeRating;
-    			if (dirty & /*results*/ 16) resultbox_changes.terrains = /*result*/ ctx[14].terrains;
+    			if (dirty & /*results*/ 16) resultbox_changes.heading = /*result*/ ctx[17].spellName;
+    			if (dirty & /*results*/ 16) resultbox_changes.challengeRating = /*result*/ ctx[17].challengeRating;
+    			if (dirty & /*results*/ 16) resultbox_changes.terrains = /*result*/ ctx[17].terrains;
 
-    			if (dirty & /*$$scope, results*/ 16777232) {
+    			if (dirty & /*$$scope, results*/ 134217744) {
     				resultbox_changes.$$scope = { dirty, ctx };
     			}
 
@@ -6237,7 +6564,7 @@ var app = (function () {
 
     			add_render_callback(() => {
     				if (div_outro) div_outro.end(1);
-    				if (!div_intro) div_intro = create_in_transition(div, receive, { key: /*result*/ ctx[14].id });
+    				if (!div_intro) div_intro = create_in_transition(div, receive, { key: /*result*/ ctx[17].id });
     				div_intro.start();
     			});
 
@@ -6246,7 +6573,7 @@ var app = (function () {
     		o: function outro(local) {
     			transition_out(resultbox.$$.fragment, local);
     			if (div_intro) div_intro.invalidate();
-    			div_outro = create_out_transition(div, send, { key: /*result*/ ctx[14].id });
+    			div_outro = create_out_transition(div, send, { key: /*result*/ ctx[17].id });
     			current = false;
     		},
     		d: function destroy(detaching) {
@@ -6260,14 +6587,14 @@ var app = (function () {
     		block,
     		id: create_each_block$2.name,
     		type: "each",
-    		source: "(103:6) {#each results as result (result.id)}",
+    		source: "(104:6) {#each results as result (result.id)}",
     		ctx
     	});
 
     	return block;
     }
 
-    function create_fragment$9(ctx) {
+    function create_fragment$a(ctx) {
     	let link;
     	let t;
     	let div;
@@ -6294,14 +6621,14 @@ var app = (function () {
     			if_block.c();
     			attr_dev(link, "href", "https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css");
     			attr_dev(link, "rel", "stylesheet");
-    			add_location(link, file$9, 67, 2, 2297);
+    			add_location(link, file$a, 68, 2, 2344);
 
     			attr_dev(div, "class", div_class_value = "" + ((/*leftSidebarIsOpen*/ ctx[1] || /*rightSidebarIsOpen*/ ctx[2]
     			? "overflow-hidden h-full"
     			: "") + "\n    w-full"));
 
     			attr_dev(div, "data-testid", "body-div");
-    			add_location(div, file$9, 72, 0, 2411);
+    			add_location(div, file$a, 73, 0, 2458);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -6363,7 +6690,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$9.name,
+    		id: create_fragment$a.name,
     		type: "component",
     		source: "",
     		ctx
@@ -6372,13 +6699,13 @@ var app = (function () {
     	return block;
     }
 
-    function instance$9($$self, $$props, $$invalidate) {
+    function instance$a($$self, $$props, $$invalidate) {
     	let $readSpellParameters;
     	let $readSourcebooks;
     	validate_store(readSpellParameters, "readSpellParameters");
     	component_subscribe($$self, readSpellParameters, $$value => $$invalidate(5, $readSpellParameters = $$value));
     	validate_store(readSourcebooks, "readSourcebooks");
-    	component_subscribe($$self, readSourcebooks, $$value => $$invalidate(12, $readSourcebooks = $$value));
+    	component_subscribe($$self, readSourcebooks, $$value => $$invalidate(15, $readSourcebooks = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots("ResponsiveApp", slots, []);
     	
@@ -6456,6 +6783,17 @@ var app = (function () {
     		$$invalidate(2, rightSidebarIsOpen);
     	}
 
+    	const click_handler = () => $$invalidate(2, rightSidebarIsOpen = !rightSidebarIsOpen);
+
+    	function sidebar_open_binding(value) {
+    		rightSidebarIsOpen = value;
+    		$$invalidate(2, rightSidebarIsOpen);
+    	}
+
+    	const click_handler_1 = () => {
+    		$$invalidate(2, rightSidebarIsOpen = false);
+    	};
+
     	$$self.$$set = $$props => {
     		if ("containerWidth" in $$props) $$invalidate(0, containerWidth = $$props.containerWidth);
     	};
@@ -6480,6 +6818,7 @@ var app = (function () {
     		ResultBox,
     		CastButton,
     		Alert,
+    		About,
     		leftSidebarIsOpen,
     		rightSidebarIsOpen,
     		containerWidth,
@@ -6516,20 +6855,23 @@ var app = (function () {
     		mobilenavbar_spellOptionsMenu_binding,
     		mobilenavbar_sourceOptionsMenu_binding,
     		sidebar0_open_binding,
-    		sidebar1_open_binding
+    		sidebar1_open_binding,
+    		click_handler,
+    		sidebar_open_binding,
+    		click_handler_1
     	];
     }
 
     class ResponsiveApp extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$9, create_fragment$9, safe_not_equal, { containerWidth: 0 });
+    		init(this, options, instance$a, create_fragment$a, safe_not_equal, { containerWidth: 0 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "ResponsiveApp",
     			options,
-    			id: create_fragment$9.name
+    			id: create_fragment$a.name
     		});
 
     		const { ctx } = this.$$;
@@ -6550,9 +6892,9 @@ var app = (function () {
     }
 
     /* src/App.svelte generated by Svelte v3.29.0 */
-    const file$a = "src/App.svelte";
+    const file$b = "src/App.svelte";
 
-    function create_fragment$a(ctx) {
+    function create_fragment$b(ctx) {
     	let div;
     	let responsiveapp;
     	let div_resize_listener;
@@ -6569,9 +6911,9 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			create_component(responsiveapp.$$.fragment);
-    			attr_dev(div, "class", "w-full p-0 m-0");
+    			attr_dev(div, "class", "w-full h-screen overflow-auto p-0 m-0");
     			add_render_callback(() => /*div_elementresize_handler*/ ctx[2].call(div));
-    			add_location(div, file$a, 5, 0, 178);
+    			add_location(div, file$b, 5, 0, 178);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -6605,7 +6947,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$a.name,
+    		id: create_fragment$b.name,
     		type: "component",
     		source: "",
     		ctx
@@ -6614,7 +6956,7 @@ var app = (function () {
     	return block;
     }
 
-    function instance$a($$self, $$props, $$invalidate) {
+    function instance$b($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots("App", slots, []);
     	let offsetWidth;
@@ -6658,13 +7000,13 @@ var app = (function () {
     class App extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$a, create_fragment$a, safe_not_equal, {});
+    		init(this, options, instance$b, create_fragment$b, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "App",
     			options,
-    			id: create_fragment$a.name
+    			id: create_fragment$b.name
     		});
     	}
     }

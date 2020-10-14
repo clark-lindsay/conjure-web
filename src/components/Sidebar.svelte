@@ -2,6 +2,7 @@
   export let open: boolean = false;
   export let title: string = "";
   export let left: boolean = true;
+  export let halfScreen: boolean = false;
   $: right = !left;
 </script>
 
@@ -26,8 +27,8 @@
 </style>
 
 <aside
-  class="fixed w-full h-full bg-gray-200 border-r-2 shadow-lg overflow-auto
-    box-border z-50"
+  class="fixed {halfScreen ? 'w-1/2' : 'w-full'} h-full bg-gray-200 border-r-2 shadow-lg
+    overflow-auto box-border z-50"
   class:open
   class:right
   class:left>

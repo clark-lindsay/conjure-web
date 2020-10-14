@@ -1,0 +1,43 @@
+<h2 class="text-blue-600 text-2xl mx-2">About</h2>
+<div class="mx-2">
+  This application was written to handle some of the odd ruling and mechanics of
+  conjuration spells that summon multiple creatures in the 5th edition of
+  Dungeons and Dragons.
+</div>
+<details class="ml-4">
+  <summary class="text-blue-600 text-lg mx-2">
+    Why does it work the way it does?
+  </summary>
+  The method used here was derived from this <a
+    class="text-blue-400"
+    href="https://media.wizards.com/2015/downloads/dnd/SA_Compendium_1.02.pdf">Sage
+    Advice Compendium</a>. Some minor tweaks were made to make an automated
+  method of summoning creatures more viable for more people.
+</details>
+<details class="ml-4">
+  <summary class="text-blue-600 text-lg mx-2">
+    How do the parameters work?
+  </summary>
+  On desktop, you should see the parameters on the left side of your screen, and
+  on mobile they are broken into two menus, opened by the "hamburger buttons" at
+  the top left and top right of your screen. The sourcebooks that you select
+  determine what creatures can be generated, so you should only select
+  sourcebooks that you have access to, or that pertain to the setting of your
+  game. The terrain settings determine what terrains the summoned creatures will
+  be able to traverse. Selecting "Land" will add creatures with a walking speed
+  to the pool of possibilities, and similarly "Water" will add creatures with a
+  swimming speed, and "Air" will add creatures with a flying speed. Lastly, the
+  challenge rating determines the challenge rating of the summoned creatures, as
+  well as the number of creatures summoned (as detailed by the spell
+  descriptions).
+</details>
+<details class="ml-4">
+  <summary class="text-blue-600 text-lg mx-2">
+    Issues, ideas, and contributing
+  </summary>
+  If you have any issues or ideas for the application, or ideas for other
+  digital tools that you would like to see for D&amp;D, or you would like to
+  contribute to the code for this project, please visit its <a
+    class="text-blue-400"
+    href="https://github.com/clark-lindsay/conjure-web">home on github</a>.
+</details>

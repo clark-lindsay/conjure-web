@@ -21,6 +21,7 @@
   import ResultBox from "./components/ResultBox.svelte";
   import CastButton from "./components/CastButton.svelte";
   import Alert from "./components/Alert.svelte";
+  import About from "./components/About.svelte";
 
   let leftSidebarIsOpen: boolean = false;
   let rightSidebarIsOpen: boolean = false;
@@ -134,8 +135,24 @@
       {/each}
     </div>
   {:else}
-    <Navbar heading="Conjure5e{appVersion ? ` ${appVersion}` : ''}" />
-    <div class="flex overflow-hidden h-full">
+    <Navbar heading="Conjure5e{appVersion ? ` ${appVersion}` : ''}">
+      <button
+        on:click={() => (rightSidebarIsOpen = !rightSidebarIsOpen)}
+        slot="right"
+        class="text-blue-700 text-xl p-2">
+        {rightSidebarIsOpen ? 'Close Sidebar' : 'About'}
+      </button>
+    </Navbar>
+
+    <Sidebar halfScreen={true} bind:open={rightSidebarIsOpen} left={false}>
+      <About />
+    </Sidebar>
+
+    <div
+      class="flex overflow-hidden h-full"
+      on:click={() => {
+        rightSidebarIsOpen = false;
+      }}>
       <div class="flex w-1/2 mr-2">
         <SelectSourcebooks />
         <div>
