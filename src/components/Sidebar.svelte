@@ -27,8 +27,8 @@
 </style>
 
 <aside
-  class="fixed {halfScreen ? 'w-1/2' : 'w-full'} h-full bg-gray-200 border-r-2 shadow-lg
-    overflow-auto box-border z-50"
+  class="fixed {halfScreen ? 'w-1/2' : 'w-full'} h-full bg-gray-200 border-x-2 border-solid
+    border-2 shadow-lg overflow-auto box-border z-50"
   class:open
   class:right
   class:left>

@@ -3508,7 +3508,7 @@ var app = (function () {
     			h2 = element("h2");
     			t = text(/*title*/ ctx[1]);
     			attr_dev(h2, "class", "absolute");
-    			add_location(h2, file$3, 34, 4, 612);
+    			add_location(h2, file$3, 34, 4, 634);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h2, anchor);
@@ -3548,7 +3548,7 @@ var app = (function () {
     			if (if_block) if_block.c();
     			t = space();
     			if (default_slot) default_slot.c();
-    			attr_dev(aside, "class", aside_class_value = "fixed " + (/*halfScreen*/ ctx[3] ? "w-1/2" : "w-full") + " h-full bg-gray-200 border-r-2 shadow-lg\n    overflow-auto box-border z-50" + " svelte-zcncv0");
+    			attr_dev(aside, "class", aside_class_value = "fixed " + (/*halfScreen*/ ctx[3] ? "w-1/2" : "w-full") + " h-full bg-gray-200 border-x-2 border-solid\n    border-2 shadow-lg overflow-auto box-border z-50" + " svelte-zcncv0");
     			toggle_class(aside, "open", /*open*/ ctx[0]);
     			toggle_class(aside, "right", /*right*/ ctx[4]);
     			toggle_class(aside, "left", /*left*/ ctx[2]);
@@ -3588,7 +3588,7 @@ var app = (function () {
     				}
     			}
 
-    			if (!current || dirty & /*halfScreen*/ 8 && aside_class_value !== (aside_class_value = "fixed " + (/*halfScreen*/ ctx[3] ? "w-1/2" : "w-full") + " h-full bg-gray-200 border-r-2 shadow-lg\n    overflow-auto box-border z-50" + " svelte-zcncv0")) {
+    			if (!current || dirty & /*halfScreen*/ 8 && aside_class_value !== (aside_class_value = "fixed " + (/*halfScreen*/ ctx[3] ? "w-1/2" : "w-full") + " h-full bg-gray-200 border-x-2 border-solid\n    border-2 shadow-lg overflow-auto box-border z-50" + " svelte-zcncv0")) {
     				attr_dev(aside, "class", aside_class_value);
     			}
 
@@ -5176,114 +5176,161 @@ var app = (function () {
     const file$9 = "src/components/About.svelte";
 
     function create_fragment$9(ctx) {
+    	let div3;
     	let h2;
     	let t1;
-    	let div;
+    	let div0;
     	let t3;
     	let details0;
     	let summary0;
     	let t5;
+    	let div1;
+    	let t6;
     	let a0;
-    	let t7;
     	let t8;
+    	let t9;
     	let details1;
     	let summary1;
-    	let t10;
     	let t11;
+    	let ul;
+    	let li0;
+    	let t13;
+    	let li1;
+    	let t15;
+    	let li2;
+    	let t17;
+    	let li3;
+    	let t19;
     	let details2;
     	let summary2;
-    	let t13;
+    	let t21;
+    	let div2;
+    	let t22;
     	let a1;
-    	let t15;
+    	let t24;
 
     	const block = {
     		c: function create() {
+    			div3 = element("div");
     			h2 = element("h2");
     			h2.textContent = "About";
     			t1 = space();
-    			div = element("div");
-    			div.textContent = "This application was written to handle some of the odd ruling and mechanics of\n  conjuration spells that summon multiple creatures in the 5th edition of\n  Dungeons and Dragons.";
+    			div0 = element("div");
+    			div0.textContent = "This application was written to handle some of the odd ruling and mechanics\n    of conjuration spells that summon multiple creatures in the 5th edition of\n    Dungeons and Dragons.";
     			t3 = space();
     			details0 = element("details");
     			summary0 = element("summary");
     			summary0.textContent = "Why does it work the way it does?";
-    			t5 = text("\n  The method used here was derived from this ");
+    			t5 = space();
+    			div1 = element("div");
+    			t6 = text("The method used here was derived from this ");
     			a0 = element("a");
-    			a0.textContent = "Sage\n    Advice Compendium";
-    			t7 = text(". Some minor tweaks were made to make an automated\n  method of summoning creatures more viable for more people.");
-    			t8 = space();
+    			a0.textContent = "Sage\n        Advice Compendium";
+    			t8 = text(". Some minor tweaks were made to make an automated\n      method of summoning creatures more viable for more people.");
+    			t9 = space();
     			details1 = element("details");
     			summary1 = element("summary");
     			summary1.textContent = "How do the parameters work?";
-    			t10 = text("\n  On desktop, you should see the parameters on the left side of your screen, and\n  on mobile they are broken into two menus, opened by the \"hamburger buttons\" at\n  the top left and top right of your screen. The sourcebooks that you select\n  determine what creatures can be generated, so you should only select\n  sourcebooks that you have access to, or that pertain to the setting of your\n  game. The terrain settings determine what terrains the summoned creatures will\n  be able to traverse. Selecting \"Land\" will add creatures with a walking speed\n  to the pool of possibilities, and similarly \"Water\" will add creatures with a\n  swimming speed, and \"Air\" will add creatures with a flying speed. Lastly, the\n  challenge rating determines the challenge rating of the summoned creatures, as\n  well as the number of creatures summoned (as detailed by the spell\n  descriptions).");
     			t11 = space();
+    			ul = element("ul");
+    			li0 = element("li");
+    			li0.textContent = "On desktop, you should see the parameters on the left side of your\n        screen, and on mobile they are broken into two menus for sources and\n        spell parameters, opened by the \"hamburger buttons\" at the top left and\n        top right of your screen.";
+    			t13 = space();
+    			li1 = element("li");
+    			li1.textContent = "The sourcebooks that you select determine what creatures can be\n        generated, so you should only select sourcebooks that you have access\n        to, or that pertain to the setting of your game.";
+    			t15 = space();
+    			li2 = element("li");
+    			li2.textContent = "The terrain settings determine what terrains the summoned creatures will\n        be able to traverse. Selecting \"Land\" will add creatures with a walking\n        speed to the pool of possibilities, and similarly \"Water\" will add\n        creatures with a swimming speed, and \"Air\" will add creatures with a\n        flying speed.";
+    			t17 = space();
+    			li3 = element("li");
+    			li3.textContent = "Lastly, the challenge rating determines the challenge rating of the\n        summoned creatures, as well as the number of creatures summoned (as\n        detailed by the spell descriptions).";
+    			t19 = space();
     			details2 = element("details");
     			summary2 = element("summary");
     			summary2.textContent = "Issues, ideas, and contributing";
-    			t13 = text("\n  If you have any issues or ideas for the application, or ideas for other\n  digital tools that you would like to see for D&D, or you would like to\n  contribute to the code for this project, please visit its ");
+    			t21 = space();
+    			div2 = element("div");
+    			t22 = text("If you have any issues or ideas for the application, or ideas for other\n      digital tools that you would like to see for D&D, or you would like to\n      contribute to the code for this project, please visit its ");
     			a1 = element("a");
     			a1.textContent = "home on github";
-    			t15 = text(".");
+    			t24 = text(".");
     			attr_dev(h2, "class", "text-blue-600 text-2xl mx-2");
-    			add_location(h2, file$9, 0, 0, 0);
-    			attr_dev(div, "class", "mx-2");
-    			add_location(div, file$9, 1, 0, 51);
-    			attr_dev(summary0, "class", "text-blue-600 text-lg mx-2");
-    			add_location(summary0, file$9, 7, 2, 281);
+    			add_location(h2, file$9, 1, 2, 38);
+    			attr_dev(div0, "class", "mx-2");
+    			add_location(div0, file$9, 2, 2, 91);
+    			attr_dev(summary0, "class", "text-blue-600 hover:text-blue-800 text-lg m-2");
+    			add_location(summary0, file$9, 8, 4, 333);
     			attr_dev(a0, "class", "text-blue-400");
     			attr_dev(a0, "href", "https://media.wizards.com/2015/downloads/dnd/SA_Compendium_1.02.pdf");
-    			add_location(a0, file$9, 10, 45, 422);
+    			add_location(a0, file$9, 12, 49, 529);
+    			attr_dev(div1, "class", "ml-8 mr-2");
+    			add_location(div1, file$9, 11, 4, 456);
     			attr_dev(details0, "class", "ml-4");
-    			add_location(details0, file$9, 6, 0, 256);
-    			attr_dev(summary1, "class", "text-blue-600 text-lg mx-2");
-    			add_location(summary1, file$9, 17, 2, 708);
+    			add_location(details0, file$9, 7, 2, 306);
+    			attr_dev(summary1, "class", "text-blue-600 hover:text-blue-800 text-lg m-2");
+    			add_location(summary1, file$9, 20, 4, 848);
+    			add_location(li0, file$9, 24, 6, 1004);
+    			add_location(li1, file$9, 30, 6, 1293);
+    			add_location(li2, file$9, 35, 6, 1523);
+    			add_location(li3, file$9, 42, 6, 1881);
+    			attr_dev(ul, "class", "list-disc ml-8 mr-2");
+    			add_location(ul, file$9, 23, 4, 965);
     			attr_dev(details1, "class", "ml-4");
-    			add_location(details1, file$9, 16, 0, 683);
-    			attr_dev(summary2, "class", "text-blue-600 text-lg mx-2");
-    			add_location(summary2, file$9, 34, 2, 1710);
+    			add_location(details1, file$9, 19, 2, 821);
+    			attr_dev(summary2, "class", "text-blue-600 hover:text-blue-800 text-lg m-2");
+    			add_location(summary2, file$9, 50, 4, 2147);
     			attr_dev(a1, "class", "text-blue-400");
     			attr_dev(a1, "href", "https://github.com/clark-lindsay/conjure-web");
-    			add_location(a1, file$9, 39, 60, 2015);
+    			add_location(a1, file$9, 56, 64, 2515);
+    			attr_dev(div2, "class", "ml-8 mr-2");
+    			add_location(div2, file$9, 53, 4, 2268);
     			attr_dev(details2, "class", "ml-4");
-    			add_location(details2, file$9, 33, 0, 1685);
+    			add_location(details2, file$9, 49, 2, 2120);
+    			attr_dev(div3, "class", "overflow-y-auto pb-20");
+    			add_location(div3, file$9, 0, 0, 0);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, h2, anchor);
-    			insert_dev(target, t1, anchor);
-    			insert_dev(target, div, anchor);
-    			insert_dev(target, t3, anchor);
-    			insert_dev(target, details0, anchor);
+    			insert_dev(target, div3, anchor);
+    			append_dev(div3, h2);
+    			append_dev(div3, t1);
+    			append_dev(div3, div0);
+    			append_dev(div3, t3);
+    			append_dev(div3, details0);
     			append_dev(details0, summary0);
     			append_dev(details0, t5);
-    			append_dev(details0, a0);
-    			append_dev(details0, t7);
-    			insert_dev(target, t8, anchor);
-    			insert_dev(target, details1, anchor);
+    			append_dev(details0, div1);
+    			append_dev(div1, t6);
+    			append_dev(div1, a0);
+    			append_dev(div1, t8);
+    			append_dev(div3, t9);
+    			append_dev(div3, details1);
     			append_dev(details1, summary1);
-    			append_dev(details1, t10);
-    			insert_dev(target, t11, anchor);
-    			insert_dev(target, details2, anchor);
+    			append_dev(details1, t11);
+    			append_dev(details1, ul);
+    			append_dev(ul, li0);
+    			append_dev(ul, t13);
+    			append_dev(ul, li1);
+    			append_dev(ul, t15);
+    			append_dev(ul, li2);
+    			append_dev(ul, t17);
+    			append_dev(ul, li3);
+    			append_dev(div3, t19);
+    			append_dev(div3, details2);
     			append_dev(details2, summary2);
-    			append_dev(details2, t13);
-    			append_dev(details2, a1);
-    			append_dev(details2, t15);
+    			append_dev(details2, t21);
+    			append_dev(details2, div2);
+    			append_dev(div2, t22);
+    			append_dev(div2, a1);
+    			append_dev(div2, t24);
     		},
     		p: noop,
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(h2);
-    			if (detaching) detach_dev(t1);
-    			if (detaching) detach_dev(div);
-    			if (detaching) detach_dev(t3);
-    			if (detaching) detach_dev(details0);
-    			if (detaching) detach_dev(t8);
-    			if (detaching) detach_dev(details1);
-    			if (detaching) detach_dev(t11);
-    			if (detaching) detach_dev(details2);
+    			if (detaching) detach_dev(div3);
     		}
     	};
 
@@ -5451,14 +5498,14 @@ var app = (function () {
     			}
 
     			attr_dev(div0, "class", "justify-center m-4");
-    			add_location(div0, file$a, 151, 10, 5045);
-    			add_location(div1, file$a, 142, 8, 4682);
+    			add_location(div0, file$a, 152, 10, 5117);
+    			add_location(div1, file$a, 143, 8, 4754);
     			attr_dev(div2, "class", "flex w-1/2 mr-2");
-    			add_location(div2, file$a, 140, 6, 4614);
+    			add_location(div2, file$a, 141, 6, 4686);
     			attr_dev(div3, "class", "flex flex-wrap w-1/2 content-start overflow-y-auto max-h-screen");
-    			add_location(div3, file$a, 159, 6, 5294);
+    			add_location(div3, file$a, 160, 6, 5366);
     			attr_dev(div4, "class", "flex overflow-hidden h-full");
-    			add_location(div4, file$a, 135, 4, 4491);
+    			add_location(div4, file$a, 136, 4, 4563);
     		},
     		m: function mount(target, anchor) {
     			mount_component(navbar, target, anchor);
@@ -5894,7 +5941,7 @@ var app = (function () {
     	return block;
     }
 
-    // (124:6) <button         on:click={() => (rightSidebarIsOpen = !rightSidebarIsOpen)}         slot="right"         class="text-blue-700 text-xl p-2">
+    // (124:6) <button         on:click={() => (rightSidebarIsOpen = !rightSidebarIsOpen)}         slot="right"         class="text-blue-700 hover:{rightSidebarIsOpen ? 'text-red-700' : 'text-blue-900'}           text-xl p-2">
     function create_right_slot$1(ctx) {
     	let button;
 
@@ -5903,6 +5950,7 @@ var app = (function () {
     	: "About") + "";
 
     	let t;
+    	let button_class_value;
     	let mounted;
     	let dispose;
 
@@ -5911,7 +5959,11 @@ var app = (function () {
     			button = element("button");
     			t = text(t_value);
     			attr_dev(button, "slot", "right");
-    			attr_dev(button, "class", "text-blue-700 text-xl p-2");
+
+    			attr_dev(button, "class", button_class_value = "text-blue-700 hover:" + (/*rightSidebarIsOpen*/ ctx[2]
+    			? "text-red-700"
+    			: "text-blue-900") + "\n          text-xl p-2");
+
     			add_location(button, file$a, 123, 6, 4151);
     		},
     		m: function mount(target, anchor) {
@@ -5927,6 +5979,12 @@ var app = (function () {
     			if (dirty & /*rightSidebarIsOpen*/ 4 && t_value !== (t_value = (/*rightSidebarIsOpen*/ ctx[2]
     			? "Close Sidebar"
     			: "About") + "")) set_data_dev(t, t_value);
+
+    			if (dirty & /*rightSidebarIsOpen*/ 4 && button_class_value !== (button_class_value = "text-blue-700 hover:" + (/*rightSidebarIsOpen*/ ctx[2]
+    			? "text-red-700"
+    			: "text-blue-900") + "\n          text-xl p-2")) {
+    				attr_dev(button, "class", button_class_value);
+    			}
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(button);
@@ -5939,14 +5997,14 @@ var app = (function () {
     		block,
     		id: create_right_slot$1.name,
     		type: "slot",
-    		source: "(124:6) <button         on:click={() => (rightSidebarIsOpen = !rightSidebarIsOpen)}         slot=\\\"right\\\"         class=\\\"text-blue-700 text-xl p-2\\\">",
+    		source: "(124:6) <button         on:click={() => (rightSidebarIsOpen = !rightSidebarIsOpen)}         slot=\\\"right\\\"         class=\\\"text-blue-700 hover:{rightSidebarIsOpen ? 'text-red-700' : 'text-blue-900'}           text-xl p-2\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (132:4) <Sidebar halfScreen={true} bind:open={rightSidebarIsOpen} left={false}>
+    // (133:4) <Sidebar halfScreen={true} bind:open={rightSidebarIsOpen} left={false}>
     function create_default_slot_4(ctx) {
     	let about;
     	let current;
@@ -5978,14 +6036,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_4.name,
     		type: "slot",
-    		source: "(132:4) <Sidebar halfScreen={true} bind:open={rightSidebarIsOpen} left={false}>",
+    		source: "(133:4) <Sidebar halfScreen={true} bind:open={rightSidebarIsOpen} left={false}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (145:10) {#if disableCastButton}
+    // (146:10) {#if disableCastButton}
     function create_if_block_2(ctx) {
     	let div;
     	let alert;
@@ -6004,7 +6062,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			create_component(alert.$$.fragment);
-    			add_location(div, file$a, 145, 12, 4770);
+    			add_location(div, file$a, 146, 12, 4842);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -6039,14 +6097,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(145:10) {#if disableCastButton}",
+    		source: "(146:10) {#if disableCastButton}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (173:16) {#each result.creatures as creature}
+    // (174:16) {#each result.creatures as creature}
     function create_each_block_3(ctx) {
     	let li;
     	let t_value = /*creature*/ ctx[20] + "";
@@ -6056,7 +6114,7 @@ var app = (function () {
     		c: function create() {
     			li = element("li");
     			t = text(t_value);
-    			add_location(li, file$a, 173, 18, 5848);
+    			add_location(li, file$a, 174, 18, 5920);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -6074,14 +6132,14 @@ var app = (function () {
     		block,
     		id: create_each_block_3.name,
     		type: "each",
-    		source: "(173:16) {#each result.creatures as creature}",
+    		source: "(174:16) {#each result.creatures as creature}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (168:12) <ResultBox               heading={result.spellName}               challengeRating={result.challengeRating}               terrains={result.terrains}>
+    // (169:12) <ResultBox               heading={result.spellName}               challengeRating={result.challengeRating}               terrains={result.terrains}>
     function create_default_slot_3(ctx) {
     	let ul;
     	let each_value_3 = /*result*/ ctx[17].creatures;
@@ -6100,7 +6158,7 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(ul, file$a, 171, 14, 5772);
+    			add_location(ul, file$a, 172, 14, 5844);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, ul, anchor);
@@ -6144,14 +6202,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_3.name,
     		type: "slot",
-    		source: "(168:12) <ResultBox               heading={result.spellName}               challengeRating={result.challengeRating}               terrains={result.terrains}>",
+    		source: "(169:12) <ResultBox               heading={result.spellName}               challengeRating={result.challengeRating}               terrains={result.terrains}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (162:8) {#each results as result (result.id)}
+    // (163:8) {#each results as result (result.id)}
     function create_each_block_2$1(key_1, ctx) {
     	let div;
     	let resultbox;
@@ -6181,7 +6239,7 @@ var app = (function () {
     			create_component(resultbox.$$.fragment);
     			t = space();
     			attr_dev(div, "class", "m-1");
-    			add_location(div, file$a, 162, 10, 5436);
+    			add_location(div, file$a, 163, 10, 5508);
     			this.first = div;
     		},
     		m: function mount(target, anchor) {
@@ -6244,7 +6302,7 @@ var app = (function () {
     		block,
     		id: create_each_block_2$1.name,
     		type: "each",
-    		source: "(162:8) {#each results as result (result.id)}",
+    		source: "(163:8) {#each results as result (result.id)}",
     		ctx
     	});
 
