@@ -2,7 +2,7 @@ import { render, fireEvent } from "@testing-library/svelte";
 
 import ResponsiveApp from "../src/ResponsiveApp.svelte";
 
-describe("the ResponsiveApp component, rendered in viewports up to 1024 px wide", () => {
+describe("the ResponsiveApp component, rendered in viewports less than 1024 px wide", () => {
   it("contains a button labelled Cast Spell", () => {
     const { getByRole } = render(ResponsiveApp, {
       props: { containerWidth: 800 },
@@ -19,9 +19,11 @@ describe("the ResponsiveApp component, rendered in viewports up to 1024 px wide"
 
     const castButton = getByRole("button", { name: "Cast Conjure Animals" });
 
-    expect(() => getByRole("list")).toThrow();
+    expect(() => getByRole("heading", { name: "Conjure Animals" })).toThrow();
     await fireEvent.click(castButton);
-    expect(getByRole("list")).toBeInTheDocument();
+    expect(
+      getByRole("heading", { name: "Conjure Animals" })
+    ).toBeInTheDocument();
   });
 
   it("if the user selects no sourcebooks, then the cast button will be disabled, an error will render, and clicking cast will not generate a result", async () => {
@@ -32,18 +34,18 @@ describe("the ResponsiveApp component, rendered in viewports up to 1024 px wide"
       props: { containerWidth: 800 },
     });
 
-    const sourceButton = getByTestId("sourceOptionsMenuDiv");
+    const spellParametersButton = getByTestId("spellOptionsMenuDiv");
 
     expect(
       getByRole("button", { name: "Cast Conjure Animals" })
     ).not.toHaveClass("cursor-not-allowed");
 
-    await fireEvent.click(sourceButton);
+    await fireEvent.click(spellParametersButton);
     const checkedBoxes = getAllByRole("checkbox", { checked: true });
     for (const box of checkedBoxes) {
       await fireEvent.click(box);
     }
-    await fireEvent.click(sourceButton);
+    await fireEvent.click(spellParametersButton);
 
     expect(getByRole("button", { name: "Cast Conjure Animals" })).toHaveClass(
       "cursor-not-allowed"
@@ -54,24 +56,24 @@ describe("the ResponsiveApp component, rendered in viewports up to 1024 px wide"
       getByRole("button", { name: "Cast Conjure Animals" })
     );
 
-    expect(() => getByRole("list")).toThrow();
+    expect(() => getByRole("heading", { name: "Conjure Animals" })).toThrow();
   });
 
   it("opening either of the sidebar menus toggles the presence of the overflow-hidden and h-full classes on the body div", async () => {
-    const { getByTestId, getAllByRole } = render(ResponsiveApp, {
+    const { getByTestId, getByRole, getAllByRole } = render(ResponsiveApp, {
       props: { containerWidth: 800 },
     });
 
-    const sourceButton = getAllByRole("button", { name: "" })[1];
+    const aboutButton = getByRole("button", { name: "About" });
     const spellParametersButton = getAllByRole("button", { name: "" })[0];
 
     expect(getByTestId("body-div")).not.toHaveClass(
       "overflow-hidden",
       "h-full"
     );
-    await fireEvent.click(sourceButton);
+    await fireEvent.click(aboutButton);
     expect(getByTestId("body-div")).toHaveClass("overflow-hidden", "h-full");
-    await fireEvent.click(sourceButton);
+    await fireEvent.click(aboutButton);
     expect(getByTestId("body-div")).not.toHaveClass(
       "overflow-hidden",
       "h-full"
@@ -87,4 +89,28 @@ describe("the ResponsiveApp component, rendered in viewports up to 1024 px wide"
   });
 });
 
-describe("the ResponsiveApp component rendered in a viewport >= 1024 px wide", () => {});
+describe("the ResponsiveApp component rendered in a viewport >= 1024 px wide", () => {
+  it("has an About button, which opens a sidebar", async () => {
+    const { getByRole } = render(ResponsiveApp, {
+      props: { containerWidth: 1024 },
+    });
+
+    expect(getByRole("button", { name: "About" })).toBeInTheDocument();
+
+    expect(getByRole("complementary")).not.toHaveClass("open");
+    await fireEvent.click(getByRole("button", { name: "About" }));
+    expect(getByRole("complementary")).toHaveClass("open");
+  });
+
+  it("closes the About sidebar if the user clicks anywhere in the main app", async () => {
+    const { getByRole } = render(ResponsiveApp, {
+      props: { containerWidth: 1024 },
+    });
+
+    await fireEvent.click(getByRole("button", { name: "About" }));
+    expect(getByRole("complementary")).toHaveClass("open");
+
+    await fireEvent.click(getByRole("heading", { name: "Sourcebooks" }));
+    expect(getByRole("complementary")).not.toHaveClass("open");
+  });
+});

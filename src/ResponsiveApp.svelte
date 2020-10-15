@@ -21,12 +21,16 @@
   import ResultBox from "./components/ResultBox.svelte";
   import CastButton from "./components/CastButton.svelte";
   import Alert from "./components/Alert.svelte";
+  import About from "./components/About.svelte";
+
+  export let containerWidth: number;
 
   let leftSidebarIsOpen: boolean = false;
   let rightSidebarIsOpen: boolean = false;
-  export let containerWidth: number;
-
   const appVersion: string = packageVersion();
+  const disabledAlertMainText = "That's a nat 1.";
+  const disabledAlertSecondaryText =
+    "Your current options will not generate any creatures! Maybe try adding more sourcebooks?";
   let disableCastButton: boolean = false;
   interface Result {
     creatures: string[];
@@ -93,19 +97,20 @@
     <MobileNavbar
       heading="Conjure5e{appVersion ? ` ${appVersion}` : ''}"
       bind:spellOptionsMenu={leftSidebarIsOpen}
-      bind:sourceOptionsMenu={rightSidebarIsOpen} />
+      bind:about={rightSidebarIsOpen} />
     <Sidebar bind:open={leftSidebarIsOpen}>
       <SelectSpellParameters />
+      <SelectSourcebooks />
     </Sidebar>
     <Sidebar bind:open={rightSidebarIsOpen} left={false}>
-      <SelectSourcebooks />
+      <About />
     </Sidebar>
 
     {#if disableCastButton}
       <div transition:fade={{ duration: 400 }}>
         <Alert
-          mainText="That's a nat 1."
-          secondaryText="Your current options will not generate any creatures! Maybe try adding more sourcebooks?" />
+          mainText={disabledAlertMainText}
+          secondaryText={disabledAlertSecondaryText} />
       </div>
     {/if}
     <div class="flex justify-center m-4">
@@ -134,8 +139,25 @@
       {/each}
     </div>
   {:else}
-    <Navbar heading="Conjure5e{appVersion ? ` ${appVersion}` : ''}" />
-    <div class="flex overflow-hidden h-full">
+    <Navbar heading="Conjure5e{appVersion ? ` ${appVersion}` : ''}">
+      <button
+        on:click={() => (rightSidebarIsOpen = !rightSidebarIsOpen)}
+        slot="right"
+        class="text-blue-700 hover:{rightSidebarIsOpen ? 'text-red-700' : 'text-blue-900'}
+          hover:bg-gray-100 text-xl p-2">
+        {rightSidebarIsOpen ? 'Close Sidebar' : 'About'}
+      </button>
+    </Navbar>
+
+    <Sidebar halfScreen={true} bind:open={rightSidebarIsOpen} left={false}>
+      <About />
+    </Sidebar>
+
+    <div
+      class="flex overflow-hidden h-full"
+      on:click={() => {
+        rightSidebarIsOpen = false;
+      }}>
       <div class="flex w-1/2 mr-2">
         <SelectSourcebooks />
         <div>
@@ -143,8 +165,8 @@
           {#if disableCastButton}
             <div transition:fade={{ duration: 200 }}>
               <Alert
-                mainText="That's a nat 1."
-                secondaryText="Your current options will not generate any creatures! Maybe try adding more sourcebooks?" />
+                mainText={disabledAlertMainText}
+                secondaryText={disabledAlertSecondaryText} />
             </div>
           {/if}
           <div class="justify-center m-4">
