@@ -143,7 +143,7 @@
         on:click={() => (rightSidebarIsOpen = !rightSidebarIsOpen)}
         slot="right"
         class="text-blue-700 hover:{rightSidebarIsOpen ? 'text-red-700' : 'text-blue-900'}
-          text-xl p-2">
+          hover:bg-gray-100 text-xl p-2">
         {rightSidebarIsOpen ? 'Close Sidebar' : 'About'}
       </button>
     </Navbar>

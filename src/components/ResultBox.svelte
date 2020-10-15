@@ -15,7 +15,7 @@
   }
 </style>
 
-<div class="box">
+<div class="box hover:bg-gray-100" data-testid="resultbox">
   <div class="flex-col text-center">
     <h3 class="text-blue-700 text-lg mr-2">{heading}</h3>
     <div class="flex justify-between">

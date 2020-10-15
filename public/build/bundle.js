@@ -4538,7 +4538,7 @@ var app = (function () {
     			t0 = text("CR: ");
     			t1 = text(/*challengeRating*/ ctx[1]);
     			attr_dev(p, "class", "text-blue-700 mr-2");
-    			add_location(p, file$6, 21, 8, 537);
+    			add_location(p, file$6, 21, 8, 579);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -4575,7 +4575,7 @@ var app = (function () {
     			p = element("p");
     			t = text(t_value);
     			attr_dev(p, "class", "text-blue-700 mr-2");
-    			add_location(p, file$6, 24, 8, 647);
+    			add_location(p, file$6, 24, 8, 689);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -4635,15 +4635,16 @@ var app = (function () {
     			div2 = element("div");
     			if (default_slot) default_slot.c();
     			attr_dev(h3, "class", "text-blue-700 text-lg mr-2");
-    			add_location(h3, file$6, 18, 4, 408);
+    			add_location(h3, file$6, 18, 4, 450);
     			attr_dev(div0, "class", "flex justify-between");
-    			add_location(div0, file$6, 19, 4, 466);
+    			add_location(div0, file$6, 19, 4, 508);
     			attr_dev(div1, "class", "flex-col text-center");
-    			add_location(div1, file$6, 17, 2, 369);
-    			add_location(hr, file$6, 30, 2, 779);
+    			add_location(div1, file$6, 17, 2, 411);
+    			add_location(hr, file$6, 30, 2, 821);
     			attr_dev(div2, "class", "text-center");
-    			add_location(div2, file$6, 31, 2, 788);
-    			attr_dev(div3, "class", "box svelte-15i5ke2");
+    			add_location(div2, file$6, 31, 2, 830);
+    			attr_dev(div3, "class", "box hover:bg-gray-100 svelte-15i5ke2");
+    			attr_dev(div3, "data-testid", "resultbox");
     			add_location(div3, file$6, 16, 0, 349);
     		},
     		l: function claim(nodes) {
@@ -5498,14 +5499,14 @@ var app = (function () {
     			}
 
     			attr_dev(div0, "class", "justify-center m-4");
-    			add_location(div0, file$a, 154, 10, 5181);
-    			add_location(div1, file$a, 145, 8, 4874);
+    			add_location(div0, file$a, 154, 10, 5199);
+    			add_location(div1, file$a, 145, 8, 4892);
     			attr_dev(div2, "class", "flex w-1/2 mr-2");
-    			add_location(div2, file$a, 143, 6, 4806);
+    			add_location(div2, file$a, 143, 6, 4824);
     			attr_dev(div3, "class", "flex flex-wrap w-1/2 content-start overflow-y-auto max-h-screen");
-    			add_location(div3, file$a, 162, 6, 5430);
+    			add_location(div3, file$a, 162, 6, 5448);
     			attr_dev(div4, "class", "flex overflow-hidden h-full");
-    			add_location(div4, file$a, 138, 4, 4683);
+    			add_location(div4, file$a, 138, 4, 4701);
     		},
     		m: function mount(target, anchor) {
     			mount_component(navbar, target, anchor);
@@ -5945,7 +5946,7 @@ var app = (function () {
     	return block;
     }
 
-    // (126:6) <button         on:click={() => (rightSidebarIsOpen = !rightSidebarIsOpen)}         slot="right"         class="text-blue-700 hover:{rightSidebarIsOpen ? 'text-red-700' : 'text-blue-900'}           text-xl p-2">
+    // (126:6) <button         on:click={() => (rightSidebarIsOpen = !rightSidebarIsOpen)}         slot="right"         class="text-blue-700 hover:{rightSidebarIsOpen ? 'text-red-700' : 'text-blue-900'}           hover:bg-gray-100 text-xl p-2">
     function create_right_slot$1(ctx) {
     	let button;
 
@@ -5966,7 +5967,7 @@ var app = (function () {
 
     			attr_dev(button, "class", button_class_value = "text-blue-700 hover:" + (/*rightSidebarIsOpen*/ ctx[2]
     			? "text-red-700"
-    			: "text-blue-900") + "\n          text-xl p-2");
+    			: "text-blue-900") + "\n          hover:bg-gray-100 text-xl p-2");
 
     			add_location(button, file$a, 125, 6, 4271);
     		},
@@ -5986,7 +5987,7 @@ var app = (function () {
 
     			if (dirty & /*rightSidebarIsOpen*/ 4 && button_class_value !== (button_class_value = "text-blue-700 hover:" + (/*rightSidebarIsOpen*/ ctx[2]
     			? "text-red-700"
-    			: "text-blue-900") + "\n          text-xl p-2")) {
+    			: "text-blue-900") + "\n          hover:bg-gray-100 text-xl p-2")) {
     				attr_dev(button, "class", button_class_value);
     			}
     		},
@@ -6001,7 +6002,7 @@ var app = (function () {
     		block,
     		id: create_right_slot$1.name,
     		type: "slot",
-    		source: "(126:6) <button         on:click={() => (rightSidebarIsOpen = !rightSidebarIsOpen)}         slot=\\\"right\\\"         class=\\\"text-blue-700 hover:{rightSidebarIsOpen ? 'text-red-700' : 'text-blue-900'}           text-xl p-2\\\">",
+    		source: "(126:6) <button         on:click={() => (rightSidebarIsOpen = !rightSidebarIsOpen)}         slot=\\\"right\\\"         class=\\\"text-blue-700 hover:{rightSidebarIsOpen ? 'text-red-700' : 'text-blue-900'}           hover:bg-gray-100 text-xl p-2\\\">",
     		ctx
     	});
 
@@ -6066,7 +6067,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			create_component(alert.$$.fragment);
-    			add_location(div, file$a, 148, 12, 4962);
+    			add_location(div, file$a, 148, 12, 4980);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -6119,7 +6120,7 @@ var app = (function () {
     		c: function create() {
     			li = element("li");
     			t = text(t_value);
-    			add_location(li, file$a, 176, 18, 5984);
+    			add_location(li, file$a, 176, 18, 6002);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -6163,7 +6164,7 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(ul, file$a, 174, 14, 5908);
+    			add_location(ul, file$a, 174, 14, 5926);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, ul, anchor);
@@ -6244,7 +6245,7 @@ var app = (function () {
     			create_component(resultbox.$$.fragment);
     			t = space();
     			attr_dev(div, "class", "m-1");
-    			add_location(div, file$a, 165, 10, 5572);
+    			add_location(div, file$a, 165, 10, 5590);
     			this.first = div;
     		},
     		m: function mount(target, anchor) {
