@@ -5398,7 +5398,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (122:2) {:else}
+    // (124:2) {:else}
     function create_else_block$1(ctx) {
     	let navbar;
     	let t0;
@@ -5498,14 +5498,14 @@ var app = (function () {
     			}
 
     			attr_dev(div0, "class", "justify-center m-4");
-    			add_location(div0, file$a, 152, 10, 5117);
-    			add_location(div1, file$a, 143, 8, 4754);
+    			add_location(div0, file$a, 154, 10, 5181);
+    			add_location(div1, file$a, 145, 8, 4874);
     			attr_dev(div2, "class", "flex w-1/2 mr-2");
-    			add_location(div2, file$a, 141, 6, 4686);
+    			add_location(div2, file$a, 143, 6, 4806);
     			attr_dev(div3, "class", "flex flex-wrap w-1/2 content-start overflow-y-auto max-h-screen");
-    			add_location(div3, file$a, 160, 6, 5366);
+    			add_location(div3, file$a, 162, 6, 5430);
     			attr_dev(div4, "class", "flex overflow-hidden h-full");
-    			add_location(div4, file$a, 136, 4, 4563);
+    			add_location(div4, file$a, 138, 4, 4683);
     		},
     		m: function mount(target, anchor) {
     			mount_component(navbar, target, anchor);
@@ -5561,6 +5561,8 @@ var app = (function () {
 
     			if (/*disableCastButton*/ ctx[3]) {
     				if (if_block) {
+    					if_block.p(ctx, dirty);
+
     					if (dirty & /*disableCastButton*/ 8) {
     						transition_in(if_block, 1);
     					}
@@ -5649,14 +5651,14 @@ var app = (function () {
     		block,
     		id: create_else_block$1.name,
     		type: "else",
-    		source: "(122:2) {:else}",
+    		source: "(124:2) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (78:2) {#if containerWidth < 1024}
+    // (80:2) {#if containerWidth < 1024}
     function create_if_block$3(ctx) {
     	let mobilenavbar;
     	let updating_spellOptionsMenu;
@@ -5779,9 +5781,9 @@ var app = (function () {
     			}
 
     			attr_dev(div0, "class", "flex justify-center m-4");
-    			add_location(div0, file$a, 96, 4, 3261);
+    			add_location(div0, file$a, 98, 4, 3381);
     			attr_dev(div1, "class", "flex flex-col justify-center items-center text-center");
-    			add_location(div1, file$a, 102, 4, 3455);
+    			add_location(div1, file$a, 104, 4, 3575);
     		},
     		m: function mount(target, anchor) {
     			mount_component(mobilenavbar, target, anchor);
@@ -5848,6 +5850,8 @@ var app = (function () {
 
     			if (/*disableCastButton*/ ctx[3]) {
     				if (if_block) {
+    					if_block.p(ctx, dirty);
+
     					if (dirty & /*disableCastButton*/ 8) {
     						transition_in(if_block, 1);
     					}
@@ -5934,14 +5938,14 @@ var app = (function () {
     		block,
     		id: create_if_block$3.name,
     		type: "if",
-    		source: "(78:2) {#if containerWidth < 1024}",
+    		source: "(80:2) {#if containerWidth < 1024}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (124:6) <button         on:click={() => (rightSidebarIsOpen = !rightSidebarIsOpen)}         slot="right"         class="text-blue-700 hover:{rightSidebarIsOpen ? 'text-red-700' : 'text-blue-900'}           text-xl p-2">
+    // (126:6) <button         on:click={() => (rightSidebarIsOpen = !rightSidebarIsOpen)}         slot="right"         class="text-blue-700 hover:{rightSidebarIsOpen ? 'text-red-700' : 'text-blue-900'}           text-xl p-2">
     function create_right_slot$1(ctx) {
     	let button;
 
@@ -5964,7 +5968,7 @@ var app = (function () {
     			? "text-red-700"
     			: "text-blue-900") + "\n          text-xl p-2");
 
-    			add_location(button, file$a, 123, 6, 4151);
+    			add_location(button, file$a, 125, 6, 4271);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, button, anchor);
@@ -5997,14 +6001,14 @@ var app = (function () {
     		block,
     		id: create_right_slot$1.name,
     		type: "slot",
-    		source: "(124:6) <button         on:click={() => (rightSidebarIsOpen = !rightSidebarIsOpen)}         slot=\\\"right\\\"         class=\\\"text-blue-700 hover:{rightSidebarIsOpen ? 'text-red-700' : 'text-blue-900'}           text-xl p-2\\\">",
+    		source: "(126:6) <button         on:click={() => (rightSidebarIsOpen = !rightSidebarIsOpen)}         slot=\\\"right\\\"         class=\\\"text-blue-700 hover:{rightSidebarIsOpen ? 'text-red-700' : 'text-blue-900'}           text-xl p-2\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (133:4) <Sidebar halfScreen={true} bind:open={rightSidebarIsOpen} left={false}>
+    // (135:4) <Sidebar halfScreen={true} bind:open={rightSidebarIsOpen} left={false}>
     function create_default_slot_4(ctx) {
     	let about;
     	let current;
@@ -6036,14 +6040,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_4.name,
     		type: "slot",
-    		source: "(133:4) <Sidebar halfScreen={true} bind:open={rightSidebarIsOpen} left={false}>",
+    		source: "(135:4) <Sidebar halfScreen={true} bind:open={rightSidebarIsOpen} left={false}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (146:10) {#if disableCastButton}
+    // (148:10) {#if disableCastButton}
     function create_if_block_2(ctx) {
     	let div;
     	let alert;
@@ -6052,8 +6056,8 @@ var app = (function () {
 
     	alert = new Alert({
     			props: {
-    				mainText: "That's a nat 1.",
-    				secondaryText: "Your current options will not generate any creatures! Maybe try adding more sourcebooks?"
+    				mainText: disabledAlertMainText,
+    				secondaryText: disabledAlertSecondaryText
     			},
     			$$inline: true
     		});
@@ -6062,13 +6066,14 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			create_component(alert.$$.fragment);
-    			add_location(div, file$a, 146, 12, 4842);
+    			add_location(div, file$a, 148, 12, 4962);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
     			mount_component(alert, div, null);
     			current = true;
     		},
+    		p: noop,
     		i: function intro(local) {
     			if (current) return;
     			transition_in(alert.$$.fragment, local);
@@ -6097,14 +6102,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(146:10) {#if disableCastButton}",
+    		source: "(148:10) {#if disableCastButton}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (174:16) {#each result.creatures as creature}
+    // (176:16) {#each result.creatures as creature}
     function create_each_block_3(ctx) {
     	let li;
     	let t_value = /*creature*/ ctx[20] + "";
@@ -6114,7 +6119,7 @@ var app = (function () {
     		c: function create() {
     			li = element("li");
     			t = text(t_value);
-    			add_location(li, file$a, 174, 18, 5920);
+    			add_location(li, file$a, 176, 18, 5984);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -6132,14 +6137,14 @@ var app = (function () {
     		block,
     		id: create_each_block_3.name,
     		type: "each",
-    		source: "(174:16) {#each result.creatures as creature}",
+    		source: "(176:16) {#each result.creatures as creature}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (169:12) <ResultBox               heading={result.spellName}               challengeRating={result.challengeRating}               terrains={result.terrains}>
+    // (171:12) <ResultBox               heading={result.spellName}               challengeRating={result.challengeRating}               terrains={result.terrains}>
     function create_default_slot_3(ctx) {
     	let ul;
     	let each_value_3 = /*result*/ ctx[17].creatures;
@@ -6158,7 +6163,7 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(ul, file$a, 172, 14, 5844);
+    			add_location(ul, file$a, 174, 14, 5908);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, ul, anchor);
@@ -6202,14 +6207,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_3.name,
     		type: "slot",
-    		source: "(169:12) <ResultBox               heading={result.spellName}               challengeRating={result.challengeRating}               terrains={result.terrains}>",
+    		source: "(171:12) <ResultBox               heading={result.spellName}               challengeRating={result.challengeRating}               terrains={result.terrains}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (163:8) {#each results as result (result.id)}
+    // (165:8) {#each results as result (result.id)}
     function create_each_block_2$1(key_1, ctx) {
     	let div;
     	let resultbox;
@@ -6239,7 +6244,7 @@ var app = (function () {
     			create_component(resultbox.$$.fragment);
     			t = space();
     			attr_dev(div, "class", "m-1");
-    			add_location(div, file$a, 163, 10, 5508);
+    			add_location(div, file$a, 165, 10, 5572);
     			this.first = div;
     		},
     		m: function mount(target, anchor) {
@@ -6302,14 +6307,14 @@ var app = (function () {
     		block,
     		id: create_each_block_2$1.name,
     		type: "each",
-    		source: "(163:8) {#each results as result (result.id)}",
+    		source: "(165:8) {#each results as result (result.id)}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (83:4) <Sidebar bind:open={leftSidebarIsOpen}>
+    // (85:4) <Sidebar bind:open={leftSidebarIsOpen}>
     function create_default_slot_2(ctx) {
     	let selectspellparameters;
     	let current;
@@ -6341,14 +6346,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2.name,
     		type: "slot",
-    		source: "(83:4) <Sidebar bind:open={leftSidebarIsOpen}>",
+    		source: "(85:4) <Sidebar bind:open={leftSidebarIsOpen}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (86:4) <Sidebar bind:open={rightSidebarIsOpen} left={false}>
+    // (88:4) <Sidebar bind:open={rightSidebarIsOpen} left={false}>
     function create_default_slot_1(ctx) {
     	let selectsourcebooks;
     	let current;
@@ -6380,14 +6385,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(86:4) <Sidebar bind:open={rightSidebarIsOpen} left={false}>",
+    		source: "(88:4) <Sidebar bind:open={rightSidebarIsOpen} left={false}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (90:4) {#if disableCastButton}
+    // (92:4) {#if disableCastButton}
     function create_if_block_1$1(ctx) {
     	let div;
     	let alert;
@@ -6396,8 +6401,8 @@ var app = (function () {
 
     	alert = new Alert({
     			props: {
-    				mainText: "That's a nat 1.",
-    				secondaryText: "Your current options will not generate any creatures! Maybe try adding more sourcebooks?"
+    				mainText: disabledAlertMainText,
+    				secondaryText: disabledAlertSecondaryText
     			},
     			$$inline: true
     		});
@@ -6406,13 +6411,14 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			create_component(alert.$$.fragment);
-    			add_location(div, file$a, 90, 6, 3022);
+    			add_location(div, file$a, 92, 6, 3198);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
     			mount_component(alert, div, null);
     			current = true;
     		},
+    		p: noop,
     		i: function intro(local) {
     			if (current) return;
     			transition_in(alert.$$.fragment, local);
@@ -6441,14 +6447,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1$1.name,
     		type: "if",
-    		source: "(90:4) {#if disableCastButton}",
+    		source: "(92:4) {#if disableCastButton}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (114:14) {#each result.creatures as creature}
+    // (116:14) {#each result.creatures as creature}
     function create_each_block_1$1(ctx) {
     	let li;
     	let t_value = /*creature*/ ctx[20] + "";
@@ -6458,7 +6464,7 @@ var app = (function () {
     		c: function create() {
     			li = element("li");
     			t = text(t_value);
-    			add_location(li, file$a, 114, 16, 3943);
+    			add_location(li, file$a, 116, 16, 4063);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -6476,14 +6482,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1$1.name,
     		type: "each",
-    		source: "(114:14) {#each result.creatures as creature}",
+    		source: "(116:14) {#each result.creatures as creature}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (109:10) <ResultBox             heading={result.spellName}             challengeRating={result.challengeRating}             terrains={result.terrains}>
+    // (111:10) <ResultBox             heading={result.spellName}             challengeRating={result.challengeRating}             terrains={result.terrains}>
     function create_default_slot$1(ctx) {
     	let ul;
     	let each_value_1 = /*result*/ ctx[17].creatures;
@@ -6502,7 +6508,7 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(ul, file$a, 112, 12, 3871);
+    			add_location(ul, file$a, 114, 12, 3991);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, ul, anchor);
@@ -6546,14 +6552,14 @@ var app = (function () {
     		block,
     		id: create_default_slot$1.name,
     		type: "slot",
-    		source: "(109:10) <ResultBox             heading={result.spellName}             challengeRating={result.challengeRating}             terrains={result.terrains}>",
+    		source: "(111:10) <ResultBox             heading={result.spellName}             challengeRating={result.challengeRating}             terrains={result.terrains}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (104:6) {#each results as result (result.id)}
+    // (106:6) {#each results as result (result.id)}
     function create_each_block$2(key_1, ctx) {
     	let div;
     	let resultbox;
@@ -6582,7 +6588,7 @@ var app = (function () {
     			div = element("div");
     			create_component(resultbox.$$.fragment);
     			t = space();
-    			add_location(div, file$a, 104, 8, 3575);
+    			add_location(div, file$a, 106, 8, 3695);
     			this.first = div;
     		},
     		m: function mount(target, anchor) {
@@ -6645,7 +6651,7 @@ var app = (function () {
     		block,
     		id: create_each_block$2.name,
     		type: "each",
-    		source: "(104:6) {#each results as result (result.id)}",
+    		source: "(106:6) {#each results as result (result.id)}",
     		ctx
     	});
 
@@ -6679,14 +6685,14 @@ var app = (function () {
     			if_block.c();
     			attr_dev(link, "href", "https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css");
     			attr_dev(link, "rel", "stylesheet");
-    			add_location(link, file$a, 68, 2, 2344);
+    			add_location(link, file$a, 70, 2, 2520);
 
     			attr_dev(div, "class", div_class_value = "" + ((/*leftSidebarIsOpen*/ ctx[1] || /*rightSidebarIsOpen*/ ctx[2]
     			? "overflow-hidden h-full"
     			: "") + "\n    w-full"));
 
     			attr_dev(div, "data-testid", "body-div");
-    			add_location(div, file$a, 73, 0, 2458);
+    			add_location(div, file$a, 75, 0, 2634);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -6757,6 +6763,9 @@ var app = (function () {
     	return block;
     }
 
+    const disabledAlertMainText = "That's a nat 1.";
+    const disabledAlertSecondaryText = "Your current options will not generate any creatures! Maybe try adding more sourcebooks?";
+
     function instance$a($$self, $$props, $$invalidate) {
     	let $readSpellParameters;
     	let $readSourcebooks;
@@ -6767,9 +6776,9 @@ var app = (function () {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots("ResponsiveApp", slots, []);
     	
+    	let { containerWidth } = $$props;
     	let leftSidebarIsOpen = false;
     	let rightSidebarIsOpen = false;
-    	let { containerWidth } = $$props;
     	const appVersion = packageVersion();
     	let disableCastButton = false;
     	let results = [];
@@ -6877,10 +6886,12 @@ var app = (function () {
     		CastButton,
     		Alert,
     		About,
+    		containerWidth,
     		leftSidebarIsOpen,
     		rightSidebarIsOpen,
-    		containerWidth,
     		appVersion,
+    		disabledAlertMainText,
+    		disabledAlertSecondaryText,
     		disableCastButton,
     		results,
     		cast,
@@ -6890,9 +6901,9 @@ var app = (function () {
     	});
 
     	$$self.$inject_state = $$props => {
+    		if ("containerWidth" in $$props) $$invalidate(0, containerWidth = $$props.containerWidth);
     		if ("leftSidebarIsOpen" in $$props) $$invalidate(1, leftSidebarIsOpen = $$props.leftSidebarIsOpen);
     		if ("rightSidebarIsOpen" in $$props) $$invalidate(2, rightSidebarIsOpen = $$props.rightSidebarIsOpen);
-    		if ("containerWidth" in $$props) $$invalidate(0, containerWidth = $$props.containerWidth);
     		if ("disableCastButton" in $$props) $$invalidate(3, disableCastButton = $$props.disableCastButton);
     		if ("results" in $$props) $$invalidate(4, results = $$props.results);
     	};

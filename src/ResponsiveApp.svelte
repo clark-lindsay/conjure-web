@@ -23,11 +23,14 @@
   import Alert from "./components/Alert.svelte";
   import About from "./components/About.svelte";
 
-  let leftSidebarIsOpen: boolean = false;
-  let rightSidebarIsOpen: boolean = false;
   export let containerWidth: number;
 
+  let leftSidebarIsOpen: boolean = false;
+  let rightSidebarIsOpen: boolean = false;
   const appVersion: string = packageVersion();
+  const disabledAlertMainText = "That's a nat 1.";
+  const disabledAlertSecondaryText =
+    "Your current options will not generate any creatures! Maybe try adding more sourcebooks?";
   let disableCastButton: boolean = false;
   interface Result {
     creatures: string[];
@@ -105,8 +108,8 @@
     {#if disableCastButton}
       <div transition:fade={{ duration: 400 }}>
         <Alert
-          mainText="That's a nat 1."
-          secondaryText="Your current options will not generate any creatures! Maybe try adding more sourcebooks?" />
+          mainText={disabledAlertMainText}
+          secondaryText={disabledAlertSecondaryText} />
       </div>
     {/if}
     <div class="flex justify-center m-4">
@@ -161,8 +164,8 @@
           {#if disableCastButton}
             <div transition:fade={{ duration: 200 }}>
               <Alert
-                mainText="That's a nat 1."
-                secondaryText="Your current options will not generate any creatures! Maybe try adding more sourcebooks?" />
+                mainText={disabledAlertMainText}
+                secondaryText={disabledAlertSecondaryText} />
             </div>
           {/if}
           <div class="justify-center m-4">
