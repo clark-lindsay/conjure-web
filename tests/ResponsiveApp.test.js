@@ -2,7 +2,7 @@ import { render, fireEvent } from "@testing-library/svelte";
 
 import ResponsiveApp from "../src/ResponsiveApp.svelte";
 
-describe("the ResponsiveApp component, rendered in viewports up to (but not more than) 1024 px wide", () => {
+describe("the ResponsiveApp component, rendered in viewports less than 1024 px wide", () => {
   it("contains a button labelled Cast Spell", () => {
     const { getByRole } = render(ResponsiveApp, {
       props: { containerWidth: 800 },
