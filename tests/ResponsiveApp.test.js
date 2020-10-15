@@ -19,9 +19,11 @@ describe("the ResponsiveApp component, rendered in viewports up to (but not more
 
     const castButton = getByRole("button", { name: "Cast Conjure Animals" });
 
-    expect(() => getByRole("list")).toThrow();
+    expect(() => getByRole("heading", { name: "Conjure Animals" })).toThrow();
     await fireEvent.click(castButton);
-    expect(getByRole("list")).toBeInTheDocument();
+    expect(
+      getByRole("heading", { name: "Conjure Animals" })
+    ).toBeInTheDocument();
   });
 
   it("if the user selects no sourcebooks, then the cast button will be disabled, an error will render, and clicking cast will not generate a result", async () => {
@@ -32,18 +34,18 @@ describe("the ResponsiveApp component, rendered in viewports up to (but not more
       props: { containerWidth: 800 },
     });
 
-    const sourceButton = getByTestId("sourceOptionsMenuDiv");
+    const spellParametersButton = getByTestId("spellOptionsMenuDiv");
 
     expect(
       getByRole("button", { name: "Cast Conjure Animals" })
     ).not.toHaveClass("cursor-not-allowed");
 
-    await fireEvent.click(sourceButton);
+    await fireEvent.click(spellParametersButton);
     const checkedBoxes = getAllByRole("checkbox", { checked: true });
     for (const box of checkedBoxes) {
       await fireEvent.click(box);
     }
-    await fireEvent.click(sourceButton);
+    await fireEvent.click(spellParametersButton);
 
     expect(getByRole("button", { name: "Cast Conjure Animals" })).toHaveClass(
       "cursor-not-allowed"
@@ -54,24 +56,24 @@ describe("the ResponsiveApp component, rendered in viewports up to (but not more
       getByRole("button", { name: "Cast Conjure Animals" })
     );
 
-    expect(() => getByRole("list")).toThrow();
+    expect(() => getByTestId("resultbox")).toThrow();
   });
 
   it("opening either of the sidebar menus toggles the presence of the overflow-hidden and h-full classes on the body div", async () => {
-    const { getByTestId, getAllByRole } = render(ResponsiveApp, {
+    const { getByTestId, getByRole, getAllByRole } = render(ResponsiveApp, {
       props: { containerWidth: 800 },
     });
 
-    const sourceButton = getAllByRole("button", { name: "" })[1];
+    const aboutButton = getByRole("button", { name: "About" });
     const spellParametersButton = getAllByRole("button", { name: "" })[0];
 
     expect(getByTestId("body-div")).not.toHaveClass(
       "overflow-hidden",
       "h-full"
     );
-    await fireEvent.click(sourceButton);
+    await fireEvent.click(aboutButton);
     expect(getByTestId("body-div")).toHaveClass("overflow-hidden", "h-full");
-    await fireEvent.click(sourceButton);
+    await fireEvent.click(aboutButton);
     expect(getByTestId("body-div")).not.toHaveClass(
       "overflow-hidden",
       "h-full"

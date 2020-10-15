@@ -19,17 +19,17 @@ test("when one button is clicked, the other button becomes invisible", async () 
     heading: "test",
   });
   const spellOptionsButton = getAllByRole("button")[0];
-  const sourceOptionsButton = getAllByRole("button")[1];
+  const aboutButton = getAllByRole("button")[1];
 
-  expect(getByTestId("sourceOptionsMenuDiv")).not.toHaveClass("invisible");
+  expect(getByTestId("aboutDiv")).not.toHaveClass("invisible");
   await fireEvent.click(spellOptionsButton);
-  expect(getByTestId("sourceOptionsMenuDiv")).toHaveClass("invisible");
+  expect(getByTestId("aboutDiv")).toHaveClass("invisible");
   await fireEvent.click(spellOptionsButton);
-  expect(getByTestId("sourceOptionsMenuDiv")).not.toHaveClass("invisible");
+  expect(getByTestId("aboutDiv")).not.toHaveClass("invisible");
 
   expect(getByTestId("spellOptionsMenuDiv")).not.toHaveClass("invisible");
-  await fireEvent.click(sourceOptionsButton);
+  await fireEvent.click(aboutButton);
   expect(getByTestId("spellOptionsMenuDiv")).toHaveClass("invisible");
-  await fireEvent.click(sourceOptionsButton);
+  await fireEvent.click(aboutButton);
   expect(getByTestId("spellOptionsMenuDiv")).not.toHaveClass("invisible");
 });

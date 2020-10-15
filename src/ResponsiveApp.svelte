@@ -97,12 +97,13 @@
     <MobileNavbar
       heading="Conjure5e{appVersion ? ` ${appVersion}` : ''}"
       bind:spellOptionsMenu={leftSidebarIsOpen}
-      bind:sourceOptionsMenu={rightSidebarIsOpen} />
+      bind:about={rightSidebarIsOpen} />
     <Sidebar bind:open={leftSidebarIsOpen}>
       <SelectSpellParameters />
+      <SelectSourcebooks />
     </Sidebar>
     <Sidebar bind:open={rightSidebarIsOpen} left={false}>
-      <SelectSourcebooks />
+      <About />
     </Sidebar>
 
     {#if disableCastButton}
