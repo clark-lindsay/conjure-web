@@ -24,9 +24,9 @@
     <ul class="list-disc ml-8 mr-2">
       <li>
         On desktop, you should see the parameters on the left side of your
-        screen, and on mobile they are broken into two menus for sources and
-        spell parameters, opened by the "hamburger buttons" at the top left and
-        top right of your screen.
+        screen, and on mobile they can be accessed by the "hamburger" menu at
+        the top left of the screen (which is not visible while you are reading
+        this).
       </li>
       <li>
         The sourcebooks that you select determine what creatures can be

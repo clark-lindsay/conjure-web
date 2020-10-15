@@ -5208,7 +5208,7 @@ var app = (function () {
     			t11 = space();
     			ul = element("ul");
     			li0 = element("li");
-    			li0.textContent = "On desktop, you should see the parameters on the left side of your\n        screen, and on mobile they are broken into two menus for sources and\n        spell parameters, opened by the \"hamburger buttons\" at the top left and\n        top right of your screen.";
+    			li0.textContent = "On desktop, you should see the parameters on the left side of your\n        screen, and on mobile they can be accessed by the \"hamburger\" menu at\n        the top left of the screen (which is not visible while you are reading\n        this).";
     			t13 = space();
     			li1 = element("li");
     			li1.textContent = "The sourcebooks that you select determine what creatures can be\n        generated, so you should only select sourcebooks that you have access\n        to, or that pertain to the setting of your game.";
@@ -5244,22 +5244,22 @@ var app = (function () {
     			attr_dev(summary1, "class", "text-blue-600 hover:text-blue-800 text-lg m-2");
     			add_location(summary1, file$9, 20, 4, 848);
     			add_location(li0, file$9, 24, 6, 1004);
-    			add_location(li1, file$9, 30, 6, 1293);
-    			add_location(li2, file$9, 35, 6, 1523);
-    			add_location(li3, file$9, 42, 6, 1881);
+    			add_location(li1, file$9, 30, 6, 1274);
+    			add_location(li2, file$9, 35, 6, 1504);
+    			add_location(li3, file$9, 42, 6, 1862);
     			attr_dev(ul, "class", "list-disc ml-8 mr-2");
     			add_location(ul, file$9, 23, 4, 965);
     			attr_dev(details1, "class", "ml-4");
     			add_location(details1, file$9, 19, 2, 821);
     			attr_dev(summary2, "class", "text-blue-600 hover:text-blue-800 text-lg m-2");
-    			add_location(summary2, file$9, 50, 4, 2147);
+    			add_location(summary2, file$9, 50, 4, 2128);
     			attr_dev(a1, "class", "text-blue-400");
     			attr_dev(a1, "href", "https://github.com/clark-lindsay/conjure-web");
-    			add_location(a1, file$9, 56, 64, 2515);
+    			add_location(a1, file$9, 56, 64, 2496);
     			attr_dev(div2, "class", "ml-8 mr-2");
-    			add_location(div2, file$9, 53, 4, 2268);
+    			add_location(div2, file$9, 53, 4, 2249);
     			attr_dev(details2, "class", "ml-4");
-    			add_location(details2, file$9, 49, 2, 2120);
+    			add_location(details2, file$9, 49, 2, 2101);
     			attr_dev(div3, "class", "overflow-y-auto pb-20");
     			add_location(div3, file$9, 0, 0, 0);
     		},
