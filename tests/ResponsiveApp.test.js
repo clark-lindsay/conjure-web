@@ -56,7 +56,7 @@ describe("the ResponsiveApp component, rendered in viewports less than 1024 px w
       getByRole("button", { name: "Cast Conjure Animals" })
     );
 
-    expect(() => getByTestId("resultbox")).toThrow();
+    expect(() => getByRole("heading", { name: "Conjure Animals" })).toThrow();
   });
 
   it("opening either of the sidebar menus toggles the presence of the overflow-hidden and h-full classes on the body div", async () => {
